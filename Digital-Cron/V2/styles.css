@@ -1949,7 +1949,7 @@ body.light-mode .services-page-card:hover {
 /* Mission Section Styles */
 .mission-section {
   position: relative;
-  background-image: url("assets/about_mission_bg.jpg");
+  background-image: url("assets/about_mission_bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
