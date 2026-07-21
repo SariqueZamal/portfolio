@@ -1810,6 +1810,29 @@ body.light-mode .services-page-card:hover {
     padding: 60px 0;
   }
 
+  .container {
+    padding: 0 20px;
+  }
+
+  #hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-grid {
+    padding: 0;
+  }
+
+  .hero-content .section-tag {
+    padding-top: 20px;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .section-title {
     font-size: 2rem;
   }
