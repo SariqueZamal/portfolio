@@ -1,535 +1,958 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Digital Cron builds a premium high-performance websites and advanced AI automation systems. We deploy custom chatbots, workflow automations, CRM integrations to scale your business.">
-    <meta name="keywords" content="Digital Cron, AI automation agnecy, AI chatbot developement services, Web development, AI chatbots, AI voice agents, email automation, workflow automation, digital cron, sarique zamal">
-    <meta name="author" content="Digital Cron">
-    
-    <title>Digital Cron | AI Automation & Web Development Agency</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="assets/logo.jpg" rel="icon" type="image/jpeg">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Digital Cron builds a premium high-performance websites and advanced AI automation systems. We deploy custom chatbots, workflow automations, CRM integrations to scale your business."
+    />
+    <meta
+      name="keywords"
+      content="Digital Cron, AI automation agnecy, AI chatbot developement services, Web development, AI chatbots, AI voice agents, email automation, workflow automation, digital cron, sarique zamal"
+    />
+    <meta name="author" content="Digital Cron" />
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8TM5WCK9SM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8TM5WCK9SM");
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Digital Cron",
+        "alternateName": "Digital Cron AI Automation",
+        "url": "https://digitalcron.com/",
+        "logo": "https://digitalcron.com/assets/logo.jpg",
+        "description": "An AI automation and web development agency specializing in high-performance websites, custom chatbots, and autonomous workflow integrations.",
+        "founder": {
+          "@type": "Person",
+          "name": "Sarique Zamal"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@digitalcron.com",
+          "contactType": "customer support",
+          "availableLanguage": ["English", "Hindi"]
+        },
+        "sameAs": [
+          "https://linkedin.com/in/sariquezamal",
+          "https://instagram.com/sariquezamal",
+          "https://x.com/sariquezamal",
+          "https://facebook.com/sariquezamal"
+        ]
+      }
+    </script>
+
+    <title>Digital Cron | AI Automation & Web Development Agency</title>
+    <link rel="canonical" href="https://digitalcron.com/" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="assets/logo.jpg" rel="icon" type="image/jpeg" />
+  </head>
+  <body>
     <!-- Background Spotlights and Grids -->
     <div class="spotlight" id="spotlight"></div>
 
     <!-- Navigation Bar -->
     <header id="site-header">
-        <div class="container nav-container">
-            <a href="index.html" class="brand" id="logo-link">
-                <img src="assets/logo.jpg" alt="Digital Cron - AI Automation Agency Logo">
-                <span>DIGITAL CRON</span>
-            </a>
-            
-            <nav id="main-nav">
-                <a href="index.html" class="nav-link active" id="nav-home">Home</a>
-                <a href="services.html" class="nav-link" id="nav-services">Services</a>
-                <a href="about.html" class="nav-link" id="nav-about">About</a>
-            </nav>
-            
-            <div class="nav-right">
-                <a href="#" class="btn btn-primary" id="header-cta-btn" data-cal-link="sariquezamal/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                    <span>Let's Talk</span>
-                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
-                <!-- Hamburger Toggle -->
-                <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
-                    <span class="ham-line"></span>
-                    <span class="ham-line"></span>
-                    <span class="ham-line"></span>
-                </button>
-            </div>
+      <div class="container nav-container">
+        <a href="index.html" class="brand" id="logo-link">
+          <img
+            src="assets/logo.jpg"
+            alt="Digital Cron - AI Automation Agency Logo"
+          />
+          <span>DIGITAL CRON</span>
+        </a>
+
+        <nav id="main-nav">
+          <a href="index.html" class="nav-link active" id="nav-home">Home</a>
+          <a href="services.html" class="nav-link" id="nav-services"
+            >Services</a
+          >
+          <a href="about.html" class="nav-link" id="nav-about">About</a>
+        </nav>
+
+        <div class="nav-right">
+          <a
+            href="#"
+            class="btn btn-primary"
+            id="header-cta-btn"
+            data-cal-link="sariquezamal/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            <span>Let's Talk</span>
+            <svg
+              class="btn-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <!-- Hamburger Toggle -->
+          <button
+            class="hamburger-btn"
+            id="hamburger-btn"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-        <nav class="mobile-nav">
-            <a href="index.html" class="mobile-nav-link active" id="mob-nav-home">Home</a>
-            <a href="services.html" class="mobile-nav-link" id="mob-nav-services">Services</a>
-            <a href="about.html" class="mobile-nav-link" id="mob-nav-about">About</a>
-        </nav>
-        <a href="#" class="btn btn-primary mobile-cta-btn" data-cal-link="sariquezamal/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-            <span>Let's Talk</span>
-            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-        </a>
+      <button
+        class="mobile-menu-close"
+        id="mobile-menu-close"
+        aria-label="Close menu"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-link active" id="mob-nav-home"
+          >Home</a
+        >
+        <a href="services.html" class="mobile-nav-link" id="mob-nav-services"
+          >Services</a
+        >
+        <a href="about.html" class="mobile-nav-link" id="mob-nav-about"
+          >About</a
+        >
+      </nav>
+      <a
+        href="#"
+        class="btn btn-primary mobile-cta-btn"
+        data-cal-link="sariquezamal/30min"
+        data-cal-namespace="30min"
+        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+      >
+        <span>Let's Talk</span>
+        <svg
+          class="btn-arrow"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
     </div>
 
     <main>
-        
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <div class="section-tag">Enterprise AI & Web Core</div>
-                    <h1 class="hero-title">
-                        AI Automation & Web Developement Agency.
-                        <span>Building High-Performance Websites & Intelligent AI Automation System.</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                       Your website should be your best employee. We build high-converting digital storefronts and empower them with intelligent workflows, voice agents, and lead generation systems that never sleep.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="#" class="btn btn-primary" id="hero-primary-btn" data-cal-link="sariquezamal/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                            <span>Let's Talk</span>
-                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
-                        <a href="services.html" class="btn btn-secondary" id="hero-secondary-btn">Explore Services</a>
-                    </div>
-                </div>
-                
-                <div class="comparison-showcase">
-                    <!-- Before Card (Faded, Manual System) -->
-                    <div class="showcase-card before-card">
-                        <div class="showcase-header">
-                            <div class="header-left">
-                                <div class="window-controls">
-                                    <span class="dot close"></span>
-                                    <span class="dot minimize"></span>
-                                    <span class="dot maximize"></span>
-                                </div>
-                                <div class="window-title">Legacy Operations // Manual</div>
-                            </div>
-                        </div>
-                        <div class="showcase-body">
-                            <div class="showcase-status status-red">
-                                <span class="status-indicator-dot"></span> Manual Bottlenecks
-                            </div>
-                            <div class="showcase-metrics-row">
-                                <div class="showcase-metric-box">
-                                    <span class="showcase-num text-red">42%</span>
-                                    <span class="showcase-lbl">Missed Calls</span>
-                                </div>
-                                <div class="showcase-metric-box">
-                                    <span class="showcase-num text-red">4.2h</span>
-                                    <span class="showcase-lbl">Response Delay</span>
-                                </div>
-                            </div>
-                            <div class="showcase-chart-box">
-                                <svg viewBox="0 0 300 80" class="svg-chart-red">
-                                    <path d="M 0 15 Q 75 35 150 55 T 300 70" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4 4" />
-                                </svg>
-                            </div>
-                            <div class="showcase-summary">
-                                ⚠️ Faded performance, customer leaks, and offline systems.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- After Card (Glowing, Automated System) -->
-                    <div class="showcase-card after-card">
-                        <div class="showcase-header">
-                            <div class="header-left">
-                                <div class="window-controls">
-                                    <span class="dot close"></span>
-                                    <span class="dot minimize"></span>
-                                    <span class="dot maximize"></span>
-                                </div>
-                                <div class="window-title">Digital Cron Engine // Automated</div>
-                            </div>
-                            <div class="growth-badge">+150% Growth</div>
-                        </div>
-                        <div class="showcase-body">
-                            <div class="showcase-status status-cyan">
-                                <span class="status-indicator-dot"></span> AI Autopilot Active
-                            </div>
-                            <div class="showcase-metrics-row">
-                                <div class="showcase-metric-box">
-                                    <span class="showcase-num text-cyan">+150%</span>
-                                    <span class="showcase-lbl">Revenue Growth</span>
-                                </div>
-                                <div class="showcase-metric-box">
-                                    <span class="showcase-num text-cyan">40h</span>
-                                    <span class="showcase-lbl">Saved / Week</span>
-                                </div>
-                                <div class="showcase-metric-box">
-                                    <span class="showcase-num text-cyan">100%</span>
-                                    <span class="showcase-lbl">Leads Captured</span>
-                                </div>
-                            </div>
-                            <div class="showcase-chart-box">
-                                <svg viewBox="0 0 300 80" class="svg-chart-cyan">
-                                    <defs>
-                                        <linearGradient id="cyan-chart-grad" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="0%" stop-color="#22c55e" stop-opacity="0.4"/>
-                                            <stop offset="100%" stop-color="#22c55e" stop-opacity="0.0"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M 0 70 Q 75 60 150 25 T 300 5" fill="none" stroke="#22c55e" stroke-width="3" />
-                                    <path d="M 0 70 Q 75 60 150 25 T 300 5 L 300 80 L 0 80 Z" fill="url(#cyan-chart-grad)" />
-                                </svg>
-                                <span class="chart-trend-arrow">▲</span>
-                            </div>
-                            <div class="showcase-summary">
-                                ✓ AI Chatbots, Voice dispatchers, and automated sync.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="section-tag">Enterprise AI & Web Core</div>
+            <h1 class="hero-title">
+              AI Automation & Web Developement Agency.
+              <span
+                >Building High-Performance Websites & Intelligent AI Automation
+                System.</span
+              >
+            </h1>
+            <p class="hero-subtitle">
+              Your website should be your best employee. We build
+              high-converting digital storefronts and empower them with
+              intelligent workflows, voice agents, and lead generation systems
+              that never sleep.
+            </p>
+            <div class="hero-cta">
+              <a
+                href="#"
+                class="btn btn-primary"
+                id="hero-primary-btn"
+                data-cal-link="sariquezamal/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
+                <span>Let's Talk</span>
+                <svg
+                  class="btn-arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a
+                href="services.html"
+                class="btn btn-secondary"
+                id="hero-secondary-btn"
+                >Explore Services</a
+              >
             </div>
-        </section>
+          </div>
 
-        <!-- System Deployed Section -->
-        <section id="deployed-system">
-            <div class="container">
-                <div class="section-tag">The Digital Cron System</div>
-                <h2 class="section-title">Integrated Intelligence. <span>Seamless Scale.</span></h2>
-                
-                <div class="system-grid">
-                    <div class="system-card" id="benefit-1">
-                        <div class="system-card-icon">⚡</div>
-                        <h3 class="system-card-title">Unified Customer Funnels</h3>
-                        <p>Turn traffic into qualified pipelines. We build lightning-fast digital storefronts that route visitors directly into intelligent conversational agents, maximizing your end-to-end conversion rates.</p>
-                    </div>
-                    
-                    <div class="system-card" id="benefit-2">
-                        <div class="system-card-icon">🤖</div>
-                        <h3 class="system-card-title">24/7 Support & Capture</h3>
-                        <p>Never miss an inquiry across any time zone. We deploy custom AI agents to resolve FAQs, qualify prospects, and sync data directly to your CRM—day or night.</p>
-                    </div>
-                    
-                    <div class="system-card" id="benefit-3">
-                        <div class="system-card-icon">🔗</div>
-                        <h3 class="system-card-title">Zero-Error Automations</h3>
-                        <p>Connect your entire tech stack seamlessly. We engineer flawless automated workflows between your apps to eliminate manual data entry, crush bottlenecks, and reclaim lost hours.</p>
-                    </div>
-
-                    <div class="system-card" id="benefit-4">
-                        <div class="system-card-icon">📈</div>
-                        <h3 class="system-card-title">Cost-Efficient Scaling</h3>
-                        <p>Multiply your output, not your payroll. Handle 10x the lead volume and transaction capacity without inflating overhead or hiring additional support staff.</p>
-                    </div>
+          <div class="comparison-showcase">
+            <!-- Before Card (Faded, Manual System) -->
+            <div class="showcase-card before-card">
+              <div class="showcase-header">
+                <div class="header-left">
+                  <div class="window-controls">
+                    <span class="dot close"></span>
+                    <span class="dot minimize"></span>
+                    <span class="dot maximize"></span>
+                  </div>
+                  <div class="window-title">Legacy Operations // Manual</div>
                 </div>
+              </div>
+              <div class="showcase-body">
+                <div class="showcase-status status-red">
+                  <span class="status-indicator-dot"></span> Manual Bottlenecks
+                </div>
+                <div class="showcase-metrics-row">
+                  <div class="showcase-metric-box">
+                    <span class="showcase-num text-red">42%</span>
+                    <span class="showcase-lbl">Missed Calls</span>
+                  </div>
+                  <div class="showcase-metric-box">
+                    <span class="showcase-num text-red">4.2h</span>
+                    <span class="showcase-lbl">Response Delay</span>
+                  </div>
+                </div>
+                <div class="showcase-chart-box">
+                  <svg viewBox="0 0 300 80" class="svg-chart-red">
+                    <path
+                      d="M 0 15 Q 75 35 150 55 T 300 70"
+                      fill="none"
+                      stroke="#ef4444"
+                      stroke-width="2.5"
+                      stroke-dasharray="4 4"
+                    />
+                  </svg>
+                </div>
+                <div class="showcase-summary">
+                  ⚠️ Faded performance, customer leaks, and offline systems.
+                </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Autonomous Engine Section -->
-        <section id="autonomous-engine" class="engine-section">
-            <!-- Animated background node-graph canvas -->
-            <canvas id="engine-canvas" class="engine-canvas" aria-hidden="true"></canvas>
-
-            <div class="container engine-container">
-                <!-- Header -->
-                <div class="engine-header">
-                    <div class="section-tag engine-tag">INFRASTRUCTURE SHOWCASE</div>
-                    <h2 class="engine-title">How We Engineer Autonomy.</h2>
-                    <p class="engine-subtitle">We don't just write scripts. We architect complete, self-operating ecosystems. Here is what happens under the hood when a business runs on our infrastructure.</p>
+            <!-- After Card (Glowing, Automated System) -->
+            <div class="showcase-card after-card">
+              <div class="showcase-header">
+                <div class="header-left">
+                  <div class="window-controls">
+                    <span class="dot close"></span>
+                    <span class="dot minimize"></span>
+                    <span class="dot maximize"></span>
+                  </div>
+                  <div class="window-title">
+                    Digital Cron Engine // Automated
+                  </div>
                 </div>
-
-                <!-- 4-Step Diagram -->
-                <div class="engine-steps">
-
-                    <!-- Connector line (desktop only) -->
-                    <div class="engine-connector" aria-hidden="true">
-                        <div class="connector-line">
-                            <div class="connector-pulse"></div>
-                        </div>
-                    </div>
-
-                    <!-- Step 1 -->
-                    <div class="engine-step" id="engine-step-1">
-                        <div class="step-node">
-                            <div class="step-node-ring"></div>
-                            <div class="step-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
-                                    <path d="M8 21h8M12 17v4"/>
-                                    <path d="M6 8h12M6 11h8"/>
-                                </svg>
-                            </div>
-                            <div class="step-number">01</div>
-                        </div>
-                        <div class="step-body">
-                            <h3 class="step-label">The Interface</h3>
-                            <p class="step-tech">Custom SaaS &amp; Dashboards</p>
-                            <p class="step-desc">We build custom, high-performance web applications and dashboards that act as the secure entry point for your data.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="engine-step" id="engine-step-2">
-                        <div class="step-node">
-                            <div class="step-node-ring"></div>
-                            <div class="step-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="3"/>
-                                    <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
-                                </svg>
-                            </div>
-                            <div class="step-number">02</div>
-                        </div>
-                        <div class="step-body">
-                            <h3 class="step-label">The Nervous System</h3>
-                            <p class="step-tech">Advanced Routing</p>
-                            <p class="step-desc">We architect highly secure, automated data pipelines on dedicated infrastructure to instantly route incoming information, bypassing manual bottlenecks.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="engine-step" id="engine-step-3">
-                        <div class="step-node">
-                            <div class="step-node-ring"></div>
-                            <div class="step-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 2a4 4 0 0 1 4 4v1h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v1a4 4 0 0 1-8 0v-1H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4z"/>
-                                    <circle cx="9" cy="10" r="1" fill="currentColor"/>
-                                    <circle cx="15" cy="10" r="1" fill="currentColor"/>
-                                    <path d="M9 15c.83.67 1.67 1 3 1s2.17-.33 3-1"/>
-                                </svg>
-                            </div>
-                            <div class="step-number">03</div>
-                        </div>
-                        <div class="step-body">
-                            <h3 class="step-label">The Brain</h3>
-                            <p class="step-tech">Autonomous Agents</p>
-                            <p class="step-desc">Complex decision-making is handed off to custom-deployed autonomous AI agents. These systems are explicitly engineered to analyze complex data, reason through advanced logic, and execute multi-step tasks dynamically.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="engine-step" id="engine-step-4">
-                        <div class="step-node">
-                            <div class="step-node-ring"></div>
-                            <div class="step-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-                                    <polyline points="16 7 22 7 22 13"/>
-                                </svg>
-                            </div>
-                            <div class="step-number">04</div>
-                        </div>
-                        <div class="step-body">
-                            <h3 class="step-label">The Output</h3>
-                            <p class="step-tech">Frictionless Execution</p>
-                            <p class="step-desc">The system autonomously updates your CRM, generates client deliverables, and scales your output without adding a single hour to your payroll.</p>
-                        </div>
-                    </div>
-
-                </div><!-- /.engine-steps -->
-            </div><!-- /.container -->
-        </section>
-
-        <!-- Industry Use Cases Section -->
-        <section id="use-cases">
-            <div class="container">
-                <div class="section-tag">Operational Architectures</div>
-                <h2 class="section-title">Industry Use Cases. <span>Proven Systems.</span></h2>
-                
-                <div class="use-case-grid">
-                    <!-- Case 1: Real Estate & Property Management -->
-                    <div class="use-case-card" id="uc-card-1">
-                        <div class="use-case-tag">Real Estate Architecture</div>
-                        <p class="use-case-body">
-                            Slow buyer response times and manual property listing updates drain agent productivity. We build custom, high-speed listing storefronts and deploy automated CRM workflows to route inquiries instantly. This architecture guarantees zero missed leads while reclaiming fifteen agent hours every single week.
-                        </p>
-                    </div>
-                    
-                    <!-- Case 2: E-Commerce & Retail -->
-                    <div class="use-case-card" id="uc-card-2">
-                        <div class="use-case-tag">E-Commerce Core</div>
-                        <p class="use-case-body">
-                            Cart abandonment and slow customer support response rates limit online revenue growth. We deploy custom, sub-second web storefronts integrated with intelligent, automated checkout workflows and AI support agents. This configuration increases checkout conversion rates by 34% and reduces support overhead by 60% instantly.
-                        </p>
-                    </div>
-
-                    <!-- Case 3: Healthcare & Private Clinics -->
-                    <div class="use-case-card" id="uc-card-3">
-                        <div class="use-case-tag">Healthcare Integration</div>
-                        <p class="use-case-body">
-                            Manual appointment scheduling and slow patient intake procedures burden administrative staff daily. We engineer secure, HIPAA-compliant patient intake platforms and launch autonomous booking voice agents. Our system saves medical clinics twenty-five administrative hours weekly and eliminates phone line bottlenecks.
-                        </p>
-                    </div>
-
-                    <!-- Case 4: Logistics & Supply Chain -->
-                    <div class="use-case-card" id="uc-card-4">
-                        <div class="use-case-tag">Logistics Infrastructure</div>
-                        <p class="use-case-body">
-                            Fragmented tracking updates and manual dispatch tasks delay global fleet operations. We build unified inventory tracking portals and deploy SMS systems that broadcast instant dispatch alerts upon database updates. This integration reduces customer delivery check-in call volume by 70% in the first month.
-                        </p>
-                    </div>
-
-                    <!-- Case 5: Professional Services & Consulting -->
-                    <div class="use-case-card" id="uc-card-5">
-                        <div class="use-case-tag">Consulting Automation</div>
-                        <p class="use-case-body">
-                            Manual client onboarding and tedious intake document drafting stall consulting pipeline speed. We build custom portal sites and integrate them with automated workflow routing and Stripe checkout loops. Our solution delivers instant client onboarding, accelerating pipeline velocity without manual administrative input.
-                        </p>
-                    </div>
-
-                    <!-- Case 6: Home Services & Contracting -->
-                    <div class="use-case-card" id="uc-card-6">
-                        <div class="use-case-tag">Home Services Engine</div>
-                        <p class="use-case-body">
-                            Missed calls and delayed booking responses lose prime leads to faster contractors. We deploy custom scheduling landing pages and launch autonomous AI voice agents to book appointments 24/7. This responsive configuration converts prospects instantly, keeping scheduling grids full and scaling territory growth.
-                        </p>
-                    </div>
+                <div class="growth-badge">+150% Growth</div>
+              </div>
+              <div class="showcase-body">
+                <div class="showcase-status status-cyan">
+                  <span class="status-indicator-dot"></span> AI Autopilot Active
                 </div>
+                <div class="showcase-metrics-row">
+                  <div class="showcase-metric-box">
+                    <span class="showcase-num text-cyan">+150%</span>
+                    <span class="showcase-lbl">Revenue Growth</span>
+                  </div>
+                  <div class="showcase-metric-box">
+                    <span class="showcase-num text-cyan">40h</span>
+                    <span class="showcase-lbl">Saved / Week</span>
+                  </div>
+                  <div class="showcase-metric-box">
+                    <span class="showcase-num text-cyan">100%</span>
+                    <span class="showcase-lbl">Leads Captured</span>
+                  </div>
+                </div>
+                <div class="showcase-chart-box">
+                  <svg viewBox="0 0 300 80" class="svg-chart-cyan">
+                    <defs>
+                      <linearGradient
+                        id="cyan-chart-grad"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#22c55e"
+                          stop-opacity="0.4"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#22c55e"
+                          stop-opacity="0.0"
+                        />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M 0 70 Q 75 60 150 25 T 300 5"
+                      fill="none"
+                      stroke="#22c55e"
+                      stroke-width="3"
+                    />
+                    <path
+                      d="M 0 70 Q 75 60 150 25 T 300 5 L 300 80 L 0 80 Z"
+                      fill="url(#cyan-chart-grad)"
+                    />
+                  </svg>
+                  <span class="chart-trend-arrow">▲</span>
+                </div>
+                <div class="showcase-summary">
+                  ✓ AI Chatbots, Voice dispatchers, and automated sync.
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Process Section -->
-        <section id="process">
-            <div class="container">
-                <div class="section-tag">Methodology</div>
-                <h2 class="section-title">From First Call to Continuous Scale.</h2>
-                
-                <div class="process-grid">
-                    <div class="process-card" id="process-1">
-                        <div class="process-num">01</div>
-                        <h3 class="process-title">Strategy Session</h3>
-                        <p>Book an introductory consultation to review your active business operations. We align on your high-ticket scaling goals, audit your current manual bottlenecks, and map out a tailored development roadmap.</p>
-                    </div>
-                    
-                    <div class="process-card" id="process-2">
-                        <div class="process-num">02</div>
-                        <h3 class="process-title">Requirements Mapping</h3>
-                        <p>We translate your vision into a rock-solid technical blueprint. Our team deeply analyzes your specific system requirements, scoping out every API connection, custom database structure, and AI workflow.</p>
-                    </div>
-                    
-                    <div class="process-card" id="process-3">
-                        <div class="process-num">03</div>
-                        <h3 class="process-title">Seamless Deployment</h3>
-                        <p>Our engineering team constructs your high-speed digital storefront and configures your fine-tuned autonomous AI agents. We deploy the entire architecture smoothly into your workflow with zero downtime.</p>
-                    </div>
+      <!-- System Deployed Section -->
+      <section id="deployed-system">
+        <div class="container">
+          <div class="section-tag">The Digital Cron System</div>
+          <h2 class="section-title">
+            Integrated Intelligence. <span>Seamless Scale.</span>
+          </h2>
 
-                    <div class="process-card" id="process-4">
-                        <div class="process-num">04</div>
-                        <h3 class="process-title">Continuous Optimization</h3>
-                        <p>Launching is just the first step. We actively monitor your data pipelines, refine your AI prompt accuracies, and deploy ongoing upgrades to ensure your automation engine evolves as your business grows.</p>
-                    </div>
-                </div>
+          <div class="system-grid">
+            <div class="system-card" id="benefit-1">
+              <div class="system-card-icon">⚡</div>
+              <h3 class="system-card-title">Unified Customer Funnels</h3>
+              <p>
+                Turn traffic into qualified pipelines. We build lightning-fast
+                digital storefronts that route visitors directly into
+                intelligent conversational agents, maximizing your end-to-end
+                conversion rates.
+              </p>
             </div>
-        </section>
 
-        <!-- Primary CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <h2 class="cta-title">Scale Your Operations, <span>Not Your Overhead.</span></h2>
-                <p class="cta-desc">
-                    Eliminate manual bottlenecks. We build high-converting digital storefronts, custom voice agents, and seamless CRM integrations that run your business on autopilot.
+            <div class="system-card" id="benefit-2">
+              <div class="system-card-icon">🤖</div>
+              <h3 class="system-card-title">24/7 Support & Capture</h3>
+              <p>
+                Never miss an inquiry across any time zone. We deploy custom AI
+                agents to resolve FAQs, qualify prospects, and sync data
+                directly to your CRM—day or night.
+              </p>
+            </div>
+
+            <div class="system-card" id="benefit-3">
+              <div class="system-card-icon">🔗</div>
+              <h3 class="system-card-title">Zero-Error Automations</h3>
+              <p>
+                Connect your entire tech stack seamlessly. We engineer flawless
+                automated workflows between your apps to eliminate manual data
+                entry, crush bottlenecks, and reclaim lost hours.
+              </p>
+            </div>
+
+            <div class="system-card" id="benefit-4">
+              <div class="system-card-icon">📈</div>
+              <h3 class="system-card-title">Cost-Efficient Scaling</h3>
+              <p>
+                Multiply your output, not your payroll. Handle 10x the lead
+                volume and transaction capacity without inflating overhead or
+                hiring additional support staff.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Autonomous Engine Section -->
+      <section id="autonomous-engine" class="engine-section">
+        <!-- Animated background node-graph canvas -->
+        <canvas
+          id="engine-canvas"
+          class="engine-canvas"
+          aria-hidden="true"
+        ></canvas>
+
+        <div class="container engine-container">
+          <!-- Header -->
+          <div class="engine-header">
+            <div class="section-tag engine-tag">INFRASTRUCTURE SHOWCASE</div>
+            <h2 class="engine-title">How We Engineer Autonomy.</h2>
+            <p class="engine-subtitle">
+              We don't just write scripts. We architect complete, self-operating
+              ecosystems. Here is what happens under the hood when a business
+              runs on our infrastructure.
+            </p>
+          </div>
+
+          <!-- 4-Step Diagram -->
+          <div class="engine-steps">
+            <!-- Connector line (desktop only) -->
+            <div class="engine-connector" aria-hidden="true">
+              <div class="connector-line">
+                <div class="connector-pulse"></div>
+              </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="engine-step" id="engine-step-1">
+              <div class="step-node">
+                <div class="step-node-ring"></div>
+                <div class="step-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8M12 17v4" />
+                    <path d="M6 8h12M6 11h8" />
+                  </svg>
+                </div>
+                <div class="step-number">01</div>
+              </div>
+              <div class="step-body">
+                <h3 class="step-label">The Interface</h3>
+                <p class="step-tech">Custom SaaS &amp; Dashboards</p>
+                <p class="step-desc">
+                  We build custom, high-performance web applications and
+                  dashboards that act as the secure entry point for your data.
                 </p>
-                <a href="#" class="btn btn-primary" id="bottom-cta-btn" data-cal-link="sariquezamal/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                    <span>Book a free growth call</span>
-                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
+              </div>
             </div>
-        </section>
 
+            <!-- Step 2 -->
+            <div class="engine-step" id="engine-step-2">
+              <div class="step-node">
+                <div class="step-node-ring"></div>
+                <div class="step-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                      d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"
+                    />
+                  </svg>
+                </div>
+                <div class="step-number">02</div>
+              </div>
+              <div class="step-body">
+                <h3 class="step-label">The Nervous System</h3>
+                <p class="step-tech">Advanced Routing</p>
+                <p class="step-desc">
+                  We architect highly secure, automated data pipelines on
+                  dedicated infrastructure to instantly route incoming
+                  information, bypassing manual bottlenecks.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="engine-step" id="engine-step-3">
+              <div class="step-node">
+                <div class="step-node-ring"></div>
+                <div class="step-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2a4 4 0 0 1 4 4v1h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v1a4 4 0 0 1-8 0v-1H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4z"
+                    />
+                    <circle cx="9" cy="10" r="1" fill="currentColor" />
+                    <circle cx="15" cy="10" r="1" fill="currentColor" />
+                    <path d="M9 15c.83.67 1.67 1 3 1s2.17-.33 3-1" />
+                  </svg>
+                </div>
+                <div class="step-number">03</div>
+              </div>
+              <div class="step-body">
+                <h3 class="step-label">The Brain</h3>
+                <p class="step-tech">Autonomous Agents</p>
+                <p class="step-desc">
+                  Complex decision-making is handed off to custom-deployed
+                  autonomous AI agents. These systems are explicitly engineered
+                  to analyze complex data, reason through advanced logic, and
+                  execute multi-step tasks dynamically.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="engine-step" id="engine-step-4">
+              <div class="step-node">
+                <div class="step-node-ring"></div>
+                <div class="step-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                    <polyline points="16 7 22 7 22 13" />
+                  </svg>
+                </div>
+                <div class="step-number">04</div>
+              </div>
+              <div class="step-body">
+                <h3 class="step-label">The Output</h3>
+                <p class="step-tech">Frictionless Execution</p>
+                <p class="step-desc">
+                  The system autonomously updates your CRM, generates client
+                  deliverables, and scales your output without adding a single
+                  hour to your payroll.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /.engine-steps -->
+        </div>
+        <!-- /.container -->
+      </section>
+
+      <!-- Industry Use Cases Section -->
+      <section id="use-cases">
+        <div class="container">
+          <div class="section-tag">Operational Architectures</div>
+          <h2 class="section-title">
+            Industry Use Cases. <span>Proven Systems.</span>
+          </h2>
+
+          <div class="use-case-grid">
+            <!-- Case 1: Real Estate & Property Management -->
+            <div class="use-case-card" id="uc-card-1">
+              <div class="use-case-tag">Real Estate Architecture</div>
+              <p class="use-case-body">
+                Slow buyer response times and manual property listing updates
+                drain agent productivity. We build custom, high-speed listing
+                storefronts and deploy automated CRM workflows to route
+                inquiries instantly. This architecture guarantees zero missed
+                leads while reclaiming fifteen agent hours every single week.
+              </p>
+            </div>
+
+            <!-- Case 2: E-Commerce & Retail -->
+            <div class="use-case-card" id="uc-card-2">
+              <div class="use-case-tag">E-Commerce Core</div>
+              <p class="use-case-body">
+                Cart abandonment and slow customer support response rates limit
+                online revenue growth. We deploy custom, sub-second web
+                storefronts integrated with intelligent, automated checkout
+                workflows and AI support agents. This configuration increases
+                checkout conversion rates by 34% and reduces support overhead by
+                60% instantly.
+              </p>
+            </div>
+
+            <!-- Case 3: Healthcare & Private Clinics -->
+            <div class="use-case-card" id="uc-card-3">
+              <div class="use-case-tag">Healthcare Integration</div>
+              <p class="use-case-body">
+                Manual appointment scheduling and slow patient intake procedures
+                burden administrative staff daily. We engineer secure,
+                HIPAA-compliant patient intake platforms and launch autonomous
+                booking voice agents. Our system saves medical clinics
+                twenty-five administrative hours weekly and eliminates phone
+                line bottlenecks.
+              </p>
+            </div>
+
+            <!-- Case 4: Logistics & Supply Chain -->
+            <div class="use-case-card" id="uc-card-4">
+              <div class="use-case-tag">Logistics Infrastructure</div>
+              <p class="use-case-body">
+                Fragmented tracking updates and manual dispatch tasks delay
+                global fleet operations. We build unified inventory tracking
+                portals and deploy SMS systems that broadcast instant dispatch
+                alerts upon database updates. This integration reduces customer
+                delivery check-in call volume by 70% in the first month.
+              </p>
+            </div>
+
+            <!-- Case 5: Professional Services & Consulting -->
+            <div class="use-case-card" id="uc-card-5">
+              <div class="use-case-tag">Consulting Automation</div>
+              <p class="use-case-body">
+                Manual client onboarding and tedious intake document drafting
+                stall consulting pipeline speed. We build custom portal sites
+                and integrate them with automated workflow routing and Stripe
+                checkout loops. Our solution delivers instant client onboarding,
+                accelerating pipeline velocity without manual administrative
+                input.
+              </p>
+            </div>
+
+            <!-- Case 6: Home Services & Contracting -->
+            <div class="use-case-card" id="uc-card-6">
+              <div class="use-case-tag">Home Services Engine</div>
+              <p class="use-case-body">
+                Missed calls and delayed booking responses lose prime leads to
+                faster contractors. We deploy custom scheduling landing pages
+                and launch autonomous AI voice agents to book appointments 24/7.
+                This responsive configuration converts prospects instantly,
+                keeping scheduling grids full and scaling territory growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section id="process">
+        <div class="container">
+          <div class="section-tag">Methodology</div>
+          <h2 class="section-title">From First Call to Continuous Scale.</h2>
+
+          <div class="process-grid">
+            <div class="process-card" id="process-1">
+              <div class="process-num">01</div>
+              <h3 class="process-title">Strategy Session</h3>
+              <p>
+                Book an introductory consultation to review your active business
+                operations. We align on your high-ticket scaling goals, audit
+                your current manual bottlenecks, and map out a tailored
+                development roadmap.
+              </p>
+            </div>
+
+            <div class="process-card" id="process-2">
+              <div class="process-num">02</div>
+              <h3 class="process-title">Requirements Mapping</h3>
+              <p>
+                We translate your vision into a rock-solid technical blueprint.
+                Our team deeply analyzes your specific system requirements,
+                scoping out every API connection, custom database structure, and
+                AI workflow.
+              </p>
+            </div>
+
+            <div class="process-card" id="process-3">
+              <div class="process-num">03</div>
+              <h3 class="process-title">Seamless Deployment</h3>
+              <p>
+                Our engineering team constructs your high-speed digital
+                storefront and configures your fine-tuned autonomous AI agents.
+                We deploy the entire architecture smoothly into your workflow
+                with zero downtime.
+              </p>
+            </div>
+
+            <div class="process-card" id="process-4">
+              <div class="process-num">04</div>
+              <h3 class="process-title">Continuous Optimization</h3>
+              <p>
+                Launching is just the first step. We actively monitor your data
+                pipelines, refine your AI prompt accuracies, and deploy ongoing
+                upgrades to ensure your automation engine evolves as your
+                business grows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Primary CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2 class="cta-title">
+            Scale Your Operations, <span>Not Your Overhead.</span>
+          </h2>
+          <p class="cta-desc">
+            Eliminate manual bottlenecks. We build high-converting digital
+            storefronts, custom voice agents, and seamless CRM integrations that
+            run your business on autopilot.
+          </p>
+          <a
+            href="#"
+            class="btn btn-primary"
+            id="bottom-cta-btn"
+            data-cal-link="sariquezamal/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            <span>Book a free growth call</span>
+            <svg
+              class="btn-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <div class="container footer-top">
-            <div class="footer-col">
-                <a href="index.html" class="footer-logo">
-                    <img src="assets/logo.jpg" alt="Digital Cron Logo">
-                    <span>DIGITAL CRON</span>
-                </a>
-                <p class="footer-tagline">
-                    Premium AI automation solutions for established businesses seeking to optimize operations and drive growth.
-                </p>
-            </div>
-            
-            <div class="footer-col">
-                <h4 class="footer-col-title">Services</h4>
-                <div class="footer-links">
-                    <a href="services.html#websites" class="footer-link">High-Converting Websites</a>
-                    <a href="services.html#chatbots" class="footer-link">Intelligent AI Chatbots</a>
-                    <a href="services.html#email" class="footer-link">Automated Email Pipelines</a>
-                    <a href="services.html#workflow" class="footer-link">Custom Workflow Automation</a>
-                    <a href="services.html#voice" class="footer-link">Autonomous Voice Agents</a>
-                    <a href="services.html#autonomous" class="footer-link">Task-Specific AI Agents</a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="footer-col-title">Company</h4>
-                <div class="footer-links">
-                    <a href="about.html" class="footer-link">About Us</a>
-                    <a href="about.html#founder" class="footer-link">Founder</a>
-                    <a href="#use-cases" class="footer-link">Industry Use Cases</a>
-                    <a href="blog.html" class="footer-link">Blog & Insights</a>
-                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
-                    <a href="terms.html" class="footer-link">Terms of Service</a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="footer-col-title">Connect</h4>
-                <div class="footer-socials">
-                    <a href="https://www.linkedin.com/company/digitalcron/" target="_blank" rel="noopener noreferrer" class="social-link li-link" id="footer-soc-li">
-                        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://instagram.com/sariquezamal" target="_blank" rel="noopener noreferrer" class="social-link ig-link" id="footer-soc-ig">
-                        <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.9 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://x.com/sariquezamal" target="_blank" rel="noopener noreferrer" class="social-link x-link" id="footer-soc-x">
-                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        <span>Twitter</span>
-                    </a>
-                    <a href="https://facebook.com/sariquezamal" target="_blank" rel="noopener noreferrer" class="social-link fb-link" id="footer-soc-fb">
-                        <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
-                        <span>Facebook</span>
-                    </a>
-                    <a href="mailto:contact@digitalcron.com" class="social-link email-link" id="footer-soc-email">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        <span>Email</span>
-                    </a>
-                    <a href="https://wa.me/917328037272" target="_blank" rel="noopener noreferrer" class="social-link wa-link" id="footer-soc-wa">
-                        <svg viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.472 1.332 4.982l-1.356 4.954 5.074-1.33c1.464.798 3.102 1.218 4.773 1.218.066 0 .132 0 .198-.002 5.505-.062 9.923-4.594 9.923-10.099-.001-5.399-4.386-9.789-9.956-9.711zm5.176 13.914c-.218.618-1.282 1.206-1.766 1.26-.444.048-.992.052-1.611-.144-.383-.12-.871-.274-1.493-.541-2.646-1.139-4.348-3.832-4.48-4.009-.131-.177-1.077-1.433-1.077-2.733 0-1.3.682-1.939.925-2.203.243-.264.53-.33.707-.33.177 0 .354.002.508.01.163.008.383-.062.597.45.218.528.751 1.83.817 1.962.066.132.11.286.022.463-.088.176-.132.286-.264.441-.132.155-.278.347-.397.466-.132.132-.27.276-.115.541.155.265.688 1.132 1.474 1.831.992.883 1.83 1.158 2.095 1.291.265.132.42.11.575-.066.155-.177.663-.772.84-1.037.177-.265.354-.221.597-.132.243.088 1.547.728 1.812.861.265.132.442.198.508.309.067.11.067.638-.151 1.256z"/></svg>
-                        <span>WhatsApp</span>
-                    </a>
-                </div>
-            </div>
+      <div class="container footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/logo.jpg" alt="Digital Cron Logo" />
+            <span>DIGITAL CRON</span>
+          </a>
+          <p class="footer-tagline">
+            Premium AI automation solutions for established businesses seeking
+            to optimize operations and drive growth.
+          </p>
         </div>
-        
-        <div class="container footer-bottom">
-            <p>© 2026 Digital Cron. All rights reserved.</p>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <div class="footer-links">
+            <a href="services.html#websites" class="footer-link"
+              >High-Converting Websites</a
+            >
+            <a href="services.html#chatbots" class="footer-link"
+              >Intelligent AI Chatbots</a
+            >
+            <a href="services.html#email" class="footer-link"
+              >Automated Email Pipelines</a
+            >
+            <a href="services.html#workflow" class="footer-link"
+              >Custom Workflow Automation</a
+            >
+            <a href="services.html#voice" class="footer-link"
+              >Autonomous Voice Agents</a
+            >
+            <a href="services.html#autonomous" class="footer-link"
+              >Task-Specific AI Agents</a
+            >
+          </div>
         </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="about.html#founder" class="footer-link">Founder</a>
+            <a href="#use-cases" class="footer-link">Industry Use Cases</a>
+            <a href="blog.html" class="footer-link">Blog & Insights</a>
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="terms.html" class="footer-link">Terms of Service</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <div class="footer-socials">
+            <a
+              href="https://www.linkedin.com/company/digitalcron/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link li-link"
+              id="footer-soc-li"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
+                />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://instagram.com/sariquezamal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link ig-link"
+              id="footer-soc-ig"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.9 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+                />
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a
+              href="https://x.com/sariquezamal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link x-link"
+              id="footer-soc-x"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+              <span>Twitter</span>
+            </a>
+            <a
+              href="https://facebook.com/sariquezamal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link fb-link"
+              id="footer-soc-fb"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"
+                />
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a
+              href="mailto:contact@digitalcron.com"
+              class="social-link email-link"
+              id="footer-soc-email"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <span>Email</span>
+            </a>
+            <a
+              href="https://wa.me/917328037272"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link wa-link"
+              id="footer-soc-wa"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.472 1.332 4.982l-1.356 4.954 5.074-1.33c1.464.798 3.102 1.218 4.773 1.218.066 0 .132 0 .198-.002 5.505-.062 9.923-4.594 9.923-10.099-.001-5.399-4.386-9.789-9.956-9.711zm5.176 13.914c-.218.618-1.282 1.206-1.766 1.26-.444.048-.992.052-1.611-.144-.383-.12-.871-.274-1.493-.541-2.646-1.139-4.348-3.832-4.48-4.009-.131-.177-1.077-1.433-1.077-2.733 0-1.3.682-1.939.925-2.203.243-.264.53-.33.707-.33.177 0 .354.002.508.01.163.008.383-.062.597.45.218.528.751 1.83.817 1.962.066.132.11.286.022.463-.088.176-.132.286-.264.441-.132.155-.278.347-.397.466-.132.132-.27.276-.115.541.155.265.688 1.132 1.474 1.831.992.883 1.83 1.158 2.095 1.291.265.132.42.11.575-.066.155-.177.663-.772.84-1.037.177-.265.354-.221.597-.132.243.088 1.547.728 1.812.861.265.132.442.198.508.309.067.11.067.638-.151 1.256z"
+                />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 Digital Cron. All rights reserved.</p>
+      </div>
     </footer>
 
     <!-- Fixed Bottom Widgets -->
-    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle light/dark theme"></button>
-    
-    <a href="https://wa.me/917328037272" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.472 1.332 4.982l-1.356 4.954 5.074-1.33c1.464.798 3.102 1.218 4.773 1.218.066 0 .132 0 .198-.002 5.505-.062 9.923-4.594 9.923-10.099-.001-5.399-4.386-9.789-9.956-9.711zm5.176 13.914c-.218.618-1.282 1.206-1.766 1.26-.444.048-.992.052-1.611-.144-.383-.12-.871-.274-1.493-.541-2.646-1.139-4.348-3.832-4.48-4.009-.131-.177-1.077-1.433-1.077-2.733 0-1.3.682-1.939.925-2.203.243-.264.53-.33.707-.33.177 0 .354.002.508.01.163.008.383-.062.597.45.218.528.751 1.83.817 1.962.066.132.11.286.022.463-.088.176-.132.286-.264.441-.132.155-.278.347-.397.466-.132.132-.27.276-.115.541.155.265.688 1.132 1.474 1.831.992.883 1.83 1.158 2.095 1.291.265.132.42.11.575-.066.155-.177.663-.772.84-1.037.177-.265.354-.221.597-.132.243.088 1.547.728 1.812.861.265.132.442.198.508.309.067.11.067.638-.151 1.256z"/>
-        </svg>
+    <button
+      class="theme-toggle-btn"
+      id="theme-toggle-btn"
+      aria-label="Toggle light/dark theme"
+    ></button>
+
+    <a
+      href="https://wa.me/917328037272"
+      class="whatsapp-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.472 1.332 4.982l-1.356 4.954 5.074-1.33c1.464.798 3.102 1.218 4.773 1.218.066 0 .132 0 .198-.002 5.505-.062 9.923-4.594 9.923-10.099-.001-5.399-4.386-9.789-9.956-9.711zm5.176 13.914c-.218.618-1.282 1.206-1.766 1.26-.444.048-.992.052-1.611-.144-.383-.12-.871-.274-1.493-.541-2.646-1.139-4.348-3.832-4.48-4.009-.131-.177-1.077-1.433-1.077-2.733 0-1.3.682-1.939.925-2.203.243-.264.53-.33.707-.33.177 0 .354.002.508.01.163.008.383-.062.597.45.218.528.751 1.83.817 1.962.066.132.11.286.022.463-.088.176-.132.286-.264.441-.132.155-.278.347-.397.466-.132.132-.27.276-.115.541.155.265.688 1.132 1.474 1.831.992.883 1.83 1.158 2.095 1.291.265.132.42.11.575-.066.155-.177.663-.772.84-1.037.177-.265.354-.221.597-.132.243.088 1.547.728 1.812.861.265.132.442.198.508.309.067.11.067.638-.151 1.256z"
+        />
+      </svg>
     </a>
 
     <!-- Cal.com Click Embed -->
     <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "30min", {origin:"https://app.cal.com"});
+      (function (C, A, L) {
+        let p = function (a, ar) {
+          a.q.push(ar);
+        };
+        let d = C.document;
+        C.Cal =
+          C.Cal ||
+          function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement("script")).src = A;
+              cal.loaded = true;
+            }
+            if (ar[0] === L) {
+              const api = function () {
+                p(api, arguments);
+              };
+              const namespace = ar[1];
+              api.q = api.q || [];
+              if (typeof namespace === "string") {
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ["initNamespace", namespace]);
+              } else p(cal, ar);
+              return;
+            }
+            p(cal, ar);
+          };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", { origin: "https://app.cal.com" });
       Cal.config = Cal.config || {};
       Cal.config.forwardQueryParams = true;
-      Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["30min"]("ui", {
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
     </script>
 
     <!-- JS script -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
