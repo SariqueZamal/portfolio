@@ -816,6 +816,9 @@ body.light-mode .system-card:hover {
 .system-card-title {
     font-size: 1.25rem;
 }
+.system-card-title p{
+    color: var(--text-muted);
+}
 
 /* Founder Snippet */
 .founder-section {
@@ -883,7 +886,7 @@ body.light-mode .founder-img-wrap {
 
 .founder-bio {
     font-size: 1.02rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.75;
     margin-bottom: 20px;
 }
@@ -974,7 +977,7 @@ body.light-mode .founder-img-wrap {
 
 .engine-subtitle {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.8;
     font-family: var(--font-mono);
 }
@@ -1157,7 +1160,7 @@ body.light-mode .founder-img-wrap {
 
 .step-desc {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.45;
     font-family: var(--font-mono);
 }
@@ -1234,6 +1237,10 @@ body.light-mode .process-card:hover {
     margin-bottom: 12px;
 }
 
+.process-title p {
+    color: var(--text-muted);
+}
+
 /* Industry Use Cases Section */
 .use-case-grid {
     display: grid;
@@ -1271,7 +1278,7 @@ body.light-mode .use-case-card:hover {
 
 .use-case-body {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.65;
     margin-bottom: 0;
     font-family: var(--font-mono);
@@ -1300,7 +1307,7 @@ body.light-mode .use-case-card:hover {
 }
 .cta-desc {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     margin-bottom: 40px;
     max-width: 600px;
     margin-left: auto;
@@ -1362,7 +1369,7 @@ body.light-mode .footer-logo img {
 
 .footer-tagline {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.5;
 }
 
@@ -1374,7 +1381,7 @@ body.light-mode .footer-logo img {
 
 .footer-link {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 .footer-link:hover {
@@ -1392,7 +1399,7 @@ body.light-mode .footer-logo img {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     transition: var(--transition-smooth);
     text-decoration: none;
     width: fit-content;
@@ -1447,7 +1454,7 @@ body.light-mode .footer-logo img {
 
 .page-hero-desc {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.8;
     max-width: 640px;
     margin: 0 auto;
@@ -1474,7 +1481,7 @@ body.light-mode .footer-logo img {
 
 .services-grid-subtitle {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.8;
     max-width: 650px;
     margin: 0 auto;
@@ -1538,16 +1545,16 @@ body.light-mode .services-page-card:hover {
 }
 
 .services-page-card-desc {
-    color: var(--text-secondary);
+    color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
 .card-hook {
     margin-bottom: 24px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.6;
-    color: var(--text-primary);
+    color: var(--text-muted);
 }
 
 .card-bullets {
@@ -1559,14 +1566,14 @@ body.light-mode .services-page-card:hover {
 }
 
 .card-bullets li {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.5;
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 .card-bullets li strong {
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 
@@ -1857,7 +1864,7 @@ body.light-mode .mission-section::before {
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 15px;
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 .mission-cards-grid {
@@ -1915,7 +1922,7 @@ body.light-mode .mission-detail-card {
 .mission-card-text {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 .mission-badge {
