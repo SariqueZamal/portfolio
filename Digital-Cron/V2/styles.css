@@ -1814,17 +1814,8 @@ body.light-mode .services-page-card:hover {
     padding: 0 20px;
   }
 
-  #hero {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .hero-grid {
-    padding: 0;
-  }
-
   .hero-content .section-tag {
-    padding-top: 20px;
+    padding-top: 52px;
   }
 
   .hero-subtitle {
