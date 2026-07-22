@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconnect to external domains for zero-latency network connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://app.cal.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=Fira+Code:wght@400;500&display=swap" />
     <meta name="description" content="Explore our technical services including high-performance web development, AI chatbots, automated voice call agents, and advanced workflow integrations.">
     <meta name="keywords" content="web development, AI chatbots, AI voice agents, workflow automation, digital agency, digital cron">
     <meta name="author" content="Digital Cron">
@@ -41,7 +47,7 @@
     <header id="site-header">
         <div class="container nav-container">
             <a href="index.html" class="brand" id="logo-link">
-                <img src="assets/logo.jpg" alt="Digital Cron Logo">
+                <img src="assets/logo.jpg" alt="Digital Cron Logo" width="38" height="38" decoding="async" fetchpriority="high">
                 <span>DIGITAL CRON</span>
             </a>
             
@@ -236,7 +242,7 @@
         <div class="container footer-top">
             <div class="footer-col">
                 <a href="index.html" class="footer-logo">
-                    <img src="assets/logo.jpg" alt="Digital Cron Logo">
+                    <img src="assets/logo.jpg" alt="Digital Cron Logo" width="38" height="38" decoding="async" fetchpriority="high">
                     <span>DIGITAL CRON</span>
                 </a>
                 <p class="footer-tagline">
@@ -325,6 +331,6 @@
     </script>
 
     <!-- JS script -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
