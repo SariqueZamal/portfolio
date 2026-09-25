@@ -138,8 +138,8 @@
 
     <!-- Hero Section -->
     <section id="hero">
-      <div class="container">
-        <div class="hero-content hero-editorial">
+      <div class="container hero-grid-3d">
+        <div class="hero-content">
           <div class="section-tag">WEBSITES • AI • AUTOMATION</div>
           <h1 class="hero-title">Build a better website.<br /><span class="text-gradient">Automate the work behind it.</span></h1>
           <p class="hero-subtitle">Digital Cron designs modern websites, booking experiences and practical AI automation systems that help businesses attract customers, respond faster and reduce repetitive work.</p>
@@ -160,6 +160,24 @@
             <div class="trust-item"><span class="trust-dot"></span> Founder-Led Studio</div>
             <div class="trust-item"><span class="trust-dot"></span> Practical Business Systems</div>
             <div class="trust-item"><span class="trust-dot"></span> Tailored Scoping</div>
+          </div>
+        </div>
+
+        <div class="hero-3d-wrapper">
+          <div class="hero-3d-stage" id="hero-3d-container">
+            <div class="stage-glow"></div>
+            <canvas id="hero-3d-canvas" aria-label="Interactive 3D Tech Object"></canvas>
+            <div class="tech-hud-top">
+              <span class="hud-status"><span class="hud-dot"></span> ENGINE 3.0</span>
+              <span class="hud-tag">WEB • AI • LOGIC</span>
+            </div>
+            <div class="tech-hud-bottom">
+              <span class="hud-drag-hint">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M19 19l-7 3-7-3M19 5l-7-3-7 3"/></svg>
+                Drag to rotate 3D core
+              </span>
+              <span class="hud-coord">ACTIVE SYSTEM</span>
+            </div>
           </div>
         </div>
       </div>
@@ -455,7 +473,9 @@
       Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
     </script>
 
-    <!-- Core JavaScript -->
+    <!-- Core JavaScript & 3D Interactive Engine -->
+    <script src="three.min.js" defer></script>
+    <script src="hero-3d.js" defer></script>
     <script src="script.js" defer></script>
   </body>
 </html>
