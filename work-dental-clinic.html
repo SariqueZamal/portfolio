@@ -3,31 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dental Clinic Patient Intake & Appointment System | Demonstration Project | Digital Cron</title>
-    <meta name="description" content="A demonstration of how a clinic website can connect patient inquiries, treatment pre-screening, team notifications, and automated follow-up into one unified system. A demonstration architecture built by Digital Cron." />
-    <meta name="keywords" content="Digital Cron, web development studio, AI automation agency, business websites, AI chatbots, workflow automation, AI voice agents, CRM integration, sarique zamal" />
+    <title>Dental Clinic Website + Booking System | Demonstration Project</title>
+    <meta name="description" content="Detailed technical and design documentation for a dental clinic website with online patient appointment requests, service information, and inquiry triage." />
     <meta name="author" content="Digital Cron" />
     <link rel="canonical" href="https://digitalcron.com/work-dental-clinic.html" />
 
-    <!-- Open Graph / Social Media Metadata -->
+    <!-- Open Graph Metadata -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://digitalcron.com/work-dental-clinic.html" />
-    <meta property="og:title" content="Dental Clinic Patient Intake & Appointment System | Demonstration Project | Digital Cron" />
-    <meta property="og:description" content="A demonstration of how a clinic website can connect patient inquiries, treatment pre-screening, team notifications, and automated follow-up into one unified system. A demonstration architecture built by Digital Cron." />
+    <meta property="og:title" content="Dental Clinic Website + Booking System | Demonstration Project" />
+    <meta property="og:description" content="Detailed technical and design documentation for a dental clinic website with online patient appointment requests, service information, and inquiry triage." />
     <meta property="og:image" content="https://digitalcron.com/assets/logo.jpg" />
 
-    <!-- Twitter / X Cards -->
+    <!-- Twitter / X Card Metadata -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dental Clinic Patient Intake & Appointment System | Demonstration Project | Digital Cron" />
-    <meta name="twitter:description" content="A demonstration of how a clinic website can connect patient inquiries, treatment pre-screening, team notifications, and automated follow-up into one unified system. A demonstration architecture built by Digital Cron." />
+    <meta name="twitter:title" content="Dental Clinic Website + Booking System | Demonstration Project" />
+    <meta name="twitter:description" content="Detailed technical and design documentation for a dental clinic website with online patient appointment requests, service information, and inquiry triage." />
     <meta name="twitter:image" content="https://digitalcron.com/assets/logo.jpg" />
 
-    <!-- Preconnect to external resources -->
+    <!-- Preconnect & Google Fonts: Syne + Plus Jakarta Sans + Space Grotesk -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://app.cal.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&family=Fira+Code:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" />
 
     <!-- Favicon Set -->
     <link rel="shortcut icon" href="favicon.ico" />
@@ -51,7 +50,7 @@
     </script>
   </head>
   <body>
-    <!-- Interactive Spotlight Background -->
+    <!-- Spotlight Effect -->
     <div class="spotlight" id="spotlight"></div>
 
     <!-- Main Navigation Header -->
@@ -69,11 +68,10 @@
           <a href="solutions.html" class="nav-link">Solutions</a>
           <a href="work.html" class="nav-link active">Work</a>
           <a href="about.html" class="nav-link">About</a>
-          <a href="insights.html" class="nav-link">Insights</a>
+          <a href="free-audit.html" class="nav-link">Free Audit</a>
         </nav>
 
         <div class="nav-actions">
-          <a href="free-audit.html" class="btn btn-outline">Free Audit</a>
           <button
             class="btn btn-primary"
             id="header-cta-btn"
@@ -107,11 +105,10 @@
         <a href="websites.html" class="mobile-nav-link">Websites</a>
         <a href="ai-automation.html" class="mobile-nav-link">AI Automation</a>
         <a href="solutions.html" class="mobile-nav-link">Solutions</a>
-        <a href="work.html" class="mobile-nav-link active">Work & Demos</a>
+        <a href="work.html" class="mobile-nav-link active">Work</a>
         <a href="about.html" class="mobile-nav-link">About</a>
-        <a href="insights.html" class="mobile-nav-link">Insights & Articles</a>
-        <a href="free-audit.html" class="mobile-nav-link">Request Free Audit</a>
-        <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+        <a href="free-audit.html" class="mobile-nav-link">Free Audit</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
       </div>
       <button
         class="btn btn-primary"
@@ -124,113 +121,65 @@
       </button>
     </div>
 
-    <!-- Page Hero -->
     <section class="page-hero">
-      <div class="container">
+      <div class="container container-narrow">
         <div class="breadcrumb">
-          <a href="index.html">Home</a> <span class="breadcrumb-separator">/</span> <a href="work.html">Work</a> <span class="breadcrumb-separator">/</span> <span>Healthcare & Dental Practice</span>
+          <a href="index.html">Home</a> <span class="breadcrumb-separator">/</span> <a href="work.html">Work</a> <span class="breadcrumb-separator">/</span> <span>Dental Clinic</span>
         </div>
-        <div style="display: flex; justify-content: center; margin-bottom: 14px;">
-          <span class="badge-demo" style="position: static; font-size: 0.8rem; padding: 4px 12px;">DEMONSTRATION PROJECT</span>
-        </div>
+        <div style="margin-bottom: 12px;"><span class="badge-demo">DEMONSTRATION PROJECT</span></div>
         <h1 class="page-hero-title">Dental Clinic Patient Intake & Appointment System</h1>
-        <p class="page-hero-desc">A demonstration of how a clinic website can connect patient inquiries, treatment pre-screening, team notifications, and automated follow-up into one unified system.</p>
-        <button
-          class="btn btn-primary"
-          data-cal-link="sariquezamal/30min"
-          data-cal-namespace="30min"
-          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-        >
-          Discuss a Similar Build
-        </button>
+        <p class="page-hero-desc">A complete project breakdown illustrating how a dental practice can present treatments, address patient anxieties, and automate appointment requests.</p>
       </div>
     </section>
 
-    <!-- Project Context -->
-    <section style="background: var(--bg-surface);">
-      <div class="container">
-        <div class="feature-grid-2">
-          <div class="feature-card" style="border-top: 3px solid #ef4444;">
-            <div class="col-tag" style="color: #f87171;">The Challenge</div>
-            <h3 style="margin: 12px 0;">Operational Bottlenecks</h3>
-            <p>Dental receptionists are overwhelmed fielding calls for routine price quotes and appointment slots, causing phone lines to tie up during peak treatment hours. Inquiries submitted through standard web forms frequently take hours to receive a callback.</p>
-          </div>
-
-          <div class="feature-card" style="border-top: 3px solid var(--blue-accent);">
-            <div class="col-tag" style="color: #818cf8;">The Architecture</div>
-            <h3 style="margin: 12px 0;">The Digital Cron Solution</h3>
-            <p>Digital Cron engineered a modern clinic storefront with a custom appointment selector, automated treatment FAQ assistant, real-time Google Calendar/CRM booking synchronization, and automated SMS appointment reminders.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Workflow Map -->
     <section>
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">System Diagram</div>
-          <h2 class="section-title">End-to-End Workflow Architecture</h2>
-          <p class="section-desc">How data moves seamlessly from initial patient/customer inquiry through to confirmed booking.</p>
+      <div class="container container-narrow">
+        <div class="legal-content">
+          <h2>Business Context</h2>
+          <p>Dental clinics and healthcare practices represent high-trust businesses where prospective patients seek immediate reassurance regarding practitioner qualifications, treatment comfort, pricing transparency, and appointment availability.</p>
+
+          <h2>The Problem</h2>
+          <p>Front-desk receptionists are frequently busy managing in-person patients and checking them in. When prospective patients call with routine questions or try to book appointments, calls go to voicemail or forms sit unread for hours. Patients who cannot quickly find answers often leave to contact competing clinics.</p>
+
+          <h2>Website Strategy</h2>
+          <p>The website is structured around three core patient priorities:</p>
+          <ul>
+            <li><strong>Clear Service Categories:</strong> Preventive care, cosmetic treatments, orthodontics, and restorative procedures with plain-language explanations.</li>
+            <li><strong>Patient Information & FAQs:</strong> Answers to common questions regarding insurance acceptance, payment plans, and first-visit procedures.</li>
+            <li><strong>Direct Appointment Requests:</strong> Prominent, mobile-friendly booking prompts on every treatment page.</li>
+          </ul>
+
+          <h2>User Journey</h2>
+          <p>Visitor arrives on website &rarr; Selects treatment category &rarr; Reads practitioner background and procedure details &rarr; Selects preferred appointment date/time &rarr; Receives instant confirmation and directions.</p>
+
+          <h2>Booking Experience</h2>
+          <p>Patients choose their treatment reason from an intuitive dropdown, pick an available slot directly on the calendar, enter contact details, and receive automated email/SMS confirmations. An automated reminder 24 hours prior to the appointment significantly reduces clinic no-show rates.</p>
+
+          <h2>AI & Automation Opportunities</h2>
+          <p>This demonstration incorporates three approved, practical automation workflows:</p>
+          <ul>
+            <li><strong>AI Chatbot:</strong> Answers routine questions regarding clinic hours, parking, insurance networks, and preparation instructions.</li>
+            <li><strong>Booking & Reminder Automation:</strong> Sends instant booking confirmations, calendar invites, and automated SMS reminders.</li>
+            <li><strong>AI Voice Receptionist:</strong> Answers after-hours phone calls, answers common clinic questions, and records appointment requests for morning confirmation.</li>
+          </ul>
+
+          <h2>Design Decisions</h2>
+          <p>We chose a clean, high-contrast visual design with generous whitespace and clear typography to evoke calm, clinical professionalism. Visual clutter, complicated animations, and aggressive sales prompts were intentionally avoided to maintain patient comfort and trust.</p>
+
+          <h2>Development Approach</h2>
+          <p>Built with lean, semantic HTML5, modern CSS, and lightweight JavaScript to ensure sub-second mobile loading speeds even on weak mobile connections. Accessible form controls ensure smooth navigation for all patients.</p>
+
+          <h2>Outcome & Design Goals</h2>
+          <p>This demonstration is engineered to eliminate front-desk telephone bottlenecks, provide 24/7 patient enquiry capture, and give clinics a credible, modern web asset that patients feel confident visiting.</p>
         </div>
 
-        <div class="process-grid">
-          <div class="process-card">
-            <div class="process-num">01</div>
-            <h3 class="process-title">Storefront Inquiry</h3>
-            <p class="process-desc">Patient selects treatment category (e.g. Invisalign, Cleaning) on mobile-optimized website.</p>
-          </div>
-          <div class="process-card">
-            <div class="process-num">02</div>
-            <h3 class="process-title">Real-Time Slot Selection</h3>
-            <p class="process-desc">Patient selects available time directly from live clinic calendar without back-and-forth.</p>
-          </div>
-          <div class="process-card">
-            <div class="process-num">03</div>
-            <h3 class="process-title">Webhook & CRM Sync</h3>
-            <p class="process-desc">Patient record, notes, and medical intake checklist are pushed instantly to clinic database.</p>
-          </div>
-          <div class="process-card">
-            <div class="process-num">04</div>
-            <h3 class="process-title">Automated Reminders</h3>
-            <p class="process-desc">Patient receives instant confirmation + automated 24h SMS reminder with directions.</p>
-          </div>
-        </div>
-
-        <!-- Tech Stack -->
-        <div class="feature-card" style="margin-top: 40px; padding: 32px; text-align: center;">
-          <h3 style="margin-bottom: 12px;">Technology Stack Used in This Build</h3>
-          <p style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--blue-accent);">Modern Semantic HTML5 / CSS3 • Cal.com API • n8n Webhook Engine • Twilio SMS • Google Workspace Sync</p>
-        </div>
-
-        <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-muted); border-radius: 12px; padding: 20px; text-align: center; margin-top: 30px;">
-          <p style="color: var(--text-muted); font-size: 0.88rem;">
-            <strong>Note:</strong> This is a demonstration project created by Digital Cron to illustrate architectural capabilities and is not presented as a client case study.
-          </p>
+        <div style="margin-top: 40px; padding: 24px; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); text-align: center;">
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">This is a demonstration project created by Digital Cron to showcase practical web architecture and is not presented as a client case study.</p>
+          <a href="contact.html" class="btn btn-primary">Discuss a Similar Healthcare Build</a>
         </div>
       </div>
     </section>
-    <!-- Global Call to Action Section -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="section-tag">Start the Conversation</div>
-        <h2 class="cta-title">Interested in Deploying a Similar System?</h2>
-        <p class="cta-desc">Let's discuss how this architecture can be customized for your exact operational requirements.</p>
-        <div class="cta-actions">
-          <button
-            class="btn btn-primary"
-            data-cal-link="sariquezamal/30min"
-            data-cal-namespace="30min"
-            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-          >
-            <span>Book a Free Consultation</span>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
-          <a href="work.html" class="btn btn-secondary">View Our Work</a>
-          <a href="free-audit.html" class="btn btn-secondary">Get a Free Audit</a>
-        </div>
-      </div>
-    </section>    <!-- Site Footer -->
+    <!-- Site Footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -240,19 +189,10 @@
               <span>DIGITAL CRON</span>
             </a>
             <p class="footer-tagline">Websites that convert. Automation that saves time.</p>
-            <p style="font-size: 0.88rem; color: var(--text-muted);">Digital Cron builds modern web systems and practical AI automation that help businesses capture leads and operate seamlessly.</p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">A premium web development and practical AI automation studio helping businesses build better digital experiences, attract customers, capture enquiries, and automate repetitive work.</p>
             <div class="footer-social-links">
               <a href="https://www.linkedin.com/company/digitalcron/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </a>
-              <a href="https://instagram.com/sariquezamal" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </a>
-              <a href="https://x.com/sariquezamal" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter X">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-              </a>
-              <a href="mailto:contact@digitalcron.com" class="social-icon" aria-label="Email">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
             </div>
           </div>
@@ -260,77 +200,75 @@
           <div>
             <h4 class="footer-heading">Services</h4>
             <ul class="footer-links">
-              <li><a href="websites.html">Business Websites</a></li>
+              <li><a href="websites.html">Websites</a></li>
+              <li><a href="websites.html#seo-websites">SEO Websites</a></li>
+              <li><a href="websites.html#booking-websites">Website + Booking</a></li>
               <li><a href="ai-chatbots.html">AI Chatbots</a></li>
-              <li><a href="workflow-automation.html">Workflow Automation</a></li>
-              <li><a href="ai-voice-agents.html">AI Voice Agents</a></li>
               <li><a href="ai-email-automation.html">AI Email Automation</a></li>
-              <li><a href="crm-automation.html">CRM Automation</a></li>
-              <li><a href="ai-agents.html">Custom AI Agents</a></li>
+              <li><a href="ai-voice-agents.html">AI Voice Receptionist</a></li>
+              <li><a href="ai-automation.html#basic-automation">Basic AI Automation</a></li>
             </ul>
           </div>
 
           <div>
             <h4 class="footer-heading">Company</h4>
             <ul class="footer-links">
-              <li><a href="about.html">About Digital Cron</a></li>
-              <li><a href="work.html">Selected Work</a></li>
-              <li><a href="solutions.html">Business Solutions</a></li>
-              <li><a href="insights.html">Insights & Articles</a></li>
-              <li><a href="free-audit.html">Free Website Audit</a></li>
-              <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="work.html">Work</a></li>
+              <li><a href="solutions.html">Solutions</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="footer-heading">Get Started</h4>
-            <p style="font-size: 0.9rem; margin-bottom: 16px; color: var(--text-secondary);">Projects are scoped around your requirements, complexity, and technology stack. Contact us for a tailored proposal.</p>
+            <h4 class="footer-heading">Consultation</h4>
+            <p style="font-size: 0.88rem; margin-bottom: 16px; color: var(--text-secondary);">Projects are scoped around your requirements, complexity and existing technology. Contact us for a tailored proposal.</p>
             <button
               class="btn btn-primary"
-              style="width: 100%; font-size: 0.88rem; padding: 10px 16px;"
+              style="width: 100%; font-size: 0.86rem; padding: 11px 16px;"
               data-cal-link="sariquezamal/30min"
               data-cal-namespace="30min"
               data-cal-config='{{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}'
             >
               Book a Free Consultation
             </button>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px;">Direct: <a href="mailto:contact@digitalcron.com" style="color: var(--blue-accent);">contact@digitalcron.com</a></p>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2026 Digital Cron. All rights reserved. Founder-led Web & AI Studio.</p>
-          <div class="footer-bottom-links">
+          <p>&copy; 2026 Digital Cron. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <a href="disclaimer.html">Disclaimer</a>
             <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
+            <a href="terms.html">Terms</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Floating Theme Switcher & WhatsApp -->
-    <div class="floating-actions">
-      <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-      </button>
-    </div>
+    <!-- Polished Floating Controls: Theme Switcher (Left) & WhatsApp (Right) -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
 
     <a href="https://wa.me/917328037272" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.472 1.332 4.982l-1.356 4.954 5.074-1.33c1.464.798 3.102 1.218 4.773 1.218.066 0 .132 0 .198-.002 5.505-.062 9.923-4.594 9.923-10.099-.001-5.399-4.386-9.789-9.956-9.711zm5.176 13.914c-.218.618-1.282 1.206-1.766 1.26-.444.048-.992.052-1.611-.144-.383-.12-.871-.274-1.493-.541-2.646-1.139-4.348-3.832-4.48-4.009-.131-.177-1.077-1.433-1.077-2.733 0-1.3.682-1.939.925-2.203.243-.264.53-.33.707-.33.177 0 .354.002.508.01.163.008.383-.062.597.45.218.528.751 1.83.817 1.962.066.132.11.286.022.463-.088.176-.132.286-.264.441-.132.155-.278.347-.397.466-.132.132-.27.276-.115.541.155.265.688 1.132 1.474 1.831.992.883 1.83 1.158 2.095 1.291.265.132.42.11.575-.066.155-.177.663-.772.84-1.037.177-.265.354-.221.597-.132.243.088 1.547.728 1.812.861.265.132.442.198.508.309.067.11.067.638-.151 1.256z"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.472 1.332 4.982l-1.356 4.954 5.074-1.33c1.464.798 3.102 1.218 4.773 1.218.066 0 .132 0 .198-.002 5.505-.062 9.923-4.594 9.923-10.099-.001-5.399-4.386-9.789-9.956-9.711zm5.176 13.914c-.218.618-1.282 1.206-1.766 1.26-.444.048-.992.052-1.611-.144-.383-.12-.871-.274-1.493-.541-2.646-1.139-4.348-3.832-4.48-4.009-.131-.177-1.077-1.433-1.077-2.733 0-1.3.682-1.939.925-2.203.243-.264.53-.33.707-.33.177 0 .354.002.508.01.163.008.383-.062.597.45.218.528.751 1.83.817 1.962.066.132.11.286.022.463-.088.176-.132.286-.264.441-.132.155-.278.347-.397.466-.132.132-.27.276-.115.541.155.265.688 1.132 1.474 1.831.992.883 1.83 1.158 2.095 1.291.265.132.42.11.575-.066.155-.177.663-.772.84-1.037.177-.265.354-.221.597-.132.243.088 1.547.728 1.812.861.265.132.442.198.508.309.067.11.067.638-.151 1.256z"/></svg>
     </a>
 
-    <!-- Cal.com Click Embed Loader -->
+    <!-- Cal.com Embed Loader -->
     <script type="text/javascript">
       (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
       Cal("init", "30min", {origin:"https://app.cal.com"});
