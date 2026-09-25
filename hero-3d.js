@@ -49,7 +49,7 @@
     // 4. Inner Glowing Energy Core
     const innerGeo = new THREE.OctahedronGeometry(0.52, 0);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: 0x10b981
+      color: 0x6366f1
     });
     const innerMesh = new THREE.Mesh(innerGeo, innerMat);
     masterGroup.add(innerMesh);
@@ -69,7 +69,7 @@
     const vertexPointsGeo = new THREE.BufferGeometry();
     vertexPointsGeo.setAttribute("position", wireGeo.attributes.position);
     const vertexPointsMat = new THREE.PointsMaterial({
-      color: 0x10b981,
+      color: 0x818cf8,
       size: 0.075,
       transparent: true,
       opacity: 0.85
@@ -78,10 +78,10 @@
     masterGroup.add(vertexPoints);
 
     // 6. Gyroscopic Cron Orbital Rings (Automation Cycles)
-    // Ring 1: Primary Emerald Orbit
+    // Ring 1: Primary Electric Indigo Orbit
     const ring1Geo = new THREE.TorusGeometry(2.05, 0.024, 16, 100);
     const ring1Mat = new THREE.MeshStandardMaterial({
-      color: 0x10b981,
+      color: 0x6366f1,
       metalness: 0.9,
       roughness: 0.15
     });
@@ -110,7 +110,7 @@
 
     // Satellite beacon on Ring 2
     const sat2Geo = new THREE.SphereGeometry(0.055, 16, 16);
-    const sat2Mat = new THREE.MeshBasicMaterial({ color: 0x10b981 });
+    const sat2Mat = new THREE.MeshBasicMaterial({ color: 0x818cf8 });
     const sat2 = new THREE.Mesh(sat2Geo, sat2Mat);
     ring2.add(sat2);
 
@@ -155,11 +155,11 @@
     dirLight1.position.set(4, 5, 4);
     scene.add(dirLight1);
 
-    const dirLight2 = new THREE.DirectionalLight(0x10b981, 2.2);
+    const dirLight2 = new THREE.DirectionalLight(0x6366f1, 2.5);
     dirLight2.position.set(-4, -3, 3);
     scene.add(dirLight2);
 
-    const coreLight = new THREE.PointLight(0x10b981, 3.5, 4);
+    const coreLight = new THREE.PointLight(0x6366f1, 3.8, 4);
     scene.add(coreLight);
 
     // 9. Pointer Drag & Momentum Physics
