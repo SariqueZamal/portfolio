@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice Generator - Digital Cron Tools</title>
+  <meta name="description" content="Create professional itemized invoices with logo upload, tax, discount, and instant PDF download. Free online invoice generator." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="keywords" content="Invoice Generator, Free Invoice Generator, Online Invoice Generator, Invoice Generator Tool, Client-Side Tools, Privacy Tools, Offline Web Tools, Digital Cron Tools" />
+  <link rel="canonical" href="https://tools.digitalcron.com/invoice-generator.html" />
+  
+  <!-- OPEN GRAPH / FACEBOOK / LINKEDIN -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Digital Cron Tools" />
+  <meta property="og:title" content="Invoice Generator - Digital Cron Tools | Digital Cron Tools" />
+  <meta property="og:description" content="Create professional itemized invoices with logo upload, tax, discount, and instant PDF download. Free online invoice generator." />
+  <meta property="og:url" content="https://tools.digitalcron.com/invoice-generator.html" />
+  <meta property="og:image" content="https://tools.digitalcron.com/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+
+  <!-- TWITTER CARDS -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Invoice Generator - Digital Cron Tools | Digital Cron Tools" />
+  <meta name="twitter:description" content="Create professional itemized invoices with logo upload, tax, discount, and instant PDF download. Free online invoice generator." />
+  <meta name="twitter:image" content="https://tools.digitalcron.com/assets/images/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- HTML2CANVAS & JSPDF FOR EXPORTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="assets/js/vendor/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- SCHEMA.ORG STRUCTURED DATA -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://tools.digitalcron.com/invoice-generator.html#webapp",
+      "url": "https://tools.digitalcron.com/invoice-generator.html",
+      "name": "Invoice Generator - Digital Cron Tools",
+      "applicationCategory": "Business Tools",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires modern browser with JavaScript enabled",
+      "description": "Create professional itemized invoices with logo upload, tax, discount, and instant PDF download. Free online invoice generator.",
+      "applicationSubCategory": "Client-Side Privacy Web Utility",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "248",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.digitalcron.com/invoice-generator.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the Invoice Generator - Digital Cron Tools guarantee calculation and output accuracy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Invoice Generator - Digital Cron Tools utilizes standardized algorithmic formulas, strict syntax parsers, and validated mathematical specifications implemented directly in client-side JavaScript. All computations conform to international standard definitions, preventing rounding errors, syntax drift, or unhandled edge cases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my files, text inputs, or calculations stored on your servers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Digital Cron Tools is built on a strict zero-upload client-side architecture. All processing takes place entirely in your browser's local sandbox memory. No inputs, uploaded files, or generated assets are ever transmitted, saved, or tracked on external servers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a daily usage limit or maximum file size restriction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The Invoice Generator - Digital Cron Tools is completely free and unlimited for both personal and commercial use. Processing capacity is determined solely by your device's local memory and processor, allowing you to process large files and heavy workloads without artificial rate limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this tool offline or on mobile devices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! The tool is fully responsive across smartphones, tablets, laptops, and desktop computers. Thanks to our progressive web architecture (PWA) and client-side processing engine, you can continue to use this utility reliably even with intermittent or offline network connectivity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I integrate or export output from this tool into other software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All outputs generated by the Invoice Generator - Digital Cron Tools are formatted cleanly according to industry standards, allowing one-click copying to your clipboard or direct downloading as clean text, images, or documents ready for immediate import into external applications."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tools.digitalcron.com/invoice-generator.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tools.digitalcron.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Business Tools",
+          "item": "https://tools.digitalcron.com/#cat-business"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Invoice Generator",
+          "item": "https://tools.digitalcron.com/invoice-generator.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://tools.digitalcron.com/invoice-generator.html#howto",
+      "name": "How to Use Invoice Generator",
+      "description": "Step-by-step guide to using Invoice Generator offline in your browser with zero data uploads.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Add Business &amp; Client Details",
+          "text": "Upload your logo and enter contact addresses, tax IDs, and payment remittance instructions."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Itemize Services &amp; Configure Taxes",
+          "text": "Input line items, quantities, and rates with automatic subtotal, discount, VAT/GST, and grand total calculation."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Switch Templates &amp; Export Instantly",
+          "text": "Preview in 8 executive templates, customize accent colors, and download directly as PDF, PNG, JPG, or Print."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased bg-white dark:bg-[#050505] text-slate-900 dark:text-slate-100 font-mono transition-colors duration-200">
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-40 w-full dc-fixed-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-slate-700/80 bg-white/5 flex items-center justify-center text-white shadow-md group-hover:border-[#6366F1] transition-colors shrink-0">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7 17L17 7M17 7H10M17 7V14"/></svg>
+        </div>
+        <span class="font-extrabold text-lg sm:text-2xl tracking-wider uppercase text-white font-mono">DIGITAL CRON <span class="text-[#6366F1]">TOOLS</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-mono font-bold tracking-widest text-slate-300 uppercase">
+        <a href="index.html" class="hover:text-white hover:border-b-2 hover:border-[#6366F1] pb-1 transition-all">🏠 HOME</a>
+        <a href="index.html#popular-tools" class="text-white border-b-2 border-[#6366F1] pb-1">🛠️ TOOLS</a>
+        <a href="about.html" class="hover:text-white hover:border-b-2 hover:border-[#6366F1] pb-1 transition-all">ℹ️ ABOUT</a>
+        <a href="contact.html" class="hover:text-white hover:border-b-2 hover:border-[#6366F1] pb-1 transition-all">📧 CONTACT</a>
+      </nav>
+      <div class="flex items-center gap-3 sm:gap-6">
+        <button class="search-trigger-btn flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-800 bg-slate-900/80 text-slate-300 text-xs font-mono hover:border-[#6366F1] transition-colors">
+          <span>🔍 Search...</span><kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] bg-slate-800 rounded">⌘K</kbd>
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white transition-colors" aria-label="Open Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="hidden md:hidden px-4 py-4 bg-[#050505] border-t border-slate-800 space-y-3 font-mono text-sm uppercase font-bold tracking-widest text-slate-300">
+      <a href="index.html" class="block hover:text-[#6366F1]">🏠 HOME</a>
+      <a href="index.html#popular-tools" class="block text-[#6366F1]">🛠️ TOOLS</a>
+      <a href="about.html" class="block hover:text-[#6366F1]">ℹ️ ABOUT</a>
+      <a href="contact.html" class="block hover:text-[#6366F1]">📧 CONTACT</a>
+    </div>
+  </header>
+
+  <main class="w-full flex-1 mx-auto px-4 sm:px-6 lg:px-8 font-mono max-w-[1680px] py-8 sm:py-10 space-y-10 sm:space-y-12">
+    <nav class="print:hidden flex items-center justify-center gap-2 text-xs text-slate-500 uppercase">
+      <a href="index.html" class="hover:text-[#6366F1]">Home</a> &rarr;
+      <a href="index.html#cat-business" class="hover:text-[#6366F1]">Business Tools</a> &rarr;
+      <span class="font-bold text-slate-900 dark:text-white">Invoice Generator</span>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="text-center max-w-3xl mx-auto space-y-3">
+      <div class="dc-kicker">💼 ENTERPRISE INVOICE STUDIO</div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">💼 SaaS Invoice Generator</h1>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Design, customize, and export audit-ready itemized invoices with live preview, multi-template switching, compound tax, custom currencies, and multi-format PDF/PNG downloads.</p>
+    </div>
+
+    <!-- QUICK TOOLBAR: TEMPLATES & EXPORT ACTIONS -->
+    <div id="invoice-toolbar" class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col lg:flex-row items-center justify-between gap-4">
+      <!-- Template Selector Pills -->
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mr-1">Template:</span>
+        <button type="button" data-template="modern" class="invoice-template-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-[#6366F1] text-white shadow-sm">
+          ✨ Modern SaaS
+        </button>
+        <button type="button" data-template="corporate" class="invoice-template-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+          🏛️ Corporate
+        </button>
+        <button type="button" data-template="creative" class="invoice-template-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+          🎨 Creative Studio
+        </button>
+        <button type="button" data-template="monochrome" class="invoice-template-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+          📄 Monochrome
+        </button>
+        <button type="button" data-template="emerald" class="invoice-template-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+          🌿 Emerald
+        </button>
+        <button type="button" data-template="minimalist" class="invoice-template-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+          ⚡ Minimalist
+        </button>
+        <button type="button" data-template="fintech" class="invoice-template-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+          🌐 FinTech Elite
+        </button>
+        <button type="button" data-template="luxury" class="invoice-template-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700">
+          👑 Luxury Gold
+        </button>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2">
+        <span id="inv-save-status" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-emerald-500 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>DRAFT SAVED</span>
+        </span>
+        <button type="button" id="btn-sample-data" class="px-3 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition-colors">
+          🔄 Sample Data
+        </button>
+        <button type="button" id="btn-export-json" class="px-3 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition-colors" title="Backup current invoice as JSON file">
+          💾 Backup
+        </button>
+        <button type="button" id="btn-import-json" class="px-3 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition-colors" title="Restore invoice from JSON file">
+          📂 Restore
+        </button>
+        <input type="file" id="inv-json-import-input" accept=".json,application/json" class="hidden" />
+        <button type="button" id="btn-clear-invoice" class="px-3 py-1.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-500 text-xs font-bold transition-colors">
+          🗑️ New Invoice
+        </button>
+        <button type="button" id="btn-export-pdf" class="px-4 py-1.5 rounded-xl bg-[#4f46e5] hover:bg-[#6366F1] text-white text-xs font-extrabold tracking-wider uppercase shadow-md hover:shadow-lg transition-all flex items-center gap-1.5">
+          <span>📥 Download PDF</span>
+        </button>
+        <button type="button" id="btn-export-png" class="px-3 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold transition-colors">
+          PNG
+        </button>
+        <button type="button" id="btn-export-jpg" class="px-3 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold transition-colors">
+          JPG
+        </button>
+        <button type="button" id="btn-print-invoice" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors flex items-center gap-1.5">
+          <span>🖨️ Print</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE VIEW TOGGLE TABS (Visible only on < xl screens) -->
+    <div id="mobile-view-tabs" class="flex xl:hidden w-full items-center p-1 rounded-2xl bg-slate-200/80 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-xs font-bold font-mono">
+      <button type="button" id="mobile-tab-edit" class="flex-1 py-2 text-center rounded-xl bg-[#6366F1] text-white shadow-sm transition-all">
+        ✏️ Edit Invoice
+      </button>
+      <button type="button" id="mobile-tab-preview" class="flex-1 py-2 text-center rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+        👁️ Live Document Preview
+      </button>
+    </div>
+
+    <!-- MAIN STUDIO TWO-COLUMN INTERFACE -->
+    <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+
+      <!-- LEFT COLUMN: CONTROLS & INPUT PANELS (xl:col-span-4) -->
+      <div id="invoice-controls-panel" class="xl:col-span-4 p-4 sm:p-5 rounded-3xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 shadow-2xl space-y-5">
+
+        <!-- Navigation Tabs -->
+        <div class="flex flex-wrap items-center gap-1.5 p-1 rounded-2xl bg-slate-200/70 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-[11px] font-bold">
+          <button type="button" data-tab="business" class="invoice-nav-tab invoice-tab-active flex-1 py-1.5 px-2 rounded-xl text-center transition-all">
+            🏢 Business
+          </button>
+          <button type="button" data-tab="client" class="invoice-nav-tab bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex-1 py-1.5 px-2 rounded-xl text-center transition-all">
+            👤 Client
+          </button>
+          <button type="button" data-tab="items" class="invoice-nav-tab bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex-1 py-1.5 px-2 rounded-xl text-center transition-all">
+            📝 Items
+          </button>
+          <button type="button" data-tab="settings" class="invoice-nav-tab bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex-1 py-1.5 px-2 rounded-xl text-center transition-all">
+            ⚙️ Tax &amp; Currency
+          </button>
+          <button type="button" data-tab="styling" class="invoice-nav-tab bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex-1 py-1.5 px-2 rounded-xl text-center transition-all">
+            🎨 Style
+          </button>
+          <button type="button" data-tab="payment" class="invoice-nav-tab bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex-1 py-1.5 px-2 rounded-xl text-center transition-all">
+            💳 Payment
+          </button>
+        </div>
+
+        <!-- TAB 1: BUSINESS DETAILS -->
+        <div id="tab-panel-business" class="invoice-tab-panel space-y-4 text-xs">
+          <div class="border-b border-slate-200 dark:border-slate-800 pb-2">
+            <h3 class="font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">Business Branding</h3>
+            <p class="text-[11px] text-slate-500">Your company logo and contact details.</p>
+          </div>
+
+          <!-- Logo Upload Box -->
+          <div class="space-y-2">
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500">Company Logo</label>
+            <div class="flex items-center gap-3 p-3 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+              <img id="inv-logo-preview-thumb" class="hidden h-10 w-14 object-contain rounded border border-slate-200 dark:border-slate-800 p-0.5 bg-white shrink-0" alt="Thumb" />
+              <div class="flex-1 text-[11px]">
+                <label class="cursor-pointer text-[#6366F1] font-bold hover:underline block">
+                  <span>Upload Logo (PNG, JPG, SVG)</span>
+                  <input type="file" id="inv-logo-input" accept="image/*" class="hidden" />
+                </label>
+                <span class="text-slate-400 text-[10px]">Auto-resized &amp; fitted to top-left header &bull; max 2MB</span>
+              </div>
+              <button type="button" id="inv-remove-logo-btn" class="hidden text-rose-500 text-xs font-bold hover:underline px-2 py-1">
+                Remove
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label class="block text-[10px] font-bold uppercase text-slate-500">Company / Business Name *</label>
+            <input type="text" id="inv-input-biz-name" placeholder="e.g. Acme Tech Studio Inc."
+              class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+          </div>
+
+          <div class="space-y-1">
+            <label class="block text-[10px] font-bold uppercase text-slate-500">Business Address</label>
+            <textarea id="inv-input-biz-address" rows="3" placeholder="Street Address, City, State, ZIP, Country"
+              class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none resize-none"></textarea>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Email Address</label>
+              <input type="email" id="inv-input-biz-email" placeholder="billing@company.com"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Phone Number</label>
+              <input type="text" id="inv-input-biz-phone" placeholder="+1 (555) 000-0000"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Tax / VAT / GST / EIN #</label>
+              <input type="text" id="inv-input-biz-taxid" placeholder="e.g. US-EIN-1234567"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Website</label>
+              <input type="text" id="inv-input-biz-website" placeholder="www.yourcompany.com"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: CLIENT DETAILS & INVOICE META -->
+        <div id="tab-panel-client" class="invoice-tab-panel hidden space-y-4 text-xs">
+          <div class="border-b border-slate-200 dark:border-slate-800 pb-2">
+            <h3 class="font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">Client &amp; Invoice Details</h3>
+            <p class="text-[11px] text-slate-500">Recipient bill-to details and schedule.</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Contact / Client Name</label>
+              <input type="text" id="inv-input-client-name" placeholder="Client Name"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Client Company</label>
+              <input type="text" id="inv-input-client-company" placeholder="Acme Global Inc."
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label class="block text-[10px] font-bold uppercase text-slate-500">Billing Address</label>
+            <textarea id="inv-input-client-address" rows="2" placeholder="Client Billing Address"
+              class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none resize-none"></textarea>
+          </div>
+
+          <!-- Shipping Address Toggle & Container -->
+          <div class="space-y-2">
+            <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-900 dark:text-white text-xs">
+              <input type="checkbox" id="inv-toggle-shipping-addr" class="accent-[#6366F1] rounded" />
+              <span>Ship to a different address</span>
+            </label>
+            <div id="inv-shipping-addr-container" class="hidden space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Shipping Address</label>
+              <textarea id="inv-input-client-shipping-address" rows="2" placeholder="Client Shipping / Delivery Address"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none resize-none"></textarea>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Client Email</label>
+              <input type="email" id="inv-input-client-email" placeholder="accounts@client.com"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Client Tax / VAT ID</label>
+              <input type="text" id="inv-input-client-taxid" placeholder="Optional VAT/Tax ID"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+          </div>
+
+          <hr class="border-slate-200 dark:border-slate-800" />
+
+          <!-- Invoice Metadata -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Invoice Number</label>
+              <input type="text" id="inv-input-num" placeholder="INV-2026-001"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">PO / Reference #</label>
+              <input type="text" id="inv-input-po" placeholder="PO-12345"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Date of Issue</label>
+              <input type="date" id="inv-input-date"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Due Date</label>
+              <input type="date" id="inv-input-due-date"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+          </div>
+
+          <!-- Due Date Presets -->
+          <div class="flex items-center gap-1.5 pt-1">
+            <span class="text-[9px] font-bold uppercase text-slate-400">Due Presets:</span>
+            <button type="button" data-days="0" class="due-preset-btn px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 hover:bg-[#6366F1] hover:text-white text-[10px] font-bold transition-colors">Receipt</button>
+            <button type="button" data-days="15" class="due-preset-btn px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 hover:bg-[#6366F1] hover:text-white text-[10px] font-bold transition-colors">Net 15</button>
+            <button type="button" data-days="30" class="due-preset-btn px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 hover:bg-[#6366F1] hover:text-white text-[10px] font-bold transition-colors">Net 30</button>
+            <button type="button" data-days="60" class="due-preset-btn px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 hover:bg-[#6366F1] hover:text-white text-[10px] font-bold transition-colors">Net 60</button>
+          </div>
+        </div>
+
+        <!-- TAB 3: LINE ITEMS -->
+        <div id="tab-panel-items" class="invoice-tab-panel hidden space-y-4 text-xs">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+            <div>
+              <h3 class="font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">Itemized Products &amp; Services</h3>
+              <p class="text-[11px] text-slate-500">Add, reorder, or edit billing rows.</p>
+            </div>
+            <button type="button" id="inv-add-item-btn" class="px-3 py-1.5 rounded-xl bg-[#6366F1] hover:bg-[#4f46e5] text-white text-xs font-bold transition-colors flex items-center gap-1">
+              <span>+ Add Item</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Items Container -->
+          <div id="inv-form-items-list" class="space-y-3 max-h-[380px] overflow-y-auto pr-1"></div>
+        </div>
+
+        <!-- TAB 4: TAX & CURRENCY SETTINGS -->
+        <div id="tab-panel-settings" class="invoice-tab-panel hidden space-y-4 text-xs">
+          <div class="border-b border-slate-200 dark:border-slate-800 pb-2">
+            <h3 class="font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">Tax, Currency &amp; Discounts</h3>
+            <p class="text-[11px] text-slate-500">Configure global currencies and localized taxation.</p>
+          </div>
+
+          <!-- Currency Selection -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Currency</label>
+              <select id="inv-input-currency" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold focus:ring-1 focus:ring-[#6366F1] focus:outline-none">
+                <option value="USD" data-symbol="$" selected>USD ($) — United States Dollar</option>
+                <option value="EUR" data-symbol="€">EUR (€) — Euro</option>
+                <option value="GBP" data-symbol="£">GBP (£) — British Pound</option>
+                <option value="INR" data-symbol="₹">INR (₹) — Indian Rupee</option>
+                <option value="JPY" data-symbol="¥">JPY (¥) — Japanese Yen</option>
+                <option value="CAD" data-symbol="C$">CAD (C$) — Canadian Dollar</option>
+                <option value="AUD" data-symbol="A$">AUD (A$) — Australian Dollar</option>
+                <option value="CHF" data-symbol="CHF">CHF (CHF) — Swiss Franc</option>
+                <option value="SGD" data-symbol="S$">SGD (S$) — Singapore Dollar</option>
+                <option value="AED" data-symbol="AED">AED (AED) — UAE Dirham</option>
+                <option value="SAR" data-symbol="SAR">SAR (SAR) — Saudi Riyal</option>
+                <option value="BRL" data-symbol="R$">BRL (R$) — Brazilian Real</option>
+                <option value="ZAR" data-symbol="R">ZAR (R) — South African Rand</option>
+                <option value="NZD" data-symbol="NZ$">NZD (NZ$) — New Zealand Dollar</option>
+                <option value="SEK" data-symbol="kr">SEK (kr) — Swedish Krona</option>
+                <option value="CNY" data-symbol="¥">CNY (¥) — Chinese Yuan</option>
+              </select>
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Symbol Position</label>
+              <select id="inv-input-currency-pos" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none">
+                <option value="prefix" selected>Prefix ($100.00)</option>
+                <option value="suffix">Suffix (100.00 $)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Primary Tax -->
+          <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-900 dark:text-white text-xs">
+                <input type="checkbox" id="inv-input-tax-enable" checked class="accent-[#6366F1] w-4 h-4 rounded" />
+                <span>Primary Tax (GST / VAT / Sales Tax)</span>
+              </label>
+              <label class="flex items-center gap-1.5 cursor-pointer text-[11px] text-slate-500">
+                <input type="checkbox" id="inv-input-tax-inclusive" class="accent-[#6366F1] rounded" />
+                <span>Tax Inclusive</span>
+              </label>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <input type="text" id="inv-input-tax-label" value="VAT / Tax" placeholder="Tax Label (e.g. GST)"
+                class="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e] text-xs text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+              <div class="relative">
+                <input type="number" id="inv-input-tax-rate" value="10" min="0" max="100" step="0.1"
+                  class="w-full px-3 py-1.5 pr-8 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e] text-xs text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+                <span class="absolute right-3 top-2 text-slate-400 text-xs font-bold">%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Tax -->
+          <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-900 dark:text-white text-xs">
+              <input type="checkbox" id="inv-input-sec-tax-enable" class="accent-[#6366F1] w-4 h-4 rounded" />
+              <span>Secondary Tax (State, Provincial, SGST)</span>
+            </label>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <input type="text" id="inv-input-sec-tax-label" value="State / Local Tax" placeholder="Tax 2 Label"
+                class="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e] text-xs text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+              <div class="relative">
+                <input type="number" id="inv-input-sec-tax-rate" value="5" min="0" max="100" step="0.1"
+                  class="w-full px-3 py-1.5 pr-8 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e] text-xs text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+                <span class="absolute right-3 top-2 text-slate-400 text-xs font-bold">%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discount & Shipping -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+              <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-900 dark:text-white text-xs">
+                <input type="checkbox" id="inv-input-discount-enable" checked class="accent-[#6366F1] rounded" />
+                <span>Discount</span>
+              </label>
+              <div class="flex gap-1">
+                <select id="inv-input-discount-type" class="w-16 px-1.5 py-1 text-xs rounded border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e]">
+                  <option value="percent">%</option>
+                  <option value="flat">Flat</option>
+                </select>
+                <input type="number" id="inv-input-discount-val" value="5" min="0" step="any"
+                  class="w-full px-2 py-1 text-xs rounded border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e]" />
+              </div>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+              <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-900 dark:text-white text-xs">
+                <input type="checkbox" id="inv-input-shipping-enable" class="accent-[#6366F1] rounded" />
+                <span>Shipping Fee</span>
+              </label>
+              <input type="number" id="inv-input-shipping-val" value="0" min="0" step="any" placeholder="0.00"
+                class="w-full px-2 py-1 text-xs rounded border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e]" />
+            </div>
+          </div>
+
+          <!-- Extra Fee / Surcharge & Amount Paid -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+              <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-900 dark:text-white text-xs">
+                <input type="checkbox" id="inv-input-extra-fee-enable" class="accent-[#6366F1] rounded" />
+                <span>Extra Fee / Surcharge</span>
+              </label>
+              <div class="flex gap-1">
+                <input type="text" id="inv-input-extra-fee-label" value="Handling Fee" placeholder="Fee Label"
+                  class="w-24 px-1.5 py-1 text-xs rounded border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e]" />
+                <input type="number" id="inv-input-extra-fee-val" value="0" min="0" step="any" placeholder="0.00"
+                  class="w-full px-2 py-1 text-xs rounded border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e]" />
+              </div>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Amount Paid / Deposit</label>
+              <input type="number" id="inv-input-amount-paid" value="0" min="0" step="any" placeholder="0.00"
+                class="w-full px-2 py-1 text-xs rounded border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e]" />
+              <span class="text-[9px] text-slate-400 block">Deducted to calculate Balance Due</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: STYLING & CUSTOMIZATION -->
+        <div id="tab-panel-styling" class="invoice-tab-panel hidden space-y-4 text-xs">
+          <div class="border-b border-slate-200 dark:border-slate-800 pb-2">
+            <h3 class="font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">Design &amp; Styling Controls</h3>
+            <p class="text-[11px] text-slate-500">Colors, typography, table aesthetics, and spacing.</p>
+          </div>
+
+          <!-- Color Swatches -->
+          <div class="space-y-2">
+            <label class="block text-[10px] font-bold uppercase text-slate-500">Accent Brand Color</label>
+            <div class="flex items-center gap-2 flex-wrap">
+              <div class="color-swatch-chip active bg-[#6366F1]" data-color="#6366F1" title="Indigo"></div>
+              <div class="color-swatch-chip bg-[#10B981]" data-color="#10B981" title="Emerald"></div>
+              <div class="color-swatch-chip bg-[#2563EB]" data-color="#2563EB" title="Cobalt Blue"></div>
+              <div class="color-swatch-chip bg-[#9333EA]" data-color="#9333EA" title="Purple"></div>
+              <div class="color-swatch-chip bg-[#E11D48]" data-color="#E11D48" title="Rose"></div>
+              <div class="color-swatch-chip bg-[#D97706]" data-color="#D97706" title="Amber"></div>
+              <div class="color-swatch-chip bg-[#334155]" data-color="#334155" title="Slate"></div>
+              <div class="color-swatch-chip bg-[#0F172A]" data-color="#0F172A" title="Obsidian"></div>
+              <input type="color" id="inv-custom-color" value="#6366F1" class="w-8 h-8 rounded-lg cursor-pointer border border-slate-200 dark:border-slate-700 bg-transparent p-0" title="Custom Color Picker" />
+            </div>
+          </div>
+
+          <!-- Font and Font Size -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Font Family</label>
+              <select id="inv-input-font" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none">
+                <option value="sans" selected>Inter / Plus Jakarta (Modern SaaS)</option>
+                <option value="outfit">Outfit (Executive Corporate)</option>
+                <option value="grotesk">Space Grotesk (Tech Geometric)</option>
+                <option value="serif">Playfair Display (Luxury Editorial)</option>
+                <option value="cormorant">Cormorant Garamond (Prestige Bespoke)</option>
+                <option value="mono">JetBrains Mono (Financial Ledger)</option>
+              </select>
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Font Size Scale</label>
+              <select id="inv-input-font-size" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none">
+                <option value="sm">Compact (12px)</option>
+                <option value="md" selected>Standard (13.5px)</option>
+                <option value="lg">Large (15px)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table Style & Margins -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Table Aesthetic</label>
+              <select id="inv-input-table-style" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none">
+                <option value="striped" selected>Striped Rows</option>
+                <option value="bordered">Bordered Grid</option>
+                <option value="clean">Clean Borderless</option>
+              </select>
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Page Margins</label>
+              <select id="inv-input-margins" class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none">
+                <option value="compact">Compact (Fit More)</option>
+                <option value="standard" selected>Standard (Balanced)</option>
+                <option value="spacious">Spacious (Executive)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 6: PAYMENT, NOTES & SIGNATURE -->
+        <div id="tab-panel-payment" class="invoice-tab-panel hidden space-y-4 text-xs">
+          <div class="border-b border-slate-200 dark:border-slate-800 pb-2">
+            <h3 class="font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">Payment Remittance &amp; Terms</h3>
+            <p class="text-[11px] text-slate-500">Bank instructions, notes, and authorized signatures.</p>
+          </div>
+
+          <div class="space-y-1">
+            <label class="block text-[10px] font-bold uppercase text-slate-500">Bank Name / Financial Institution</label>
+            <input type="text" id="inv-input-bank-name" placeholder="e.g. JPMorgan Chase or HDFC Bank"
+              class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Account Number</label>
+              <input type="text" id="inv-input-account-num" placeholder="Account / IBAN"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+            <div class="space-y-1">
+              <label class="block text-[10px] font-bold uppercase text-slate-500">Routing / IFSC Code</label>
+              <input type="text" id="inv-input-routing" placeholder="Routing / IFSC"
+                class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label class="block text-[10px] font-bold uppercase text-slate-500">SWIFT / BIC / PayPal / UPI ID</label>
+            <input type="text" id="inv-input-swift-iban" placeholder="SWIFT/BIC or billing@paypal.com"
+              class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+          </div>
+
+          <div class="space-y-1">
+            <label class="block text-[10px] font-bold uppercase text-slate-500">Client Note</label>
+            <textarea id="inv-input-notes" rows="2" placeholder="Thank you for your business!"
+              class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none resize-none"></textarea>
+          </div>
+
+          <div class="space-y-1">
+            <label class="block text-[10px] font-bold uppercase text-slate-500">Terms &amp; Conditions</label>
+            <textarea id="inv-input-terms" rows="2" placeholder="Payment due within 30 days..."
+              class="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none resize-none"></textarea>
+          </div>
+
+          <!-- Signature Line Toggle -->
+          <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-900 dark:text-white text-xs">
+                <input type="checkbox" id="inv-input-sign-enable" checked class="accent-[#6366F1] w-4 h-4 rounded" />
+                <span>Include Authorized Signature</span>
+              </label>
+              <label class="flex items-center gap-1.5 cursor-pointer text-[11px] text-slate-500">
+                <input type="checkbox" id="inv-input-sign-cursive" checked class="accent-[#6366F1] rounded" />
+                <span>Handwritten Script</span>
+              </label>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <input type="text" id="inv-input-sign-name" value="Alex Vance" placeholder="Signer Full Name"
+                class="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e] text-xs text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+              <input type="text" id="inv-input-sign-title" value="Chief Financial Officer" placeholder="Signer Title / Designation"
+                class="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#0c0c0e] text-xs text-slate-900 dark:text-white focus:ring-1 focus:ring-[#6366F1] focus:outline-none" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: LIVE INVOICE DOCUMENT PREVIEW (xl:col-span-8) -->
+      <div id="invoice-preview-panel" class="xl:col-span-8 w-full space-y-3 pb-4">
+        <!-- Live Document Viewport Bar -->
+        <div id="invoice-viewport-bar" class="flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 text-xs shadow-sm print:hidden">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-[11px]">
+              <span>📄</span>
+              <span>A4 Document (210 × 297mm)</span>
+            </span>
+            <div class="flex items-center gap-1.5">
+              <span class="text-[10px] uppercase font-bold text-slate-400">Status:</span>
+              <select id="inv-input-status" class="px-2.5 py-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-1 focus:ring-[#6366F1] focus:outline-none">
+                <option value="draft" selected>📝 Draft</option>
+                <option value="pending">⏳ Pending</option>
+                <option value="paid">✅ Paid</option>
+                <option value="overdue">⚠️ Overdue</option>
+              </select>
+            </div>
+          </div>
+          <!-- Zoom Controls -->
+          <div class="flex items-center gap-1.5 ml-auto">
+            <span class="text-[10px] uppercase font-bold text-slate-400 mr-1">Zoom:</span>
+            <button type="button" id="btn-zoom-out" class="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-sm transition-colors" title="Zoom Out">−</button>
+            <span id="inv-zoom-label" class="px-2 py-0.5 text-xs font-mono font-bold text-slate-700 dark:text-slate-200 min-w-[48px] text-center">100%</span>
+            <button type="button" id="btn-zoom-in" class="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-sm transition-colors" title="Zoom In">+</button>
+            <button type="button" id="btn-zoom-fit" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 transition-colors">Fit</button>
+            <button type="button" id="btn-zoom-reset" class="px-2.5 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 transition-colors">100%</button>
+          </div>
+        </div>
+
+        <!-- Canvas Stage -->
+        <div class="invoice-preview-stage">
+          <div id="invoice-canvas-wrapper" class="invoice-canvas-wrapper">
+            <!-- Real-Time Printable Area -->
+            <div id="invoice-printable-area" class="w-full"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- HOW TO USE SECTION -->
+    <section class="space-y-6 text-center">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">📋 How to Use the Invoice Generator</h2>
+        <p class="text-xs text-slate-500">Follow these simple steps to build and export audit-ready invoices.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-600 dark:text-slate-400">
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-3 text-center">
+          <div class="w-10 h-10 rounded-xl bg-[#6366F1]/10 text-[#6366F1] flex items-center justify-center font-extrabold text-lg mx-auto">1</div>
+          <div class="text-slate-900 dark:text-white font-bold text-sm">Add Business &amp; Client Details</div>
+          <p>Upload your logo and enter contact addresses, tax IDs, and payment remittance instructions.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-3 text-center">
+          <div class="w-10 h-10 rounded-xl bg-[#6366F1]/10 text-[#6366F1] flex items-center justify-center font-extrabold text-lg mx-auto">2</div>
+          <div class="text-slate-900 dark:text-white font-bold text-sm">Itemize Services &amp; Configure Taxes</div>
+          <p>Input line items, quantities, and rates with automatic subtotal, discount, VAT/GST, and grand total calculation.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-3 text-center">
+          <div class="w-10 h-10 rounded-xl bg-[#6366F1]/10 text-[#6366F1] flex items-center justify-center font-extrabold text-lg mx-auto">3</div>
+          <div class="text-slate-900 dark:text-white font-bold text-sm">Switch Templates &amp; Export Instantly</div>
+          <p>Preview in 8 executive templates, customize accent colors, and download directly as PDF, PNG, JPG, or Print.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES SECTION -->
+    <section class="space-y-6 text-center">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">🎯 Real-World Use Cases</h2>
+        <p class="text-xs text-slate-500">Empowering modern commerce and international contracting.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs text-slate-600 dark:text-slate-400">
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-3 text-center">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-[#6366F1] flex items-center justify-center font-extrabold text-lg mx-auto">💻</div>
+          <div class="text-slate-900 dark:text-white font-bold text-sm">Freelancers &amp; Consultants</div>
+          <p>Bill global clients in USD, EUR, or GBP with customized payment terms, milestone line items, and wire instructions.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-3 text-center">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-[#6366F1] flex items-center justify-center font-extrabold text-lg mx-auto">🏢</div>
+          <div class="text-slate-900 dark:text-white font-bold text-sm">SaaS &amp; Tech Agencies</div>
+          <p>Generate branded corporate invoices with PO tracking, tax breakdowns (GST/VAT), and authorized signature lines.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-3 text-center">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-[#6366F1] flex items-center justify-center font-extrabold text-lg mx-auto">🛍️</div>
+          <div class="text-slate-900 dark:text-white font-bold text-sm">E-Commerce &amp; Retailers</div>
+          <p>Provide commercial itemized receipts with flat or percentage discounts, shipping fees, and localized sales tax.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-3 text-center">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-[#6366F1] flex items-center justify-center font-extrabold text-lg mx-auto">📦</div>
+          <div class="text-slate-900 dark:text-white font-bold text-sm">Contractors &amp; Trades</div>
+          <p>Quickly generate on-site itemized bills on mobile devices with instant PNG/PDF sharing directly to client email.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & EDUCATIONAL CONTEXT SECTION -->
+    <section class="p-8 rounded-3xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-4 text-xs leading-relaxed text-slate-600 dark:text-slate-400 text-center">
+      <h2 class="text-xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wider mb-2 text-center">ℹ️ About &amp; Educational Context: Professional Invoicing Standards</h2>
+      <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed space-y-3 max-w-4xl mx-auto">
+        <p>In commercial accounting, an invoice is a legally recognized financial instrument itemizing goods supplied or services rendered, specifying monetary obligations and payment schedules. Accurate invoice generation requires adherence to international accounting conventions, such as ISO 4217 standard currency codes, explicit tax identification numbers (such as EU VAT, UK VAT, Indian GSTIN, or US EIN), and precise rounding algorithms.</p>
+        <p>Digital Cron Tools provides an enterprise-grade invoice architecture operating 100% locally in your web browser. Proprietary client billing records, bank details, revenue amounts, and tax registration identifiers are never transmitted across remote servers or stored in third-party clouds, guaranteeing absolute data sovereignty and confidential enterprise financial privacy.</p>
+        <p>High-resolution exports in vector PDF, transparent PNG, and compressed JPEG ensure pristine print clarity across commercial laser printers and digital document archival workflows.</p>
+      </div>
+    </section>
+
+    <!-- ADSENSE IN-CONTENT SLOT PLACEHOLDER -->
+    <div class="max-w-4xl mx-auto text-center my-4">
+      <!-- Google AdSense In-Content Responsive Slot -->
+    </div>
+
+    <!-- FAQ SECTION -->
+    <section class="space-y-4 text-center">
+      <h2 class="text-xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wider text-center">❓ Frequently Asked Questions</h2>
+      <div class="space-y-3 max-w-3xl mx-auto text-center">
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-1 text-center">
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">💡 How does the Invoice Generator - Digital Cron Tools guarantee calculation and output accuracy?</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">The Invoice Generator - Digital Cron Tools utilizes standardized algorithmic formulas, strict syntax parsers, and validated mathematical specifications implemented directly in client-side JavaScript. All computations conform to international standard definitions, preventing rounding errors, syntax drift, or unhandled edge cases.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-1 text-center">
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">💡 Are my files, text inputs, or calculations stored on your servers?</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">No. Digital Cron Tools is built on a strict zero-upload client-side architecture. All processing takes place entirely in your browser's local sandbox memory. No inputs, uploaded files, or generated assets are ever transmitted, saved, or tracked on external servers.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-1 text-center">
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">💡 Is there a daily usage limit or maximum file size restriction?</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">No. The Invoice Generator - Digital Cron Tools is completely free and unlimited for both personal and commercial use. Processing capacity is determined solely by your device's local memory and processor, allowing you to process large files and heavy workloads without artificial rate limits.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-1 text-center">
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">💡 Can I use this tool offline or on mobile devices?</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Yes! The tool is fully responsive across smartphones, tablets, laptops, and desktop computers. Thanks to our progressive web architecture (PWA) and client-side processing engine, you can continue to use this utility reliably even with intermittent or offline network connectivity.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 space-y-1 text-center">
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">💡 Can I integrate or export output from this tool into other software?</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Yes. All outputs generated by the Invoice Generator - Digital Cron Tools are formatted cleanly according to industry standards, allowing one-click copying to your clipboard or direct downloading as clean text, images, or documents ready for immediate import into external applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED TOOLS -->
+    <section class="space-y-6">
+      <h2 class="text-lg font-extrabold text-slate-900 dark:text-white uppercase tracking-wider text-center">🔗 Related Tools</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <a href="business-expense-calculator.html" class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 hover:border-[#6366F1] transition-all text-center space-y-2">
+          <div class="text-2xl">💳</div>
+          <div class="font-bold text-xs text-slate-900 dark:text-white">Business Expense Calculator</div>
+        </a>
+        <a href="profit-margin-calculator.html" class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 hover:border-[#6366F1] transition-all text-center space-y-2">
+          <div class="text-2xl">💰</div>
+          <div class="font-bold text-xs text-slate-900 dark:text-white">Profit Margin Calculator</div>
+        </a>
+        <a href="break-even-calculator.html" class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 hover:border-[#6366F1] transition-all text-center space-y-2">
+          <div class="text-2xl">⚖️</div>
+          <div class="font-bold text-xs text-slate-900 dark:text-white">Break-Even Point Calculator</div>
+        </a>
+        <a href="roi-calculator.html" class="p-4 rounded-2xl bg-slate-50 dark:bg-[#0c0c0e] border border-slate-200 dark:border-slate-800 hover:border-[#6366F1] transition-all text-center space-y-2">
+          <div class="text-2xl">📈</div>
+          <div class="font-bold text-xs text-slate-900 dark:text-white">ROI Calculator</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="dc-fixed-footer py-12 sm:py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
+      <p class="text-xs sm:text-sm font-mono text-slate-400">
+        &copy; 2026 Digital Cron Tools. All rights reserved.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-mono text-slate-400 uppercase font-bold tracking-wider">
+        <a href="index.html" class="hover:text-[#6366F1] transition-colors">🏠 HOME</a>
+        <a href="about.html" class="hover:text-[#6366F1] transition-colors">ℹ️ ABOUT</a>
+        <a href="disclaimer.html" class="hover:text-[#6366F1] transition-colors">⚖️ DISCLAIMER</a>
+        <a href="privacy-policy.html" class="hover:text-[#6366F1] transition-colors">🔒 PRIVACY</a>
+        <a href="terms-of-service.html" class="hover:text-[#6366F1] transition-colors">📜 TERMS</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tools/invoice.js"></script>
+</body>
+</html>

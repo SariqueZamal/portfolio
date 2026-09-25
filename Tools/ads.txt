@@ -1,0 +1,10 @@
+# ==============================================================================
+# Google AdSense Authorized Digital Sellers (ads.txt)
+# Digital Cron Tools (tools.digitalcron.com)
+#
+# Instructions:
+# When your Google AdSense account is approved, replace 'pub-XXXXXXXXXXXXXXXX'
+# with your actual 16-digit AdSense Publisher ID (e.g. pub-1234567890123456).
+# ==============================================================================
+
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
