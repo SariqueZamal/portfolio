@@ -35,9 +35,8 @@
 
     // 3. Central Faceted AI Crystal Core (Icosahedron)
     const coreGeo = new THREE.IcosahedronGeometry(1.0, 0); // Flat-shaded tech crystal
-    const isInitialLight = document.body.classList.contains("light-mode");
     const coreMat = new THREE.MeshStandardMaterial({
-      color: isInitialLight ? 0x0284c7 : 0x06b6d4,
+      color: 0x06b6d4,
       roughness: 0.18,
       metalness: 0.88,
       flatShading: true,
@@ -58,7 +57,7 @@
     // 5. Cybernetic Wireframe Cage with Vertex Points
     const wireGeo = new THREE.IcosahedronGeometry(1.36, 1);
     const wireMat = new THREE.MeshBasicMaterial({
-      color: isInitialLight ? 0x0284c7 : 0x38bdf8,
+      color: 0x38bdf8,
       wireframe: true,
       transparent: true,
       opacity: 0.38
@@ -118,7 +117,7 @@
     // Ring 3: Equatorial Halo Ring
     const ring3Geo = new THREE.TorusGeometry(1.48, 0.014, 12, 70);
     const ring3Mat = new THREE.MeshBasicMaterial({
-      color: isInitialLight ? 0x4f46e5 : 0x818cf8,
+      color: 0x818cf8,
       transparent: true,
       opacity: 0.55
     });
@@ -243,21 +242,7 @@
     }, { threshold: 0.05 });
     observer.observe(container);
 
-    // 12. Theme Switch Listener
-    const themeToggleBtn = document.getElementById("theme-toggle-btn");
-    function updateThemeColors() {
-      const isLight = document.body.classList.contains("light-mode");
-      coreMat.color.setHex(isLight ? 0x0284c7 : 0x06b6d4);
-      wireMat.color.setHex(isLight ? 0x0284c7 : 0x38bdf8);
-      ring3Mat.color.setHex(isLight ? 0x4f46e5 : 0x818cf8);
-    }
-    if (themeToggleBtn) {
-      themeToggleBtn.addEventListener("click", () => {
-        setTimeout(updateThemeColors, 60);
-      });
-    }
-
-    // 13. Main Render Loop
+    // 12. Main Render Loop
     let clock = new THREE.Clock();
     let animationFrameId;
 
