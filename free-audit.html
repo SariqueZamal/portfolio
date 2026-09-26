@@ -82,14 +82,14 @@
 
         <div class="nav-actions">
           <button
-            class="btn btn-primary"
+            class="btn-pill btn-pill-primary"
             id="header-cta-btn"
             data-cal-link="sariquezamal/30min"
             data-cal-namespace="30min"
             data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
           >
-            <span>Book a Free Consultation</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <span>Book a Consultation</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
           <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
             <span></span>
@@ -120,13 +120,13 @@
         <a href="contact.html" class="mobile-nav-link">Contact</a>
       </div>
       <button
-        class="btn btn-primary"
+        class="btn-pill btn-pill-primary"
         style="width: 100%; margin-top: auto;"
         data-cal-link="sariquezamal/30min"
         data-cal-namespace="30min"
         data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
       >
-        Book a Free Consultation
+        <span>Book a Consultation</span>
       </button>
     </div>
 
@@ -135,94 +135,194 @@
         <div class="breadcrumb">
           <a href="index.html">Home</a> <span class="breadcrumb-separator">/</span> <span>Free Audit</span>
         </div>
-        <div class="section-tag">Complimentary Review</div>
-        <h1 class="page-hero-title">Get a Free Website & Automation Audit</h1>
+        <div class="hero-badge-pill" style="margin-bottom: 24px;">
+          <span class="hero-badge-dot"></span>
+          <span>Complimentary Technical &amp; Operational Review</span>
+        </div>
+        <h1 class="page-hero-title">Get a Free Website &amp; Automation Audit</h1>
         <p class="page-hero-desc">We review your existing website and customer journey to identify concrete opportunities to improve speed, conversion, and repetitive manual tasks.</p>
       </div>
     </section>
 
     <section>
-      <div class="container container-narrow">
-        <div class="form-container">
-          <form class="interactive-form" id="audit-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="audit-name">Your Name <span class="required">*</span></label>
-                <input class="form-input" type="text" id="audit-name" name="name" required placeholder="Alex Mercer" />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="audit-business">Business Name <span class="required">*</span></label>
-                <input class="form-input" type="text" id="audit-business" name="business" required placeholder="Mercer Dental Practice" />
-              </div>
-            </div>
+      <div class="container">
+        <div class="split-layout" style="align-items: flex-start; gap: 48px;">
+          
+          <!-- Left: Promo Sidebar -->
+          <div class="promo-sidebar">
+            <div class="sidebar-tag">COMPREHENSIVE • ACTIONABLE • ZERO OBLIGATION</div>
+            <h2 class="sidebar-title">What You Get in Your Digital Audit</h2>
+            <p class="sidebar-desc">Founder Sarique Zamal personally inspects your website and customer interaction flows to uncover where you're losing leads and wasting manual hours.</p>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="audit-email">Business Email <span class="required">*</span></label>
-                <input class="form-input" type="email" id="audit-email" name="email" required placeholder="alex@mercerdental.com" />
+            <div class="sidebar-checklist">
+              <div class="sidebar-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Core Web Vitals &amp; mobile speed benchmarking</span>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="audit-website">Current Website URL</label>
-                <input class="form-input" type="url" id="audit-website" name="website" placeholder="https://mercerdental.com" />
+              <div class="sidebar-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>UX clarity, typography &amp; navigation friction review</span>
               </div>
-            </div>
-
-            <!-- EXPLICITLY STYLED DROPDOWN VISIBLE IN BOTH DARK & LIGHT THEMES -->
-            <div class="form-group">
-              <label class="form-label" for="audit-help">What do you need the most help with? <span class="required">*</span></label>
-              <select class="form-select" id="audit-help" name="primary_help" required>
-                <option value="" disabled selected>Please select an option...</option>
-                <option value="business_website">Building a New Business Website</option>
-                <option value="website_redesign">Redesigning Outdated Website</option>
-                <option value="seo_website">SEO-Focused Website & Search Visibility</option>
-                <option value="booking_website">Website + Appointment Booking System</option>
-                <option value="landing_page">High-Converting Landing Page</option>
-                <option value="ai_chatbot">AI Chatbot for Customer Enquiries</option>
-                <option value="ai_email">AI Email Automation</option>
-                <option value="ai_voice">AI Voice Receptionist for Phone Calls</option>
-                <option value="basic_automation">Basic Business AI Automation</option>
-                <option value="booking_automation">Booking & Appointment Automation</option>
-                <option value="general_audit">General Digital Review & Recommendations</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="audit-challenge">What is your biggest operational or customer challenge right now?</label>
-              <textarea class="form-textarea" id="audit-challenge" name="challenge" placeholder="e.g. Visitors leave without booking, or staff spend too much time answering routine phone calls..."></textarea>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Preferred Contact Method</label>
-              <div style="display: flex; gap: 20px; font-size: 0.92rem; color: var(--text-secondary); margin-top: 6px;">
-                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
-                  <input type="radio" name="preferred_contact" value="email" checked /> Email
-                </label>
-                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
-                  <input type="radio" name="preferred_contact" value="whatsapp" /> WhatsApp
-                </label>
-                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
-                  <input type="radio" name="preferred_contact" value="call" /> Video Consultation
-                </label>
+              <div class="sidebar-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Lead capture &amp; booking conversion opportunities</span>
+              </div>
+              <div class="sidebar-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AI automation potential for routine support &amp; emails</span>
+              </div>
+              <div class="sidebar-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Clear priority roadmap delivered in 24–48 hours</span>
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 14px;">
-              Request My Free Audit &rarr;
-            </button>
-            <p class="form-hint" style="text-align: center; margin-top: 10px;">We review each request personally and respond within 24–48 hours with actionable suggestions.</p>
-          </form>
+            <div class="perfect-for-card">
+              <div class="perfect-for-label">PERFECT FOR</div>
+              <div class="perfect-for-text">
+                Businesses experiencing low website conversions, high inquiry response times, or planning a website redesign and wanting expert technical direction.
+              </div>
+            </div>
 
-          <div class="form-success-banner">
-            <h3 style="color: #6366f1; margin-bottom: 8px;">Audit Request Received</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 16px;">Thank you for requesting an audit. Founder Sarique Zamal will review your website and customer touchpoints and respond with actionable insights.</p>
+            <div style="margin-top: 32px; padding: 20px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: var(--radius-md);">
+              <div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 6px;">Need advice immediately?</div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">Schedule a direct 30-minute discovery call to evaluate your architecture live.</p>
+              <button
+                class="btn-pill btn-pill-primary"
+                style="width: 100%; justify-content: center; font-size: 0.86rem;"
+                data-cal-link="sariquezamal/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
+                <span>Schedule Live Discovery Call</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Audit Form -->
+          <div style="flex: 1; width: 100%;">
+            <div class="form-container">
+              <form class="interactive-form" id="audit-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="audit-name">Your Name <span class="required">*</span></label>
+                    <input class="form-input" type="text" id="audit-name" name="name" required placeholder="Alex Mercer" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="audit-business">Business Name <span class="required">*</span></label>
+                    <input class="form-input" type="text" id="audit-business" name="business" required placeholder="Mercer Dental Practice" />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="audit-email">Business Email <span class="required">*</span></label>
+                    <input class="form-input" type="email" id="audit-email" name="email" required placeholder="alex@mercerdental.com" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="audit-website">Current Website URL</label>
+                    <input class="form-input" type="url" id="audit-website" name="website" placeholder="https://mercerdental.com" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="audit-help">What do you need the most help with? <span class="required">*</span></label>
+                  <select class="form-select" id="audit-help" name="primary_help" required>
+                    <option value="" disabled selected>Please select an option...</option>
+                    <option value="business_website">Building a New Business Website</option>
+                    <option value="website_redesign">Redesigning Outdated Website</option>
+                    <option value="seo_website">SEO-Focused Website &amp; Search Visibility</option>
+                    <option value="booking_website">Website + Appointment Booking System</option>
+                    <option value="landing_page">High-Converting Landing Page</option>
+                    <option value="ai_chatbot">AI Chatbot for Customer Enquiries</option>
+                    <option value="ai_email">AI Email Automation</option>
+                    <option value="ai_voice">AI Voice Receptionist for Phone Calls</option>
+                    <option value="basic_automation">Basic Business AI Automation</option>
+                    <option value="booking_automation">Booking &amp; Appointment Automation</option>
+                    <option value="general_audit">General Digital Review &amp; Recommendations</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="audit-challenge">What is your biggest operational or customer challenge right now?</label>
+                  <textarea class="form-textarea" id="audit-challenge" name="challenge" placeholder="e.g. Visitors leave without booking, or staff spend too much time answering routine phone calls..."></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Preferred Contact Method</label>
+                  <div style="display: flex; gap: 20px; font-size: 0.92rem; color: var(--text-secondary); margin-top: 6px;">
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                      <input type="radio" name="preferred_contact" value="email" checked /> Email
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                      <input type="radio" name="preferred_contact" value="whatsapp" /> WhatsApp
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                      <input type="radio" name="preferred_contact" value="call" /> Video Consultation
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-pill btn-pill-primary" style="width: 100%; font-size: 1rem; padding: 14px; justify-content: center;">
+                  <span>Request My Free Audit</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <p class="form-hint" style="text-align: center; margin-top: 10px;">We review each request personally and respond within 24–48 hours with actionable suggestions.</p>
+              </form>
+
+              <div class="form-success-banner">
+                <h3 style="color: #6366f1; margin-bottom: 8px;">Audit Request Received</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 16px;">Thank you for requesting an audit. Founder Sarique Zamal will review your website and customer touchpoints and respond with actionable insights.</p>
+                <button
+                  class="btn-pill btn-pill-primary"
+                  data-cal-link="sariquezamal/30min"
+                  data-cal-namespace="30min"
+                  data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                >
+                  <span>Prefer to Talk Live? Book a Consultation Call</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Indigo Transform Banner -->
+    <section style="padding: 40px 0 80px;">
+      <div class="container">
+        <div class="transform-banner-ref">
+          <h2 class="transform-title">Ready to Upgrade Your Digital Infrastructure?</h2>
+          <p class="transform-desc">From lightning-fast websites to autonomous customer intake pipelines, let's discuss how we can engineer real growth for your business.</p>
+          <div class="transform-actions">
             <button
-              class="btn btn-primary"
+              class="btn-white-pill"
               data-cal-link="sariquezamal/30min"
               data-cal-namespace="30min"
               data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
             >
-              Prefer to Talk Live? Book a Consultation Call
+              <span>Book a Consultation</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
+            <a href="work.html" class="btn-pill btn-pill-secondary" style="border-color: rgba(255,255,255,0.3); color: #fff;">
+              <span>View Case Studies</span>
+            </a>
+          </div>
+          <div class="transform-checklist">
+            <div class="checklist-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Direct access to senior engineers</span>
+            </div>
+            <div class="checklist-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Clean, production-grade source code</span>
+            </div>
+            <div class="checklist-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero lock-in & full IP ownership</span>
+            </div>
           </div>
         </div>
       </div>
@@ -272,14 +372,14 @@
           <div>
             <h4 class="footer-heading">Consultation</h4>
             <p style="font-size: 0.88rem; margin-bottom: 16px; color: var(--text-secondary);">Projects are scoped around your requirements, complexity and existing technology. Contact us for a tailored proposal.</p>
-            <button
-              class="btn btn-primary"
-              style="width: 100%; font-size: 0.86rem; padding: 11px 16px;"
+                        <button
+              class="btn-pill btn-pill-primary"
+              style="width: 100%; font-size: 0.86rem; padding: 11px 16px; justify-content: center;"
               data-cal-link="sariquezamal/30min"
               data-cal-namespace="30min"
-              data-cal-config='{{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}'
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
             >
-              Book a Free Consultation
+              <span>Book a Consultation</span>
             </button>
           </div>
         </div>

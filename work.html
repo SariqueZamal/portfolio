@@ -82,14 +82,14 @@
 
         <div class="nav-actions">
           <button
-            class="btn btn-primary"
+            class="btn-pill btn-pill-primary"
             id="header-cta-btn"
             data-cal-link="sariquezamal/30min"
             data-cal-namespace="30min"
             data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
           >
-            <span>Book a Free Consultation</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <span>Book a Consultation</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
           <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
             <span></span>
@@ -119,14 +119,14 @@
         <a href="free-audit.html" class="mobile-nav-link">Free Audit</a>
         <a href="contact.html" class="mobile-nav-link">Contact</a>
       </div>
-      <button
-        class="btn btn-primary"
+            <button
+        class="btn-pill btn-pill-primary"
         style="width: 100%; margin-top: auto;"
         data-cal-link="sariquezamal/30min"
         data-cal-namespace="30min"
         data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
       >
-        Book a Free Consultation
+        <span>Book a Consultation</span>
       </button>
     </div>
 
@@ -135,14 +135,26 @@
         <div class="breadcrumb">
           <a href="index.html">Home</a> <span class="breadcrumb-separator">/</span> <span>Work</span>
         </div>
-        <div class="section-tag">Methodology & Demonstration Projects</div>
-        <h1 class="page-hero-title">How We Approach Real Business Problems</h1>
-        <p class="page-hero-desc">We believe in deliberate process over guesswork. Explore how we work through each engagement, alongside detailed demonstration architectures built for specific business models.</p>
+        <div class="hero-badge-pill"><span class="hero-badge-dot"></span> Proven Architectures & Delivery</div>
+        <h1 class="page-hero-title">Real Results, Real <span class="text-gradient">Impact</span></h1>
+        <p class="page-hero-desc">We believe in deliberate process over guesswork. Explore how we engineer digital solutions through disciplined stages, alongside functional demonstration architectures built for specific business models.</p>
+        <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+          <button
+            class="btn btn-primary btn-pill-primary"
+            data-cal-link="sariquezamal/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            <span>Book a Free Consultation</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <a href="#process" class="btn btn-secondary btn-pill-secondary">View 7-Stage Process &darr;</a>
+        </div>
       </div>
     </section>
 
     <!-- 7-Stage Professional Process -->
-    <section style="background: var(--bg-surface);">
+    <section id="process" style="background: var(--bg-surface);">
       <div class="container">
         <div class="section-header">
           <div class="section-tag">How We Work</div>
@@ -219,44 +231,110 @@
           <p class="section-desc">To illustrate how we solve operational bottlenecks, we build complete proof-of-concept architectures for common business types. These are clearly labeled demonstration projects, not client case studies.</p>
         </div>
 
-        <div class="service-grid-3">
+        <div class="case-grid-3">
           <!-- Demo 1: Dental Clinic -->
-          <div class="service-card">
-            <div style="margin-bottom: 14px;">
-              <span class="badge-demo">Demonstration Project</span>
+          <div class="case-card-ref">
+            <div class="case-preview-box">
+              <div class="case-preview-telemetry">
+                <span>DEMO ARCHITECTURE</span>
+                <span class="badge-demo" style="font-size: 0.68rem; padding: 2px 8px;">Proof of Concept</span>
+              </div>
+              <div class="case-graph-mockup">
+                <div class="graph-bar" style="height: 45%;"></div>
+                <div class="graph-bar" style="height: 65%;"></div>
+                <div class="graph-bar" style="height: 85%;"></div>
+                <div class="graph-bar" style="height: 100%;"></div>
+              </div>
             </div>
-            <div>
-              <div class="service-icon">🦷</div>
-              <h3 class="service-title">Dental Clinic Website + Booking System</h3>
-              <p class="service-desc">A demonstration of how a specialized dental clinic website connects patient treatment information, inquiry triage, and calendar booking into one smooth flow.</p>
+            <div class="case-card-body">
+              <span class="case-category">Healthcare / Booking Architecture</span>
+              <h3 class="case-title">Dental Clinic Website + Booking System</h3>
+              <p class="case-desc">A demonstration of how a specialized dental clinic website connects patient treatment information, inquiry triage, and calendar booking into one smooth flow.</p>
+              <div class="case-metrics-row">
+                <div class="case-metric-stat">
+                  <span class="case-metric-val">100%</span>
+                  <span class="case-metric-label">Automated Triage</span>
+                </div>
+                <div class="case-metric-stat">
+                  <span class="case-metric-val">&lt; 1.2s</span>
+                  <span class="case-metric-label">Speed Score</span>
+                </div>
+              </div>
+              <a href="work-dental-clinic.html" class="case-link-btn">
+                <span>View Project Breakdown</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
             </div>
-            <a href="work-dental-clinic.html" class="service-link-text">Read Detailed Project Breakdown &rarr;</a>
           </div>
 
           <!-- Demo 2: Salon & Spa -->
-          <div class="service-card">
-            <div style="margin-bottom: 14px;">
-              <span class="badge-demo">Demonstration Project</span>
+          <div class="case-card-ref">
+            <div class="case-preview-box">
+              <div class="case-preview-telemetry">
+                <span>DEMO ARCHITECTURE</span>
+                <span class="badge-demo" style="font-size: 0.68rem; padding: 2px 8px;">Proof of Concept</span>
+              </div>
+              <div class="case-graph-mockup">
+                <div class="graph-bar" style="height: 50%;"></div>
+                <div class="graph-bar" style="height: 70%;"></div>
+                <div class="graph-bar" style="height: 90%;"></div>
+                <div class="graph-bar" style="height: 95%;"></div>
+              </div>
             </div>
-            <div>
-              <div class="service-icon">✂️</div>
-              <h3 class="service-title">Salon & Spa Website + Appointment System</h3>
-              <p class="service-desc">A demonstration showing service menus, stylist portfolios, online appointment requests, automated confirmations, and customer question triage.</p>
+            <div class="case-card-body">
+              <span class="case-category">Lifestyle / Scheduling Flow</span>
+              <h3 class="case-title">Salon & Spa Website + Appointment System</h3>
+              <p class="case-desc">A demonstration showing service menus, stylist portfolios, online appointment requests, automated confirmations, and customer question triage.</p>
+              <div class="case-metrics-row">
+                <div class="case-metric-stat">
+                  <span class="case-metric-val">24/7</span>
+                  <span class="case-metric-label">Instant Booking</span>
+                </div>
+                <div class="case-metric-stat">
+                  <span class="case-metric-val">Zero</span>
+                  <span class="case-metric-label">Manual Dispatch</span>
+                </div>
+              </div>
+              <a href="work-salon-booking.html" class="case-link-btn">
+                <span>View Project Breakdown</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
             </div>
-            <a href="work-salon-booking.html" class="service-link-text">Read Detailed Project Breakdown &rarr;</a>
           </div>
 
           <!-- Demo 3: Home Services -->
-          <div class="service-card">
-            <div style="margin-bottom: 14px;">
-              <span class="badge-demo">Demonstration Project</span>
+          <div class="case-card-ref">
+            <div class="case-preview-box">
+              <div class="case-preview-telemetry">
+                <span>DEMO ARCHITECTURE</span>
+                <span class="badge-demo" style="font-size: 0.68rem; padding: 2px 8px;">Proof of Concept</span>
+              </div>
+              <div class="case-graph-mockup">
+                <div class="graph-bar" style="height: 40%;"></div>
+                <div class="graph-bar" style="height: 60%;"></div>
+                <div class="graph-bar" style="height: 80%;"></div>
+                <div class="graph-bar" style="height: 100%;"></div>
+              </div>
             </div>
-            <div>
-              <div class="service-icon">🛠️</div>
-              <h3 class="service-title">Local Home Services Website + Quote System</h3>
-              <p class="service-desc">A demonstration of how a home service contractor can showcase service areas, capture quote requests, and triage after-hours phone calls with an AI receptionist.</p>
+            <div class="case-card-body">
+              <span class="case-category">Field Services / Lead Qualification</span>
+              <h3 class="case-title">Local Home Services Website + Quote System</h3>
+              <p class="case-desc">A demonstration of how a home service contractor can showcase service areas, capture quote requests, and triage after-hours phone calls with an AI receptionist.</p>
+              <div class="case-metrics-row">
+                <div class="case-metric-stat">
+                  <span class="case-metric-val">99.8%</span>
+                  <span class="case-metric-label">Call Capture</span>
+                </div>
+                <div class="case-metric-stat">
+                  <span class="case-metric-val">Instant</span>
+                  <span class="case-metric-label">SMS Follow-up</span>
+                </div>
+              </div>
+              <a href="work-home-services.html" class="case-link-btn">
+                <span>View Project Breakdown</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
             </div>
-            <a href="work-home-services.html" class="service-link-text">Read Detailed Project Breakdown &rarr;</a>
           </div>
         </div>
 
@@ -267,23 +345,41 @@
         </div>
       </div>
     </section>
-    <!-- Global Call to Action Section -->
-    <section class="cta-section">
+
+    <!-- Signature Indigo Transform Banner -->
+    <section style="padding: 40px 0 80px;">
       <div class="container">
-        <div class="section-tag">Next Steps</div>
-        <h2 class="cta-title">Want to See How This Applies to Your Business?</h2>
-        <p class="cta-desc">Schedule a consultation to talk through an architecture tailored to your specific service model.</p>
-        <div class="cta-actions">
-          <button
-            class="btn btn-primary"
-            data-cal-link="sariquezamal/30min"
-            data-cal-namespace="30min"
-            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-          >
-            <span>Book a Free Consultation</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
-          <a href="work.html" class="btn btn-secondary">View Our Work</a>
+        <div class="transform-banner-ref">
+          <h2 class="transform-title">Ready to Transform Your Digital Infrastructure?</h2>
+          <p class="transform-desc">Let's discuss how modern engineering and autonomous AI workflows can elevate your brand, streamline your team, and accelerate business growth.</p>
+          <div class="transform-actions">
+            <button
+              class="btn-white-pill"
+              data-cal-link="sariquezamal/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
+              <span>Book a Consultation</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <a href="contact.html" class="btn-pill btn-pill-secondary" style="border-color: rgba(255,255,255,0.3); color: #fff;">
+              <span>Send an Inquiry</span>
+            </a>
+          </div>
+          <div class="transform-checklist">
+            <div class="checklist-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Direct access to senior engineers</span>
+            </div>
+            <div class="checklist-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Clean, production-grade source code</span>
+            </div>
+            <div class="checklist-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero lock-in & full IP ownership</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>    <!-- Site Footer -->
@@ -331,14 +427,14 @@
           <div>
             <h4 class="footer-heading">Consultation</h4>
             <p style="font-size: 0.88rem; margin-bottom: 16px; color: var(--text-secondary);">Projects are scoped around your requirements, complexity and existing technology. Contact us for a tailored proposal.</p>
-            <button
-              class="btn btn-primary"
-              style="width: 100%; font-size: 0.86rem; padding: 11px 16px;"
+                        <button
+              class="btn-pill btn-pill-primary"
+              style="width: 100%; font-size: 0.86rem; padding: 11px 16px; justify-content: center;"
               data-cal-link="sariquezamal/30min"
               data-cal-namespace="30min"
-              data-cal-config='{{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}'
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
             >
-              Book a Free Consultation
+              <span>Book a Consultation</span>
             </button>
           </div>
         </div>
