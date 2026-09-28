@@ -136,68 +136,112 @@
       </button>
     </div>
 
-    <!-- Hero Section -->
-    <section id="hero">
-      <div class="container hero-grid-3d">
-        <div class="hero-content">
+    <!-- Hero Section (Web3 Agency Centered Display + Flanked 3D Tech Core) -->
+    <section id="hero" style="padding-top: 56px; padding-bottom: 64px;">
+      <div class="container">
+        <!-- Centered Header Display -->
+        <div class="hero-centered-header">
           <div class="hero-badge-pill">
             <span class="hero-badge-dot"></span>
-            High-Performance Websites & Practical AI Automation
+            High-Performance Websites &amp; Practical AI Automation
           </div>
-          <h1 class="hero-title">Websites & AI Systems For <span class="text-gradient">Smarter</span> Businesses</h1>
-          <p class="hero-subtitle">We engineer high-converting websites and practical AI automation that help businesses capture leads, respond instantly, and scale without extra overhead.</p>
-          <div class="hero-cta">
-            <button
-              class="btn btn-primary btn-pill-primary"
-              id="hero-primary-btn"
-              data-cal-link="sariquezamal/30min"
-              data-cal-namespace="30min"
-              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-            >
-              <span>Book a Free Consultation</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-            <a href="work.html" class="btn btn-secondary btn-pill-secondary" id="hero-secondary-btn">
-              <span>View Our Work</span> &rarr;
-            </a>
-          </div>
-          <div class="hero-social-proof">
-            <div class="avatar-group">
-              <div class="avatar-circle">SZ</div>
-              <div class="avatar-circle" style="background:#4338ca;">MV</div>
-              <div class="avatar-circle" style="background:#2563eb;">ER</div>
-            </div>
-            <div class="proof-meta">
-              <div class="star-rating">★★★★★</div>
-              <div class="proof-text"><strong>4.9/5</strong> Trusted by growing businesses worldwide</div>
-            </div>
-          </div>
+          <h1 class="hero-main-title">Websites &amp; AI <span class="hero-gradient-text">Studio.</span></h1>
         </div>
 
-        <div class="hero-3d-wrapper">
-          <div class="hero-3d-stage" id="hero-3d-container">
-            <div class="stage-glow"></div>
-            <canvas id="hero-3d-canvas" aria-label="Interactive 3D Tech Object"></canvas>
-            <div class="tech-hud-top">
-              <span class="hud-status"><span class="hud-dot"></span> ENGINE 3.0</span>
-              <span class="hud-tag">WEB • AI • LOGIC</span>
+        <!-- 3-Column Flanked Grid: Left Stats | Center 3D Object | Right Copy & CTA -->
+        <div class="hero-flanked-grid">
+          <!-- Left Flank: Floating Glass Stats -->
+          <div class="hero-stats-flank">
+            <div class="floating-stat-card">
+              <div class="floating-stat-num">150+</div>
+              <div class="floating-stat-label">Projects Completed</div>
             </div>
-            <div class="tech-hud-bottom">
-              <span class="hud-drag-hint">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M19 19l-7 3-7-3M19 5l-7-3-7 3"/></svg>
-                Drag to rotate 3D core
-              </span>
-              <span class="hud-coord">ACTIVE SYSTEM</span>
+            <div class="floating-stat-card">
+              <div class="floating-stat-num">98%</div>
+              <div class="floating-stat-label">Client Satisfaction</div>
+            </div>
+          </div>
+
+          <!-- Center Flank: Interactive 3D Tech Object Core -->
+          <div class="hero-3d-center-col">
+            <div class="hero-3d-center-stage" id="hero-3d-container">
+              <div class="center-stage-aura"></div>
+              <canvas id="hero-3d-canvas" aria-label="Interactive 3D Tech Object"></canvas>
+              <div class="tech-hud-top">
+                <span class="hud-status"><span class="hud-dot"></span> QUANTUM CORE</span>
+                <span class="hud-tag">WEB • AI • LOGIC</span>
+              </div>
+              <div class="tech-hud-bottom">
+                <span class="hud-drag-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M19 19l-7 3-7-3M19 5l-7-3-7 3"/></svg>
+                  Drag to rotate 3D core
+                </span>
+                <span class="hud-coord">ACTIVE SYSTEM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Flank: High-Impact Copy & Cal.com CTA -->
+          <div class="hero-cta-flank">
+            <p class="hero-flank-desc">We engineer high-converting websites and practical AI automation that help businesses capture leads, respond instantly, and scale without extra overhead.</p>
+            <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+              <button
+                class="btn btn-primary btn-pill-primary"
+                id="hero-primary-btn"
+                data-cal-link="sariquezamal/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
+                <span>Book a Consultation</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <a href="work.html" class="btn btn-secondary btn-pill-secondary" id="hero-secondary-btn" style="text-align: center;">
+                <span>View Our Work</span> &rarr;
+              </a>
+            </div>
+            <div class="hero-social-proof" style="margin-top: 8px;">
+              <div class="avatar-group">
+                <div class="avatar-circle">SZ</div>
+                <div class="avatar-circle" style="background:#4338ca;">MV</div>
+                <div class="avatar-circle" style="background:#2563eb;">ER</div>
+              </div>
+              <div class="proof-meta">
+                <div class="star-rating">★★★★★</div>
+                <div class="proof-text"><strong>4.9/5</strong> Verified Reviews</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Star-Separated Marquee Ticker Ribbon (Matching Reference Aesthetic) -->
+    <div class="marquee-ribbon-wrapper" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"><span class="star-separator">✦</span> Website Architecture</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> AI Voice Receptionist</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Cal.com Integration</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> SEO Engineering</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Smart Email Triage</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Performance Core</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Automated Booking</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Sub-1.2s Load Times</span>
+        <!-- Duplicated track for seamless infinite scroll -->
+        <span class="marquee-item"><span class="star-separator">✦</span> Website Architecture</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> AI Voice Receptionist</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Cal.com Integration</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> SEO Engineering</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Smart Email Triage</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Performance Core</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Automated Booking</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Sub-1.2s Load Times</span>
+      </div>
+    </div>
+
     <!-- Trusted Tech Stack & Modern Standards Strip -->
     <section class="trust-strip">
       <div class="container">
-        <div class="trust-strip-header">Trusted Tech Stack & Modern Standards</div>
+        <div class="trust-strip-header">Trusted Tech Stack &amp; Modern Standards</div>
         <div class="trust-logos-row">
           <span class="trust-logo-item">
             <svg class="trust-logo-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -227,89 +271,210 @@
       </div>
     </section>
 
-    <!-- "WHAT WE DO" Modern Feature Grid (5 Cards) -->
-    <section style="padding: 72px 0;">
+    <!-- "OUR SERVICES" Web3 Split Showcase Section (Matching Reference Mockup) -->
+    <section class="services-section-web3">
       <div class="container">
-        <div class="section-header" style="text-align: center; max-width: 720px; margin: 0 auto 48px auto;">
-          <div class="badge-demo" style="margin-bottom: 14px;">WHAT WE DO</div>
-          <h2 class="section-title">Engineered Solutions Built For Your <span class="text-gradient">Business</span></h2>
-          <p class="section-desc">Empowering modern service businesses with high-converting websites and practical AI automation.</p>
+        <div class="services-header-web3">
+          <div class="badge-demo" style="margin-bottom: 14px;">OUR SERVICES</div>
+          <h2 class="services-title-web3">Engineered For Measurable Growth</h2>
+          <p class="section-desc">From lightning-fast web architecture to practical AI automation pipelines, we build tools that scale your business.</p>
         </div>
 
-        <div class="feature-grid-5">
-          <a href="websites.html#business-websites" class="feature-card-ref">
-            <div class="feature-icon-box">🏢</div>
-            <h3 class="feature-title-ref">Business Websites</h3>
-            <p class="feature-desc-ref">Custom, high-credibility websites structured around conversion clarity, speed, and mobile polish.</p>
-            <span class="feature-link-ref">Explore Websites &rarr;</span>
-          </a>
+        <!-- Showcase Card 1: Website Architecture + Glassmorphic Laptop UI Mockup -->
+        <div class="services-showcase-card">
+          <div class="showcase-text-col">
+            <span class="showcase-pill-tag">Core Service • Web Architecture</span>
+            <h3 class="showcase-title">High-Performance Websites &amp; Booking Engines</h3>
+            <p class="showcase-desc">Custom websites designed from the ground up for conversion clarity, sub-second load times, and frictionless customer appointments.</p>
+            <div class="showcase-checklist">
+              <div class="showcase-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sub-1.2s Page Speeds &amp; 100/100 Core Web Vitals</span>
+              </div>
+              <div class="showcase-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Integrated Cal.com Direct Appointment Booking Engine</span>
+              </div>
+              <div class="showcase-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>SEO Engineering, Clean Semantic HTML5 &amp; Schema Markup</span>
+              </div>
+            </div>
+            <a href="websites.html" class="showcase-link-btn">
+              <span>Explore Websites</span> &rarr;
+            </a>
+          </div>
+          <div class="showcase-visual-col">
+            <div class="ui-mockup-laptop">
+              <div class="laptop-screen-header">
+                <div class="laptop-dots">
+                  <span class="laptop-dot red"></span>
+                  <span class="laptop-dot yellow"></span>
+                  <span class="laptop-dot green"></span>
+                </div>
+                <span class="laptop-url-bar">digitalcron.com/architecture</span>
+                <span style="font-size:0.7rem;color:#38bdf8;font-family:var(--font-mono);">⚡ 99.8%</span>
+              </div>
+              <div class="laptop-screen-body">
+                <div class="laptop-card-widget">
+                  <div class="widget-label">Speed Index</div>
+                  <div class="widget-metric">0.8s</div>
+                  <div class="widget-graph-bar"><div class="widget-graph-fill" style="width: 95%;"></div></div>
+                </div>
+                <div class="laptop-card-widget">
+                  <div class="widget-label">Conversions</div>
+                  <div class="widget-metric">+44%</div>
+                  <div class="widget-graph-bar"><div class="widget-graph-fill" style="width: 84%; background: linear-gradient(90deg, #38bdf8, #818cf8);"></div></div>
+                </div>
+              </div>
+              <div class="laptop-card-widget" style="margin-bottom:0;">
+                <div class="widget-label" style="display:flex;justify-content:space-between;">
+                  <span>Live Telemetry Status</span>
+                  <span style="color:#34d399;">Active</span>
+                </div>
+                <div style="font-family:var(--font-mono);font-size:0.78rem;color:#cbd5e1;padding-top:4px;">
+                  ✓ Clean Code &bull; Mobile-First &bull; Zero Bloat
+                </div>
+              </div>
+              <div class="floating-mobile-card">
+                <span class="mobile-chip-tag">Booking Engine</span>
+                <div class="mobile-card-title">Cal.com Sync</div>
+                <div class="mobile-card-status">24/7 Automated</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <a href="websites.html#booking-websites" class="feature-card-ref">
-            <div class="feature-icon-box">📅</div>
-            <h3 class="feature-title-ref">Website + Booking</h3>
-            <p class="feature-desc-ref">Integrated appointment engines that let customers discover services and book 24/7 with zero friction.</p>
-            <span class="feature-link-ref">Explore Booking &rarr;</span>
-          </a>
+        <!-- Showcase Card 2: AI Automation & Voice Receptionist -->
+        <div class="services-showcase-card">
+          <div class="showcase-text-col">
+            <span class="showcase-pill-tag">Core Service • AI Automation</span>
+            <h3 class="showcase-title">AI Voice Receptionist &amp; Smart Workflow Triage</h3>
+            <p class="showcase-desc">Automate front-office workflows with intelligent voice answering, fast email triage, and smart lead qualification that work around the clock.</p>
+            <div class="showcase-checklist">
+              <div class="showcase-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AI Voice Receptionist with Natural Phone Booking</span>
+              </div>
+              <div class="showcase-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sub-30s Lead Qualification &amp; Intelligent Email Triage</span>
+              </div>
+              <div class="showcase-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>CRM &amp; Messaging Integrations with Zero Human Delay</span>
+              </div>
+            </div>
+            <a href="ai-automation.html" class="showcase-link-btn">
+              <span>Explore AI Systems</span> &rarr;
+            </a>
+          </div>
+          <div class="showcase-visual-col">
+            <div class="ui-mockup-laptop">
+              <div class="laptop-screen-header">
+                <div class="laptop-dots">
+                  <span class="laptop-dot red"></span>
+                  <span class="laptop-dot yellow"></span>
+                  <span class="laptop-dot green"></span>
+                </div>
+                <span class="laptop-url-bar">ai.digitalcron.com/pipeline</span>
+                <span style="font-size:0.7rem;color:#a5b4fc;font-family:var(--font-mono);">VOICE &bull; ON</span>
+              </div>
+              <div class="laptop-screen-body">
+                <div class="laptop-card-widget">
+                  <div class="widget-label">Response Time</div>
+                  <div class="widget-metric">&lt; 30s</div>
+                  <div class="widget-graph-bar"><div class="widget-graph-fill" style="width: 98%;"></div></div>
+                </div>
+                <div class="laptop-card-widget">
+                  <div class="widget-label">Calls Answered</div>
+                  <div class="widget-metric">100%</div>
+                  <div class="widget-graph-bar"><div class="widget-graph-fill" style="width: 100%; background: linear-gradient(90deg, #10b981, #38bdf8);"></div></div>
+                </div>
+              </div>
+              <div class="laptop-card-widget" style="margin-bottom:0;">
+                <div class="widget-label" style="display:flex;justify-content:space-between;">
+                  <span>AI Voice Agent</span>
+                  <span style="color:#34d399;">Online</span>
+                </div>
+                <div style="font-family:var(--font-mono);font-size:0.78rem;color:#cbd5e1;padding-top:4px;">
+                  Caller routed &bull; Calendar synced &bull; SMS confirmed
+                </div>
+              </div>
+              <div class="floating-mobile-card">
+                <span class="mobile-chip-tag" style="color:#a5b4fc; background:rgba(99,102,241,0.2);">Smart Triage</span>
+                <div class="mobile-card-title">Lead Dispatched</div>
+                <div class="mobile-card-status">Instant Notification</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <a href="ai-chatbots.html" class="feature-card-ref">
-            <div class="feature-icon-box">💬</div>
-            <h3 class="feature-title-ref">AI Chatbots</h3>
-            <p class="feature-desc-ref">Website assistants that answer questions, qualify prospects, and capture client enquiries 24/7.</p>
-            <span class="feature-link-ref">Explore Chatbots &rarr;</span>
-          </a>
+        <!-- 5-Service Solutions Grid -->
+        <div style="margin-top: 48px;">
+          <div class="feature-grid-5">
+            <a href="websites.html#business-websites" class="feature-card-ref">
+              <div class="feature-icon-box">🏢</div>
+              <h3 class="feature-title-ref">Business Websites</h3>
+              <p class="feature-desc-ref">Custom, high-credibility websites structured around conversion clarity, speed, and mobile polish.</p>
+              <span class="feature-link-ref">Explore Websites &rarr;</span>
+            </a>
 
-          <a href="ai-email-automation.html" class="feature-card-ref">
-            <div class="feature-icon-box">✉️</div>
-            <h3 class="feature-title-ref">AI Email Automation</h3>
-            <p class="feature-desc-ref">Practical AI-assisted email workflows for inquiry triage, automatic responses, and timely follow-ups.</p>
-            <span class="feature-link-ref">Explore Email &rarr;</span>
-          </a>
+            <a href="websites.html#booking-websites" class="feature-card-ref">
+              <div class="feature-icon-box">📅</div>
+              <h3 class="feature-title-ref">Website + Booking</h3>
+              <p class="feature-desc-ref">Integrated appointment engines that let customers discover services and book 24/7 with zero friction.</p>
+              <span class="feature-link-ref">Explore Booking &rarr;</span>
+            </a>
 
-          <a href="ai-voice-agents.html" class="feature-card-ref">
-            <div class="feature-icon-box">📞</div>
-            <h3 class="feature-title-ref">AI Voice Receptionist</h3>
-            <p class="feature-desc-ref">AI-driven call answering that handles common queries, collects caller details, and schedules visits.</p>
-            <span class="feature-link-ref">Explore Voice &rarr;</span>
-          </a>
+            <a href="ai-chatbots.html" class="feature-card-ref">
+              <div class="feature-icon-box">💬</div>
+              <h3 class="feature-title-ref">AI Chatbots</h3>
+              <p class="feature-desc-ref">Website assistants that answer questions, qualify prospects, and capture client enquiries 24/7.</p>
+              <span class="feature-link-ref">Explore Chatbots &rarr;</span>
+            </a>
+
+            <a href="ai-email-automation.html" class="feature-card-ref">
+              <div class="feature-icon-box">✉️</div>
+              <h3 class="feature-title-ref">AI Email Automation</h3>
+              <p class="feature-desc-ref">Practical AI-assisted email workflows for inquiry triage, automatic responses, and timely follow-ups.</p>
+              <span class="feature-link-ref">Explore Email &rarr;</span>
+            </a>
+
+            <a href="ai-voice-agents.html" class="feature-card-ref">
+              <div class="feature-icon-box">📞</div>
+              <h3 class="feature-title-ref">AI Voice Receptionist</h3>
+              <p class="feature-desc-ref">AI-driven call answering that handles common queries, collects caller details, and schedules visits.</p>
+              <span class="feature-link-ref">Explore Voice &rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Dark Metrics Banner -->
-    <div class="container">
-      <div class="metrics-banner-ref">
-        <div class="metrics-grid">
-          <div class="metric-item-ref">
-            <div class="metric-icon-box">🚀</div>
-            <div class="metric-data">
-              <div class="metric-number">150+</div>
-              <div class="metric-label">Projects Delivered</div>
-            </div>
+    <!-- Horizontal 4-Stat Metrics Row (Matching Reference Design 5M+ / 450M+ / 22% / 8.03%) -->
+    <section class="stats-bar-web3">
+      <div class="container">
+        <div class="stats-bar-grid">
+          <div class="stat-web3-cell">
+            <div class="stat-web3-num">150+</div>
+            <div class="stat-web3-label">Projects Built</div>
           </div>
-          <div class="metric-item-ref">
-            <div class="metric-icon-box">😊</div>
-            <div class="metric-data">
-              <div class="metric-number">98%</div>
-              <div class="metric-label">Client Satisfaction</div>
-            </div>
+          <div class="stat-web3-cell">
+            <div class="stat-web3-num">98%</div>
+            <div class="stat-web3-label">Client Satisfaction</div>
           </div>
-          <div class="metric-item-ref">
-            <div class="metric-icon-box">⚡</div>
-            <div class="metric-data">
-              <div class="metric-number">&lt; 1.2s</div>
-              <div class="metric-label">Avg Load Time</div>
-            </div>
+          <div class="stat-web3-cell">
+            <div class="stat-web3-num">&lt; 1.2s</div>
+            <div class="stat-web3-label">Page Load Speed</div>
           </div>
-          <div class="metric-item-ref">
-            <div class="metric-icon-box">🛡️</div>
-            <div class="metric-data">
-              <div class="metric-number">24/7</div>
-              <div class="metric-label">Systems Uptime</div>
-            </div>
+          <div class="stat-web3-cell">
+            <div class="stat-web3-num">24/7</div>
+            <div class="stat-web3-label">Systems Uptime</div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- "OUR WORK" / Real Results Showcase -->
     <section style="padding: 24px 0 72px 0;">
@@ -334,7 +499,7 @@
               </div>
             </div>
             <div class="case-card-body">
-              <h3 class="case-card-title">Healthcare Clinic Intake & Booking</h3>
+              <h3 class="case-card-title">Healthcare Clinic Intake &amp; Booking</h3>
               <p class="case-card-desc">Redesigned the clinic's digital presence with fast online triage, patient intake forms, and direct calendar synchronization.</p>
               <span class="case-link-ref">View Case Study &rarr;</span>
             </div>
@@ -350,7 +515,7 @@
               </div>
             </div>
             <div class="case-card-body">
-              <h3 class="case-card-title">Salon Booking & Auto-Reminders</h3>
+              <h3 class="case-card-title">Salon Booking &amp; Auto-Reminders</h3>
               <p class="case-card-desc">Automated appointment scheduling, staff selection, deposit workflows, and SMS/WhatsApp confirmation sequences.</p>
               <span class="case-link-ref">View Case Study &rarr;</span>
             </div>
@@ -375,12 +540,12 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section style="padding: 72px 0; background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <!-- "Our happy Customers" Section (Matching Reference Design) -->
+    <section class="customers-section-web3" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
       <div class="container">
         <div class="section-header" style="text-align: center; max-width: 680px; margin: 0 auto 48px auto;">
           <div class="badge-demo" style="margin-bottom: 14px;">TESTIMONIALS</div>
-          <h2 class="section-title">What Our <span class="text-gradient">Clients</span> Say</h2>
+          <h2 class="customers-title-web3">Our happy Customers</h2>
           <p class="section-desc">Hear from businesses that rely on Digital Cron for their web presence and practical automation.</p>
         </div>
 
