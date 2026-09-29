@@ -4078,3 +4078,409 @@ nav#main-nav {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ==========================================================================
+   PREMIUM ARCHITECTURE: PRE-FOOTER CTA, SYSTEM BLUEPRINTS, AUDIT STRIP
+   ========================================================================== */
+
+/* ----- 1. Uniform Pre-Footer CTA: Ready to Upgrade Your Digital Infrastructure? ----- */
+.prefooter-upgrade-section {
+  padding: 48px 0 72px;
+}
+
+.upgrade-cta-card {
+  background: radial-gradient(100% 120% at 80% 20%, rgba(99, 102, 241, 0.16) 0%, rgba(10, 13, 20, 0.96) 60%), #0a0d14;
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  border-radius: 24px;
+  padding: 52px 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(99, 102, 241, 0.12);
+}
+
+.upgrade-cta-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #6366f1 50%, #38bdf8 75%, transparent 100%);
+}
+
+.upgrade-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.upgrade-cta-content {
+  flex: 1;
+  max-width: 640px;
+}
+
+.upgrade-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  margin-bottom: 18px;
+}
+
+.upgrade-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+
+.upgrade-cta-desc {
+  font-size: 0.96rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin: 0 0 22px 0;
+}
+
+.upgrade-trust-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.trust-pill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.upgrade-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.upgrade-btn-main,
+.upgrade-btn-ghost {
+  min-width: 240px;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .upgrade-cta-card {
+    padding: 36px 28px;
+  }
+  .upgrade-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .upgrade-cta-actions {
+    width: 100%;
+  }
+  .upgrade-btn-main,
+  .upgrade-btn-ghost {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* ----- 2. Redesigned System Blueprint Luxury Cards ----- */
+.blueprint-luxury-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.blueprint-card-luxury {
+  background: rgba(13, 18, 28, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blueprint-card-luxury::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #38bdf8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blueprint-card-luxury:hover {
+  transform: translateY(-6px);
+  border-color: rgba(99, 102, 241, 0.45);
+  background: rgba(18, 25, 40, 0.95);
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.7), 0 0 32px rgba(99, 102, 241, 0.15);
+}
+
+.blueprint-card-luxury:hover::before {
+  opacity: 1;
+}
+
+.bp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bp-industry-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bp-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 6px #38bdf8;
+}
+
+.bp-status-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.bp-card-title {
+  font-family: var(--font-display);
+  font-size: 1.24rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.32;
+  transition: color 0.2s ease;
+}
+
+.blueprint-card-luxury:hover .bp-card-title {
+  color: #a5b4fc;
+}
+
+.bp-card-desc {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+/* Architecture Data Pipeline Visualizer */
+.bp-pipeline-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+}
+
+.bp-pipeline-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bp-pipeline-nodes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.bp-node-chip {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: #e2e8f0;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.bp-arrow-sep {
+  color: #6366f1;
+  font-size: 0.78rem;
+  font-weight: bold;
+}
+
+/* Specs Row */
+.bp-specs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 20px;
+}
+
+.bp-spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.bp-spec-name {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 3px;
+}
+
+.bp-spec-val {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.bp-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #6366f1;
+  margin-top: auto;
+  transition: gap 0.25s ease, color 0.2s ease;
+}
+
+.blueprint-card-luxury:hover .bp-card-action {
+  gap: 12px;
+  color: #818cf8;
+}
+
+@media (max-width: 840px) {
+  .blueprint-luxury-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----- 3. Homepage Audit Strip Section ----- */
+.home-audit-strip {
+  padding: 24px 0 54px;
+}
+
+.audit-strip-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(13, 18, 28, 0.9) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 20px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.audit-strip-content {
+  flex: 1;
+  max-width: 680px;
+}
+
+.audit-strip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+.audit-strip-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.audit-strip-desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.audit-strip-action {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .audit-strip-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 22px;
+    gap: 22px;
+  }
+  .audit-strip-action {
+    width: 100%;
+  }
+  .audit-strip-action .btn-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}
