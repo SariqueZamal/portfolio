@@ -5109,3 +5109,76 @@ nav#main-nav {
     padding: 32px 24px;
   }
 }
+
+
+/* ==========================================================================
+   EQUAL-HEIGHT FORM & SIDEBAR LAYOUT (CONTACT & FREE AUDIT PAGES)
+   ========================================================================== */
+.equal-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.equal-split-left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.equal-split-left .promo-sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.equal-split-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.equal-split-right .form-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.equal-split-right .interactive-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.equal-split-right .form-textarea {
+  min-height: 110px;
+  flex: 1;
+  resize: vertical;
+}
+
+@media (max-width: 992px) {
+  .equal-split-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-items: flex-start;
+  }
+  
+  .equal-split-left .promo-sidebar,
+  .equal-split-right .form-container,
+  .equal-split-right .interactive-form {
+    height: auto;
+  }
+
+  .equal-split-right .form-textarea {
+    flex: none;
+    min-height: 100px;
+  }
+}
