@@ -213,37 +213,72 @@
       </div>
     </div>
 
-    <!-- Founder Section -->
-    <section style="background: var(--bg-surface); padding: 72px 0;">
-      <div class="container container-narrow">
-        <div class="split-layout" style="align-items: center; gap: 48px;">
-          <div>
-            <div class="section-tag">Founder &amp; Technical Lead</div>
-            <h2 style="font-size: 2.1rem; margin-bottom: 18px;">Direct Partnership. <span class="text-gradient">No Account Managers.</span></h2>
-            <p style="margin-bottom: 16px; color: var(--text-secondary); line-height: 1.75;">I founded Digital Cron with a straightforward conviction: <strong>service businesses shouldn't have to choose between an impressive website and an efficient operational workflow.</strong></p>
-            <p style="margin-bottom: 16px; color: var(--text-secondary); line-height: 1.75;">Too many companies spend thousands on glossy agency websites that create administrative bottlenecks behind the scenes—unanswered contact forms, phone calls lost to voicemail during peak hours, and staff wasting dozens of hours every week manually confirming appointment dates and re-typing lead information.</p>
-            <p style="margin-bottom: 24px; color: var(--text-secondary); line-height: 1.75;">At Digital Cron, we bridge that gap. We engineer fast, conversion-focused websites and pair them with practical AI automations so your digital infrastructure actively captures demand, answers routine inquiries around the clock, and books qualified appointments without adding overhead.</p>
-            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-              <a href="https://www.linkedin.com/company/digitalcron/" target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-secondary" style="font-size: 0.86rem; padding: 10px 20px;">
+        <!-- Founder Section (Equal Height Redesign) -->
+    <section class="founder-section">
+      <div class="container">
+        <div class="founder-equal-grid">
+          
+          <!-- Left: Founder Manifesto & Content Pane -->
+          <div class="founder-content-card">
+            <div class="founder-content-header">
+              <div class="section-tag" style="margin-bottom: 12px;">Founder &amp; Technical Lead</div>
+              <h2 class="founder-headline">Direct Senior Partnership. <span class="text-gradient">No Account Managers.</span></h2>
+            </div>
+            
+            <div class="founder-body-text">
+              <p>I founded Digital Cron with a straightforward conviction: <strong>service businesses shouldn't have to choose between an impressive website and an efficient operational workflow.</strong></p>
+              <p>Too many companies invest heavily in glossy agency websites that create administrative friction behind the scenes—unanswered contact forms, phone calls lost to voicemail during busy hours, and front-desk staff spending dozens of hours manually confirming calendar dates and re-typing lead details.</p>
+              <p>At Digital Cron, we bridge that gap. We engineer fast, conversion-focused websites and pair them with practical AI automations so your digital presence actively captures demand, answers routine customer questions 24/7, and schedules qualified appointments without adding administrative overhead.</p>
+            </div>
+
+            <div class="founder-highlight-chips">
+              <div class="founder-chip">
+                <span class="chip-dot"></span>
+                <span>Direct Architecture Oversight</span>
+              </div>
+              <div class="founder-chip">
+                <span class="chip-dot"></span>
+                <span>Zero Outsourced Development</span>
+              </div>
+              <div class="founder-chip">
+                <span class="chip-dot"></span>
+                <span>Transparent Milestone Pricing</span>
+              </div>
+            </div>
+
+            <div class="founder-actions-row">
+              <button
+                class="btn-pill btn-pill-primary"
+                data-cal-link="sariquezamal/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
+                <span>Book 30-Min Consultation</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="https://www.linkedin.com/company/digitalcron/" target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-secondary">
                 <span>LinkedIn Profile</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-              <a href="contact.html" class="btn-pill btn-pill-primary" style="font-size: 0.86rem; padding: 10px 20px;">
-                <span>Connect Directly</span>
               </a>
             </div>
           </div>
 
-          <div style="text-align: center;">
-            <div style="max-width: 320px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.6);">
-              <img src="assets/founder.webp" alt="Sarique Zamal - Founder & Technical Lead at Digital Cron" width="300" height="300" style="border-radius: var(--radius-md); width: 100%; height: auto; object-fit: cover;" decoding="async" loading="lazy" />
-              <div style="margin-top: 14px; text-align: left; padding: 0 4px;">
-                <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #ffffff;">Sarique Zamal</div>
-                <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-primary); margin-top: 2px;">Founder &amp; Senior Technical Architect</div>
-                <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">Direct partner on every project from initial architecture to final production deployment.</div>
+          <!-- Right: Founder Portrait Card (Stretches to 100% Equal Height) -->
+          <div class="founder-photo-card">
+            <div class="founder-image-wrapper">
+              <img src="assets/founder.webp" alt="Sarique Zamal - Founder & Technical Lead at Digital Cron" class="founder-full-img" decoding="async" fetchpriority="high" />
+              <div class="founder-image-overlay">
+                <div class="founder-overlay-badge">
+                  <span class="status-pulse-dot"></span>
+                  <span>Direct Technical Lead</span>
+                </div>
+                <div class="founder-overlay-name">Sarique Zamal</div>
+                <div class="founder-overlay-role">Founder &amp; Senior Technical Architect</div>
+                <div class="founder-overlay-desc">Direct engineering partner on every project from initial systems audit to live deployment.</div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
