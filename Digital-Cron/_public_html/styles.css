@@ -2808,7 +2808,7 @@ nav#main-nav {
   opacity: 0.75;
 }
 
-/* Right-Side 3D Tech Object Stage & Overlaid Telemetry Card */
+/* Right-Side 3D Tech Object Stage (Unobstructed WebGL Canvas) */
 .hero-nexora-3d-col {
   position: relative;
   width: 100%;
@@ -2988,7 +2988,7 @@ nav#main-nav {
   gap: 10px;
 }
 
-/* "Success Story" Telemetry Showcase Matching Reference Design */
+/* "System Architecture Blueprint" Showcase Matching Reference Design */
 .story-section-nexora {
   padding: 60px 0 80px 0;
 }
@@ -3840,5 +3840,241 @@ nav#main-nav {
 
   .hero-3d-stage {
     max-width: 280px;
+  }
+}
+
+/* ==========================================================================
+   Engineered System Blueprints Component Styles
+   ========================================================================== */
+
+.blueprint-specs-deck {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 36px 0 54px 0;
+}
+
+.blueprint-spec-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.blueprint-spec-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.blueprint-spec-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.blueprint-spec-val {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.blueprint-spec-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Pipeline Flow Deck */
+.blueprint-pipeline-deck {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 0 48px 0;
+}
+
+.pipeline-step-node {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 22px 26px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: border-color 0.25s ease;
+}
+
+.pipeline-step-node:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.pipeline-step-num {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #818cf8;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.pipeline-step-body {
+  flex-grow: 1;
+}
+
+.pipeline-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.pipeline-step-title {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.pipeline-step-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.pipeline-step-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Architecture Specs Table */
+.spec-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  margin: 28px 0 44px 0;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.spec-table th {
+  background: rgba(255, 255, 255, 0.03);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.spec-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.spec-table td strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Production Deliverables Checklist */
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 28px 0 44px 0;
+}
+
+.deliverable-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.deliverable-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(34, 197, 94, 0.14);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4ade80;
+  font-weight: bold;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.deliverable-text strong {
+  display: block;
+  font-size: 0.96rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.deliverable-text span {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+@media (max-width: 1024px) {
+  .blueprint-specs-deck {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .deliverables-grid {
+    grid-template-columns: 1fr;
+  }
+  .pipeline-step-node {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blueprint-specs-deck {
+    grid-template-columns: 1fr;
   }
 }
