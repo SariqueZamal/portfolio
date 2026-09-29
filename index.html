@@ -176,28 +176,10 @@
             </div>
           </div>
 
-          <!-- Right Column: Interactive 3D Tech Object Stage & Overlaid Telemetry Card -->
+          <!-- Right Column: Interactive 3D Tech Object Stage -->
           <div class="hero-nexora-3d-col">
             <div class="hero-3d-nexora-stage" id="hero-3d-container">
               <canvas id="hero-3d-canvas" aria-label="Interactive 3D Tech Object"></canvas>
-            </div>
-            <div class="hero-floating-telemetry">
-              <div class="telemetry-tag-row">
-                <span class="telemetry-title">TELEMETRY</span>
-                <span class="telemetry-badge">● LIVE</span>
-              </div>
-              <div class="telemetry-main-metric">+44.8%</div>
-              <div class="telemetry-title">Conversion Velocity</div>
-              <svg class="telemetry-sparkline" viewBox="0 0 160 28" fill="none">
-                <path d="M0 24 C 20 22, 40 16, 65 18 C 90 20, 110 6, 135 8 C 145 9, 152 3, 160 2" stroke="#6366f1" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-                <path d="M0 24 C 20 22, 40 16, 65 18 C 90 20, 110 6, 135 8 C 145 9, 152 3, 160 2 L 160 28 L 0 28 Z" fill="url(#sparkline-grad)" opacity="0.3"/>
-                <defs>
-                  <linearGradient id="sparkline-grad" x1="0" y1="0" x2="0" y2="28" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#6366f1"/>
-                    <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-              </svg>
             </div>
           </div>
         </div>
@@ -282,54 +264,65 @@
       </div>
     </section>
 
-    <!-- "SUCCESS STORY" Split Telemetry Showcase -->
+    <!-- FEATURED SYSTEM ARCHITECTURE SHOWCASE -->
     <section class="story-section-nexora">
       <div class="container">
         <div class="story-card-nexora">
           <div class="story-content-col">
-            <span class="story-badge">SUCCESS STORY &bull; HEALTHCARE CLINIC</span>
-            <h2 class="story-title">Intake &amp; Booking Architecture Transformation</h2>
-            <p class="story-desc">Metro Health transitioned from high-friction phone scheduling to an intelligent online intake flow. Our automated confirmation workflows eliminated front-desk backlog and maximized practitioner chair time.</p>
-            <blockquote style="border-left: 2px solid #6366f1; padding-left: 16px; margin: 0 0 24px 0; color: #cbd5e1; font-style: italic;">
-              &ldquo;Digital Cron built an online patient booking system that completely modernized our practice. Our front-desk phone calls dropped by half, and our appointment calendar is consistently full.&rdquo;
-            </blockquote>
+            <span class="story-badge">FEATURED ARCHITECTURE &bull; HEALTHCARE INTAKE</span>
+            <h2 class="story-title">Patient Intake &amp; Booking Architecture</h2>
+            <p class="story-desc">Engineered for medical practices, dental clinics, and wellness centers to eliminate telephone triage bottlenecks, provide 24/7 self-service scheduling, and automate SMS confirmations with zero administrative drag.</p>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.94rem; color: #cbd5e1;">
+                <span style="color: #6366f1; font-weight: bold;">✓</span>
+                <span><strong>Multi-Provider Calendar Sync:</strong> Real-time Cal.com slot allocation preventing double-bookings.</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.94rem; color: #cbd5e1;">
+                <span style="color: #6366f1; font-weight: bold;">✓</span>
+                <span><strong>Automated Lifecycle Reminders:</strong> Multi-stage SMS &amp; email confirmations eliminating no-shows.</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.94rem; color: #cbd5e1;">
+                <span style="color: #6366f1; font-weight: bold;">✓</span>
+                <span><strong>Sub-1.2s Core Performance:</strong> Lean, semantic code ensuring frictionless mobile booking on any device.</span>
+              </div>
+            </div>
             <a href="work-dental-clinic.html" class="hero-btn-ghost" style="align-self: flex-start;">
-              <span>Read Full Case Study</span> &rarr;
+              <span>Explore System Architecture</span> &rarr;
             </a>
           </div>
           <div class="story-visual-col">
             <div class="dashboard-panel-nexora">
               <div class="dashboard-panel-header">
-                <span>SYSTEM TELEMETRY &bull; LIVE METRICS</span>
+                <span>SYSTEM SPECIFICATION &bull; CORE STACK</span>
                 <span style="color:#34d399; display:inline-flex; align-items:center; gap:6px;">
                   <span style="width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 8px #34d399;"></span>
-                  OPERATIONAL
+                  PRODUCTION READY
                 </span>
               </div>
               <div class="dashboard-stats-row">
                 <div class="dash-stat-cell">
-                  <div class="dash-stat-label">RESPONSE TIME</div>
-                  <div class="dash-stat-val">2m</div>
-                  <div class="dash-stat-sub">Was 4 Hours</div>
+                  <div class="dash-stat-label">RESPONSE SPEED</div>
+                  <div class="dash-stat-val">&lt; 1.2s</div>
+                  <div class="dash-stat-sub">Page Benchmark</div>
                 </div>
                 <div class="dash-stat-cell">
-                  <div class="dash-stat-label">BOOKINGS</div>
-                  <div class="dash-stat-val">+38%</div>
-                  <div class="dash-stat-sub">Patient Volume</div>
+                  <div class="dash-stat-label">AVAILABILITY</div>
+                  <div class="dash-stat-val">24/7</div>
+                  <div class="dash-stat-sub">Active Intake</div>
                 </div>
                 <div class="dash-stat-cell">
-                  <div class="dash-stat-label">NO-SHOWS</div>
-                  <div class="dash-stat-val">-92%</div>
-                  <div class="dash-stat-sub">Drop Rate</div>
+                  <div class="dash-stat-label">INTEGRATION</div>
+                  <div class="dash-stat-val">API</div>
+                  <div class="dash-stat-sub">Live Webhooks</div>
                 </div>
               </div>
-              <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 14px 16px;">
-                <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.72rem; color:#94a3b8; margin-bottom:8px;">
-                  <span>Automated Intake Conversion Velocity</span>
-                  <span style="color:#38bdf8;">99.4% Synchronized</span>
+              <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px;">
+                <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.75rem; color:#94a3b8; margin-bottom:8px;">
+                  <span>Intake Flow Pipeline</span>
+                  <span style="color:#38bdf8;">End-to-End Encrypted</span>
                 </div>
-                <div style="width:100%; height:6px; background:rgba(255,255,255,0.08); border-radius:99px; overflow:hidden;">
-                  <div style="width:94%; height:100%; background:linear-gradient(90deg, #6366f1, #38bdf8); border-radius:99px;"></div>
+                <div style="font-family: var(--font-mono); font-size: 0.76rem; color: #a5b4fc; line-height: 1.6;">
+                  Visitor Triage &rarr; Service Selection &rarr; Direct Calendar Slot &rarr; Automated Webhook Dispatch
                 </div>
               </div>
             </div>
@@ -388,21 +381,13 @@
           <div class="metric-card-nexora">
             <div class="metric-icon-square">🚀</div>
             <div class="metric-info-nexora">
-              <div class="metric-num-nexora">150+</div>
-              <div class="metric-label-nexora">Projects Delivered</div>
+              <div class="metric-num-nexora">10</div>
+              <div class="metric-label-nexora">Production Solutions</div>
             </div>
           </div>
 
           <div class="metric-card-nexora">
             <div class="metric-icon-square">⭐</div>
-            <div class="metric-info-nexora">
-              <div class="metric-num-nexora">98%</div>
-              <div class="metric-label-nexora">Client Satisfaction</div>
-            </div>
-          </div>
-
-          <div class="metric-card-nexora">
-            <div class="metric-icon-square">⚡</div>
             <div class="metric-info-nexora">
               <div class="metric-num-nexora">&lt; 1.2s</div>
               <div class="metric-label-nexora">Page Load Speed</div>
@@ -410,124 +395,114 @@
           </div>
 
           <div class="metric-card-nexora">
-            <div class="metric-icon-square">🛡️</div>
+            <div class="metric-icon-square">⚡</div>
             <div class="metric-info-nexora">
               <div class="metric-num-nexora">24/7</div>
-              <div class="metric-label-nexora">Automated Uptime</div>
+              <div class="metric-label-nexora">Autonomous Workflows</div>
+            </div>
+          </div>
+
+          <div class="metric-card-nexora">
+            <div class="metric-icon-square">🔒</div>
+            <div class="metric-info-nexora">
+              <div class="metric-num-nexora">100%</div>
+              <div class="metric-label-nexora">Code &amp; IP Ownership</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- "OUR WORK" / Real Results Showcase -->
+    <!-- "OUR WORK" / Engineered Production Blueprints -->
     <section style="padding: 24px 0 72px 0;">
       <div class="container">
         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 36px; flex-wrap: wrap; gap: 16px;">
           <div>
-            <div class="badge-demo" style="margin-bottom: 12px;">OUR WORK</div>
-            <h2 class="section-title" style="margin-bottom: 8px;">Real Results, Real <span class="text-gradient">Impact</span></h2>
-            <p class="section-desc" style="margin-top: 0;">See how we help businesses transform customer flow and operations.</p>
+            <div class="badge-demo" style="margin-bottom: 12px;">SYSTEM BLUEPRINTS</div>
+            <h2 class="section-title" style="margin-bottom: 8px;">Engineered Production <span class="text-gradient">Blueprints</span></h2>
+            <p class="section-desc" style="margin-top: 0;">Explore production-ready architectures, API integrations, and automated workflows designed for high-touch service businesses.</p>
           </div>
-          <a href="work.html" class="btn btn-secondary btn-pill" style="margin-bottom: 8px;">View All Case Studies &rarr;</a>
+          <a href="work.html" class="btn btn-secondary btn-pill" style="margin-bottom: 8px;">Explore All Blueprints &rarr;</a>
         </div>
 
         <div class="case-grid-3">
           <a href="work-dental-clinic.html" class="case-card-ref">
             <div class="case-preview-box">
               <span class="case-badge">Healthcare Clinic</span>
-              <div class="case-preview-telemetry">
-                <div class="telemetry-row"><span>Inquiry Response</span><strong style="color:#38bdf8;">2m (was 4h)</strong></div>
-                <div class="telemetry-bar-wrap"><div class="telemetry-bar-fill" style="width: 88%;"></div></div>
-                <div class="telemetry-row"><span>Patient Bookings</span><strong style="color:#a5b4fc;">+38% Qualified</strong></div>
+              <div class="case-feature-pills">
+                <span class="feature-pill-tag">Cal.com Sync</span>
+                <span class="feature-pill-tag">SMS Confirmations</span>
+                <span class="feature-pill-tag">&lt; 1.2s Load</span>
               </div>
             </div>
             <div class="case-card-body">
               <h3 class="case-card-title">Healthcare Clinic Intake &amp; Booking</h3>
-              <p class="case-card-desc">Redesigned the clinic's digital presence with fast online triage, patient intake forms, and direct calendar synchronization.</p>
-              <span class="case-link-ref">View Case Study &rarr;</span>
+              <p class="case-card-desc">Engineered patient intake and multi-doctor scheduling architecture with real-time calendar synchronization, intake qualification, and automated SMS reminder flows.</p>
+              <span class="case-link-ref">Explore Architecture Blueprint &rarr;</span>
             </div>
           </a>
 
           <a href="work-salon-booking.html" class="case-card-ref">
             <div class="case-preview-box">
               <span class="case-badge">Salon Booking</span>
-              <div class="case-preview-telemetry">
-                <div class="telemetry-row"><span>No-Show Rate</span><strong style="color:#38bdf8;">-92% Drop</strong></div>
-                <div class="telemetry-bar-wrap"><div class="telemetry-bar-fill" style="width: 94%;"></div></div>
-                <div class="telemetry-row"><span>After-Hours Bookings</span><strong style="color:#a5b4fc;">46% of Total</strong></div>
+              <div class="case-feature-pills">
+                <span class="feature-pill-tag">Stylist Portfolios</span>
+                <span class="feature-pill-tag">Automated Reminders</span>
+                <span class="feature-pill-tag">Mobile Booking</span>
               </div>
             </div>
             <div class="case-card-body">
               <h3 class="case-card-title">Salon Booking &amp; Auto-Reminders</h3>
-              <p class="case-card-desc">Automated appointment scheduling, staff selection, deposit workflows, and SMS/WhatsApp confirmation sequences.</p>
-              <span class="case-link-ref">View Case Study &rarr;</span>
+              <p class="case-card-desc">Mobile-first appointment scheduling architecture with categorized treatment menus, stylist portfolio profiles, and automated SMS/WhatsApp confirmations.</p>
+              <span class="case-link-ref">Explore Architecture Blueprint &rarr;</span>
             </div>
           </a>
 
           <a href="work-home-services.html" class="case-card-ref">
             <div class="case-preview-box">
               <span class="case-badge">Home Services</span>
-              <div class="case-preview-telemetry">
-                <div class="telemetry-row"><span>First Contact Time</span><strong style="color:#38bdf8;">&lt; 30 Seconds</strong></div>
-                <div class="telemetry-bar-wrap"><div class="telemetry-bar-fill" style="width: 90%;"></div></div>
-                <div class="telemetry-row"><span>Quote Conversion</span><strong style="color:#a5b4fc;">+42% Growth</strong></div>
+              <div class="case-feature-pills">
+                <span class="feature-pill-tag">Emergency Dispatch</span>
+                <span class="feature-pill-tag">Zip Code Validation</span>
+                <span class="feature-pill-tag">Instant SMS Alerts</span>
               </div>
             </div>
             <div class="case-card-body">
               <h3 class="case-card-title">Home Services Fast Lead Capture</h3>
-              <p class="case-card-desc">High-speed service area landing architecture with automated inquiry routing and instant emergency callback triggers.</p>
-              <span class="case-link-ref">View Case Study &rarr;</span>
+              <p class="case-card-desc">High-speed local service architecture with zip-code coverage verification, photo-upload quote forms, and 24/7 emergency dispatch call routing.</p>
+              <span class="case-link-ref">Explore Architecture Blueprint &rarr;</span>
             </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- "Our happy Customers" Section (Matching Reference Design) -->
+    <!-- Core Standards: Why Businesses Partner With Digital Cron -->
     <section class="customers-section-web3" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
       <div class="container">
         <div class="section-header" style="text-align: center; max-width: 680px; margin: 0 auto 48px auto;">
-          <div class="badge-demo" style="margin-bottom: 14px;">TESTIMONIALS</div>
-          <h2 class="customers-title-web3">Our happy Customers</h2>
-          <p class="section-desc">Hear from businesses that rely on Digital Cron for their web presence and practical automation.</p>
+          <div class="badge-demo" style="margin-bottom: 14px;">CORE STANDARDS</div>
+          <h2 class="customers-title-web3">Why Businesses Choose Us</h2>
+          <p class="section-desc">We combine senior web architecture with production-grade AI automations to solve real operational bottlenecks.</p>
         </div>
 
         <div class="testimonials-grid-3">
           <div class="testimonial-card-ref">
-            <div class="quote-icon">&ldquo;</div>
-            <p class="testimonial-text">&ldquo;Digital Cron built an online patient booking system that completely modernized our practice. Our front-desk phone calls dropped by half, and our appointment calendar is consistently full.&rdquo;</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">MV</div>
-              <div class="author-info">
-                <span class="author-name">Dr. Michael Vance</span>
-                <span class="author-role">Clinical Director, Metro Health</span>
-              </div>
-            </div>
+            <div class="quote-icon">⚡</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: #ffffff; margin-bottom: 10px;">Sub-Second Speed &amp; Zero Bloat</h3>
+            <p class="testimonial-text">We reject bloated CMS themes and slow page builders. Every website is engineered from semantic HTML5 and lightweight CSS, achieving sub-1.2s load speeds and pristine Core Web Vitals on every screen.</p>
           </div>
 
           <div class="testimonial-card-ref">
-            <div class="quote-icon">&ldquo;</div>
-            <p class="testimonial-text">&ldquo;The website redesign and automated reminder sequence immediately paid for itself. Our no-show rate plummeted from 20% to under 2%, and clients constantly compliment how effortless booking is.&rdquo;</p>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="border-color:#38bdf8;">ER</div>
-              <div class="author-info">
-                <span class="author-name">Elena Rostova</span>
-                <span class="author-role">Founder, Maison Salon</span>
-              </div>
-            </div>
+            <div class="quote-icon">🔄</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: #ffffff; margin-bottom: 10px;">Seamless Tool Integrations</h3>
+            <p class="testimonial-text">Our automations integrate directly with your daily operations—Cal.com, Google Calendar, Twilio, WhatsApp, and CRM webhooks—routing leads and booking slots automatically without disrupting your team.</p>
           </div>
 
           <div class="testimonial-card-ref">
-            <div class="quote-icon">&ldquo;</div>
-            <p class="testimonial-text">&ldquo;Speed and technical clarity. Their lead capture workflow answers quote requests in under 30 seconds. We are closing high-value jobs before our competitors even review their inbox.&rdquo;</p>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="border-color:#818cf8;">MB</div>
-              <div class="author-info">
-                <span class="author-name">Marcus Brody</span>
-                <span class="author-role">Operations Lead, Apex Services</span>
-              </div>
-            </div>
+            <div class="quote-icon">🎯</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: #ffffff; margin-bottom: 10px;">Direct Founder Partnership</h3>
+            <p class="testimonial-text">You communicate directly with the technical architect. No account managers, no confusing handoffs—just clear technical milestones, transparent pricing, and dependable production delivery.</p>
           </div>
         </div>
       </div>

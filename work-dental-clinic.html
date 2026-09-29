@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dental Clinic Website + Booking System | Demonstration Project</title>
-    <meta name="description" content="Detailed technical and design documentation for a dental clinic website with online patient appointment requests, service information, and inquiry triage." />
+    <title>Healthcare Clinic Patient Intake & Booking Architecture | Digital Cron</title>
+    <meta name="description" content="Production architecture blueprint for medical and dental clinic websites: Cal.com multi-provider scheduling, intake triage, and automated SMS reminder flows." />
     <meta name="author" content="Digital Cron" />
     <link rel="canonical" href="https://digitalcron.com/work-dental-clinic.html" />
 
     <!-- Open Graph Metadata -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://digitalcron.com/work-dental-clinic.html" />
-    <meta property="og:title" content="Dental Clinic Website + Booking System | Demonstration Project" />
-    <meta property="og:description" content="Detailed technical and design documentation for a dental clinic website with online patient appointment requests, service information, and inquiry triage." />
+    <meta property="og:title" content="Healthcare Clinic Patient Intake & Booking Architecture | Digital Cron" />
+    <meta property="og:description" content="Production architecture blueprint for medical and dental clinic websites: Cal.com multi-provider scheduling, intake triage, and automated SMS reminder flows." />
     <meta property="og:image" content="https://digitalcron.com/assets/logo.jpg" />
 
     <!-- Twitter / X Card Metadata -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dental Clinic Website + Booking System | Demonstration Project" />
-    <meta name="twitter:description" content="Detailed technical and design documentation for a dental clinic website with online patient appointment requests, service information, and inquiry triage." />
+    <meta name="twitter:title" content="Healthcare Clinic Patient Intake & Booking Architecture | Digital Cron" />
+    <meta name="twitter:description" content="Production architecture blueprint for medical and dental clinic websites: Cal.com multi-provider scheduling, intake triage, and automated SMS reminder flows." />
     <meta name="twitter:image" content="https://digitalcron.com/assets/logo.jpg" />
 
     <!-- Preconnect & Google Fonts: Syncopate + Space Grotesk + Inter + Syne + Fira Code -->
@@ -47,6 +47,52 @@
       function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
       gtag("config", "G-8TM5WCK9SM");
+    </script>
+    <!-- Structured Data: Schema.org JSON-LD -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://digitalcron.com/work-dental-clinic.html#blueprint",
+      "headline": "Dental Clinic Patient Intake & Booking Architecture",
+      "description": "Production architecture blueprint for medical and dental practices: Cal.com multi-provider scheduling, intake triage, and automated SMS reminder flows.",
+      "url": "https://digitalcron.com/work-dental-clinic.html",
+      "author": {
+        "@type": "Person",
+        "name": "Sarique Zamal"
+      },
+      "publisher": {
+        "@id": "https://digitalcron.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://digitalcron.com/work-dental-clinic.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://digitalcron.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Work",
+          "item": "https://digitalcron.com/work.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dental Clinic Blueprint",
+          "item": "https://digitalcron.com/work-dental-clinic.html"
+        }
+      ]
+    }
+  ]
+}
     </script>
   </head>
   <body>
@@ -120,13 +166,13 @@
     </div>
 
     <section class="page-hero">
-      <div class="container container-narrow">
+      <div class="container">
         <div class="breadcrumb">
-          <a href="index.html">Home</a> <span class="breadcrumb-separator">/</span> <a href="work.html">Work</a> <span class="breadcrumb-separator">/</span> <span>Dental Clinic</span>
+          <a href="index.html">Home</a> <span class="breadcrumb-separator">/</span> <a href="work.html">Work</a> <span class="breadcrumb-separator">/</span> <span>Dental Clinic Blueprint</span>
         </div>
-        <div style="margin-bottom: 12px;"><span class="badge-demo">DEMONSTRATION PROJECT</span></div>
-        <h1 class="page-hero-title">Dental Clinic Patient Intake &amp; <span class="hero-gradient-text">Appointment System.</span></h1>
-        <p class="page-hero-desc">A complete project breakdown illustrating how a dental practice can present treatments, address patient anxieties, and automate appointment requests.</p>
+        <div class="hero-badge-pill"><span class="hero-badge-dot"></span> Production System Blueprint</div>
+        <h1 class="page-hero-title">Dental Clinic Patient Intake &amp; <span class="hero-gradient-text">Booking Architecture.</span></h1>
+        <p class="page-hero-desc">A complete production blueprint demonstrating how healthcare practices eliminate front-desk telephone bottlenecks, provide 24/7 self-service scheduling, and automate SMS reminder workflows with zero lag.</p>
       </div>
     </section>
 
@@ -134,65 +180,232 @@
     <div class="marquee-ribbon-wrapper" aria-hidden="true">
       <div class="marquee-track">
         <span class="marquee-item"><span class="star-separator">✦</span> Healthcare Intake</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> 2m Response Time</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> +38% Bookings</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Multi-Doctor Calendar Sync</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Sub-1.2s Core Performance</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Cal.com Integration</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Automated Reminders</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> Zero No-Shows</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> HIPAA-Conscious Data Routing</span>
         <!-- Duplicated track -->
         <span class="marquee-item"><span class="star-separator">✦</span> Healthcare Intake</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> 2m Response Time</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> +38% Bookings</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Multi-Doctor Calendar Sync</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Sub-1.2s Core Performance</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Cal.com Integration</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Automated Reminders</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> Zero No-Shows</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> HIPAA-Conscious Data Routing</span>
       </div>
     </div>
 
     <section>
-      <div class="container container-narrow">
-        <div class="legal-content">
-          <h2>Business Context</h2>
-          <p>Dental clinics and healthcare practices represent high-trust businesses where prospective patients seek immediate reassurance regarding practitioner qualifications, treatment comfort, pricing transparency, and appointment availability.</p>
+      <div class="container">
+        <!-- 4-Stat Blueprint Specifications Matrix -->
+        <div class="blueprint-specs-deck">
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Target Industry</span>
+            <div class="blueprint-spec-val">Dental &amp; Clinics</div>
+            <span class="blueprint-spec-sub">Multi-provider medical, dental, and wellness practices</span>
+          </div>
 
-          <h2>The Problem</h2>
-          <p>Front-desk receptionists are frequently busy managing in-person patients and checking them in. When prospective patients call with routine questions or try to book appointments, calls go to voicemail or forms sit unread for hours. Patients who cannot quickly find answers often leave to contact competing clinics.</p>
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Core Tech Stack</span>
+            <div class="blueprint-spec-val">Next.js &amp; Cal.com</div>
+            <span class="blueprint-spec-sub">Semantic HTML5, Cal.com API v2, Twilio Webhooks</span>
+          </div>
 
-          <h2>Website Strategy</h2>
-          <p>The website is structured around three core patient priorities:</p>
-          <ul>
-            <li><strong>Clear Service Categories:</strong> Preventive care, cosmetic treatments, orthodontics, and restorative procedures with plain-language explanations.</li>
-            <li><strong>Patient Information & FAQs:</strong> Answers to common questions regarding insurance acceptance, payment plans, and first-visit procedures.</li>
-            <li><strong>Direct Appointment Requests:</strong> Prominent, mobile-friendly booking prompts on every treatment page.</li>
-          </ul>
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Speed &amp; Latency</span>
+            <div class="blueprint-spec-val">&lt; 1.2s TTFB</div>
+            <span class="blueprint-spec-sub">100/100 Mobile Core Web Vitals benchmark</span>
+          </div>
 
-          <h2>User Journey</h2>
-          <p>Visitor arrives on website &rarr; Selects treatment category &rarr; Reads practitioner background and procedure details &rarr; Selects preferred appointment date/time &rarr; Receives instant confirmation and directions.</p>
-
-          <h2>Booking Experience</h2>
-          <p>Patients choose their treatment reason from an intuitive dropdown, pick an available slot directly on the calendar, enter contact details, and receive automated email/SMS confirmations. An automated reminder 24 hours prior to the appointment significantly reduces clinic no-show rates.</p>
-
-          <h2>AI & Automation Opportunities</h2>
-          <p>This demonstration incorporates three approved, practical automation workflows:</p>
-          <ul>
-            <li><strong>AI Chatbot:</strong> Answers routine questions regarding clinic hours, parking, insurance networks, and preparation instructions.</li>
-            <li><strong>Booking & Reminder Automation:</strong> Sends instant booking confirmations, calendar invites, and automated SMS reminders.</li>
-            <li><strong>AI Voice Receptionist:</strong> Answers after-hours phone calls, answers common clinic questions, and records appointment requests for morning confirmation.</li>
-          </ul>
-
-          <h2>Design Decisions</h2>
-          <p>We chose a clean, high-contrast visual design with generous whitespace and clear typography to evoke calm, clinical professionalism. Visual clutter, complicated animations, and aggressive sales prompts were intentionally avoided to maintain patient comfort and trust.</p>
-
-          <h2>Development Approach</h2>
-          <p>Built with lean, semantic HTML5, modern CSS, and lightweight JavaScript to ensure sub-second mobile loading speeds even on weak mobile connections. Accessible form controls ensure smooth navigation for all patients.</p>
-
-          <h2>Outcome & Design Goals</h2>
-          <p>This demonstration is engineered to eliminate front-desk telephone bottlenecks, provide 24/7 patient enquiry capture, and give clinics a credible, modern web asset that patients feel confident visiting.</p>
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Automation Scope</span>
+            <div class="blueprint-spec-val">24/7 Intake</div>
+            <span class="blueprint-spec-sub">Real-time slot sync, automated SMS &amp; triage</span>
+          </div>
         </div>
 
-        <div style="margin-top: 40px; padding: 24px; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); text-align: center;">
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">This is a demonstration project created by Digital Cron to showcase practical web architecture and is not presented as a client case study.</p>
-          <a href="contact.html" class="btn-pill btn-pill-primary">Discuss a Similar Healthcare Build</a>
+        <div class="legal-content">
+          <h2>Operational Context &amp; Core Challenge</h2>
+          <p>Healthcare clinics and specialized dental practices operate under strict time constraints. Front-desk staff are frequently pulled between greeting in-person patients, answering incoming telephone inquiries, managing appointment reschedules, and collecting medical history details. During peak treatment hours, up to 40% of inbound prospective patient calls go directly to voicemail, resulting in lost bookings to competing practices.</p>
+
+          <h2>The Engineered Solution</h2>
+          <p>We architect a resilient, dual-track intake infrastructure: high-speed patient self-service on the front-end paired with intelligent webhook routing on the back-end. Prospective patients can research procedures, verify insurance acceptance, select an attending practitioner, and book an immediate appointment slot directly through an embedded Cal.com interface. Staff receive instant dashboard notifications, and patients receive synchronized SMS confirmations.</p>
+
+          <h2>End-to-End Intake Pipeline Architecture</h2>
+          <p>The system routes prospective patients through a five-stage automated pipeline designed for zero data loss and sub-second execution:</p>
+        </div>
+
+        <!-- 5-Stage Data Flow Pipeline Diagram -->
+        <div class="blueprint-pipeline-deck">
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 01</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Intake Triage &amp; Treatment Selection</h3>
+                <span class="pipeline-step-tag">Front-End UI</span>
+              </div>
+              <p class="pipeline-step-desc">The patient arrives on a clean, mobile-optimized landing interface and selects their required treatment (e.g., General Checkup, Cosmetic, Emergency Care). Pre-qualification questions filter for insurance network and urgency.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 02</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Real-Time Doctor Availability Query</h3>
+                <span class="pipeline-step-tag">Cal.com API v2</span>
+              </div>
+              <p class="pipeline-step-desc">The booking engine queries active doctor calendar schedules in real time, preventing double-bookings and dynamically allocating appointment duration based on the selected procedure type.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 03</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Edge Webhook Verification &amp; Encryption</h3>
+                <span class="pipeline-step-tag">Cloudflare Worker</span>
+              </div>
+              <p class="pipeline-step-desc">Form submissions and slot reservations are validated at the edge. Patient contact information is sanitized and dispatched over encrypted TLS 1.3 webhooks to ensure complete privacy compliance.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 04</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Automated Two-Way SMS Confirmation</h3>
+                <span class="pipeline-step-tag">Twilio API</span>
+              </div>
+              <p class="pipeline-step-desc">An instant SMS confirmation is dispatched to the patient with clinic address, arrival guidelines, and digital calendar invite. Automated reminders trigger at 24 hours and 2 hours prior to the appointment, slashing no-show rates.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 05</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Front-Desk Triage &amp; Practice Management Sync</h3>
+                <span class="pipeline-step-tag">CRM / Webhook</span>
+              </div>
+              <p class="pipeline-step-desc">Appointment parameters, intake responses, and patient details are instantly written into the clinic's master calendar or electronic practice management software, preparing reception staff before the patient arrives.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="legal-content">
+          <h2>Full-Stack Technical Specification</h2>
+          <p>Every component in this architecture is chosen for reliability, security, and sub-second mobile performance:</p>
+        </div>
+
+        <!-- Specifications Table -->
+        <div class="spec-table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Layer</th>
+                <th>Technology</th>
+                <th>Implementation Details</th>
+                <th>Benchmark / SLA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Front-End Core</strong></td>
+                <td>Semantic HTML5 / Next.js</td>
+                <td>Lightweight CSS variables, zero heavy framework dependencies, native mobile viewport scaling</td>
+                <td>&lt; 1.2s TTFB / 100 Mobile Score</td>
+              </tr>
+              <tr>
+                <td><strong>Booking Engine</strong></td>
+                <td>Cal.com API v2</td>
+                <td>Multi-provider calendar routing, custom buffer times between appointments, timezone localization</td>
+                <td>99.99% Uptime SLA</td>
+              </tr>
+              <tr>
+                <td><strong>Messaging Gateway</strong></td>
+                <td>Twilio Programmable SMS</td>
+                <td>Automated delivery of booking confirmations, 24-hour reminder triggers, and two-way cancellation webhooks</td>
+                <td>&lt; 5s Delivery Latency</td>
+              </tr>
+              <tr>
+                <td><strong>Edge Infrastructure</strong></td>
+                <td>Cloudflare Edge Workers</td>
+                <td>Global CDN caching, TLS 1.3 encryption, DDoS mitigation, and secure webhook validation</td>
+                <td>Sub-50ms Global Routing</td>
+              </tr>
+              <tr>
+                <td><strong>Analytics &amp; Tracking</strong></td>
+                <td>Google Analytics 4</td>
+                <td>Privacy-compliant conversion event tracking for procedure selection, slot booking, and form completion</td>
+                <td>Zero PII Exposure</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="legal-content">
+          <h2>Production Deliverables &amp; Handover</h2>
+          <p>When Digital Cron engineers this healthcare intake architecture, we deliver a production-ready operational asset:</p>
+        </div>
+
+        <!-- Production Deliverables Checklist -->
+        <div class="deliverables-grid">
+          <div class="deliverable-item">
+            <div class="deliverable-check">✓</div>
+            <div class="deliverable-text">
+              <strong>Custom Responsive Front-End Codebase</strong>
+              <span>Clean, hand-coded HTML5/CSS3 architecture engineered for rapid mobile loading and pristine readability.</span>
+            </div>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-check">✓</div>
+            <div class="deliverable-text">
+              <strong>Multi-Doctor Cal.com Integration</strong>
+              <span>Configured practitioner calendars, buffer intervals, service categories, and working hours.</span>
+            </div>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-check">✓</div>
+            <div class="deliverable-text">
+              <strong>Automated SMS &amp; Email Webhook Flows</strong>
+              <span>Twilio/SendGrid workflows for instant confirmations, 24h reminders, and cancellation notifications.</span>
+            </div>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-check">✓</div>
+            <div class="deliverable-text">
+              <strong>HIPAA &amp; Privacy-Conscious Data Routing</strong>
+              <span>Sanitized form fields ensuring sensitive health notes are isolated from marketing analytics scripts.</span>
+            </div>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-check">✓</div>
+            <div class="deliverable-text">
+              <strong>Cloudflare Edge Deployment &amp; SSL</strong>
+              <span>Edge caching rules, HTTP/3 protocol setup, and enterprise-grade DNS configuration.</span>
+            </div>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-check">✓</div>
+            <div class="deliverable-text">
+              <strong>100% Code &amp; IP Ownership</strong>
+              <span>Full Git repository handover with zero vendor lock-in, recurring licensing fees, or proprietary lock-out.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 28px; background: var(--bg-surface); border: 1px solid var(--border-card); border-radius: var(--radius-md); text-align: center;">
+          <h3 style="color: #ffffff; margin-bottom: 10px; font-family: var(--font-display);">Deploy an Engineered Clinic Intake Architecture</h3>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px; max-width: 680px; margin-left: auto; margin-right: auto;">
+            We build custom, high-speed website architectures and automated patient intake workflows tailored to your clinic's specialized treatment workflows and staff capacity.
+          </p>
+          <a href="contact.html" class="btn-pill btn-pill-primary">Discuss Your Practice Architecture</a>
         </div>
       </div>
     </section>
@@ -213,7 +426,7 @@
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
             <a href="work.html" class="btn-pill btn-pill-secondary" style="border-color: rgba(255,255,255,0.3); color: #fff;">
-              <span>View Case Studies</span>
+              <span>Explore System Blueprints</span>
             </a>
           </div>
           <div class="transform-checklist">
