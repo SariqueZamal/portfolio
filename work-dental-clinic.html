@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Healthcare Clinic Patient Intake & Booking Architecture | Digital Cron</title>
-    <meta name="description" content="Production architecture blueprint for medical and dental clinic websites: Cal.com multi-provider scheduling, intake triage, and automated SMS reminder flows." />
+    <meta name="description" content="Production architecture blueprint for medical and dental clinic websites: multi-provider calendar scheduling, intake triage, and automated SMS reminder flows." />
     <meta name="author" content="Digital Cron" />
     <link rel="canonical" href="https://digitalcron.com/work-dental-clinic.html" />
 
@@ -12,13 +12,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://digitalcron.com/work-dental-clinic.html" />
     <meta property="og:title" content="Healthcare Clinic Patient Intake & Booking Architecture | Digital Cron" />
-    <meta property="og:description" content="Production architecture blueprint for medical and dental clinic websites: Cal.com multi-provider scheduling, intake triage, and automated SMS reminder flows." />
+    <meta property="og:description" content="Production architecture blueprint for medical and dental clinic websites: multi-provider calendar scheduling, intake triage, and automated SMS reminder flows." />
     <meta property="og:image" content="https://digitalcron.com/assets/logo.jpg" />
 
     <!-- Twitter / X Card Metadata -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Healthcare Clinic Patient Intake & Booking Architecture | Digital Cron" />
-    <meta name="twitter:description" content="Production architecture blueprint for medical and dental clinic websites: Cal.com multi-provider scheduling, intake triage, and automated SMS reminder flows." />
+    <meta name="twitter:description" content="Production architecture blueprint for medical and dental clinic websites: multi-provider calendar scheduling, intake triage, and automated SMS reminder flows." />
     <meta name="twitter:image" content="https://digitalcron.com/assets/logo.jpg" />
 
     <!-- Preconnect & Google Fonts: Syncopate + Space Grotesk + Inter + Syne + Fira Code -->
@@ -57,7 +57,7 @@
       "@type": "TechArticle",
       "@id": "https://digitalcron.com/work-dental-clinic.html#blueprint",
       "headline": "Dental Clinic Patient Intake & Booking Architecture",
-      "description": "Production architecture blueprint for medical and dental practices: Cal.com multi-provider scheduling, intake triage, and automated SMS reminder flows.",
+      "description": "Production architecture blueprint for medical and dental practices: multi-provider calendar scheduling, intake triage, and automated SMS reminder flows.",
       "url": "https://digitalcron.com/work-dental-clinic.html",
       "author": {
         "@type": "Person",
@@ -180,14 +180,14 @@
         <span class="marquee-item"><span class="star-separator">✦</span> Healthcare Intake</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Multi-Doctor Calendar Sync</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Sub-1.2s Core Performance</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> Cal.com Integration</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Real-Time Calendar Sync</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Automated Reminders</span>
         <span class="marquee-item"><span class="star-separator">✦</span> HIPAA-Conscious Data Routing</span>
         <!-- Duplicated track -->
         <span class="marquee-item"><span class="star-separator">✦</span> Healthcare Intake</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Multi-Doctor Calendar Sync</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Sub-1.2s Core Performance</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> Cal.com Integration</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Real-Time Calendar Sync</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Automated Reminders</span>
         <span class="marquee-item"><span class="star-separator">✦</span> HIPAA-Conscious Data Routing</span>
       </div>
@@ -204,9 +204,9 @@
           </div>
 
           <div class="blueprint-spec-box">
-            <span class="blueprint-spec-label">Core Tech Stack</span>
-            <div class="blueprint-spec-val">Next.js &amp; Cal.com</div>
-            <span class="blueprint-spec-sub">Semantic HTML5, Cal.com API v2, Twilio Webhooks</span>
+            <span class="blueprint-spec-label">System Architecture</span>
+            <div class="blueprint-spec-val">Intake &amp; Booking Engine</div>
+            <span class="blueprint-spec-sub">Automated Patient Triage, Calendar Sync &amp; SMS Dispatch</span>
           </div>
 
           <div class="blueprint-spec-box">
@@ -227,7 +227,7 @@
           <p>Healthcare clinics and specialized dental practices operate under strict time constraints. Front-desk staff are frequently pulled between greeting in-person patients, answering incoming telephone inquiries, managing appointment reschedules, and collecting medical history details. During peak treatment hours, up to 40% of inbound prospective patient calls go directly to voicemail, resulting in lost bookings to competing practices.</p>
 
           <h2>The Engineered Solution</h2>
-          <p>We architect a resilient, dual-track intake infrastructure: high-speed patient self-service on the front-end paired with intelligent webhook routing on the back-end. Prospective patients can research procedures, verify insurance acceptance, select an attending practitioner, and book an immediate appointment slot directly through an embedded Cal.com interface. Staff receive instant dashboard notifications, and patients receive synchronized SMS confirmations.</p>
+          <p>We architect a resilient, dual-track intake infrastructure: high-speed patient self-service on the front-end paired with intelligent webhook routing on the back-end. Prospective patients can research procedures, verify insurance acceptance, select an attending practitioner, and book an immediate appointment slot directly through an embedded calendar scheduling interface. Staff receive instant dashboard notifications, and patients receive synchronized SMS confirmations.</p>
 
           <h2>End-to-End Intake Pipeline Architecture</h2>
           <p>The system routes prospective patients through a five-stage automated pipeline designed for zero data loss and sub-second execution:</p>
@@ -251,7 +251,7 @@
             <div class="pipeline-step-body">
               <div class="pipeline-step-header">
                 <h3 class="pipeline-step-title">Real-Time Doctor Availability Query</h3>
-                <span class="pipeline-step-tag">Cal.com API v2</span>
+                <span class="pipeline-step-tag">Automated Calendar Engine</span>
               </div>
               <p class="pipeline-step-desc">The booking engine queries active doctor calendar schedules in real time, preventing double-bookings and dynamically allocating appointment duration based on the selected procedure type.</p>
             </div>
@@ -262,7 +262,7 @@
             <div class="pipeline-step-body">
               <div class="pipeline-step-header">
                 <h3 class="pipeline-step-title">Edge Webhook Verification &amp; Encryption</h3>
-                <span class="pipeline-step-tag">Cloudflare Worker</span>
+                <span class="pipeline-step-tag">Edge Routing Engine</span>
               </div>
               <p class="pipeline-step-desc">Form submissions and slot reservations are validated at the edge. Patient contact information is sanitized and dispatched over encrypted TLS 1.3 webhooks to ensure complete privacy compliance.</p>
             </div>
@@ -273,7 +273,7 @@
             <div class="pipeline-step-body">
               <div class="pipeline-step-header">
                 <h3 class="pipeline-step-title">Automated Two-Way SMS Confirmation</h3>
-                <span class="pipeline-step-tag">Twilio API</span>
+                <span class="pipeline-step-tag">Automated SMS Service</span>
               </div>
               <p class="pipeline-step-desc">An instant SMS confirmation is dispatched to the patient with clinic address, arrival guidelines, and digital calendar invite. Automated reminders trigger at 24 hours and 2 hours prior to the appointment, slashing no-show rates.</p>
             </div>
@@ -302,7 +302,7 @@
             <thead>
               <tr>
                 <th>Layer</th>
-                <th>Technology</th>
+                <th>Architecture &amp; Protocol</th>
                 <th>Implementation Details</th>
                 <th>Benchmark / SLA</th>
               </tr>
@@ -310,25 +310,25 @@
             <tbody>
               <tr>
                 <td><strong>Front-End Core</strong></td>
-                <td>Semantic HTML5 / Next.js</td>
+                <td>High-Speed Web Framework</td>
                 <td>Lightweight CSS variables, zero heavy framework dependencies, native mobile viewport scaling</td>
                 <td>&lt; 1.2s TTFB / 100 Mobile Score</td>
               </tr>
               <tr>
                 <td><strong>Booking Engine</strong></td>
-                <td>Cal.com API v2</td>
+                <td>Automated Calendar Engine</td>
                 <td>Multi-provider calendar routing, custom buffer times between appointments, timezone localization</td>
                 <td>99.99% Uptime SLA</td>
               </tr>
               <tr>
                 <td><strong>Messaging Gateway</strong></td>
-                <td>Twilio Programmable SMS</td>
+                <td>Automated SMS Dispatch Service</td>
                 <td>Automated delivery of booking confirmations, 24-hour reminder triggers, and two-way cancellation webhooks</td>
                 <td>&lt; 5s Delivery Latency</td>
               </tr>
               <tr>
                 <td><strong>Edge Infrastructure</strong></td>
-                <td>Cloudflare Edge Workers</td>
+                <td>Global Edge Routing &amp; Caching</td>
                 <td>Global CDN caching, TLS 1.3 encryption, DDoS mitigation, and secure webhook validation</td>
                 <td>Sub-50ms Global Routing</td>
               </tr>
@@ -353,14 +353,14 @@
             <div class="deliverable-check">✓</div>
             <div class="deliverable-text">
               <strong>Custom Responsive Front-End Codebase</strong>
-              <span>Clean, hand-coded HTML5/CSS3 architecture engineered for rapid mobile loading and pristine readability.</span>
+              <span>Clean, hand-coded lightweight architecture engineered for rapid mobile loading and pristine readability.</span>
             </div>
           </div>
 
           <div class="deliverable-item">
             <div class="deliverable-check">✓</div>
             <div class="deliverable-text">
-              <strong>Multi-Doctor Cal.com Integration</strong>
+              <strong>Multi-Doctor Calendar Integration</strong>
               <span>Configured practitioner calendars, buffer intervals, service categories, and working hours.</span>
             </div>
           </div>
@@ -369,7 +369,7 @@
             <div class="deliverable-check">✓</div>
             <div class="deliverable-text">
               <strong>Automated SMS &amp; Email Webhook Flows</strong>
-              <span>Twilio/SendGrid workflows for instant confirmations, 24h reminders, and cancellation notifications.</span>
+              <span>Automated notification workflows for instant confirmations, 24h reminders, and cancellation notifications.</span>
             </div>
           </div>
 
@@ -384,7 +384,7 @@
           <div class="deliverable-item">
             <div class="deliverable-check">✓</div>
             <div class="deliverable-text">
-              <strong>Cloudflare Edge Deployment &amp; SSL</strong>
+              <strong>Global Edge Deployment &amp; SSL</strong>
               <span>Edge caching rules, HTTP/3 protocol setup, and enterprise-grade DNS configuration.</span>
             </div>
           </div>
