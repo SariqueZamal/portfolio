@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hospitality Salon Booking Engine & Deposit Safeguard | Digital Cron</title>
-    <meta name="description" content="Production architecture blueprint for premium salons and spas: Multi-staff calendar booking, automated Stripe deposits, and zero no-show SMS workflows." />
+    <meta name="description" content="Production architecture blueprint for premium salons and spas: Multi-staff calendar booking, automated card payment deposits, and zero no-show SMS workflows." />
     <meta name="author" content="Digital Cron" />
     <link rel="canonical" href="https://digitalcron.com/work-salon-booking.html" />
 
@@ -12,13 +12,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://digitalcron.com/work-salon-booking.html" />
     <meta property="og:title" content="Hospitality Salon Booking Engine & Deposit Safeguard | Digital Cron" />
-    <meta property="og:description" content="Production architecture blueprint for premium salons and spas: Multi-staff calendar booking, automated Stripe deposits, and zero no-show SMS workflows." />
+    <meta property="og:description" content="Production architecture blueprint for premium salons and spas: Multi-staff calendar booking, automated card payment deposits, and zero no-show SMS workflows." />
     <meta property="og:image" content="https://digitalcron.com/assets/logo.jpg" />
 
     <!-- Twitter / X Card Metadata -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Hospitality Salon Booking Engine & Deposit Safeguard | Digital Cron" />
-    <meta name="twitter:description" content="Production architecture blueprint for premium salons and spas: Multi-staff calendar booking, automated Stripe deposits, and zero no-show SMS workflows." />
+    <meta name="twitter:description" content="Production architecture blueprint for premium salons and spas: Multi-staff calendar booking, automated card payment deposits, and zero no-show SMS workflows." />
     <meta name="twitter:image" content="https://digitalcron.com/assets/logo.jpg" />
 
     <!-- Preconnect & Google Fonts: Syncopate + Space Grotesk + Inter + Syne + Fira Code -->
@@ -57,7 +57,7 @@
       "@type": "TechArticle",
       "@id": "https://digitalcron.com/work-salon-booking.html#blueprint",
       "headline": "Premium Salon Multi-Stylist Booking & Deposit Architecture",
-      "description": "Production architecture blueprint for premium salons and spas: Multi-staff calendar booking, automated Stripe deposits, and zero no-show SMS workflows.",
+      "description": "Production architecture blueprint for premium salons and spas: Multi-staff calendar booking, automated card payment deposits, and zero no-show SMS workflows.",
       "url": "https://digitalcron.com/work-salon-booking.html",
       "author": {
         "@type": "Person",
@@ -180,14 +180,14 @@
         <span class="marquee-item"><span class="star-separator">✦</span> Salon Booking Architecture</span>
         <span class="marquee-item"><span class="star-separator">✦</span> -92% No-Show Rate</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Zero Manual Lag Bookings</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> Cal.com Integration</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Real-Time Calendar Sync</span>
         <span class="marquee-item"><span class="star-separator">✦</span> SMS Confirmations</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Staff Selection</span>
         <!-- Duplicated track -->
         <span class="marquee-item"><span class="star-separator">✦</span> Salon Booking Architecture</span>
         <span class="marquee-item"><span class="star-separator">✦</span> -92% No-Show Rate</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Zero Manual Lag Bookings</span>
-        <span class="marquee-item"><span class="star-separator">✦</span> Cal.com Integration</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Real-Time Calendar Sync</span>
         <span class="marquee-item"><span class="star-separator">✦</span> SMS Confirmations</span>
         <span class="marquee-item"><span class="star-separator">✦</span> Staff Selection</span>
       </div>
@@ -204,9 +204,9 @@
           </div>
 
           <div class="blueprint-spec-box">
-            <span class="blueprint-spec-label">Core Tech Stack</span>
-            <div class="blueprint-spec-val">HTML5 &amp; Stripe</div>
-            <span class="blueprint-spec-sub">Cal.com API v2, Stripe Deposits, Twilio WhatsApp</span>
+            <span class="blueprint-spec-label">System Architecture</span>
+            <div class="blueprint-spec-val">Deposit Booking Engine</div>
+            <span class="blueprint-spec-sub">Automated Calendar Engine, Deposit Safeguards, WhatsApp Alerts</span>
           </div>
 
           <div class="blueprint-spec-box">
@@ -251,7 +251,7 @@
             <div class="pipeline-step-body">
               <div class="pipeline-step-header">
                 <h3 class="pipeline-step-title">Dynamic Duration Buffering &amp; Slot Allocation</h3>
-                <span class="pipeline-step-tag">Cal.com API v2</span>
+                <span class="pipeline-step-tag">Automated Calendar Engine</span>
               </div>
               <p class="pipeline-step-desc">The engine calculates dynamic appointment duration (e.g. 120 mins for full color vs. 45 mins for haircut) plus a 15-minute cleanup buffer before querying the assigned specialist's calendar in real time.</p>
             </div>
@@ -262,9 +262,9 @@
             <div class="pipeline-step-body">
               <div class="pipeline-step-header">
                 <h3 class="pipeline-step-title">Deposit Safeguard &amp; Payment Processing</h3>
-                <span class="pipeline-step-tag">Stripe Webhooks</span>
+                <span class="pipeline-step-tag">Secure Card Gateway Webhooks</span>
               </div>
-              <p class="pipeline-step-desc">An optional appointment deposit or card authorization is captured via Stripe to eliminate non-serious bookings and protect salon revenue against last-minute cancellations.</p>
+              <p class="pipeline-step-desc">An optional appointment deposit or card authorization is captured via Secure Card Gateway to eliminate non-serious bookings and protect salon revenue against last-minute cancellations.</p>
             </div>
           </div>
 
@@ -273,7 +273,7 @@
             <div class="pipeline-step-body">
               <div class="pipeline-step-header">
                 <h3 class="pipeline-step-title">Multi-Channel Instant Confirmation &amp; Reminders</h3>
-                <span class="pipeline-step-tag">Twilio / WhatsApp API</span>
+                <span class="pipeline-step-tag">Automated Messaging System</span>
               </div>
               <p class="pipeline-step-desc">Instant confirmation dispatches to the client with add-to-calendar links and salon directions. Automated reminders fire at 24 hours and 2 hours with quick 1-tap confirmation or rescheduling prompts.</p>
             </div>
@@ -302,7 +302,7 @@
             <thead>
               <tr>
                 <th>Layer</th>
-                <th>Technology</th>
+                <th>Architecture &amp; Protocol</th>
                 <th>Implementation Details</th>
                 <th>Benchmark / SLA</th>
               </tr>
@@ -310,31 +310,31 @@
             <tbody>
               <tr>
                 <td><strong>Visual Front-End</strong></td>
-                <td>Semantic HTML5 / CSS Grid</td>
+                <td>Mobile-First Responsive Framework</td>
                 <td>Touch-friendly appointment cards, WebP image galleries, instant CSS state transitions</td>
                 <td>&lt; 1.1s Mobile Load / 0 Cumulative Layout Shift</td>
               </tr>
               <tr>
                 <td><strong>Scheduling Core</strong></td>
-                <td>Cal.com API v2</td>
+                <td>Automated Calendar Engine</td>
                 <td>Multi-staff routing, custom appointment duration definitions, time-off blocking</td>
                 <td>Instant Slot Locking</td>
               </tr>
               <tr>
                 <td><strong>Deposit Security</strong></td>
-                <td>Stripe Payments API</td>
+                <td>Secure Deposit Engine</td>
                 <td>PCI-DSS compliant payment intent tokenization, refund automation on authorized cancellations</td>
                 <td>Bank-Grade Security</td>
               </tr>
               <tr>
                 <td><strong>Notification Engine</strong></td>
-                <td>Twilio SMS &amp; WhatsApp Webhook</td>
+                <td>Automated SMS &amp; Messaging System</td>
                 <td>Two-way conversational messaging for confirmation, reminder triggers, and reschedule routing</td>
                 <td>99.9% Delivery Guarantee</td>
               </tr>
               <tr>
                 <td><strong>Hosting &amp; Edge CDN</strong></td>
-                <td>Cloudflare Global Edge</td>
+                <td>Global Edge CDN &amp; Security</td>
                 <td>SSL/TLS 1.3 encryption, automatic WebP asset compression, sub-second global response times</td>
                 <td>100% Edge Availability</td>
               </tr>
@@ -368,7 +368,7 @@
           <div class="deliverable-item">
             <div class="deliverable-check">✓</div>
             <div class="deliverable-text">
-              <strong>Stripe Deposit Webhook Integration</strong>
+              <strong>Deposit Safeguard Webhook Integration</strong>
               <span>Automated deposit collection safeguards to minimize salon no-shows and seat vacancies.</span>
             </div>
           </div>
@@ -377,7 +377,7 @@
             <div class="deliverable-check">✓</div>
             <div class="deliverable-text">
               <strong>Automated 24h &amp; 2h SMS/WhatsApp Reminders</strong>
-              <span>Configured Twilio webhook flows with one-tap confirmation and rescheduling links.</span>
+              <span>Configured Automated webhook dispatch flows with one-tap confirmation and rescheduling links.</span>
             </div>
           </div>
 
