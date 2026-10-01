@@ -84,15 +84,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Global Navigation Header -->
-    <header class="header" id="header">
-      <div class="header-container">
-        <a href="index.html" class="brand" aria-label="Digital Cron Home">
-          <img src="assets/logo.jpg" alt="Digital Cron Logo" width="34" height="34" loading="eager" fetchpriority="high" />
+    <!-- Main Navigation Header -->
+    <header id="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand" id="logo-link">
+          <img src="assets/logo.jpg" alt="Digital Cron Logo" width="34" height="34" decoding="async" fetchpriority="high" />
           <span>DIGITAL CRON</span>
         </a>
 
-        <nav class="nav-desktop" id="main-nav" aria-label="Primary Navigation">
+        <nav id="main-nav">
           <a href="index.html" class="nav-link active">Home</a>
           <a href="services.html" class="nav-link">Services</a>
           <a href="solutions.html" class="nav-link">Solutions</a>
@@ -101,7 +101,7 @@
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
 
-        <div class="header-actions">
+        <div class="nav-actions">
           <button
             class="btn-pill btn-pill-primary"
             id="header-cta-btn"
@@ -850,43 +850,67 @@
     </section>
 
     <!-- 10. FOUNDER / ABOUT SECTION -->
-    <section id="founder" style="padding: 72px 0;">
+    <section class="founder-section" id="founder">
       <div class="container">
-        <div class="story-card-nexora" style="padding: 44px;">
-          <div class="story-content-col" style="max-width: 100%;">
-            <span class="story-badge">DIRECT FOUNDER ACCESS &bull; TECHNICAL LEADERSHIP</span>
-            <h2 class="story-title" style="font-size: 2.2rem; margin-bottom: 16px;">Built by a Developer Who Cares About the Business Outcome</h2>
-            <p class="story-desc" style="margin-bottom: 20px;">
-              Digital Cron is founded and engineered by <strong>Sarique Zamal</strong>, a full-stack developer and automation systems architect.
-            </p>
-            <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 24px;">
-              Most service businesses don't need another generic monthly software subscription or an expensive 20-person agency with layers of junior account managers. They need a competent technical partner who takes the time to understand their customer flow and builds a reliable system that works day in and day out.
-            </p>
-            <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 28px;">
-              At Digital Cron, we start with your customer journey, eliminate the friction between the first click and a booked appointment, and deliver 100% owned, production-grade code that scales with your business.
-            </p>
-            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
-              <div style="padding: 12px 18px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.8rem; color: #cbd5e1;">
-                ✦ Direct Founder Partnership (Zero Account Managers)
+        <div class="founder-equal-grid">
+          
+          <!-- Left: Founder Manifesto & Content Pane -->
+          <div class="founder-content-card">
+            <div class="founder-content-header">
+              <div class="section-tag" style="margin-bottom: 12px;">DIRECT FOUNDER ACCESS &bull; TECHNICAL LEADERSHIP</div>
+              <h2 class="founder-headline">Built by a Developer Who Cares About the <span class="text-gradient">Business Outcome.</span></h2>
+            </div>
+            
+            <div class="founder-body-text">
+              <p>Digital Cron is founded and engineered by <strong>Sarique Zamal</strong>, a full-stack developer and automation systems architect.</p>
+              <p>Most service businesses don't need another generic monthly software subscription or an expensive 20-person agency with layers of junior account managers. They need a competent technical partner who takes the time to understand their customer flow and builds a reliable system that works day in and day out.</p>
+              <p>At Digital Cron, we start with your customer journey, eliminate the friction between the first click and a booked appointment, and deliver 100% owned, production-grade code that scales with your business.</p>
+            </div>
+
+            <div class="founder-highlight-chips">
+              <div class="founder-chip">
+                <span class="chip-dot"></span>
+                <span>Direct Founder Partnership (Zero Account Managers)</span>
               </div>
-              <div style="padding: 12px 18px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.8rem; color: #cbd5e1;">
-                ✦ 100% Code &amp; IP Ownership (Zero Platform Lock-in)
+              <div class="founder-chip">
+                <span class="chip-dot"></span>
+                <span>100% Code &amp; IP Ownership (Zero Platform Lock-in)</span>
               </div>
-              <div style="padding: 12px 18px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.8rem; color: #cbd5e1;">
-                ✦ Sub-1.2s Load Benchmark (Clean Semantic Code)
+              <div class="founder-chip">
+                <span class="chip-dot"></span>
+                <span>Sub-1.2s Load Benchmark (Clean Semantic Code)</span>
               </div>
             </div>
-            <button
-              class="hero-btn-primary"
-              style="width: fit-content;"
-              data-cal-link="sariquezamal/30min"
-              data-cal-namespace="30min"
-              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-            >
-              <span>Schedule a Call with Sarique</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
+
+            <div class="founder-actions-row">
+              <button
+                class="btn-pill btn-pill-primary"
+                data-cal-link="sariquezamal/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
+                <span>Schedule a Call with Sarique</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
           </div>
+
+          <!-- Right: Founder Portrait Card (Stretches to 100% Equal Height) -->
+          <div class="founder-photo-card">
+            <div class="founder-image-wrapper">
+              <img src="assets/founder.webp" alt="Sarique Zamal - Founder & Technical Lead at Digital Cron" class="founder-full-img" decoding="async" fetchpriority="high" />
+              <div class="founder-image-overlay">
+                <div class="founder-overlay-badge">
+                  <span class="status-pulse-dot"></span>
+                  <span>Direct Technical Lead</span>
+                </div>
+                <div class="founder-overlay-name">Sarique Zamal</div>
+                <div class="founder-overlay-role">Founder &amp; Senior Technical Architect</div>
+                <div class="founder-overlay-desc">Direct engineering partner on every project from initial systems audit to live deployment.</div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1054,7 +1078,7 @@
 
     <!-- 14. FREQUENTLY ASKED QUESTIONS -->
     <section id="faq" style="background: var(--bg-surface); padding: 72px 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-      <div class="container">
+      <div class="container container-narrow">
         <div class="section-header" style="text-align: center; max-width: 720px; margin: 0 auto 48px auto;">
           <div class="badge-demo" style="margin-bottom: 14px;">FREQUENTLY ASKED QUESTIONS</div>
           <h2 class="section-title" style="margin-bottom: 12px;">Clear Answers for <span class="text-gradient">Business Owners</span></h2>
@@ -1062,104 +1086,84 @@
         </div>
 
         <div class="faq-accordion">
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>Is Digital Cron an agency or a software company?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Digital Cron is a technology partner that provides custom web development and practical automation systems. We do not sell generic off-the-shelf software subscriptions; we engineer bespoke websites, AI reception workflows, and booking integrations specifically scoped around how your business operates.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Digital Cron is a technology partner that provides custom web development and practical automation systems. We do not sell generic off-the-shelf software subscriptions; we engineer bespoke websites, AI reception workflows, and booking integrations specifically scoped around how your business operates.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>Do you work with existing websites?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. You don't necessarily need to rebuild your website from scratch. We can evaluate your current website and integrate AI reception, automated booking calendars, or CRM lead capture pipelines into your existing platform where practical.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Yes. You don't necessarily need to rebuild your website from scratch. We can evaluate your current website and integrate AI reception, automated booking calendars, or CRM lead capture pipelines into your existing platform where practical.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>Do you build custom websites?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. Every new website we deliver is custom-built with clean, semantic code optimized for sub-1.2s loading speeds, pristine Core Web Vitals, and conversion clarity. We do not use bloated page builder themes that slow down your site.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Yes. Every new website we deliver is custom-built with clean, semantic code optimized for sub-1.2s loading speeds, pristine Core Web Vitals, and conversion clarity. We do not use bloated page builder themes that slow down your site.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>Can you connect my existing CRM?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. We integrate with major CRM and scheduling platforms via secure webhooks and APIs. Lead details, booking parameters, and qualification notes are synchronized directly into your team's existing workflow.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Yes. We integrate with major CRM and scheduling platforms via secure webhooks and APIs. Lead details, booking parameters, and qualification notes are synchronized directly into your team's existing workflow.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>Can you automate phone calls?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. We can deploy automated AI voice receptionists configured to answer incoming calls 24/7, answer common business inquiries, collect customer contact details, and schedule appointment slots directly into your calendar.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Yes. We can deploy automated AI voice receptionists configured to answer incoming calls 24/7, answer common business inquiries, collect customer contact details, and schedule appointment slots directly into your calendar.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>Can you automate appointment booking?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. We configure frictionless calendar booking workflows synchronized with Google Calendar, Cal.com, or your practice management software. The system respects your team's real-time availability and buffer times.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Yes. We configure frictionless calendar booking workflows synchronized with Google Calendar, Cal.com, or your practice management software. The system respects your team's real-time availability and buffer times.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>Do you work with small businesses?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. Our systems are built primarily for independent practices, local service contractors, real estate teams, boutique stays, and growing service businesses that handle customer enquiries and appointments daily.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Yes. Our systems are built primarily for independent practices, local service contractors, real estate teams, boutique stays, and growing service businesses that handle customer enquiries and appointments daily.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>How much does a project cost?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Because every system is scoped around the business and its operational workflow, investment varies based on whether you need a high-performance website, specific automation modules, or an end-to-end business system. The first step is a free consultation to map your requirements and provide a clear, tailored proposal.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Because every system is scoped around the business and its operational workflow, investment varies based on whether you need a high-performance website, specific automation modules, or an end-to-end business system. The first step is a free consultation to map your requirements and provide a clear, tailored proposal.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>How long does a project take?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Delivery timelines depend on scope. A targeted conversion website or single automation workflow typically takes 2 to 3 weeks, while a comprehensive business system with AI voice reception and CRM integration typically takes 4 to 6 weeks.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">Delivery timelines depend on scope. A targeted conversion website or single automation workflow typically takes 2 to 3 weeks, while a comprehensive business system with AI voice reception and CRM integration typically takes 4 to 6 weeks.</div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-question" aria-expanded="false">
+          <div class="faq-item">
+            <div class="faq-question">
               <span>Do you guarantee more leads or revenue?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>No responsible technology provider can guarantee a specific revenue outcome. Digital Cron focuses on building and optimizing the systems that improve the customer journey, eliminate response delays, and make lead handling more efficient.</p>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
+            <div class="faq-answer">No responsible technology provider can guarantee a specific revenue outcome. Digital Cron focuses on building and optimizing the systems that improve the customer journey, eliminate response delays, and make lead handling more efficient.</div>
           </div>
         </div>
       </div>
