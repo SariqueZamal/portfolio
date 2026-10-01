@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!isActive) {
           item.classList.add("active");
-          answer.style.maxHeight = answer.scrollHeight + "px";
+          answer.style.maxHeight = (answer.scrollHeight + 32) + "px";
         } else {
           item.classList.remove("active");
           answer.style.maxHeight = null;
