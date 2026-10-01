@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://app.cal.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=Fira+Code:wght@400;500&display=swap" />
+    <meta
+      name="description"
+      content="Solar Lead Qualification System blueprint: Automated homeowner screening, roof eligibility qualification, energy consumption analysis, and consultation booking."
+    />
+    <meta name="keywords" content="solar lead qualification, solar website, solar automation, renewable energy booking, solar consultation" />
+    <meta name="author" content="Digital Cron" />
+
+    <title>Solar Lead Qualification System Blueprint | Digital Cron</title>
+    <link rel="canonical" href="https://digitalcron.com/work-solar.html" />
+
+    <meta property="og:title" content="Solar Lead Qualification System Blueprint | Digital Cron" />
+    <meta property="og:description" content="Automated homeowner screening, energy requirement analysis, and consultation booking for solar contractors." />
+    <meta property="og:image" content="https://digitalcron.com/assets/logo.jpg" />
+    <meta property="og:url" content="https://digitalcron.com/work-solar.html" />
+    <meta property="og:type" content="article" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Solar Lead Qualification System Blueprint | Digital Cron" />
+    <meta name="twitter:description" content="Automated homeowner screening, energy requirement analysis, and consultation booking." />
+    <meta name="twitter:image" content="https://digitalcron.com/assets/logo.jpg" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="26x26" href="assets/favicon-26x26.png" />
+    <link rel="icon" type="image/png" sizes="28x28" href="assets/favicon-28x28.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Global Navigation Header -->
+    <header class="header" id="header">
+      <div class="header-container">
+        <a href="index.html" class="brand" aria-label="Digital Cron Home">
+          <img src="assets/logo.jpg" alt="Digital Cron Logo" width="34" height="34" loading="eager" fetchpriority="high" />
+          <span>DIGITAL CRON</span>
+        </a>
+
+        <nav class="nav-desktop" id="main-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="solutions.html" class="nav-link">Solutions</a>
+          <a href="work.html" class="nav-link active">Work</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="btn-pill btn-pill-primary"
+            id="header-cta-btn"
+            data-cal-link="sariquezamal/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            <span>Book a Consultation</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Off-canvas Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-header">
+        <span class="brand">
+          <img src="assets/logo.jpg" alt="Digital Cron Logo" width="28" height="28" />
+          <span>DIGITAL CRON</span>
+        </span>
+        <button class="mobile-close-btn" id="mobile-menu-close" aria-label="Close Menu">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="solutions.html" class="mobile-nav-link">Solutions</a>
+        <a href="work.html" class="mobile-nav-link active">Work</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+      <button
+        class="btn-pill btn-pill-primary"
+        style="width: 100%; margin-top: auto;"
+        data-cal-link="sariquezamal/30min"
+        data-cal-namespace="30min"
+        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+      >
+        <span>Book a Consultation</span>
+      </button>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span class="breadcrumb-separator">/</span> <a href="work.html">Work</a> <span class="breadcrumb-separator">/</span> <span>Solar Blueprint</span>
+        </div>
+        <div class="hero-badge-pill"><span class="hero-badge-dot"></span> Example Solution Blueprint</div>
+        <h1 class="page-hero-title">Solar Lead <span class="hero-gradient-text">Qualification System.</span></h1>
+        <p class="page-hero-desc">A production-ready demonstration blueprint illustrating how residential and commercial solar installers qualify homeowners, screen property suitability, and automate consultation bookings before sales teams spend time.</p>
+      </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-ribbon-wrapper" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"><span class="star-separator">✦</span> Solar Lead Qualification</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Homeowner Screening</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Electric Bill Triage</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Consultation Booking</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> CRM Lead Routing</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Automated SMS Alerts</span>
+        <!-- Duplicated track -->
+        <span class="marquee-item"><span class="star-separator">✦</span> Solar Lead Qualification</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Homeowner Screening</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Electric Bill Triage</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Consultation Booking</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> CRM Lead Routing</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Automated SMS Alerts</span>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <!-- Blueprint Specs Deck -->
+        <div class="blueprint-specs-deck">
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Target Industry</span>
+            <div class="blueprint-spec-val">Solar &amp; Renewables</div>
+            <span class="blueprint-spec-sub">Residential &amp; commercial solar installers</span>
+          </div>
+
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">System Architecture</span>
+            <div class="blueprint-spec-val">Lead Qualification Engine</div>
+            <span class="blueprint-spec-sub">Interactive property survey &amp; automated calendar booking</span>
+          </div>
+
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Performance Benchmark</span>
+            <div class="blueprint-spec-val">&lt; 1.2s Load Speed</div>
+            <span class="blueprint-spec-sub">Optimized for high-intent mobile ad traffic</span>
+          </div>
+
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Automation Scope</span>
+            <div class="blueprint-spec-val">Autonomous Screening</div>
+            <span class="blueprint-spec-sub">Instant lead scoring, CRM webhook sync &amp; SMS alerts</span>
+          </div>
+        </div>
+
+        <div class="legal-content">
+          <h2>Who This Is For</h2>
+          <p>This system blueprint is designed for regional solar contractors, installation teams, and renewable energy providers who spend money on local marketing or search traffic and need a dependable way to filter unqualified inquiries before their sales consultants get on the phone.</p>
+
+          <h2>Common Operational Problems</h2>
+          <ul>
+            <li><strong>Unqualified Lead Fatigue:</strong> Sales representatives spending hours calling renters or homes with heavily shaded roofs who cannot install solar.</li>
+            <li><strong>Slow Speed to Lead:</strong> Homeowners requesting quotes on evenings or weekends waiting 24 to 48 hours for a reply, by which time they have contacted competitors.</li>
+            <li><strong>Manual Data Collection:</strong> Sales staff spending the first 15 minutes of every call manually collecting monthly electric bills and property specs.</li>
+            <li><strong>Consultation Drop-Off:</strong> Unscheduled phone inquiries falling out of the funnel due to endless phone tag.</li>
+          </ul>
+
+          <h2>The Proposed Digital Cron System</h2>
+          <p>We deploy a streamlined, conversion-optimized landing interface paired with a multi-step qualification intake funnel. Instead of a generic contact form, the homeowner answers five essential qualification questions (home ownership status, estimated monthly electric bill, roof condition, and shading). High-intent qualifying prospects are immediately offered an interactive calendar slot for an on-site or virtual solar assessment, while your CRM receives complete lead data in real time.</p>
+
+          <h2>End-to-End Workflow Pipeline</h2>
+          <p>The system routes homeowner inquiries through a disciplined 7-stage automated pipeline:</p>
+        </div>
+
+        <!-- Pipeline Diagram -->
+        <div class="blueprint-pipeline-deck">
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 01</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Landing Page &amp; Intent Capture</h3>
+                <span class="pipeline-step-tag">Front-End Core</span>
+              </div>
+              <p class="pipeline-step-desc">The homeowner lands on a fast, lightweight mobile interface highlighting local utility rates, solar incentives, and a straightforward eligibility assessment.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 02</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Homeowner &amp; Property Verification</h3>
+                <span class="pipeline-step-tag">Qualification Filter</span>
+              </div>
+              <p class="pipeline-step-desc">The visitor confirms property ownership (Single Family Homeowner vs. Renter) and roof age to immediately verify technical feasibility.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 03</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Energy Consumption Assessment</h3>
+                <span class="pipeline-step-tag">Triage Engine</span>
+              </div>
+              <p class="pipeline-step-desc">The homeowner selects their average monthly electricity spend range ($150–$300, $300–$500, $500+) and utility provider to estimate system capacity needs.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 04</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Automated Lead Scoring</h3>
+                <span class="pipeline-step-tag">Edge Logic</span>
+              </div>
+              <p class="pipeline-step-desc">The system scores the enquiry based on roof suitability, ownership, and bill amount. High-scoring leads are routed directly to priority scheduling.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 05</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Instant Consultation Booking</h3>
+                <span class="pipeline-step-tag">Calendar Sync</span>
+              </div>
+              <p class="pipeline-step-desc">Qualified homeowners select a live slot on your solar design consultant's calendar for a 20-minute proposal review or site visit.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 06</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">CRM Sync &amp; Sales Dispatch</h3>
+                <span class="pipeline-step-tag">Webhook Pipeline</span>
+              </div>
+              <p class="pipeline-step-desc">Lead parameters, electric bill data, and booking confirmation are instantly written into your CRM or Google Sheets, alerting sales leadership via email/SMS.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 07</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Automated Confirmation &amp; Reminders</h3>
+                <span class="pipeline-step-tag">SMS / Email</span>
+              </div>
+              <p class="pipeline-step-desc">The homeowner receives an immediate calendar invite and SMS confirmation with guidelines on what bills to prepare for the consultation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="legal-content">
+          <h2>What Digital Cron Can Build For Your Solar Business</h2>
+          <ul>
+            <li><strong>Custom High-Speed Solar Landing Page:</strong> Clean, conversion-focused page with sub-1.2s loading speed and transparent solar value proposition.</li>
+            <li><strong>Interactive Multi-Step Qualification Funnel:</strong> Custom qualification form that calculates energy potential and filters out renters and low-intent submissions.</li>
+            <li><strong>Automated Calendar Scheduling:</strong> Direct integration with Google Calendar or your sales team's booking tool to eliminate phone tag.</li>
+            <li><strong>CRM Webhook Pipeline:</strong> Automatic transfer of contact details and qualification notes into your CRM or pipeline management tool.</li>
+            <li><strong>Automated SMS &amp; Email Reminders:</strong> Multi-stage reminder triggers that confirm consultations and prepare homeowners for the site visit.</li>
+          </ul>
+        </div>
+
+        <!-- Call to Action Box -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: 40px; text-align: center; margin-top: 48px;">
+          <h2 style="font-family: var(--font-display); font-size: 1.8rem; color: #ffffff; margin-bottom: 12px;">Discuss a Solar Qualification System</h2>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 620px; margin: 0 auto 24px auto; line-height: 1.6;">
+            Tell us about your current customer inquiry process and marketing channels. We'll map out a practical qualification workflow tailored to your solar sales operation.
+          </p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <button
+              class="btn-pill btn-pill-primary"
+              data-cal-link="sariquezamal/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
+              <span>Get a Free Automation Consultation</span>
+            </button>
+            <a href="contact.html" class="btn-pill btn-pill-secondary">
+              <span>Discuss My Business</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Footer CTA -->
+    <section class="prefooter-upgrade-section">
+      <div class="container">
+        <div class="upgrade-cta-card">
+          <div class="upgrade-cta-inner">
+            <div class="upgrade-cta-content">
+              <div class="upgrade-pill-badge">
+                <span class="badge-dot"></span>
+                <span>Direct Founder Partnership &bull; Senior Engineering</span>
+              </div>
+              <h2 class="upgrade-cta-title">Let's Build a Better <span class="text-gradient">Customer Journey.</span></h2>
+              <p class="upgrade-cta-desc">Tell us how your business currently handles website visitors, calls and enquiries. We'll discuss where a better website or automation system could fit.</p>
+              <div class="upgrade-trust-pills">
+                <span class="trust-pill-tag">⚡ Sub-1.2s Load Benchmark</span>
+                <span class="trust-pill-tag">🔒 100% Code &amp; IP Ownership</span>
+                <span class="trust-pill-tag">🎯 Zero Platform Lock-in</span>
+              </div>
+            </div>
+            <div class="upgrade-cta-actions">
+              <button
+                class="btn-pill btn-pill-primary upgrade-btn-main"
+                data-cal-link="sariquezamal/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
+                <span>Book a Free Consultation</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="solutions.html" class="btn-pill btn-pill-secondary upgrade-btn-ghost">
+                <span>Explore Our Solutions</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-nexora">
+      <div class="container">
+        <div class="footer-grid-nexora">
+          <div class="footer-brand-col">
+            <a href="index.html" class="brand" style="text-decoration:none; margin-bottom: 4px;">
+              <img src="assets/logo.jpg" alt="Digital Cron Logo" width="34" height="34" loading="lazy" decoding="async" />
+              <span>DIGITAL CRON</span>
+            </a>
+            <p class="footer-brand-desc">We don't just build websites. We build the digital systems that help businesses capture, qualify and convert customer enquiries.</p>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Web Solutions</h4>
+            <ul class="footer-links-list">
+              <li><a href="services.html#business-websites">High-Performance Websites</a></li>
+              <li><a href="services.html#seo-websites">SEO-Focused Websites</a></li>
+              <li><a href="services.html#booking-websites">Website + Booking</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Automation</h4>
+            <ul class="footer-links-list">
+              <li><a href="services.html#ai-voice-receptionist">AI Voice Receptionist</a></li>
+              <li><a href="services.html#ai-chatbots">AI Chatbots</a></li>
+              <li><a href="services.html#lead-management">Lead Qualification</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Company</h4>
+            <ul class="footer-links-list">
+              <li><a href="about.html">About Digital Cron</a></li>
+              <li><a href="work.html">Solution Blueprints</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Consultation</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Schedule a 30-minute consultation to map your customer journey and automation opportunities.</p>
+            <button
+              class="btn-pill btn-pill-primary"
+              style="width: 100%; font-size: 0.84rem; padding: 11px 16px; justify-content: center;"
+              data-cal-link="sariquezamal/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
+              <span>Book a Consultation</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-bottom-nexora">
+          <p>&copy; 2026 Digital Cron. All rights reserved.</p>
+          <div class="legal-links-nexora">
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://app.cal.com"});
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+      Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

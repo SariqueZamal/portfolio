@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://app.cal.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=Fira+Code:wght@400;500&display=swap" />
+    <meta
+      name="description"
+      content="Hospitality Direct Booking & Guest Enquiry System blueprint: 24/7 AI guest assistant, live room availability checks, commission-free booking, and automated confirmations."
+    />
+    <meta name="keywords" content="hospitality booking automation, hotel direct booking, AI guest reception, boutique stay website, hospitality enquiry system" />
+    <meta name="author" content="Digital Cron" />
+
+    <title>Hospitality Direct Booking &amp; Guest Enquiry System Blueprint | Digital Cron</title>
+    <link rel="canonical" href="https://digitalcron.com/work-hospitality.html" />
+
+    <meta property="og:title" content="Hospitality Direct Booking &amp; Guest Enquiry System Blueprint | Digital Cron" />
+    <meta property="og:description" content="Direct booking engine and 24/7 automated guest communication for boutique hotels, resorts, and stays." />
+    <meta property="og:image" content="https://digitalcron.com/assets/logo.jpg" />
+    <meta property="og:url" content="https://digitalcron.com/work-hospitality.html" />
+    <meta property="og:type" content="article" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hospitality Direct Booking &amp; Guest Enquiry System Blueprint | Digital Cron" />
+    <meta name="twitter:description" content="Direct booking engine and 24/7 automated guest communication for boutique stays." />
+    <meta name="twitter:image" content="https://digitalcron.com/assets/logo.jpg" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="26x26" href="assets/favicon-26x26.png" />
+    <link rel="icon" type="image/png" sizes="28x28" href="assets/favicon-28x28.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180x180.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Global Navigation Header -->
+    <header class="header" id="header">
+      <div class="header-container">
+        <a href="index.html" class="brand" aria-label="Digital Cron Home">
+          <img src="assets/logo.jpg" alt="Digital Cron Logo" width="34" height="34" loading="eager" fetchpriority="high" />
+          <span>DIGITAL CRON</span>
+        </a>
+
+        <nav class="nav-desktop" id="main-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="solutions.html" class="nav-link">Solutions</a>
+          <a href="work.html" class="nav-link active">Work</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="btn-pill btn-pill-primary"
+            id="header-cta-btn"
+            data-cal-link="sariquezamal/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            <span>Book a Consultation</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Off-canvas Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-header">
+        <span class="brand">
+          <img src="assets/logo.jpg" alt="Digital Cron Logo" width="28" height="28" />
+          <span>DIGITAL CRON</span>
+        </span>
+        <button class="mobile-close-btn" id="mobile-menu-close" aria-label="Close Menu">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="solutions.html" class="mobile-nav-link">Solutions</a>
+        <a href="work.html" class="mobile-nav-link active">Work</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+      <button
+        class="btn-pill btn-pill-primary"
+        style="width: 100%; margin-top: auto;"
+        data-cal-link="sariquezamal/30min"
+        data-cal-namespace="30min"
+        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+      >
+        <span>Book a Consultation</span>
+      </button>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span class="breadcrumb-separator">/</span> <a href="work.html">Work</a> <span class="breadcrumb-separator">/</span> <span>Hospitality Blueprint</span>
+        </div>
+        <div class="hero-badge-pill"><span class="hero-badge-dot"></span> Example Solution Blueprint</div>
+        <h1 class="page-hero-title">Direct Booking &amp; <span class="hero-gradient-text">Guest Enquiry System.</span></h1>
+        <p class="page-hero-desc">A production-ready demonstration blueprint illustrating how boutique hotels, luxury retreats, and hospitality businesses automate guest communication, check live room availability, and capture commission-free bookings.</p>
+      </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-ribbon-wrapper" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"><span class="star-separator">✦</span> Direct Booking Engine</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> 24/7 AI Guest Assistant</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Live Availability Check</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Commission-Free Reservations</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> WhatsApp &amp; SMS Confirmations</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Sub-1.2s Load Speed</span>
+        <!-- Duplicated track -->
+        <span class="marquee-item"><span class="star-separator">✦</span> Direct Booking Engine</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> 24/7 AI Guest Assistant</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Live Availability Check</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Commission-Free Reservations</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> WhatsApp &amp; SMS Confirmations</span>
+        <span class="marquee-item"><span class="star-separator">✦</span> Sub-1.2s Load Speed</span>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <!-- Blueprint Specs Deck -->
+        <div class="blueprint-specs-deck">
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Target Industry</span>
+            <div class="blueprint-spec-val">Hospitality &amp; Stays</div>
+            <span class="blueprint-spec-sub">Boutique hotels, luxury villas, resorts &amp; dining venues</span>
+          </div>
+
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">System Architecture</span>
+            <div class="blueprint-spec-val">Direct Reservation Engine</div>
+            <span class="blueprint-spec-sub">AI guest assistance, calendar check &amp; automated confirmations</span>
+          </div>
+
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Performance Benchmark</span>
+            <div class="blueprint-spec-val">&lt; 1.2s Page Load</div>
+            <span class="blueprint-spec-sub">High-resolution image optimization &amp; zero bloat</span>
+          </div>
+
+          <div class="blueprint-spec-box">
+            <span class="blueprint-spec-label">Automation Scope</span>
+            <div class="blueprint-spec-val">24/7 Guest Service</div>
+            <span class="blueprint-spec-sub">Instant answers, availability sync &amp; automated follow-up</span>
+          </div>
+        </div>
+
+        <div class="legal-content">
+          <h2>Who This Is For</h2>
+          <p>This system blueprint is designed for independent boutique hotels, luxury villa rentals, private resorts, and dining venues seeking to capture direct customer reservations, reduce dependence on high-commission travel agencies (OTAs), and eliminate repetitive front-desk questions.</p>
+
+          <h2>Common Operational Problems</h2>
+          <ul>
+            <li><strong>High OTA Commission Fees:</strong> Paying 15% to 25% of every booking to third-party travel platforms because direct website booking feels confusing or slow.</li>
+            <li><strong>Repetitive Inquiries Overwhelming Front-Desk:</strong> Front-desk staff repeatedly answering questions about check-in times, pet policies, amenities, and local transport.</li>
+            <li><strong>Lost International Bookings:</strong> Travelers in opposing time zones asking booking questions at night and abandoning the reservation when no one answers.</li>
+            <li><strong>Manual Confirmation Workflows:</strong> Staff manually drafting confirmation emails, arrival instructions, and payment receipts.</li>
+          </ul>
+
+          <h2>The Proposed Digital Cron System</h2>
+          <p>We deploy an elegant, editorial-style direct booking website paired with an autonomous 24/7 AI guest assistant. Prospective guests can explore suites, view high-resolution photo galleries, ask specific questions about policies or amenities in natural language, verify real-time room availability, and submit a direct reservation. The system triggers immediate calendar slot reservations, dispatches payment details, and sends automated WhatsApp or SMS arrival guidelines.</p>
+
+          <h2>End-to-End Workflow Pipeline</h2>
+          <p>The system routes prospective guests through a 6-stage automated pipeline:</p>
+        </div>
+
+        <!-- Pipeline Diagram -->
+        <div class="blueprint-pipeline-deck">
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 01</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Editorial Experience &amp; Suite Discovery</h3>
+                <span class="pipeline-step-tag">Front-End UI</span>
+              </div>
+              <p class="pipeline-step-desc">The guest explores high-speed, mobile-optimized room categories, dining menus, and property amenities with zero image lag.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 02</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">24/7 AI Guest Concierge</h3>
+                <span class="pipeline-step-tag">AI Assistant</span>
+              </div>
+              <p class="pipeline-step-desc">An interactive assistant answers specific questions about early check-in, dietary menus, nearby attractions, and parking guidelines in seconds.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 03</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Live Availability &amp; Rate Query</h3>
+                <span class="pipeline-step-tag">Booking Engine</span>
+              </div>
+              <p class="pipeline-step-desc">The reservation calendar checks real-time dates and party sizes, calculating accurate rates and seasonal packages without third-party fees.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 04</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Direct Reservation Submission</h3>
+                <span class="pipeline-step-tag">Secure Intake</span>
+              </div>
+              <p class="pipeline-step-desc">Guest details, arrival time, and special requests are captured in an encrypted, frictionless mobile checkout workflow.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 05</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Property Management Sync</h3>
+                <span class="pipeline-step-tag">Webhook / PMS</span>
+              </div>
+              <p class="pipeline-step-desc">The reservation is written directly into your property master calendar, instantly notifying hospitality managers and front-desk staff.</p>
+            </div>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">STAGE 06</div>
+            <div class="pipeline-step-body">
+              <div class="pipeline-step-header">
+                <h3 class="pipeline-step-title">Automated Confirmation &amp; Pre-Arrival Guide</h3>
+                <span class="pipeline-step-tag">Automated Follow-Up</span>
+              </div>
+              <p class="pipeline-step-desc">The guest receives an automated confirmation via email and WhatsApp with driving directions, keyless check-in instructions, and local recommendations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="legal-content">
+          <h2>What Digital Cron Can Build For Your Hospitality Business</h2>
+          <ul>
+            <li><strong>Custom Direct-Booking Website:</strong> Premium editorial design showcasing your property with sub-1.2s loading speeds and conversion hierarchy.</li>
+            <li><strong>24/7 AI Guest Assistant:</strong> Trained on your exact property policies, menus, and local area details to answer inquiries day and night.</li>
+            <li><strong>Direct Reservation Workflow:</strong> Mobile-friendly date and room selection that avoids costly 15–25% OTA commission fees.</li>
+            <li><strong>Automated Follow-Up Sequences:</strong> Multi-channel confirmations and pre-arrival reminders sent via email and WhatsApp.</li>
+            <li><strong>Team Notification Pipeline:</strong> Instant alerts dispatched to property managers as soon as a new booking or inquiry is placed.</li>
+          </ul>
+        </div>
+
+        <!-- Call to Action Box -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: 40px; text-align: center; margin-top: 48px;">
+          <h2 style="font-family: var(--font-display); font-size: 1.8rem; color: #ffffff; margin-bottom: 12px;">Discuss a Hospitality System Blueprint</h2>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 620px; margin: 0 auto 24px auto; line-height: 1.6;">
+            Tell us about your property, current booking volume, and guest communication workflow. We'll map out a direct-booking system designed to increase direct revenue.
+          </p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <button
+              class="btn-pill btn-pill-primary"
+              data-cal-link="sariquezamal/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
+              <span>Get a Free Automation Consultation</span>
+            </button>
+            <a href="contact.html" class="btn-pill btn-pill-secondary">
+              <span>Discuss My Business</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Footer CTA -->
+    <section class="prefooter-upgrade-section">
+      <div class="container">
+        <div class="upgrade-cta-card">
+          <div class="upgrade-cta-inner">
+            <div class="upgrade-cta-content">
+              <div class="upgrade-pill-badge">
+                <span class="badge-dot"></span>
+                <span>Direct Founder Partnership &bull; Senior Engineering</span>
+              </div>
+              <h2 class="upgrade-cta-title">Let's Build a Better <span class="text-gradient">Customer Journey.</span></h2>
+              <p class="upgrade-cta-desc">Tell us how your business currently handles website visitors, calls and enquiries. We'll discuss where a better website or automation system could fit.</p>
+              <div class="upgrade-trust-pills">
+                <span class="trust-pill-tag">⚡ Sub-1.2s Load Benchmark</span>
+                <span class="trust-pill-tag">🔒 100% Code &amp; IP Ownership</span>
+                <span class="trust-pill-tag">🎯 Zero Platform Lock-in</span>
+              </div>
+            </div>
+            <div class="upgrade-cta-actions">
+              <button
+                class="btn-pill btn-pill-primary upgrade-btn-main"
+                data-cal-link="sariquezamal/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
+                <span>Book a Free Consultation</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="solutions.html" class="btn-pill btn-pill-secondary upgrade-btn-ghost">
+                <span>Explore Our Solutions</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-nexora">
+      <div class="container">
+        <div class="footer-grid-nexora">
+          <div class="footer-brand-col">
+            <a href="index.html" class="brand" style="text-decoration:none; margin-bottom: 4px;">
+              <img src="assets/logo.jpg" alt="Digital Cron Logo" width="34" height="34" loading="lazy" decoding="async" />
+              <span>DIGITAL CRON</span>
+            </a>
+            <p class="footer-brand-desc">We don't just build websites. We build the digital systems that help businesses capture, qualify and convert customer enquiries.</p>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Web Solutions</h4>
+            <ul class="footer-links-list">
+              <li><a href="services.html#business-websites">High-Performance Websites</a></li>
+              <li><a href="services.html#seo-websites">SEO-Focused Websites</a></li>
+              <li><a href="services.html#booking-websites">Website + Booking</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Automation</h4>
+            <ul class="footer-links-list">
+              <li><a href="services.html#ai-voice-receptionist">AI Voice Receptionist</a></li>
+              <li><a href="services.html#ai-chatbots">AI Chatbots</a></li>
+              <li><a href="services.html#lead-management">Lead Qualification</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Company</h4>
+            <ul class="footer-links-list">
+              <li><a href="about.html">About Digital Cron</a></li>
+              <li><a href="work.html">Solution Blueprints</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Consultation</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Schedule a 30-minute consultation to map your customer journey and automation opportunities.</p>
+            <button
+              class="btn-pill btn-pill-primary"
+              style="width: 100%; font-size: 0.84rem; padding: 11px 16px; justify-content: center;"
+              data-cal-link="sariquezamal/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
+              <span>Book a Consultation</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-bottom-nexora">
+          <p>&copy; 2026 Digital Cron. All rights reserved.</p>
+          <div class="legal-links-nexora">
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://app.cal.com"});
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+      Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
