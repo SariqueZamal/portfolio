@@ -232,6 +232,7 @@
       renderer.setSize(width, height);
     }
     window.addEventListener("resize", onResize);
+    requestAnimationFrame(onResize);
 
     // 11. Intersection Observer (Freezes render loop when out of viewport)
     let isVisible = true;
