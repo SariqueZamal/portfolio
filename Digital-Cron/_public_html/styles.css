@@ -59,6 +59,15 @@
   padding: 0;
 }
 
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, p, span, a, li {
+  overflow-wrap: break-word;
+}
+
 html {
   scroll-behavior: smooth;
   background-color: var(--bg-base);
@@ -761,6 +770,8 @@ nav#main-nav {
   transform: translate(-50%, -50%);
   width: 360px;
   height: 360px;
+  max-width: 100%;
+  max-height: 100%;
   background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, rgba(56, 189, 248, 0.12) 40%, transparent 70%);
   filter: blur(40px);
   pointer-events: none;
@@ -3585,6 +3596,21 @@ nav#main-nav {
   .footer-grid-nexora {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .footer-brand-col {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 960px) {
+  nav#main-nav,
+  .nav-actions #header-cta-btn {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3837,13 +3863,52 @@ nav#main-nav {
   }
 
   /* Nexora Layout Responsive Rules (480px) */
+  .container,
+  .container-narrow {
+    padding: 0 16px;
+  }
+
   .hero-nexora-title {
     font-size: 2.1rem;
+  }
+
+  .hero-pill-badge {
+    max-width: 100%;
+    font-size: 0.68rem;
+    padding: 5px 12px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .hero-nexora-cta {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-ghost {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero-3d-nexora-stage {
     max-width: 290px;
     border-radius: 24px;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-card {
+    padding: 28px 18px;
+  }
+
+  .founder-image-wrapper {
+    min-height: 320px;
   }
 
   .industries-grid-ref {
@@ -3858,6 +3923,11 @@ nav#main-nav {
 }
 
 @media (max-width: 360px) {
+  .container,
+  .container-narrow {
+    padding: 0 12px;
+  }
+
   .brand {
     font-size: 0.98rem;
   }
@@ -3866,8 +3936,16 @@ nav#main-nav {
     font-size: 1.8rem;
   }
 
+  .hero-nexora-title {
+    font-size: 1.85rem;
+  }
+
   .hero-3d-stage {
     max-width: 280px;
+  }
+
+  .hero-3d-nexora-stage {
+    max-width: 260px;
   }
 }
 
@@ -5452,7 +5530,7 @@ nav#main-nav {
 /* Service Packages (01, 02, 03) */
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 28px;
   margin-top: 36px;
 }
