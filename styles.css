@@ -1361,10 +1361,10 @@ nav#main-nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(200, 200, 220, 0.02) 45%, transparent 70%);
-  filter: blur(52px);
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(56, 189, 248, 0.15) 45%, transparent 72%);
+  filter: blur(42px);
   pointer-events: none;
   z-index: 0;
 }
@@ -1390,21 +1390,20 @@ nav#main-nav {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: #f8fafc;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.14);
+  border: 1px solid rgba(99, 102, 241, 0.32);
   padding: 4px 10px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
 .hud-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #10b981;
-  box-shadow: 0 0 8px #10b981;
+  background-color: #6366f1;
+  box-shadow: 0 0 8px #6366f1;
   animation: hudPulse 2s infinite ease-in-out;
 }
 
@@ -1417,13 +1416,12 @@ nav#main-nav {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.08em;
-  color: #94a3b8;
+  color: var(--text-muted);
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-subtle);
   padding: 4px 10px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
 .tech-hud-bottom {
@@ -1444,27 +1442,20 @@ nav#main-nav {
   gap: 6px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: #cbd5e1;
-  background: rgba(15, 15, 20, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  background: rgba(10, 13, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 4px 10px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
 .hud-coord {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.06em;
-  color: #94a3b8;
+  color: var(--accent-primary);
   font-weight: 500;
-  background: rgba(15, 15, 20, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 4px 10px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Service Category Cards (Homepage) */
@@ -2831,22 +2822,22 @@ nav#main-nav {
 .hero-3d-nexora-stage {
   position: relative;
   width: 100%;
-  max-width: 460px;
+  max-width: 480px;
   aspect-ratio: 1 / 1;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0%, rgba(18, 18, 22, 0.75) 55%, rgba(8, 8, 12, 0.95) 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.16) 0%, rgba(56, 189, 248, 0.06) 45%, rgba(10, 13, 20, 0.5) 85%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 28px;
+  border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
   cursor: grab;
   user-select: none;
   touch-action: pan-y;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-3d-nexora-stage:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 36px rgba(255, 255, 255, 0.08);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5), 0 0 36px rgba(99, 102, 241, 0.2);
 }
 
 .hero-3d-nexora-stage:active {
@@ -2857,7 +2848,6 @@ nav#main-nav {
   width: 100% !important;
   height: 100% !important;
   display: block;
-  pointer-events: none;
 }
 
 /* Overlaid Glass Telemetry Card on Right-Side 3D Core */
@@ -3571,16 +3561,6 @@ nav#main-nav {
     gap: 40px;
   }
 
-  .hero-nexora-3d-col {
-    max-width: 440px;
-    margin: 0 auto;
-  }
-
-  .hero-3d-nexora-stage {
-    max-width: 420px;
-    margin: 0 auto;
-  }
-
   .story-card-nexora {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -3836,10 +3816,9 @@ nav#main-nav {
     width: 100%;
   }
 
-  .hero-3d-stage,
-  .hero-3d-nexora-stage {
-    max-width: 310px;
-    border-radius: 20px;
+  .hero-3d-stage {
+    max-width: 320px;
+    border-radius: 22px;
   }
 
   /* Nexora Layout Responsive Rules (480px) */
@@ -3867,9 +3846,8 @@ nav#main-nav {
     font-size: 1.8rem;
   }
 
-  .hero-3d-stage,
-  .hero-3d-nexora-stage {
-    max-width: 270px;
+  .hero-3d-stage {
+    max-width: 280px;
   }
 }
 
