@@ -18,7 +18,7 @@
     // 2. Scene, Camera, Renderer
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
-    camera.position.z = 7.4;
+    camera.position.z = 6.2;
 
     const renderer = new THREE.WebGLRenderer({
       canvas: canvas,
@@ -31,47 +31,46 @@
 
     // Master Group containing all rotating 3D elements
     const masterGroup = new THREE.Group();
-    masterGroup.scale.set(0.85, 0.85, 0.85);
     scene.add(masterGroup);
 
-    // 3. Central Faceted Titanium Crystal Core (Icosahedron)
-    const coreGeo = new THREE.IcosahedronGeometry(1.0, 0); // Flat-shaded titanium crystal
+    // 3. Central Faceted AI Crystal Core (Icosahedron)
+    const coreGeo = new THREE.IcosahedronGeometry(1.0, 0); // Flat-shaded tech crystal
     const coreMat = new THREE.MeshStandardMaterial({
-      color: 0xf8fafc,
-      roughness: 0.12,
-      metalness: 0.95,
+      color: 0x06b6d4,
+      roughness: 0.18,
+      metalness: 0.88,
       flatShading: true,
       transparent: true,
-      opacity: 0.95
+      opacity: 0.92
     });
     const coreMesh = new THREE.Mesh(coreGeo, coreMat);
     masterGroup.add(coreMesh);
 
-    // 4. Inner Glowing Luminescent Energy Core
+    // 4. Inner Glowing Energy Core
     const innerGeo = new THREE.OctahedronGeometry(0.52, 0);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: 0xffffff
+      color: 0x6366f1
     });
     const innerMesh = new THREE.Mesh(innerGeo, innerMat);
     masterGroup.add(innerMesh);
 
-    // 5. High-Precision Silver Wireframe Cage with Vertex Points
+    // 5. Cybernetic Wireframe Cage with Vertex Points
     const wireGeo = new THREE.IcosahedronGeometry(1.36, 1);
     const wireMat = new THREE.MeshBasicMaterial({
-      color: 0x94a3b8,
+      color: 0x38bdf8,
       wireframe: true,
       transparent: true,
-      opacity: 0.32
+      opacity: 0.38
     });
     const wireMesh = new THREE.Mesh(wireGeo, wireMat);
     masterGroup.add(wireMesh);
 
-    // Glowing Diamond Vertex Nodes on Wireframe
+    // Glowing Vertex Nodes on Wireframe
     const vertexPointsGeo = new THREE.BufferGeometry();
     vertexPointsGeo.setAttribute("position", wireGeo.attributes.position);
     const vertexPointsMat = new THREE.PointsMaterial({
-      color: 0xffffff,
-      size: 0.055,
+      color: 0x818cf8,
+      size: 0.075,
       transparent: true,
       opacity: 0.85
     });
@@ -79,12 +78,12 @@
     masterGroup.add(vertexPoints);
 
     // 6. Gyroscopic Cron Orbital Rings (Automation Cycles)
-    // Ring 1: Primary Brushed Titanium Orbit
+    // Ring 1: Primary Electric Indigo Orbit
     const ring1Geo = new THREE.TorusGeometry(2.05, 0.024, 16, 100);
     const ring1Mat = new THREE.MeshStandardMaterial({
-      color: 0xe2e8f0,
-      metalness: 0.96,
-      roughness: 0.12
+      color: 0x6366f1,
+      metalness: 0.9,
+      roughness: 0.15
     });
     const ring1 = new THREE.Mesh(ring1Geo, ring1Mat);
     ring1.rotation.x = Math.PI / 3.8;
@@ -97,12 +96,12 @@
     const sat1 = new THREE.Mesh(sat1Geo, sat1Mat);
     ring1.add(sat1);
 
-    // Ring 2: Secondary Platinum Silver Orbit
+    // Ring 2: Secondary Cyan Orbit
     const ring2Geo = new THREE.TorusGeometry(1.72, 0.02, 16, 100);
     const ring2Mat = new THREE.MeshStandardMaterial({
-      color: 0x94a3b8,
-      metalness: 0.92,
-      roughness: 0.16
+      color: 0x06b6d4,
+      metalness: 0.85,
+      roughness: 0.2
     });
     const ring2 = new THREE.Mesh(ring2Geo, ring2Mat);
     ring2.rotation.x = -Math.PI / 3.2;
@@ -111,26 +110,26 @@
 
     // Satellite beacon on Ring 2
     const sat2Geo = new THREE.SphereGeometry(0.055, 16, 16);
-    const sat2Mat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    const sat2Mat = new THREE.MeshBasicMaterial({ color: 0x818cf8 });
     const sat2 = new THREE.Mesh(sat2Geo, sat2Mat);
     ring2.add(sat2);
 
     // Ring 3: Equatorial Halo Ring
     const ring3Geo = new THREE.TorusGeometry(1.48, 0.014, 12, 70);
     const ring3Mat = new THREE.MeshBasicMaterial({
-      color: 0x64748b,
+      color: 0x818cf8,
       transparent: true,
-      opacity: 0.4
+      opacity: 0.55
     });
     const ring3 = new THREE.Mesh(ring3Geo, ring3Mat);
     ring3.rotation.x = Math.PI / 2;
     masterGroup.add(ring3);
 
-    // 7. Floating Precision Particle Field
-    const particleCount = 100;
+    // 7. Floating Cyber Particle Nebula
+    const particleCount = 120;
     const particlePositions = new Float32Array(particleCount * 3);
     for (let i = 0; i < particleCount * 3; i += 3) {
-      const r = 1.6 + Math.random() * 1.3;
+      const r = 1.6 + Math.random() * 1.5;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(Math.random() * 2 - 1);
       particlePositions[i] = r * Math.sin(phi) * Math.cos(theta);
@@ -140,27 +139,27 @@
     const particleGeo = new THREE.BufferGeometry();
     particleGeo.setAttribute("position", new THREE.BufferAttribute(particlePositions, 3));
     const particleMat = new THREE.PointsMaterial({
-      color: 0xd1d5db,
-      size: 0.035,
+      color: 0x38bdf8,
+      size: 0.045,
       transparent: true,
-      opacity: 0.55
+      opacity: 0.65
     });
     const particles = new THREE.Points(particleGeo, particleMat);
     masterGroup.add(particles);
 
-    // 8. Studio Lighting System (Crisp Specular Highlights)
-    const ambientLight = new THREE.AmbientLight(0x18181b, 1.8);
+    // 8. Lighting System
+    const ambientLight = new THREE.AmbientLight(0x0f172a, 1.4);
     scene.add(ambientLight);
 
-    const dirLight1 = new THREE.DirectionalLight(0xffffff, 3.2);
-    dirLight1.position.set(5, 6, 4);
+    const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 2.6);
+    dirLight1.position.set(4, 5, 4);
     scene.add(dirLight1);
 
-    const dirLight2 = new THREE.DirectionalLight(0xa1a1aa, 2.0);
-    dirLight2.position.set(-5, -4, 3);
+    const dirLight2 = new THREE.DirectionalLight(0x6366f1, 2.5);
+    dirLight2.position.set(-4, -3, 3);
     scene.add(dirLight2);
 
-    const coreLight = new THREE.PointLight(0xffffff, 4.2, 5);
+    const coreLight = new THREE.PointLight(0x6366f1, 3.8, 4);
     scene.add(coreLight);
 
     // 9. Pointer Drag & Momentum Physics
