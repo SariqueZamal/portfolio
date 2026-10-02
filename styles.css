@@ -2646,7 +2646,7 @@ nav#main-nav {
 
 .hero-nexora-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 56px;
   align-items: center;
 }
@@ -2655,6 +2655,7 @@ nav#main-nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   z-index: 2;
 }
 
@@ -2707,7 +2708,7 @@ nav#main-nav {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 44px;
+  margin-bottom: 0;
   flex-wrap: wrap;
 }
 
@@ -2814,7 +2815,7 @@ nav#main-nav {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   z-index: 2;
 }
@@ -2822,7 +2823,7 @@ nav#main-nav {
 .hero-3d-nexora-stage {
   position: relative;
   width: 100%;
-  max-width: 480px;
+  max-width: 460px;
   aspect-ratio: 1 / 1;
   background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.16) 0%, rgba(56, 189, 248, 0.06) 45%, rgba(10, 13, 20, 0.5) 85%);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2832,7 +2833,7 @@ nav#main-nav {
   cursor: grab;
   user-select: none;
   touch-action: pan-y;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .hero-3d-nexora-stage:hover {
@@ -3559,6 +3560,16 @@ nav#main-nav {
   .hero-nexora-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+    align-items: center;
+  }
+
+  .hero-nexora-3d-col {
+    justify-content: center;
+  }
+
+  .hero-3d-nexora-stage {
+    max-width: 420px;
+    margin: 0 auto;
   }
 
   .story-card-nexora {
@@ -3744,6 +3755,10 @@ nav#main-nav {
     font-size: 2.6rem;
   }
 
+  .hero-3d-nexora-stage {
+    max-width: 360px;
+  }
+
   .solutions-grid-nexora {
     grid-template-columns: 1fr;
   }
@@ -3824,6 +3839,11 @@ nav#main-nav {
   /* Nexora Layout Responsive Rules (480px) */
   .hero-nexora-title {
     font-size: 2.1rem;
+  }
+
+  .hero-3d-nexora-stage {
+    max-width: 290px;
+    border-radius: 24px;
   }
 
   .industries-grid-ref {
