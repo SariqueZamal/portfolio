@@ -2862,6 +2862,30 @@ nav#main-nav {
   display: block;
 }
 
+/* Feature Strip Below 3D Neural Matrix */
+.hero-features-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 16px;
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: rgba(15, 20, 32, 0.7);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-features-strip span {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 /* Overlaid Glass Telemetry Card on Right-Side 3D Core */
 .hero-floating-telemetry {
   position: absolute;
