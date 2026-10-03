@@ -3105,12 +3105,15 @@ nav#main-nav {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  text-decoration: none;
   transition: gap 0.2s ease, color 0.2s ease;
 }
 
-.solution-card-nexora:hover .solution-link-nexora {
+.solution-card-nexora:hover .solution-link-nexora,
+.solution-link-nexora:hover {
   color: #ffffff;
   gap: 10px;
+  text-decoration: none;
 }
 
 /* "System Architecture Blueprint" Showcase Matching Reference Design */
@@ -5083,12 +5086,16 @@ section[id],
   font-weight: 600;
   color: #6366f1;
   margin-top: auto;
+  text-decoration: none;
   transition: gap 0.25s ease, color 0.2s ease;
 }
 
-.blueprint-card-luxury:hover .bp-card-action {
+.blueprint-card-luxury:hover .bp-card-action,
+.industry-card-ref:hover .bp-card-action,
+.bp-card-action:hover {
   gap: 12px;
   color: #818cf8;
+  text-decoration: none;
 }
 
 @media (max-width: 840px) {
