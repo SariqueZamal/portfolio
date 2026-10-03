@@ -8,14 +8,13 @@
 (function () {
   function initHero3D() {
     const container = document.getElementById("hero-3d-container");
-    const canvasWrap = document.getElementById("hero-3d-canvas-wrap") || container;
     const canvas = document.getElementById("hero-3d-canvas");
     if (!container || !canvas || typeof THREE === "undefined") return;
 
     // 1. Dimensions & Sizing
-    let rect = canvasWrap.getBoundingClientRect();
-    let width = rect.width || 440;
-    let height = rect.height || 380;
+    let rect = container.getBoundingClientRect();
+    let width = rect.width || 460;
+    let height = rect.height || 460;
 
     // 2. Scene, Camera, Renderer
     const scene = new THREE.Scene();
@@ -218,7 +217,7 @@
       previousPointerY = clientY;
       rotationVelocityX = 0;
       rotationVelocityY = 0;
-      canvasWrap.style.cursor = "grabbing";
+      container.style.cursor = "grabbing";
     }
 
     function onPointerMove(e) {
@@ -245,24 +244,24 @@
 
     function onPointerUp() {
       isDragging = false;
-      canvasWrap.style.cursor = "grab";
+      container.style.cursor = "grab";
     }
 
     // Event listeners
-    canvasWrap.addEventListener("mousedown", onPointerDown);
+    container.addEventListener("mousedown", onPointerDown);
     window.addEventListener("mousemove", onPointerMove);
     window.addEventListener("mouseup", onPointerUp);
 
-    canvasWrap.addEventListener("touchstart", onPointerDown, { passive: true });
+    container.addEventListener("touchstart", onPointerDown, { passive: true });
     window.addEventListener("touchmove", onPointerMove, { passive: true });
     window.addEventListener("touchend", onPointerUp);
 
     // 11. Responsive Canvas Resize
     function onResize() {
-      if (!canvasWrap || !renderer || !camera) return;
-      const r = canvasWrap.getBoundingClientRect();
-      width = r.width || 440;
-      height = r.height || 380;
+      if (!container || !renderer || !camera) return;
+      const r = container.getBoundingClientRect();
+      width = r.width || 460;
+      height = r.height || 460;
       if (width === 0 || height === 0) return;
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
