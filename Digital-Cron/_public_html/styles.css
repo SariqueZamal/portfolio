@@ -2649,8 +2649,8 @@ nav#main-nav {
 
 /* Hero Section */
 .hero-nexora {
-  padding-top: calc(var(--header-height) + 24px);
-  padding-bottom: 40px;
+  padding-top: calc(var(--header-height) + 48px);
+  padding-bottom: 72px;
   position: relative;
   overflow: hidden;
 }
@@ -2658,7 +2658,7 @@ nav#main-nav {
 .hero-nexora-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 40px;
+  gap: 56px;
   align-items: center;
 }
 
@@ -2684,7 +2684,7 @@ nav#main-nav {
   border: 1px solid rgba(99, 102, 241, 0.32);
   padding: 6px 14px;
   border-radius: var(--radius-full);
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   backdrop-filter: blur(8px);
 }
 
@@ -2698,20 +2698,20 @@ nav#main-nav {
 
 .hero-nexora-title {
   font-family: var(--font-display);
-  font-size: 2.75rem;
+  font-size: 3.8rem;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.08;
   letter-spacing: -0.03em;
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .hero-nexora-desc {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-size: 1.12rem;
+  line-height: 1.7;
   color: var(--text-secondary);
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   max-width: 580px;
 }
 
@@ -3778,7 +3778,7 @@ nav#main-nav {
 
   /* Nexora Layout Responsive Rules (768px) */
   .hero-nexora-title {
-    font-size: 2.1rem;
+    font-size: 2.6rem;
   }
 
   .hero-3d-nexora-stage {
@@ -3869,7 +3869,7 @@ nav#main-nav {
   }
 
   .hero-nexora-title {
-    font-size: 1.85rem;
+    font-size: 2.1rem;
   }
 
   .hero-pill-badge {
@@ -3937,7 +3937,7 @@ nav#main-nav {
   }
 
   .hero-nexora-title {
-    font-size: 1.65rem;
+    font-size: 1.85rem;
   }
 
   .hero-3d-stage {
