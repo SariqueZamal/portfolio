@@ -595,10 +595,14 @@ nav#main-nav {
 }
 
 .page-hero-desc {
+  font-family: var(--font-mono);
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+  color: var(--text-secondary);
   max-width: 680px;
   margin: 0 auto 24px auto;
-  font-size: 1.1rem;
-  line-height: 1.68;
 }
 
 /* Breadcrumbs */
@@ -1195,9 +1199,13 @@ nav#main-nav {
   margin-bottom: 20px;
 }
 
-.hero-subtitle {
-  font-size: 1.14rem;
-  line-height: 1.7;
+.hero-subtitle,
+.hero-desc {
+  font-family: var(--font-mono);
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
   color: var(--text-secondary);
   margin-bottom: 30px;
   max-width: 580px;
@@ -2707,11 +2715,13 @@ nav#main-nav {
 }
 
 .hero-nexora-desc {
-  font-family: var(--font-sans);
-  font-size: 1.12rem;
-  line-height: 1.7;
+  font-family: var(--font-mono);
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
   color: var(--text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   max-width: 580px;
 }
 
@@ -3904,6 +3914,13 @@ nav#main-nav {
     font-size: 2.6rem;
   }
 
+  .hero-nexora-desc,
+  .page-hero-desc,
+  .hero-subtitle {
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+
   .hero-3d-nexora-stage {
     max-width: 360px;
   }
@@ -3993,6 +4010,13 @@ nav#main-nav {
 
   .hero-nexora-title {
     font-size: 2.1rem;
+  }
+
+  .hero-nexora-desc,
+  .page-hero-desc,
+  .hero-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.65;
   }
 
   .hero-pill-badge {
