@@ -3444,7 +3444,7 @@ nav#main-nav {
 
 .footer-grid-nexora {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1.2fr 1.2fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1.25fr 1.15fr 1fr;
   gap: 36px;
   margin-bottom: 56px;
 }
@@ -3456,12 +3456,12 @@ nav#main-nav {
 }
 
 .footer-brand-desc {
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  line-height: 1.62;
-  color: var(--text-muted);
-  margin: 14px 0 20px 0;
-  max-width: 280px;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.68;
+  color: #94a3b8;
+  margin: 16px 0 20px 0;
+  max-width: 290px;
 }
 
 .footer-social-row {
@@ -3499,85 +3499,91 @@ nav#main-nav {
 
 .footer-col-title {
   font-family: var(--font-display);
-  font-size: 0.96rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 0.04em;
-  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .footer-links-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 13px;
 }
 
 .footer-links-list a {
-  font-family: var(--font-sans);
-  font-size: 0.86rem;
-  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #94a3b8;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer-links-list a:hover {
   color: #ffffff;
+  transform: translateX(2px);
 }
 
-/* Footer Connect Column */
+/* Footer Contact / Connect Column */
 .footer-connect-list {
-  gap: 10px;
+  gap: 13px;
 }
 
 .footer-connect-link {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-sans);
-  font-size: 0.86rem;
-  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #94a3b8;
   text-decoration: none;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.footer-connect-link:hover {
-  color: #ffffff;
-  transform: translateX(3px);
-}
-
-.footer-connect-link.footer-connect-email:hover {
-  color: var(--text-muted);
-  transform: none;
-  cursor: default;
-}
-
 .footer-connect-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  color: #94a3b8;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-connect-icon svg {
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Hover effect on all connect items EXCEPT email */
+.footer-connect-link:not(.footer-connect-email):hover {
+  color: #ffffff;
+  transform: translateX(4px);
 }
 
 .footer-connect-link:not(.footer-connect-email):hover .footer-connect-icon {
-  background: #6366f1;
-  border-color: #6366f1;
-  box-shadow: 0 0 14px rgba(99, 102, 241, 0.45);
+  color: #6366f1;
 }
 
-.footer-connect-link.footer-connect-email .footer-connect-icon {
-  pointer-events: none;
+/* Email button: explicitly NO hover effect */
+.footer-connect-link.footer-connect-email {
+  cursor: pointer;
+}
+
+.footer-connect-link.footer-connect-email:hover {
+  color: #94a3b8;
+  transform: none;
+}
+
+.footer-connect-link.footer-connect-email:hover .footer-connect-icon {
+  color: #94a3b8;
+  transform: none;
 }
 
 .footer-subscribe-box {
