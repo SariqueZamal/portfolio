@@ -3275,18 +3275,20 @@ nav#main-nav {
 
 .metrics-grid-nexora {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
 }
 
 .metric-card-nexora {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
-  border-radius: 18px;
-  padding: 24px 22px;
+  border-radius: 16px;
+  padding: 20px 18px;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
+  min-width: 0;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -3296,37 +3298,49 @@ nav#main-nav {
 }
 
 .metric-icon-square {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   background: #6366f1;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   flex-shrink: 0;
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
 }
 
 .metric-info-nexora {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  flex: 1;
 }
 
 .metric-num-nexora {
   font-family: var(--font-display);
-  font-size: 1.95rem;
+  font-size: clamp(1.2rem, 1.35vw, 1.45rem);
   font-weight: 800;
   color: #ffffff;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .metric-label-nexora {
   font-family: var(--font-sans);
-  font-size: 0.86rem;
-  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+@media (max-width: 1080px) {
+  .metrics-grid-nexora {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
 }
 
 /* Pre-Footer CTA Banner with Email Input */
