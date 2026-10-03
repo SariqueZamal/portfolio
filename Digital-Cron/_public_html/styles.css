@@ -590,19 +590,18 @@ nav#main-nav {
 }
 
 .page-hero-title {
+  font-family: var(--font-display);
   font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
   margin-bottom: 14px;
 }
 
 .page-hero-desc {
-  font-family: var(--font-mono);
-  font-size: 1.02rem;
-  font-weight: 400;
-  line-height: 1.75;
-  letter-spacing: -0.01em;
-  color: var(--text-secondary);
   max-width: 680px;
   margin: 0 auto 24px auto;
+  font-size: 1.1rem;
+  line-height: 1.68;
 }
 
 /* Breadcrumbs */
@@ -1199,13 +1198,9 @@ nav#main-nav {
   margin-bottom: 20px;
 }
 
-.hero-subtitle,
-.hero-desc {
-  font-family: var(--font-mono);
-  font-size: 1.02rem;
-  font-weight: 400;
-  line-height: 1.75;
-  letter-spacing: -0.01em;
+.hero-subtitle {
+  font-size: 1.14rem;
+  line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 30px;
   max-width: 580px;
@@ -1488,7 +1483,9 @@ nav#main-nav {
 }
 
 .category-title {
+  font-family: var(--font-display);
   font-size: 1.65rem;
+  font-weight: 700;
   color: var(--text-primary);
 }
 
@@ -1547,7 +1544,9 @@ nav#main-nav {
 }
 
 .service-title {
+  font-family: var(--font-display);
   font-size: 1.22rem;
+  font-weight: 700;
   margin-bottom: 8px;
   color: var(--text-primary);
 }
@@ -1755,7 +1754,7 @@ nav#main-nav {
 
 .form-label {
   display: block;
-  font-family: var(--font-nav);
+  font-family: var(--font-sans);
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -1883,7 +1882,7 @@ nav#main-nav {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  font-family: var(--font-nav);
+  font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -2071,7 +2070,7 @@ nav#main-nav {
   align-items: center;
   gap: 8px;
   color: var(--text-secondary);
-  font-family: var(--font-nav);
+  font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
   opacity: 0.75;
@@ -2415,7 +2414,7 @@ nav#main-nav {
 }
 
 .author-name {
-  font-family: var(--font-nav);
+  font-family: var(--font-display);
   font-size: 0.94rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -2599,7 +2598,7 @@ nav#main-nav {
 }
 
 .promo-item-content h4 {
-  font-family: var(--font-nav);
+  font-family: var(--font-display);
   font-size: 0.98rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -2715,13 +2714,11 @@ nav#main-nav {
 }
 
 .hero-nexora-desc {
-  font-family: var(--font-mono);
-  font-size: 1.02rem;
-  font-weight: 400;
-  line-height: 1.75;
-  letter-spacing: -0.01em;
+  font-family: var(--font-sans);
+  font-size: 1.12rem;
+  line-height: 1.7;
   color: var(--text-secondary);
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   max-width: 580px;
 }
 
@@ -3502,9 +3499,10 @@ nav#main-nav {
 
 .footer-col-title {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: #ffffff;
+  letter-spacing: 0.04em;
   margin-bottom: 18px;
 }
 
@@ -3592,6 +3590,9 @@ nav#main-nav {
 }
 
 .legal-links-nexora a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -3914,13 +3915,6 @@ nav#main-nav {
     font-size: 2.6rem;
   }
 
-  .hero-nexora-desc,
-  .page-hero-desc,
-  .hero-subtitle {
-    font-size: 0.94rem;
-    line-height: 1.7;
-  }
-
   .hero-3d-nexora-stage {
     max-width: 360px;
   }
@@ -4010,13 +4004,6 @@ nav#main-nav {
 
   .hero-nexora-title {
     font-size: 2.1rem;
-  }
-
-  .hero-nexora-desc,
-  .page-hero-desc,
-  .hero-subtitle {
-    font-size: 0.88rem;
-    line-height: 1.65;
   }
 
   .hero-pill-badge {
@@ -5469,8 +5456,8 @@ nav#main-nav {
   border: 1px solid var(--border-card);
   border-radius: var(--radius-full);
   color: var(--text-primary);
-  font-family: var(--font-sans);
-  font-size: 0.84rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   font-weight: 500;
   text-decoration: none;
   transition: var(--transition-smooth);
