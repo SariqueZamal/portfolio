@@ -1987,27 +1987,9 @@ nav#main-nav {
   color: var(--text-primary);
 }
 
-/* FLOATING CONTROLS: WhatsApp (Bottom-Right) */
+/* FLOATING CONTROLS: WhatsApp (Removed) */
 .whatsapp-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-  z-index: 99;
-  transition: var(--transition-smooth);
-}
-
-.whatsapp-btn:hover {
-  transform: scale(1.08);
+  display: none !important;
 }
 
 /* Legal Page Content Layout */
@@ -3588,17 +3570,17 @@ nav#main-nav {
   filter: drop-shadow(0 0 6px rgba(225, 48, 108, 0.45));
 }
 
-/* Twitter / X (#1da1f2) */
+/* Twitter / X (#ffffff) */
 .footer-connect-link.footer-link-twitter:hover,
 .footer-connect-link[href*="x.com"]:hover,
 .footer-connect-link[href*="twitter.com"]:hover {
-  color: #1da1f2;
+  color: #ffffff;
 }
 .footer-connect-link.footer-link-twitter:hover .footer-connect-icon,
 .footer-connect-link[href*="x.com"]:hover .footer-connect-icon,
 .footer-connect-link[href*="twitter.com"]:hover .footer-connect-icon {
-  color: #1da1f2;
-  filter: drop-shadow(0 0 6px rgba(29, 161, 242, 0.45));
+  color: #ffffff;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
 }
 
 /* Facebook (#1877f2) */
