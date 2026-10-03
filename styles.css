@@ -3561,29 +3561,14 @@ nav#main-nav {
   height: 16px;
 }
 
-/* Hover effect on all connect items EXCEPT email */
-.footer-connect-link:not(.footer-connect-email):hover {
+/* Hover effect on contact items: exactly same color as company links */
+.footer-connect-link:hover {
   color: #ffffff;
-  transform: translateX(4px);
+  transform: translateX(2px);
 }
 
-.footer-connect-link:not(.footer-connect-email):hover .footer-connect-icon {
-  color: #6366f1;
-}
-
-/* Email button: explicitly NO hover effect */
-.footer-connect-link.footer-connect-email {
-  cursor: pointer;
-}
-
-.footer-connect-link.footer-connect-email:hover {
-  color: #94a3b8;
-  transform: none;
-}
-
-.footer-connect-link.footer-connect-email:hover .footer-connect-icon {
-  color: #94a3b8;
-  transform: none;
+.footer-connect-link:hover .footer-connect-icon {
+  color: #ffffff;
 }
 
 .footer-subscribe-box {
