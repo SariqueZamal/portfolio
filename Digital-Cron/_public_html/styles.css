@@ -3561,14 +3561,68 @@ nav#main-nav {
   height: 16px;
 }
 
-/* Hover effect on contact items: exactly same color as company links */
+/* Hover effect on contact items: each tab uses its brand color */
 .footer-connect-link:hover {
-  color: #ffffff;
-  transform: translateX(2px);
+  transform: translateX(3px);
 }
 
-.footer-connect-link:hover .footer-connect-icon {
-  color: #ffffff;
+/* LinkedIn (#0a66c2) */
+.footer-connect-link.footer-link-linkedin:hover,
+.footer-connect-link[href*="linkedin.com"]:hover {
+  color: #0a66c2;
+}
+.footer-connect-link.footer-link-linkedin:hover .footer-connect-icon,
+.footer-connect-link[href*="linkedin.com"]:hover .footer-connect-icon {
+  color: #0a66c2;
+  filter: drop-shadow(0 0 6px rgba(10, 102, 194, 0.45));
+}
+
+/* Instagram (#e1306c) */
+.footer-connect-link.footer-link-instagram:hover,
+.footer-connect-link[href*="instagram.com"]:hover {
+  color: #e1306c;
+}
+.footer-connect-link.footer-link-instagram:hover .footer-connect-icon,
+.footer-connect-link[href*="instagram.com"]:hover .footer-connect-icon {
+  color: #e1306c;
+  filter: drop-shadow(0 0 6px rgba(225, 48, 108, 0.45));
+}
+
+/* Twitter / X (#1da1f2) */
+.footer-connect-link.footer-link-twitter:hover,
+.footer-connect-link[href*="x.com"]:hover,
+.footer-connect-link[href*="twitter.com"]:hover {
+  color: #1da1f2;
+}
+.footer-connect-link.footer-link-twitter:hover .footer-connect-icon,
+.footer-connect-link[href*="x.com"]:hover .footer-connect-icon,
+.footer-connect-link[href*="twitter.com"]:hover .footer-connect-icon {
+  color: #1da1f2;
+  filter: drop-shadow(0 0 6px rgba(29, 161, 242, 0.45));
+}
+
+/* Facebook (#1877f2) */
+.footer-connect-link.footer-link-facebook:hover,
+.footer-connect-link[href*="facebook.com"]:hover {
+  color: #1877f2;
+}
+.footer-connect-link.footer-link-facebook:hover .footer-connect-icon,
+.footer-connect-link[href*="facebook.com"]:hover .footer-connect-icon {
+  color: #1877f2;
+  filter: drop-shadow(0 0 6px rgba(24, 119, 242, 0.45));
+}
+
+/* WhatsApp (#25d366) */
+.footer-connect-link.footer-link-whatsapp:hover,
+.footer-connect-link[href*="wa.me"]:hover,
+.footer-connect-link[href*="whatsapp.com"]:hover {
+  color: #25d366;
+}
+.footer-connect-link.footer-link-whatsapp:hover .footer-connect-icon,
+.footer-connect-link[href*="wa.me"]:hover .footer-connect-icon,
+.footer-connect-link[href*="whatsapp.com"]:hover .footer-connect-icon {
+  color: #25d366;
+  filter: drop-shadow(0 0 6px rgba(37, 211, 102, 0.45));
 }
 
 .footer-subscribe-box {
