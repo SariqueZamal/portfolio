@@ -3685,6 +3685,17 @@ nav#main-nav {
   color: #ffffff;
 }
 
+/* Anchor Target Offset for Sticky Header */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+.solution-card-nexora[id],
+.package-card[id] {
+  scroll-margin-top: 100px;
+}
+
 /* ==========================================================================
    FLOATING AI CHATBOT WIDGET
    ========================================================================== */
