@@ -1,7 +1,8 @@
 /**
- * Digital Cron — Interactive 3D Tech Object Engine
- * Renders a gyroscopic quantum chronometer core with orbital rings, wireframe lattice,
- * and particle nebula representing Web Development + AI Automation.
+ * Digital Cron — Interactive 3D AI Neural Matrix Engine
+ * Renders a dynamic AI Neural Network with glowing synaptic nodes, Faceted Core,
+ * Synaptic Energy Signals, Gyroscopic Orbit Rings, and Matrix Data Field.
+ * Representing AI Chatbots, AI Voice Reception, and Automated Customer Systems.
  */
 
 (function () {
@@ -33,71 +34,106 @@
     const masterGroup = new THREE.Group();
     scene.add(masterGroup);
 
-    // 3. Central Faceted AI Crystal Core (Icosahedron)
-    const coreGeo = new THREE.IcosahedronGeometry(1.0, 0); // Flat-shaded tech crystal
+    // 3. Central Faceted AI Brain Core (Faceted Crystal Icosahedron)
+    const coreGeo = new THREE.IcosahedronGeometry(0.95, 0);
     const coreMat = new THREE.MeshStandardMaterial({
       color: 0x06b6d4,
-      roughness: 0.18,
-      metalness: 0.88,
+      roughness: 0.15,
+      metalness: 0.9,
       flatShading: true,
       transparent: true,
-      opacity: 0.92
+      opacity: 0.88
     });
     const coreMesh = new THREE.Mesh(coreGeo, coreMat);
     masterGroup.add(coreMesh);
 
-    // 4. Inner Glowing Energy Core
-    const innerGeo = new THREE.OctahedronGeometry(0.52, 0);
+    // 4. Inner Glowing Synaptic Core
+    const innerGeo = new THREE.OctahedronGeometry(0.55, 0);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: 0x6366f1
+      color: 0x6366f1,
+      wireframe: false
     });
     const innerMesh = new THREE.Mesh(innerGeo, innerMat);
     masterGroup.add(innerMesh);
 
-    // 5. Cybernetic Wireframe Cage with Vertex Points
-    const wireGeo = new THREE.IcosahedronGeometry(1.36, 1);
+    // 5. Outer AI Neural Lattice (Secondary Sphere Layer)
+    const neuralGeo = new THREE.IcosahedronGeometry(1.45, 2);
+    
+    // Wireframe Cage for Synaptic Connections
     const wireMat = new THREE.MeshBasicMaterial({
       color: 0x38bdf8,
       wireframe: true,
       transparent: true,
-      opacity: 0.38
+      opacity: 0.32
     });
-    const wireMesh = new THREE.Mesh(wireGeo, wireMat);
+    const wireMesh = new THREE.Mesh(neuralGeo, wireMat);
     masterGroup.add(wireMesh);
 
-    // Glowing Vertex Nodes on Wireframe
-    const vertexPointsGeo = new THREE.BufferGeometry();
-    vertexPointsGeo.setAttribute("position", wireGeo.attributes.position);
-    const vertexPointsMat = new THREE.PointsMaterial({
-      color: 0x818cf8,
-      size: 0.075,
-      transparent: true,
-      opacity: 0.85
-    });
-    const vertexPoints = new THREE.Points(vertexPointsGeo, vertexPointsMat);
-    masterGroup.add(vertexPoints);
+    // Neural Nodes (Glowing Junction Points)
+    const nodeGeo = new THREE.BufferGeometry();
+    const nodePositions = neuralGeo.attributes.position.clone();
+    nodeGeo.setAttribute("position", nodePositions);
 
-    // 6. Gyroscopic Cron Orbital Rings (Automation Cycles)
+    const nodeMat = new THREE.PointsMaterial({
+      color: 0x818cf8,
+      size: 0.085,
+      transparent: true,
+      opacity: 0.9
+    });
+    const neuralNodes = new THREE.Points(nodeGeo, nodeMat);
+    masterGroup.add(neuralNodes);
+
+    // 6. Active Synaptic Connection Lines & Firing Energy Pulses
+    const posAttr = neuralGeo.attributes.position;
+    const vertexCount = posAttr.count;
+    const connectionPositions = [];
+    const maxDistance = 0.85;
+
+    for (let i = 0; i < vertexCount; i++) {
+      const v1 = new THREE.Vector3(posAttr.getX(i), posAttr.getY(i), posAttr.getZ(i));
+      for (let j = i + 1; j < vertexCount; j++) {
+        const v2 = new THREE.Vector3(posAttr.getX(j), posAttr.getY(j), posAttr.getZ(j));
+        if (v1.distanceTo(v2) < maxDistance) {
+          connectionPositions.push(v1.x, v1.y, v1.z);
+          connectionPositions.push(v2.x, v2.y, v2.z);
+        }
+      }
+    }
+
+    const connectionGeo = new THREE.BufferGeometry();
+    connectionGeo.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(connectionPositions, 3)
+    );
+    const connectionMat = new THREE.LineBasicMaterial({
+      color: 0x6366f1,
+      transparent: true,
+      opacity: 0.45
+    });
+    const connectionLines = new THREE.LineSegments(connectionGeo, connectionMat);
+    masterGroup.add(connectionLines);
+
+    // 7. Gyroscopic Orbital AI Signal Rings (Call & Chat Integration)
     // Ring 1: Primary Electric Indigo Orbit
-    const ring1Geo = new THREE.TorusGeometry(2.05, 0.024, 16, 100);
+    const ring1Geo = new THREE.TorusGeometry(2.05, 0.022, 16, 100);
     const ring1Mat = new THREE.MeshStandardMaterial({
       color: 0x6366f1,
       metalness: 0.9,
       roughness: 0.15
     });
     const ring1 = new THREE.Mesh(ring1Geo, ring1Mat);
-    ring1.rotation.x = Math.PI / 3.8;
+    ring1.rotation.x = Math.PI / 3.6;
     ring1.rotation.y = Math.PI / 6;
     masterGroup.add(ring1);
 
-    // Satellite pulse beacon on Ring 1
-    const sat1Geo = new THREE.SphereGeometry(0.065, 16, 16);
+    // Satellite Signal Node 1
+    const sat1Geo = new THREE.SphereGeometry(0.075, 16, 16);
     const sat1Mat = new THREE.MeshBasicMaterial({ color: 0xffffff });
     const sat1 = new THREE.Mesh(sat1Geo, sat1Mat);
     ring1.add(sat1);
 
     // Ring 2: Secondary Cyan Orbit
-    const ring2Geo = new THREE.TorusGeometry(1.72, 0.02, 16, 100);
+    const ring2Geo = new THREE.TorusGeometry(1.72, 0.018, 16, 100);
     const ring2Mat = new THREE.MeshStandardMaterial({
       color: 0x06b6d4,
       metalness: 0.85,
@@ -108,14 +144,14 @@
     ring2.rotation.z = Math.PI / 4;
     masterGroup.add(ring2);
 
-    // Satellite beacon on Ring 2
-    const sat2Geo = new THREE.SphereGeometry(0.055, 16, 16);
-    const sat2Mat = new THREE.MeshBasicMaterial({ color: 0x818cf8 });
+    // Satellite Signal Node 2
+    const sat2Geo = new THREE.SphereGeometry(0.065, 16, 16);
+    const sat2Mat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
     const sat2 = new THREE.Mesh(sat2Geo, sat2Mat);
     ring2.add(sat2);
 
-    // Ring 3: Equatorial Halo Ring
-    const ring3Geo = new THREE.TorusGeometry(1.48, 0.014, 12, 70);
+    // Ring 3: Equatorial Neural Halo
+    const ring3Geo = new THREE.TorusGeometry(1.48, 0.012, 12, 70);
     const ring3Mat = new THREE.MeshBasicMaterial({
       color: 0x818cf8,
       transparent: true,
@@ -125,11 +161,11 @@
     ring3.rotation.x = Math.PI / 2;
     masterGroup.add(ring3);
 
-    // 7. Floating Cyber Particle Nebula
-    const particleCount = 120;
+    // 8. Floating Matrix Data Field (Cyber Particles)
+    const particleCount = 140;
     const particlePositions = new Float32Array(particleCount * 3);
     for (let i = 0; i < particleCount * 3; i += 3) {
-      const r = 1.6 + Math.random() * 1.5;
+      const r = 1.5 + Math.random() * 1.6;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(Math.random() * 2 - 1);
       particlePositions[i] = r * Math.sin(phi) * Math.cos(theta);
@@ -140,29 +176,29 @@
     particleGeo.setAttribute("position", new THREE.BufferAttribute(particlePositions, 3));
     const particleMat = new THREE.PointsMaterial({
       color: 0x38bdf8,
-      size: 0.045,
+      size: 0.048,
       transparent: true,
-      opacity: 0.65
+      opacity: 0.7
     });
-    const particles = new THREE.Points(particleGeo, particleMat);
-    masterGroup.add(particles);
+    const matrixParticles = new THREE.Points(particleGeo, particleMat);
+    masterGroup.add(matrixParticles);
 
-    // 8. Lighting System
-    const ambientLight = new THREE.AmbientLight(0x0f172a, 1.4);
+    // 9. Lighting System
+    const ambientLight = new THREE.AmbientLight(0x0f172a, 1.5);
     scene.add(ambientLight);
 
-    const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 2.6);
+    const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 2.8);
     dirLight1.position.set(4, 5, 4);
     scene.add(dirLight1);
 
-    const dirLight2 = new THREE.DirectionalLight(0x6366f1, 2.5);
+    const dirLight2 = new THREE.DirectionalLight(0x6366f1, 2.6);
     dirLight2.position.set(-4, -3, 3);
     scene.add(dirLight2);
 
-    const coreLight = new THREE.PointLight(0x6366f1, 3.8, 4);
+    const coreLight = new THREE.PointLight(0x6366f1, 4.0, 5);
     scene.add(coreLight);
 
-    // 9. Pointer Drag & Momentum Physics
+    // 10. Pointer Drag & Momentum Physics
     let isDragging = false;
     let previousPointerX = 0;
     let previousPointerY = 0;
@@ -202,8 +238,8 @@
       // Parallax calculation
       const normX = (clientX / window.innerWidth) * 2 - 1;
       const normY = (clientY / window.innerHeight) * 2 - 1;
-      targetParallaxX = normX * 0.22;
-      targetParallaxY = -normY * 0.22;
+      targetParallaxX = normX * 0.25;
+      targetParallaxY = -normY * 0.25;
     }
 
     function onPointerUp() {
@@ -220,7 +256,7 @@
     window.addEventListener("touchmove", onPointerMove, { passive: true });
     window.addEventListener("touchend", onPointerUp);
 
-    // 10. Responsive Canvas Resize
+    // 11. Responsive Canvas Resize
     function onResize() {
       if (!container || !renderer || !camera) return;
       const r = container.getBoundingClientRect();
@@ -234,7 +270,7 @@
     window.addEventListener("resize", onResize);
     requestAnimationFrame(onResize);
 
-    // 11. Intersection Observer (Freezes render loop when out of viewport)
+    // 12. Intersection Observer (Freezes render loop when out of viewport)
     let isVisible = true;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -243,12 +279,11 @@
     }, { threshold: 0.05 });
     observer.observe(container);
 
-    // 12. Main Render Loop
+    // 13. Main Render Loop
     let clock = new THREE.Clock();
-    let animationFrameId;
 
     function animate() {
-      animationFrameId = requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
       if (!isVisible) return;
 
       const elapsedTime = clock.getElapsedTime();
@@ -262,8 +297,8 @@
         masterGroup.rotation.y += rotationVelocityY;
 
         // Continuous ambient rotation
-        masterGroup.rotation.y += 0.0035;
-        masterGroup.rotation.x += 0.0015;
+        masterGroup.rotation.y += 0.004;
+        masterGroup.rotation.x += 0.0018;
       }
 
       // Smooth Parallax
@@ -273,30 +308,34 @@
       camera.position.y = currentParallaxY;
       camera.lookAt(0, 0, 0);
 
-      // Independent internal mesh movements
-      coreMesh.rotation.y += 0.005;
-      wireMesh.rotation.y -= 0.0035;
-      innerMesh.rotation.z += 0.008;
+      // Independent mesh movements (AI Core Processing simulation)
+      coreMesh.rotation.y += 0.006;
+      coreMesh.rotation.x -= 0.003;
+      wireMesh.rotation.y -= 0.004;
+      innerMesh.rotation.z += 0.009;
 
-      // Inner Core Harmonic Breathing Pulse
-      const pulseScale = 1 + Math.sin(elapsedTime * 3.2) * 0.08;
+      // Inner Core Harmonic Breathing Pulse (Neural Activity simulation)
+      const pulseScale = 1 + Math.sin(elapsedTime * 3.6) * 0.1;
       innerMesh.scale.set(pulseScale, pulseScale, pulseScale);
 
-      // Orbital Rings Rotation
-      ring1.rotation.z += 0.012;
-      ring2.rotation.z -= 0.015;
-      ring3.rotation.z += 0.008;
+      // Synaptic Connection Line Pulse (Opacity Modulation)
+      connectionMat.opacity = 0.35 + Math.sin(elapsedTime * 2.8) * 0.2;
 
-      // Satellite Beacons along Orbits
-      const satAngle1 = elapsedTime * 1.5;
+      // Orbital AI Signal Rings Rotation
+      ring1.rotation.z += 0.014;
+      ring2.rotation.z -= 0.016;
+      ring3.rotation.z += 0.009;
+
+      // Satellite Signal Nodes along Orbits
+      const satAngle1 = elapsedTime * 1.6;
       sat1.position.set(Math.cos(satAngle1) * 2.05, Math.sin(satAngle1) * 2.05, 0);
 
-      const satAngle2 = -elapsedTime * 1.8;
+      const satAngle2 = -elapsedTime * 1.9;
       sat2.position.set(Math.cos(satAngle2) * 1.72, Math.sin(satAngle2) * 1.72, 0);
 
-      // Particle Nebula Drift
-      particles.rotation.y -= 0.001;
-      particles.rotation.x += 0.0008;
+      // Floating Matrix Particles Drift
+      matrixParticles.rotation.y -= 0.0012;
+      matrixParticles.rotation.x += 0.0009;
 
       renderer.render(scene, camera);
     }
@@ -311,7 +350,6 @@
     script.onload = initHero3D;
     document.head.appendChild(script);
   } else {
-    // If Three.js is already loaded, init on DOM ready
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", initHero3D);
     } else {
