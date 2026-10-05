@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     trigger.innerHTML = `
       <span class="dc-chatbot-online-dot"></span>
       <svg class="chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
       </svg>
       <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -286,6 +286,78 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeBtn.addEventListener("click", closeChat);
 
+    const waSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.472 1.332 4.982l-1.356 4.954 5.074-1.33c1.464.798 3.102 1.218 4.773 1.218.066 0 .132 0 .198-.002 5.505-.062 9.923-4.594 9.923-10.099-.001-5.399-4.386-9.789-9.956-9.711zm5.176 13.914c-.218.618-1.282 1.206-1.766 1.26-.444.048-.992.052-1.611-.144-.383-.12-.871-.274-1.493-.541-2.646-1.139-4.348-3.832-4.48-4.009-.131-.177-1.077-1.433-1.077-2.733 0-1.3.682-1.939.925-2.203.243-.264.53-.33.707-.33.177 0 .354.002.508.01.163.008.383-.062.597.45.218.528.751 1.83.817 1.962.066.132.11.286.022.463-.088.176-.132.286-.264.441-.132.155-.278.347-.397.466-.132.132-.27.276-.115.541.155.265.688 1.132 1.474 1.831.992.883 1.83 1.158 2.095 1.291.265.132.42.11.575-.066.155-.177.663-.772.84-1.037.177-.265.354-.221.597-.132.243.088 1.547.728 1.812.861.265.132.442.198.508.309.067.11.067.638-.151 1.256z"/></svg>`;
+
+    function getWhatsAppCard() {
+      return `
+        <div class="dc-chat-wa-card">
+          <div class="dc-wa-header">
+            <div class="dc-wa-icon-box">
+              ${waSvg}
+            </div>
+            <div class="dc-wa-title-area">
+              <div class="dc-wa-title">WhatsApp Direct Line</div>
+              <div class="dc-wa-sub">Usually replies in minutes • Founder Direct</div>
+            </div>
+          </div>
+          <div class="dc-wa-number-badge">
+            ${waSvg}
+            <span>+91 73280 37272</span>
+          </div>
+          <p class="dc-wa-desc">Connect directly with Sarique Zamal (Founder) to discuss your business requirements, project timeline, or pricing.</p>
+          <a href="https://wa.me/917328037272" target="_blank" rel="noopener noreferrer" class="dc-wa-action-btn">
+            ${waSvg}
+            <span>Chat on WhatsApp &rarr;</span>
+          </a>
+        </div>
+      `;
+    }
+
+    function getThreeWaysCard(introText = "To discuss your question or project in detail, choose from any of our <strong>3 direct contact ways</strong>:") {
+      return `
+        <div class="dc-chat-three-ways">
+          <p class="dc-three-ways-intro">${introText}</p>
+          <div class="dc-three-ways-list">
+            <!-- 1. WhatsApp -->
+            <a href="https://wa.me/917328037272" target="_blank" rel="noopener noreferrer" class="dc-way-item dc-way-wa">
+              <div class="dc-way-icon">
+                ${waSvg}
+              </div>
+              <div class="dc-way-info">
+                <span class="dc-way-label">1. WhatsApp Direct</span>
+                <span class="dc-way-val">+91 73280 37272</span>
+              </div>
+              <span class="dc-way-arrow">&rarr;</span>
+            </a>
+
+            <!-- 2. Email -->
+            <a href="mailto:contact@digitalcron.com" class="dc-way-item dc-way-email">
+              <div class="dc-way-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </div>
+              <div class="dc-way-info">
+                <span class="dc-way-label">2. Email Inquiries</span>
+                <span class="dc-way-val">contact@digitalcron.com</span>
+              </div>
+              <span class="dc-way-arrow">&rarr;</span>
+            </a>
+
+            <!-- 3. Book Appointment -->
+            <a href="contact.html" class="dc-way-item dc-way-cal" data-cal-link="sariquezamal/30min" data-cal-namespace="30min">
+              <div class="dc-way-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <div class="dc-way-info">
+                <span class="dc-way-label">3. Book Appointment</span>
+                <span class="dc-way-val">Free 30-Min Strategy Call</span>
+              </div>
+              <span class="dc-way-arrow">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
     function showGreeting() {
       appendBotMessage("Hey 👋 How can I help you today?", true);
     }
@@ -298,20 +370,26 @@ document.addEventListener("DOMContentLoaded", () => {
       msgsContainer.scrollTop = msgsContainer.scrollHeight;
     }
 
-    function appendBotMessage(html, showChips = false) {
+    function appendBotMessage(html, showChips = false, customChips = null) {
       const msg = document.createElement("div");
       msg.className = "dc-chat-msg bot";
       let content = `<div class="dc-chat-bubble">${html}</div>`;
+      
+      const chipsData = customChips || [
+        { query: "services", label: "🚀 Explore AI Services" },
+        { query: "consultation", label: "📅 Book Free Consultation" },
+        { query: "audit", label: "🔍 Free Website Audit" },
+        { query: "whatsapp", label: "💬 Chat on WhatsApp" }
+      ];
+
       if (showChips) {
-        content += `
-          <div class="dc-chat-chips">
-            <button type="button" class="dc-chat-chip" data-query="services">🚀 Explore AI Services</button>
-            <button type="button" class="dc-chat-chip" data-query="consultation">📅 Book Free Consultation</button>
-            <button type="button" class="dc-chat-chip" data-query="audit">🔍 Free Website Audit</button>
-            <button type="button" class="dc-chat-chip" data-query="whatsapp">💬 Chat on WhatsApp</button>
-          </div>
-        `;
+        content += `<div class="dc-chat-chips">`;
+        chipsData.forEach(c => {
+          content += `<button type="button" class="dc-chat-chip" data-query="${c.query}">${c.label}</button>`;
+        });
+        content += `</div>`;
       }
+      
       msg.innerHTML = content;
       msgsContainer.appendChild(msg);
       msgsContainer.scrollTop = msgsContainer.scrollHeight;
@@ -330,13 +408,33 @@ document.addEventListener("DOMContentLoaded", () => {
       appendUserMessage(displayText);
       setTimeout(() => {
         if (query === "services") {
-          appendBotMessage(`We build high-performance systems for growing businesses:<br><br>• <strong>High-Performance Websites</strong><br>• <strong>AI Reception</strong> (24/7 call management)<br>• <strong>Trained AI Chatbots</strong> (Instant enquiry qualification)<br>• <strong>Booking & Follow-Up Automation</strong><br><br>Explore more at our <a href="services.html">Services Page</a> or tell us your requirement!`, true);
+          appendBotMessage(`We build high-performance systems for growing businesses:<br><br>• <strong>High-Performance Websites</strong><br>• <strong>AI Reception</strong> (24/7 call management)<br>• <strong>Trained AI Chatbots</strong> (Instant enquiry qualification)<br>• <strong>Booking & Follow-Up Automation</strong><br><br>Explore more at our <a href="services.html">Services Page</a> or connect with us directly!`, true, [
+            { query: "whatsapp", label: "💬 WhatsApp with Us" },
+            { query: "consultation", label: "📅 Book Consultation" },
+            { query: "audit", label: "🔍 Free Website Audit" }
+          ]);
         } else if (query === "consultation") {
-          appendBotMessage(`You can schedule a direct 30-minute discovery call with our founder Sarique Zamal to map your digital systems:<br><br>👉 <a href="contact.html">Book a Free Consultation &rarr;</a>`, true);
+          appendBotMessage(`Schedule a direct 30-minute discovery session with our founder Sarique Zamal to map your digital systems:<br><br>👉 <a href="contact.html">Book Free 30-Min Strategy Call &rarr;</a>`, true, [
+            { query: "whatsapp", label: "💬 WhatsApp Direct" },
+            { query: "email", label: "✉️ Send Email" },
+            { query: "services", label: "🚀 View Services" }
+          ]);
         } else if (query === "audit") {
-          appendBotMessage(`We analyze your website's performance, conversion flow, and automation readiness:<br><br>👉 <a href="free-audit.html">Request Your Free Website Audit &rarr;</a>`, true);
+          appendBotMessage(`We analyze your website's performance, conversion flow, and automation readiness:<br><br>👉 <a href="free-audit.html">Request Your Free Website Audit &rarr;</a>`, true, [
+            { query: "consultation", label: "📅 Book Consultation" },
+            { query: "whatsapp", label: "💬 Chat on WhatsApp" }
+          ]);
         } else if (query === "whatsapp") {
-          appendBotMessage(`Connect directly with our founder on WhatsApp for quick inquiries:<br><br>👉 <a href="https://wa.me/917328037272" target="_blank" rel="noopener noreferrer">Message on WhatsApp (+91 73280 37272) &rarr;</a>`, true);
+          appendBotMessage(getWhatsAppCard(), true, [
+            { query: "consultation", label: "📅 Book Appointment" },
+            { query: "email", label: "✉️ Send Email" },
+            { query: "services", label: "🚀 View Services" }
+          ]);
+        } else if (query === "email") {
+          appendBotMessage(`Send your project scope or inquiries to our team:<br><br>✉️ Email: <a href="mailto:contact@digitalcron.com"><strong>contact@digitalcron.com</strong></a><br><br>We reply within 24 business hours.`, true, [
+            { query: "whatsapp", label: "💬 Chat on WhatsApp" },
+            { query: "consultation", label: "📅 Book Appointment" }
+          ]);
         } else {
           respondToText(displayText);
         }
@@ -345,18 +443,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function respondToText(raw) {
       const q = raw.toLowerCase();
-      if (q.includes("hi") || q.includes("hey") || q.includes("hello")) {
+      if (q.includes("whatsapp") || q.includes("whats app") || q.includes("phone") || q.includes("number") || q.includes("call")) {
+        appendBotMessage(getWhatsAppCard(), true, [
+          { query: "consultation", label: "📅 Book Appointment" },
+          { query: "email", label: "✉️ Send Email" },
+          { query: "services", label: "🚀 View Services" }
+        ]);
+      } else if (q.includes("email") || q.includes("mail")) {
+        appendBotMessage(`Send your questions or requirements directly to our founder:<br><br>✉️ Email: <a href="mailto:contact@digitalcron.com"><strong>contact@digitalcron.com</strong></a><br><br>Or choose another preferred channel:`, true, [
+          { query: "whatsapp", label: "💬 WhatsApp (+91 73280 37272)" },
+          { query: "consultation", label: "📅 Book Free Consultation" }
+        ]);
+      } else if (q.includes("service") || q.includes("build") || q.includes("website") || q.includes("bot") || q.includes("voice") || q.includes("feature")) {
+        appendBotMessage(`We specialize in conversion websites, voice receptionists, trained chatbots, and autonomous workflow pipelines.<br><br>Check out our <a href="services.html">Services</a> or <a href="work.html">System Blueprints</a>!`, true, [
+          { query: "consultation", label: "📅 Book Consultation" },
+          { query: "whatsapp", label: "💬 Chat on WhatsApp" }
+        ]);
+      } else if (q.includes("book") || q.includes("meeting") || q.includes("consult") || q.includes("appointment") || q.includes("schedule")) {
+        appendBotMessage(`You can book an architecture strategy call with our founder directly:<br><br>👉 <a href="contact.html">Schedule Free 30-Min Call &rarr;</a>`, true, [
+          { query: "whatsapp", label: "💬 WhatsApp Direct" },
+          { query: "email", label: "✉️ Send Email" }
+        ]);
+      } else if (q.includes("audit") || q.includes("review")) {
+        appendBotMessage(`Want us to review your site? Submit your URL here:<br><br>👉 <a href="free-audit.html">Free Audit Request &rarr;</a>`, true, [
+          { query: "consultation", label: "📅 Book Consultation" },
+          { query: "whatsapp", label: "💬 Chat on WhatsApp" }
+        ]);
+      } else if (q.includes("hi") || q.includes("hey") || q.includes("hello")) {
         appendBotMessage("Hello! 👋 How can I assist you with your website or AI automation today?", true);
-      } else if (q.includes("service") || q.includes("build") || q.includes("website") || q.includes("bot") || q.includes("voice")) {
-        appendBotMessage(`We specialize in conversion websites, voice receptionists, and autonomous workflow pipelines.<br><br>Check out our <a href="services.html">Services</a> or <a href="work.html">System Blueprints</a>!`, true);
-      } else if (q.includes("book") || q.includes("call") || q.includes("meeting") || q.includes("consult")) {
-        appendBotMessage(`You can book an architecture session with our founder directly:<br><br>👉 <a href="contact.html">Schedule 30-Min Call &rarr;</a>`, true);
-      } else if (q.includes("audit") || q.includes("free") || q.includes("review")) {
-        appendBotMessage(`Want us to review your site? Submit your URL here:<br><br>👉 <a href="free-audit.html">Free Audit Request &rarr;</a>`, true);
-      } else if (q.includes("whatsapp") || q.includes("phone") || q.includes("number") || q.includes("contact")) {
-        appendBotMessage(`Reach founder Sarique Zamal directly:<br>💬 WhatsApp: <a href="https://wa.me/917328037272" target="_blank">+91 73280 37272</a><br>✉️ Email: <a href="mailto:contact@digitalcron.com">contact@digitalcron.com</a>`, true);
       } else {
-        appendBotMessage(`Thanks for your question! We can definitely help. Would you like to <a href="contact.html">schedule a free consultation</a> or chat directly on <a href="https://wa.me/917328037272" target="_blank">WhatsApp</a>?`, true);
+        // Fallback for any unspecified question: give them WhatsApp, Email, and Book Appointment to discuss
+        appendBotMessage(getThreeWaysCard("To discuss your specific question or project requirements, choose from any of our <strong>3 direct ways to connect</strong>:"), true, [
+          { query: "whatsapp", label: "💬 Chat on WhatsApp" },
+          { query: "email", label: "✉️ Send Email" },
+          { query: "consultation", label: "📅 Book Appointment" }
+        ]);
       }
     }
 
