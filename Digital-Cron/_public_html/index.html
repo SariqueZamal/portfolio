@@ -574,42 +574,185 @@
       </div>
     </section>
 
-    <!-- 5. FROM FIRST CLICK TO BOOKED CUSTOMER -->
-    <section class="metrics-bar-nexora" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <!-- 5. EXAMPLE WORKFLOW ENGINE (FROM FIRST CLICK TO BOOKED CUSTOMER) -->
+    <section class="workflow-section-nexora" id="example-workflow">
       <div class="container">
-        <div style="text-align: center; max-width: 760px; margin: 0 auto 32px auto;">
-          <div class="badge-demo" style="margin-bottom: 10px;">EXAMPLE WORKFLOW</div>
-          <h2 style="font-family: var(--font-display); font-size: 1.8rem; color: #ffffff; margin-bottom: 8px;">From First Click to Booked Customer</h2>
-          <p style="font-size: 0.94rem; color: var(--text-secondary); margin: 0;">Digital Cron can connect the major steps of the customer journey so information moves between your website, enquiry channels, calendar and CRM with less manual handling.</p>
+        <!-- Section Header -->
+        <div style="text-align: center; max-width: 820px; margin: 0 auto 36px auto;">
+          <div class="badge-demo" style="margin-bottom: 12px;">EXAMPLE WORKFLOW ARCHITECTURE</div>
+          <h2 class="section-title" style="margin-bottom: 12px;">From First Click to <span class="text-gradient">Booked Customer</span></h2>
+          <p class="section-desc">A demonstration of how Digital Cron connects every step of your customer pipeline — turning incoming traffic into pre-qualified, confirmed calendar bookings and automated follow-ups with zero manual bottlenecks.</p>
         </div>
 
-        <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 32px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: 0.8rem;">
-            <span style="color:#ffffff;">1. Website Visitor</span>
-            <span style="color:#6366f1;">&rarr;</span>
-            <span style="color:#a5b4fc;">2. Lead Capture</span>
-            <span style="color:#6366f1;">&rarr;</span>
-            <span style="color:#a5b4fc;">3. AI Reception / Assistant</span>
-            <span style="color:#6366f1;">&rarr;</span>
-            <span style="color:#a5b4fc;">4. Qualification</span>
-            <span style="color:#6366f1;">&rarr;</span>
-            <span style="color:#a5b4fc;">5. Booking</span>
-            <span style="color:#6366f1;">&rarr;</span>
-            <span style="color:#a5b4fc;">6. CRM Sync</span>
-            <span style="color:#6366f1;">&rarr;</span>
-            <span style="color:#34d399; font-weight: bold;">7. Follow-Up</span>
+        <!-- Horizontal Flow Stepper Tracker -->
+        <div class="workflow-stepper-tracker">
+          <div class="workflow-stepper-node">
+            <span class="workflow-stepper-num">01</span>
+            <span>Discovery</span>
           </div>
-          <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); text-align: center; margin: 12px 0 0;">* Demonstration workflow. Scoped to the individual business, existing tools, and operational preferences.</p>
+          <span class="workflow-stepper-arrow">&rarr;</span>
+
+          <div class="workflow-stepper-node">
+            <span class="workflow-stepper-num">02</span>
+            <span>Smart Intake</span>
+          </div>
+          <span class="workflow-stepper-arrow">&rarr;</span>
+
+          <div class="workflow-stepper-node">
+            <span class="workflow-stepper-num">03</span>
+            <span>AI Qualification</span>
+          </div>
+          <span class="workflow-stepper-arrow">&rarr;</span>
+
+          <div class="workflow-stepper-node">
+            <span class="workflow-stepper-num">04</span>
+            <span>Self-Service Booking</span>
+          </div>
+          <span class="workflow-stepper-arrow">&rarr;</span>
+
+          <div class="workflow-stepper-node">
+            <span class="workflow-stepper-num">05</span>
+            <span>CRM &amp; Team Sync</span>
+          </div>
+          <span class="workflow-stepper-arrow">&rarr;</span>
+
+          <div class="workflow-stepper-node">
+            <span class="workflow-stepper-num" style="background: rgba(52, 211, 153, 0.2); border-color: rgba(52, 211, 153, 0.4); color: #34d399;">06</span>
+            <span style="color: #34d399;">Nurture &amp; Retention</span>
+          </div>
         </div>
 
+        <!-- 6-Stage Interactive Workflow Cards Grid -->
+        <div class="workflow-stages-grid">
+          <!-- Stage 1 -->
+          <div class="workflow-stage-card">
+            <div class="workflow-stage-header">
+              <span class="workflow-stage-num-badge">STAGE 01</span>
+              <span class="workflow-stage-pill">Traffic &amp; Inbound</span>
+            </div>
+            <div class="workflow-stage-icon-row">
+              <div class="workflow-stage-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <h3 class="workflow-stage-title">High-Speed Landing Page</h3>
+            </div>
+            <p class="workflow-stage-desc">Prospect lands on clean, mobile-first pages with sub-second loading speed, clear value propositions, and friction-free conversion entry points.</p>
+            <div class="workflow-stage-footer">
+              <span class="workflow-stage-meta"><span class="workflow-stage-action-dot"></span> 98+ Core Web Vitals</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">&lt; 0.8s Initial Load</span>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="workflow-stage-card">
+            <div class="workflow-stage-header">
+              <span class="workflow-stage-num-badge">STAGE 02</span>
+              <span class="workflow-stage-pill">24/7 Engagement</span>
+            </div>
+            <div class="workflow-stage-icon-row">
+              <div class="workflow-stage-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h3 class="workflow-stage-title">AI Chat &amp; Voice Intake</h3>
+            </div>
+            <p class="workflow-stage-desc">Intelligent assistant answers visitor inquiries around the clock, provides immediate guidance on services, and captures contact information before bounce.</p>
+            <div class="workflow-stage-footer">
+              <span class="workflow-stage-meta"><span class="workflow-stage-action-dot"></span> Zero Wait Time</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">24/7/365 Coverage</span>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="workflow-stage-card">
+            <div class="workflow-stage-header">
+              <span class="workflow-stage-num-badge">STAGE 03</span>
+              <span class="workflow-stage-pill">Automated Screening</span>
+            </div>
+            <div class="workflow-stage-icon-row">
+              <div class="workflow-stage-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h3 class="workflow-stage-title">Criteria-Based Qualification</h3>
+            </div>
+            <p class="workflow-stage-desc">Evaluates prospect needs, location, service requirements, and budget against custom business rules before advancing to staff calendars.</p>
+            <div class="workflow-stage-footer">
+              <span class="workflow-stage-meta"><span class="workflow-stage-action-dot"></span> Intent Scored</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">Spam &amp; Low-Fit Filtered</span>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="workflow-stage-card">
+            <div class="workflow-stage-header">
+              <span class="workflow-stage-num-badge">STAGE 04</span>
+              <span class="workflow-stage-pill">Direct Scheduling</span>
+            </div>
+            <div class="workflow-stage-icon-row">
+              <div class="workflow-stage-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <h3 class="workflow-stage-title">Self-Service Calendar Booking</h3>
+            </div>
+            <p class="workflow-stage-desc">Qualified prospects pick an available slot directly in real-time. Automatic timezone detection, staff round-robin, and buffer times prevent conflicts.</p>
+            <div class="workflow-stage-footer">
+              <span class="workflow-stage-meta"><span class="workflow-stage-action-dot"></span> 2-Way Calendar Sync</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">Google Cal &amp; Cal.com</span>
+            </div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="workflow-stage-card">
+            <div class="workflow-stage-header">
+              <span class="workflow-stage-num-badge">STAGE 05</span>
+              <span class="workflow-stage-pill">Pipeline Dispatch</span>
+            </div>
+            <div class="workflow-stage-icon-row">
+              <div class="workflow-stage-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="workflow-stage-title">CRM &amp; Team Alerts</h3>
+            </div>
+            <p class="workflow-stage-desc">Customer profiles, qualification notes, and booking data sync automatically into your CRM. Instant push alerts reach your team via WhatsApp or Slack.</p>
+            <div class="workflow-stage-footer">
+              <span class="workflow-stage-meta"><span class="workflow-stage-action-dot"></span> Zero Manual Entry</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">Instant Webhook Triggers</span>
+            </div>
+          </div>
+
+          <!-- Stage 6 -->
+          <div class="workflow-stage-card">
+            <div class="workflow-stage-header">
+              <span class="workflow-stage-num-badge" style="color: #34d399; background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.3);">STAGE 06</span>
+              <span class="workflow-stage-pill" style="color: #6ee7b7;">Nurture &amp; Retention</span>
+            </div>
+            <div class="workflow-stage-icon-row">
+              <div class="workflow-stage-icon-box" style="color: #34d399; border-color: rgba(52, 211, 153, 0.3); background: rgba(52, 211, 153, 0.1);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+              </div>
+              <h3 class="workflow-stage-title">Confirmations &amp; Reminders</h3>
+            </div>
+            <p class="workflow-stage-desc">Instant automated SMS and email confirmations, timed reminder cadences to slash no-shows, and automated post-service review collection workflows.</p>
+            <div class="workflow-stage-footer">
+              <span class="workflow-stage-meta" style="color: #34d399;"><span class="workflow-stage-action-dot"></span> 90%+ Show-Up Rate</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">Multi-Touch Cadence</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workflow Guarantees Section Divider -->
+        <div style="text-align: center; margin: 52px 0 24px 0;">
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase;">Engineered Workflow Standards</span>
+        </div>
+
+        <!-- 4 Workflow Standards & Guarantees -->
         <div class="metrics-grid-nexora">
           <div class="metric-card-nexora">
             <div class="metric-icon-square">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
             <div class="metric-info-nexora">
-              <div class="metric-num-nexora">Performance</div>
-              <div class="metric-label-nexora">Fast Page Loads &amp; Clean Code</div>
+              <div class="metric-num-nexora">&lt; 1.0s Speed</div>
+              <div class="metric-label-nexora">Sub-Second Response &amp; Clean Code</div>
             </div>
           </div>
 
@@ -618,8 +761,8 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
             <div class="metric-info-nexora">
-              <div class="metric-num-nexora">24/7</div>
-              <div class="metric-label-nexora">Automated Enquiry Response</div>
+              <div class="metric-num-nexora">24/7/365</div>
+              <div class="metric-label-nexora">Continuous Intake &amp; Triage</div>
             </div>
           </div>
 
@@ -628,20 +771,32 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
             </div>
             <div class="metric-info-nexora">
-              <div class="metric-num-nexora">Connected</div>
-              <div class="metric-label-nexora">Calendar &amp; CRM Tool Sync</div>
+              <div class="metric-num-nexora">100% Synced</div>
+              <div class="metric-label-nexora">Live Calendar, CRM &amp; Alert Routing</div>
             </div>
           </div>
 
           <div class="metric-card-nexora">
             <div class="metric-icon-square">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
             <div class="metric-info-nexora">
               <div class="metric-num-nexora">Client-Owned</div>
-              <div class="metric-label-nexora">Transparent Project Code Terms</div>
+              <div class="metric-label-nexora">Full Code, IP &amp; Account Control</div>
             </div>
           </div>
+        </div>
+
+        <!-- Section Bottom CTA -->
+        <div style="display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 48px;">
+          <a href="#blueprints" class="btn-pill btn-pill-secondary">
+            <span>Explore Solution Blueprints</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <button onclick="openCalModal()" class="btn-pill btn-pill-primary">
+            <span>Map Your Business Workflow</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
       </div>
     </section>
