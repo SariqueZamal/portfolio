@@ -3226,18 +3226,19 @@ nav#main-nav {
 
 .industries-grid-ref {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .industry-card-ref {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: 18px;
-  padding: 24px 20px;
+  padding: 24px 14px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
   transition: transform 0.25s ease, border-color 0.25s ease;
   text-decoration: none;
 }
@@ -3254,7 +3255,7 @@ nav#main-nav {
 
 .industry-title-ref {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 6px;
@@ -3262,9 +3263,38 @@ nav#main-nav {
 
 .industry-desc-ref {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   line-height: 1.5;
   color: var(--text-muted);
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.industry-card-ref .bp-card-action {
+  font-family: var(--font-display);
+  font-size: clamp(0.7rem, 0.76vw, 0.74rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  color: #6366f1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.industry-card-ref .bp-card-action svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.industry-card-ref:hover .bp-card-action {
+  color: #818cf8;
+  gap: 8px;
 }
 
 /* Horizontal 4-Stat Metrics Row Matching Reference Design */
