@@ -7053,3 +7053,512 @@ section[id],
   }
 }
 
+
+/* ==========================================================================
+   Interactive Service Architectural Blueprint Modal & Triggers
+   ========================================================================== */
+
+/* Card interactive trigger enhancements */
+.service-blueprint-card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-blueprint-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 24px rgba(99, 102, 241, 0.15);
+}
+
+.service-card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.service-click-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #818cf8;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+}
+
+.service-blueprint-card:hover .service-click-hint {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #c7d2fe;
+}
+
+.service-blueprint-trigger-btn {
+  width: 100%;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 11px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(99, 102, 241, 0.1);
+  color: #c7d2fe;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.service-blueprint-card:hover .service-blueprint-trigger-btn,
+.service-blueprint-trigger-btn:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  border-color: #6366f1;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Modal Overlay */
+.service-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(5, 7, 13, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Modal Container Dialog */
+.service-modal-dialog {
+  background: #0b0f19;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  max-width: 920px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 0 0 50px rgba(99, 102, 241, 0.18);
+  transform: scale(0.94) translateY(16px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.service-modal-overlay.is-active .service-modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Header */
+.service-modal-header {
+  padding: 24px 32px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 21, 35, 0.92);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.service-modal-header-info {
+  flex: 1;
+}
+
+.service-modal-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 10px;
+}
+
+.service-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0 0 6px 0;
+}
+
+.service-modal-tagline {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.service-modal-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.service-modal-close-btn:hover {
+  background: rgba(244, 63, 94, 0.15);
+  border-color: rgba(244, 63, 94, 0.35);
+  color: #fda4af;
+  transform: rotate(90deg);
+}
+
+/* Modal Body Content */
+.service-modal-body {
+  padding: 28px 32px 36px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* Section Block Styling */
+.modal-blueprint-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #a5b4fc;
+}
+
+.modal-section-title {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.modal-section-intro {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 1. The Pain-to-Pitch Layout */
+.modal-pitch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.modal-pitch-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-pitch-card-pain {
+  border-color: rgba(244, 63, 94, 0.28);
+  background: linear-gradient(145deg, rgba(244, 63, 94, 0.08) 0%, rgba(15, 21, 35, 0.9) 100%);
+}
+
+.modal-pitch-card-what {
+  border-color: rgba(56, 189, 248, 0.28);
+  background: linear-gradient(145deg, rgba(56, 189, 248, 0.08) 0%, rgba(15, 21, 35, 0.9) 100%);
+}
+
+.modal-pitch-card-why {
+  border-color: rgba(52, 211, 153, 0.28);
+  background: linear-gradient(145deg, rgba(52, 211, 153, 0.08) 0%, rgba(15, 21, 35, 0.9) 100%);
+}
+
+.modal-pitch-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.modal-pitch-card-pain .modal-pitch-card-header { color: #fb7185; }
+.modal-pitch-card-what .modal-pitch-card-header { color: #38bdf8; }
+.modal-pitch-card-why .modal-pitch-card-header { color: #34d399; }
+
+.modal-pitch-card-body {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+}
+
+/* 2. The How It Works Breakdown */
+.modal-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  position: relative;
+}
+
+.modal-workflow-step {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.modal-workflow-step:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+.modal-step-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  color: #a5b4fc;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.modal-step-title {
+  font-family: var(--font-display);
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.modal-step-desc {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+/* 3. Before vs. After Comparison */
+.modal-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.modal-compare-card {
+  border-radius: 18px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-compare-card-old {
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.05) 0%, rgba(15, 21, 35, 0.95) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.modal-compare-card-new {
+  background: linear-gradient(145deg, rgba(16, 185, 129, 0.08) 0%, rgba(15, 21, 35, 0.95) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.06);
+}
+
+.modal-compare-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.modal-compare-card-old .modal-compare-header { color: #f87171; }
+.modal-compare-card-new .modal-compare-header { color: #34d399; }
+
+.modal-compare-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-compare-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}
+
+.modal-compare-icon {
+  flex-shrink: 0;
+  font-weight: bold;
+  margin-top: 1px;
+}
+
+.modal-compare-card-old .modal-compare-icon { color: #ef4444; }
+.modal-compare-card-new .modal-compare-icon { color: #10b981; }
+
+/* 4. Trust Factors & ROI Block */
+.modal-trust-cta-card {
+  background: linear-gradient(145deg, rgba(20, 27, 45, 0.85) 0%, rgba(10, 13, 22, 0.95) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.32);
+  border-radius: 20px;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal-trust-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.modal-trust-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.modal-trust-point-icon {
+  color: #818cf8;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.modal-cta-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-cta-btn-main {
+  padding: 12px 24px;
+  font-size: 0.88rem;
+}
+
+.modal-cta-secondary-link {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.modal-cta-secondary-link:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+/* Modal Responsive */
+@media (max-width: 860px) {
+  .modal-pitch-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-workflow-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-trust-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .service-modal-header {
+    padding: 20px 20px 16px;
+  }
+  .service-modal-body {
+    padding: 20px 18px 28px;
+    gap: 28px;
+  }
+  .modal-workflow-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-cta-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .modal-cta-btn-main {
+    width: 100%;
+    justify-content: center;
+  }
+}
