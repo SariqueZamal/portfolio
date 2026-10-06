@@ -3112,6 +3112,187 @@ nav#main-nav {
   text-transform: uppercase;
 }
 
+/* Color Variants for WHAT WE BUILD Cards */
+/* 1. Amber / Gold - High-Performance Websites */
+.solution-card-nexora.sol-color-amber .solution-icon-box-nexora {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.06) 100%);
+  border-color: rgba(245, 158, 11, 0.38);
+  color: #fbbf24;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+}
+.solution-card-nexora.sol-color-amber:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(245, 158, 11, 0.12);
+}
+.solution-card-nexora.sol-color-amber:hover .solution-icon-box-nexora {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-color: #f59e0b;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.55);
+  transform: scale(1.08);
+}
+.solution-card-nexora.sol-color-amber .solution-badge-pill {
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+.solution-card-nexora.sol-color-amber .solution-deliverable-check {
+  color: #f59e0b;
+}
+.solution-card-nexora.sol-color-amber:hover .bp-card-action {
+  color: #fbbf24;
+}
+
+/* 2. Emerald / Green - AI Reception */
+.solution-card-nexora.sol-color-emerald .solution-icon-box-nexora {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.06) 100%);
+  border-color: rgba(16, 185, 129, 0.38);
+  color: #34d399;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.2);
+}
+.solution-card-nexora.sol-color-emerald:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(16, 185, 129, 0.12);
+}
+.solution-card-nexora.sol-color-emerald:hover .solution-icon-box-nexora {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.55);
+  transform: scale(1.08);
+}
+.solution-card-nexora.sol-color-emerald .solution-badge-pill {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.solution-card-nexora.sol-color-emerald .solution-deliverable-check {
+  color: #10b981;
+}
+.solution-card-nexora.sol-color-emerald:hover .bp-card-action {
+  color: #34d399;
+}
+
+/* 3. Cyan / Sky - Lead Qualification */
+.solution-card-nexora.sol-color-cyan .solution-icon-box-nexora {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(56, 189, 248, 0.06) 100%);
+  border-color: rgba(56, 189, 248, 0.38);
+  color: #38bdf8;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.2);
+}
+.solution-card-nexora.sol-color-cyan:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(56, 189, 248, 0.12);
+}
+.solution-card-nexora.sol-color-cyan:hover .solution-icon-box-nexora {
+  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.55);
+  transform: scale(1.08);
+}
+.solution-card-nexora.sol-color-cyan .solution-badge-pill {
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+.solution-card-nexora.sol-color-cyan .solution-deliverable-check {
+  color: #38bdf8;
+}
+.solution-card-nexora.sol-color-cyan:hover .bp-card-action {
+  color: #38bdf8;
+}
+
+/* 4. Violet / Purple - Booking Automation */
+.solution-card-nexora.sol-color-violet .solution-icon-box-nexora {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.06) 100%);
+  border-color: rgba(139, 92, 246, 0.38);
+  color: #a78bfa;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2);
+}
+.solution-card-nexora.sol-color-violet:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(139, 92, 246, 0.12);
+}
+.solution-card-nexora.sol-color-violet:hover .solution-icon-box-nexora {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  border-color: #8b5cf6;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.55);
+  transform: scale(1.08);
+}
+.solution-card-nexora.sol-color-violet .solution-badge-pill {
+  color: #c4b5fd;
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+.solution-card-nexora.sol-color-violet .solution-deliverable-check {
+  color: #a78bfa;
+}
+.solution-card-nexora.sol-color-violet:hover .bp-card-action {
+  color: #a78bfa;
+}
+
+/* 5. Rose / Coral - Trained AI Chatbots */
+.solution-card-nexora.sol-color-rose .solution-icon-box-nexora {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.2) 0%, rgba(244, 63, 94, 0.06) 100%);
+  border-color: rgba(244, 63, 94, 0.38);
+  color: #fb7185;
+  box-shadow: 0 4px 16px rgba(244, 63, 94, 0.2);
+}
+.solution-card-nexora.sol-color-rose:hover {
+  border-color: rgba(244, 63, 94, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(244, 63, 94, 0.12);
+}
+.solution-card-nexora.sol-color-rose:hover .solution-icon-box-nexora {
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  border-color: #f43f5e;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(244, 63, 94, 0.55);
+  transform: scale(1.08);
+}
+.solution-card-nexora.sol-color-rose .solution-badge-pill {
+  color: #fda4af;
+  background: rgba(244, 63, 94, 0.12);
+  border-color: rgba(244, 63, 94, 0.3);
+}
+.solution-card-nexora.sol-color-rose .solution-deliverable-check {
+  color: #fb7185;
+}
+.solution-card-nexora.sol-color-rose:hover .bp-card-action {
+  color: #fb7185;
+}
+
+/* 6. Indigo / Blue - Follow-Up Automation */
+.solution-card-nexora.sol-color-indigo .solution-icon-box-nexora {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0.06) 100%);
+  border-color: rgba(99, 102, 241, 0.38);
+  color: #818cf8;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
+}
+.solution-card-nexora.sol-color-indigo:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(99, 102, 241, 0.12);
+}
+.solution-card-nexora.sol-color-indigo:hover .solution-icon-box-nexora {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  border-color: #6366f1;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.55);
+  transform: scale(1.08);
+}
+.solution-card-nexora.sol-color-indigo .solution-badge-pill {
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+.solution-card-nexora.sol-color-indigo .solution-deliverable-check {
+  color: #818cf8;
+}
+.solution-card-nexora.sol-color-indigo:hover .bp-card-action {
+  color: #818cf8;
+}
+
 .solution-title-nexora {
   font-family: var(--font-display);
   font-size: 1.25rem;
