@@ -7562,3 +7562,141 @@ section[id],
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   Modernized 4-Stat Metrics Bar & Color Variants
+   ========================================================================== */
+.metrics-bar-nexora {
+  padding: 44px 0 !important;
+  margin: 0 !important;
+  background: var(--bg-surface) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+.metrics-grid-nexora {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  width: 100% !important;
+}
+
+.metric-card-nexora {
+  background: rgba(13, 18, 30, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 18px !important;
+  padding: 20px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  min-width: 0 !important;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.metric-card-nexora:hover {
+  transform: translateY(-3px) !important;
+}
+
+.metric-icon-square {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.metric-card-nexora:hover .metric-icon-square {
+  transform: scale(1.06) !important;
+}
+
+/* Color theme: Cyan (Solutions) */
+.metric-card-nexora.metric-color-cyan .metric-icon-square {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(56, 189, 248, 0.06) 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  color: #38bdf8 !important;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.2) !important;
+}
+.metric-card-nexora.metric-color-cyan:hover {
+  border-color: rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.12) !important;
+}
+
+/* Color theme: Emerald (Code & IP) */
+.metric-card-nexora.metric-color-emerald .metric-icon-square {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.06) 100%) !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  color: #34d399 !important;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.2) !important;
+}
+.metric-card-nexora.metric-color-emerald:hover {
+  border-color: rgba(16, 185, 129, 0.45) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(16, 185, 129, 0.12) !important;
+}
+
+/* Color theme: Amber (Speed) */
+.metric-card-nexora.metric-color-amber .metric-icon-square {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.06) 100%) !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  color: #fbbf24 !important;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2) !important;
+}
+.metric-card-nexora.metric-color-amber:hover {
+  border-color: rgba(245, 158, 11, 0.45) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.12) !important;
+}
+
+/* Color theme: Violet (Uptime) */
+.metric-card-nexora.metric-color-violet .metric-icon-square {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.06) 100%) !important;
+  border: 1px solid rgba(139, 92, 246, 0.35) !important;
+  color: #a78bfa !important;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2) !important;
+}
+.metric-card-nexora.metric-color-violet:hover {
+  border-color: rgba(139, 92, 246, 0.45) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(139, 92, 246, 0.12) !important;
+}
+
+.metric-info-nexora {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  flex: 1 !important;
+}
+
+.metric-num-nexora {
+  font-family: var(--font-nav), var(--font-sans), sans-serif !important;
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  font-variant-numeric: tabular-nums !important;
+  white-space: nowrap !important;
+}
+
+.metric-label-nexora {
+  font-family: var(--font-sans) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.35 !important;
+  color: #94a3b8 !important;
+  margin-top: 3px !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 1080px) {
+  .metrics-grid-nexora {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .metrics-grid-nexora {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
