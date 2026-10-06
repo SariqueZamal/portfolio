@@ -1144,23 +1144,26 @@ nav#main-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  min-width: 0;
 }
 
 .stat-web3-num {
   font-family: var(--font-display);
-  font-size: 3.2rem;
+  font-size: 1.95rem;
   font-weight: 800;
   color: #ffffff;
-  line-height: 1;
-  letter-spacing: -0.03em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .stat-web3-label {
   font-family: var(--font-sans);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 /* "Our happy Customers" Section (Matching Reference Design) */
@@ -4975,7 +4978,8 @@ section[id],
   }
 
   .stat-web3-num {
-    font-size: 2.4rem;
+    font-size: 1.7rem;
+    white-space: nowrap;
   }
 
   .stat-web3-label {
@@ -5122,11 +5126,13 @@ section[id],
   }
 
   .stat-web3-num {
-    font-size: 2rem;
+    font-size: 1.35rem;
+    white-space: nowrap;
   }
 
   .stat-web3-label {
     font-size: 0.82rem;
+    white-space: normal;
   }
 
   .page-hero-title {
