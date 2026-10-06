@@ -3079,22 +3079,82 @@ nav#main-nav {
   margin-bottom: 22px;
 }
 
+.solution-card-nexora:hover .solution-icon-box-nexora {
+  background: #6366f1;
+  color: #ffffff;
+  border-color: #6366f1;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+  transform: scale(1.05);
+}
+
+.solution-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.solution-card-top .solution-icon-box-nexora {
+  margin-bottom: 0;
+}
+
+.solution-badge-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .solution-title-nexora {
   font-family: var(--font-display);
-  font-size: 1.28rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   line-height: 1.25;
 }
 
 .solution-desc-nexora {
   font-family: var(--font-sans);
-  font-size: 0.94rem;
-  line-height: 1.62;
+  font-size: 0.88rem;
+  line-height: 1.58;
   color: var(--text-secondary);
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   flex-grow: 1;
+}
+
+.solution-deliverables-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+}
+
+.solution-deliverable-item {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.solution-deliverable-check {
+  color: #6366f1;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
 }
 
 .solution-link-nexora {
