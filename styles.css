@@ -3930,8 +3930,8 @@ nav#main-nav {
 
 .footer-grid-nexora {
   display: grid;
-  grid-template-columns: 1.4fr repeat(4, 1fr);
-  gap: 36px;
+  grid-template-columns: 1.48fr 1.05fr 1.23fr 1fr minmax(max-content, 0.65fr);
+  gap: 40px;
   margin-bottom: 48px;
   align-items: start;
 }
@@ -3951,11 +3951,11 @@ nav#main-nav {
 
 .footer-brand-desc {
   font-family: var(--font-sans);
-  font-size: 0.86rem;
-  line-height: 1.72;
+  font-size: 0.92rem;
+  line-height: 1.76;
   color: #94a3b8;
   margin: 0;
-  max-width: 260px;
+  max-width: 210px;
 }
 
 .footer-social-row {
@@ -4031,7 +4031,7 @@ nav#main-nav {
 
 /* Footer Contact / Connect Column */
 .footer-connect-list {
-  gap: 13px;
+  gap: 12px;
 }
 
 .footer-connect-link {
@@ -4901,6 +4901,10 @@ section[id],
 
   .footer-brand-col {
     grid-column: span 2;
+  }
+
+  .footer-brand-desc {
+    max-width: 100%;
   }
 }
 
