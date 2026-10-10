@@ -3930,7 +3930,7 @@ nav#main-nav {
 
 .footer-grid-nexora {
   display: grid;
-  grid-template-columns: 1.95fr repeat(4, 1fr);
+  grid-template-columns: 1.85fr 1fr 1.15fr 1fr 1fr;
   gap: 36px;
   margin-bottom: 56px;
   align-items: start;
@@ -4021,6 +4021,7 @@ nav#main-nav {
   transition: color 0.2s ease, transform 0.2s ease;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .footer-links-list a:hover {
