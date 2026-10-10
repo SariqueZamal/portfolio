@@ -3951,11 +3951,11 @@ nav#main-nav {
 
 .footer-brand-desc {
   font-family: var(--font-sans);
-  font-size: 0.92rem;
-  line-height: 1.76;
+  font-size: 0.945rem;
+  line-height: 1.82;
   color: #94a3b8;
   margin: 0;
-  max-width: 210px;
+  max-width: 285px;
 }
 
 .footer-social-row {
