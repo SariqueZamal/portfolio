@@ -3930,9 +3930,9 @@ nav#main-nav {
 
 .footer-grid-nexora {
   display: grid;
-  grid-template-columns: 1.85fr 1fr 1.15fr 1fr 1fr;
+  grid-template-columns: 1.4fr repeat(4, 1fr);
   gap: 36px;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
   align-items: start;
 }
 
@@ -3951,11 +3951,11 @@ nav#main-nav {
 
 .footer-brand-desc {
   font-family: var(--font-sans);
-  font-size: 0.835rem;
-  line-height: 1.58;
+  font-size: 0.86rem;
+  line-height: 1.72;
   color: #94a3b8;
   margin: 0;
-  max-width: 350px;
+  max-width: 260px;
 }
 
 .footer-social-row {
@@ -4008,7 +4008,7 @@ nav#main-nav {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 12px;
   margin: 0;
   padding: 0;
 }
