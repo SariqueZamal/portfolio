@@ -7761,7 +7761,7 @@ section[id],
 
 .fe-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr 1fr;
+  grid-template-columns: 1.75fr 1fr 1.15fr 1fr;
   gap: 48px;
   margin-bottom: 56px;
   align-items: start;
@@ -7816,11 +7816,11 @@ section[id],
 
 .fe-brand-desc {
   font-family: var(--font-sans);
-  font-size: 0.945rem;
-  line-height: 1.82;
+  font-size: 0.935rem;
+  line-height: 1.80;
   color: #94a3b8;
-  margin: 0 0 22px 0;
-  max-width: 305px;
+  margin: 0 0 27px 0;
+  max-width: 275px;
 }
 
 .fe-social-dock {
