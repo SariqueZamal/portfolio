@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", () => {
           { query: "consultation", label: "📅 Book Free Consultation" }
         ]);
       } else if (q.includes("service") || q.includes("build") || q.includes("website") || q.includes("bot") || q.includes("voice") || q.includes("feature")) {
-        appendBotMessage(`We specialize in conversion websites, voice receptionists, trained chatbots, and autonomous workflow pipelines.<br><br>Check out our <a href="services.html">Services</a> or <a href="work.html">System Blueprints</a>!`, true, [
+        appendBotMessage(`We specialize in conversion websites, voice receptionists, trained chatbots, and autonomous workflow pipelines.<br><br>Check out our <a href="services.html">Services</a> or <a href="solutions.html">Solution Blueprints</a>!`, true, [
           { query: "consultation", label: "📅 Book Consultation" },
           { query: "whatsapp", label: "💬 Chat on WhatsApp" }
         ]);
