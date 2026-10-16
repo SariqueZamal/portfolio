@@ -7761,9 +7761,10 @@ section[id],
 
 .fe-grid {
   display: grid;
+  max-width: 1000px;
+  margin: 0 auto 56px auto;
   grid-template-columns: 1.75fr 1fr 1.15fr 1fr;
-  gap: 48px;
-  margin-bottom: 56px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -7965,6 +7966,8 @@ section[id],
   font-family: var(--font-mono);
   font-size: 0.76rem;
   color: #475569;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .fe-bottom-left {
@@ -7984,7 +7987,6 @@ section[id],
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-right: 76px; /* Shift legal links to the left away from corner */
 }
 
 .fe-legal-links a {
@@ -8009,6 +8011,7 @@ section[id],
   .fe-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 36px;
+    max-width: 100%;
   }
 
   .fe-brand-col {
@@ -8016,6 +8019,10 @@ section[id],
   }
 
   .fe-brand-desc {
+    max-width: 100%;
+  }
+
+  .fe-bottom-bar {
     max-width: 100%;
   }
 
