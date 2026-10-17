@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://app.cal.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=Fira+Code:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Syncopate:wght@700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=Fira+Code:wght@400;500&display=swap" />
     <meta
       name="description"
       content="Digital Cron builds high-performance websites and practical automation systems for businesses that depend on leads, calls and appointments. Capture enquiries, qualify leads, and book customers."
@@ -180,38 +180,40 @@
           <!-- Right Column: Sleek 3D Visual Workflow Card (Real Business Scenario) -->
           <div class="hero-nexora-3d-col">
             <div class="hero-workflow-3d-stage" id="heroWorkflowStage">
-              <!-- Floating 3D Spatial Badge 1 -->
-              <div class="hero-floating-badge badge-pos-top-right">
-                <span class="badge-dot-live pulse-cyan"></span>
-                <span class="badge-text">✦ 24/7 Voice &amp; Chatbot</span>
-              </div>
-
               <!-- The Sleek 3D Workflow Card Object -->
               <div class="hero-workflow-3d-card" id="heroWorkflowCard">
-                <!-- Window Controls & Status Header -->
+                <!-- Window Controls, Engine Status & 5-Industry Tabs -->
                 <div class="hw-header">
-                  <div class="hw-window-controls">
-                    <span class="hw-dot hw-dot-red"></span>
-                    <span class="hw-dot hw-dot-yellow"></span>
-                    <span class="hw-dot hw-dot-green"></span>
+                  <div class="hw-header-bar">
+                    <div class="hw-window-controls">
+                      <span class="hw-dot hw-dot-red" title="Close"></span>
+                      <span class="hw-dot hw-dot-yellow" title="Minimize"></span>
+                      <span class="hw-dot hw-dot-green" title="Expand"></span>
+                    </div>
+                    <div class="hw-status-pill">
+                      <span class="badge-dot-live pulse-green"></span>
+                      <span>Engine Active</span>
+                    </div>
                   </div>
-                  <div class="hw-status-pill">
-                    <span class="badge-dot-live pulse-green"></span>
-                    <span>Engine Active</span>
+                  <div class="hw-industry-tabs" id="hwIndustryTabs" role="tablist" aria-label="Business Workflow Scenarios">
+                    <button class="hw-tab active" data-industry="clinics" type="button" role="tab" aria-selected="true">Clinics</button>
+                    <button class="hw-tab" data-industry="realestate" type="button" role="tab" aria-selected="false">Real Estate</button>
+                    <button class="hw-tab" data-industry="solar" type="button" role="tab" aria-selected="false">Solar</button>
+                    <button class="hw-tab" data-industry="hospitality" type="button" role="tab" aria-selected="false">Hospitality</button>
+                    <button class="hw-tab" data-industry="homeservices" type="button" role="tab" aria-selected="false">Home Services</button>
                   </div>
-                  <div class="hw-scenario-tag">Scenario: Dental &amp; Clinic Flow</div>
                 </div>
 
                 <!-- Real Business Scenario Context -->
                 <div class="hw-meta-row">
-                  <div class="hw-scenario-title">
+                  <div class="hw-scenario-title" id="hwScenarioTitle">
                     <span>Inbound Patient to Booked Chair</span>
                   </div>
-                  <div class="hw-latency-chip">⚡ 42s Full Cycle</div>
+                  <div class="hw-latency-chip" id="hwLatencyChip">⚡ 42s Full Cycle</div>
                 </div>
 
                 <!-- Connected Real Workflow Steps -->
-                <div class="hw-pipeline">
+                <div class="hw-pipeline" id="hwPipeline">
                   <!-- Node 1: Inbound Capture -->
                   <div class="hw-node">
                     <div class="hw-node-icon icon-cyan">🌐</div>
@@ -220,7 +222,7 @@
                         <span class="hw-node-title">1. Patient Enquiry Captured</span>
                         <span class="hw-node-pill pill-cyan">0s Delay • 10:42 PM</span>
                       </div>
-                      <div class="hw-node-desc">Sarah M. reaches out after-hours via web chat seeking implant consultation.</div>
+                      <div class="hw-node-desc">Patient reaches out after-hours via web chat &amp; WhatsApp seeking an implant consultation.</div>
                       <div class="hw-node-meta">Channel: AI Web Concierge + Smart Voice Intake</div>
                     </div>
                   </div>
@@ -233,8 +235,8 @@
                         <span class="hw-node-title">2. Autonomous AI Triage</span>
                         <span class="hw-node-pill pill-purple">100% Qualified</span>
                       </div>
-                      <div class="hw-node-desc">AI verifies Delta Dental PPO insurance and qualifies implant case urgency.</div>
-                      <div class="hw-node-meta">Matched: High-Intent Surgical Consultation</div>
+                      <div class="hw-node-desc">AI verifies treatment requirements, budget eligibility, and consultation urgency.</div>
+                      <div class="hw-node-meta">Matched: High-Intent Clinical Consultation</div>
                     </div>
                   </div>
 
@@ -246,8 +248,8 @@
                         <span class="hw-node-title">3. Self-Service Booking</span>
                         <span class="hw-node-pill pill-indigo">Calendar Synced</span>
                       </div>
-                      <div class="hw-node-desc">Customer selects tomorrow at 10:30 AM with Dr. Zamal (Operatory 2).</div>
-                      <div class="hw-node-meta">Integrated: Real-time Cal.com &amp; Practice Management Sync</div>
+                      <div class="hw-node-desc">Patient selects tomorrow at 10:30 AM with Dr. Zamal (Consultation Room 2).</div>
+                      <div class="hw-node-meta">Integrated: Real-Time Cal.com &amp; Clinic Calendar Sync</div>
                     </div>
                   </div>
 
@@ -259,8 +261,8 @@
                         <span class="hw-node-title">4. Multi-Touch Confirmation</span>
                         <span class="hw-node-pill pill-green">Automated</span>
                       </div>
-                      <div class="hw-node-desc">Instant SMS confirmation sent with digital health intake form &amp; reminders.</div>
-                      <div class="hw-node-meta">Dispatched: Webhook &bull; Clinic Front Desk Alerted</div>
+                      <div class="hw-node-desc">Instant WhatsApp &amp; SMS confirmation sent with digital patient intake form.</div>
+                      <div class="hw-node-meta">Dispatched: Webhook &bull; Front Desk Alerted</div>
                     </div>
                   </div>
                 </div>
@@ -276,16 +278,10 @@
                     <div class="hw-stat-lbl">Enquiries Captured</div>
                   </div>
                   <div class="hw-stat-box">
-                    <div class="hw-stat-val stat-purple">0 No-Shows</div>
-                    <div class="hw-stat-lbl">Automated Cadence</div>
+                    <div class="hw-stat-val stat-purple">-65% No-Shows</div>
+                    <div class="hw-stat-lbl">Automated Reminders</div>
                   </div>
                 </div>
-              </div>
-
-              <!-- Floating 3D Spatial Badge 2 -->
-              <div class="hero-floating-badge badge-pos-bottom-left">
-                <span class="badge-dot-live pulse-indigo"></span>
-                <span class="badge-text">✦ Zero Manual Data Entry</span>
               </div>
             </div>
           </div>
