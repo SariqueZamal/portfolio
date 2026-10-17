@@ -4,13 +4,13 @@
  * along with the interactive 5-Industry scenario tab switcher and auto-cycle engine.
  */
 (function () {
-  // 1. Data Definitions for 5 High-Impact Business Industries
+  // 1. Precise Multi-Billion Dollar Enterprise Industry Scenarios
   const INDUSTRY_SCENARIOS = {
     clinics: {
       id: "clinics",
       tabLabel: "Clinics",
       title: "Inbound Patient to Booked Chair",
-      cycleTime: "⚡ 42s Full Cycle",
+      cycleTime: "⚡ 42s Cycle",
       steps: [
         {
           icon: "🌐",
@@ -18,43 +18,39 @@
           title: "1. Patient Enquiry Captured",
           pill: "0s Delay • 10:42 PM",
           pillClass: "pill-cyan",
-          desc: "Patient reaches out after-hours via web chat & WhatsApp seeking an implant consultation.",
-          meta: "Channel: AI Web Concierge + Smart Voice Intake"
+          desc: "After-hours patient reaches out via web concierge or smart voice reception seeking an urgent dental implant consultation."
         },
         {
           icon: "🧠",
           iconClass: "icon-purple",
-          title: "2. Autonomous AI Triage",
+          title: "2. Autonomous Clinical Triage",
           pill: "100% Qualified",
           pillClass: "pill-purple",
-          desc: "AI verifies treatment requirements, budget eligibility, and consultation urgency.",
-          meta: "Matched: High-Intent Clinical Consultation"
+          desc: "AI instantly verifies insurance coverage, treatment scope, and procedure budget with zero waiting time."
         },
         {
           icon: "📅",
           iconClass: "icon-indigo",
-          title: "3. Self-Service Booking",
+          title: "3. Direct Operatory Booking",
           pill: "Calendar Synced",
           pillClass: "pill-indigo",
-          desc: "Patient selects tomorrow at 10:30 AM with Dr. Zamal (Consultation Room 2).",
-          meta: "Integrated: Real-Time Cal.com & Clinic Calendar Sync"
+          desc: "Patient self-books an open consultation slot directly into practice management calendar with Dr. Zamal."
         },
         {
           icon: "📲",
           iconClass: "icon-green",
-          title: "4. Multi-Touch Confirmation",
-          pill: "Automated",
+          title: "4. Automated Confirmation",
+          pill: "Instant Dispatch",
           pillClass: "pill-green",
-          desc: "Instant WhatsApp & SMS confirmation sent with digital patient intake form.",
-          meta: "Dispatched: Webhook • Front Desk Alerted"
+          desc: "WhatsApp & SMS confirmation sent with digital patient intake forms, alerting front desk staff in real time."
         }
       ]
     },
     realestate: {
       id: "realestate",
       tabLabel: "Real Estate",
-      title: "Property Inquiry to Booked Site Visit",
-      cycleTime: "⚡ 35s Full Cycle",
+      title: "Buyer Inquiry to Booked Site Visit",
+      cycleTime: "⚡ 35s Cycle",
       steps: [
         {
           icon: "🏢",
@@ -62,8 +58,7 @@
           title: "1. Buyer Lead Captured",
           pill: "0s Delay • 9:15 PM",
           pillClass: "pill-cyan",
-          desc: "Prospect inquiries from listing page asking for 3BHK floor plans and pricing.",
-          meta: "Channel: AI Voice Reception + Web Concierge"
+          desc: "Prospective buyer inquires on a featured listing via website chat or phone requesting floor plans and pricing."
         },
         {
           icon: "🧠",
@@ -71,78 +66,71 @@
           title: "2. Autonomous Lead Qualification",
           pill: "100% Qualified",
           pillClass: "pill-purple",
-          desc: "AI qualifies budget range, financing status, and preferred move-in timeline.",
-          meta: "Matched: Pre-Qualified High-Intent Buyer"
+          desc: "AI qualifies purchase budget, financing pre-approval, and target move-in timeline before agent handover."
         },
         {
           icon: "📅",
           iconClass: "icon-indigo",
-          title: "3. Automated Site Visit Booking",
+          title: "3. Private Showing Scheduled",
           pill: "Calendar Synced",
           pillClass: "pill-indigo",
-          desc: "Buyer books a Saturday 11:00 AM property tour directly into the assigned agent's calendar.",
-          meta: "Integrated: 2-Way Google Calendar & CRM Sync"
+          desc: "Buyer books an available weekend showing slot synchronized in real time with the assigned broker's calendar."
         },
         {
           icon: "📲",
           iconClass: "icon-green",
-          title: "4. Multi-Touch Confirmation",
-          pill: "Automated",
+          title: "4. Automated Confirmation",
+          pill: "Instant Dispatch",
           pillClass: "pill-green",
-          desc: "Instant WhatsApp brochure, location pin, and 24-hour reminder sequence triggered.",
-          meta: "Dispatched: CRM Pipeline Updated"
+          desc: "Instant WhatsApp property brochure, GPS pin, and automated 24-hour reminder sequence dispatched to buyer."
         }
       ]
     },
     solar: {
       id: "solar",
       tabLabel: "Solar",
-      title: "Homeowner Inquiry to Booked Site Survey",
-      cycleTime: "⚡ 48s Full Cycle",
+      title: "Solar Lead to Booked Site Survey",
+      cycleTime: "⚡ 48s Cycle",
       steps: [
         {
           icon: "☀️",
           iconClass: "icon-cyan",
-          title: "1. Solar Lead Captured",
+          title: "1. Homeowner Inquiry Captured",
           pill: "0s Delay • 8:20 PM",
           pillClass: "pill-cyan",
-          desc: "Homeowner requests rooftop solar savings estimate via landing page.",
-          meta: "Channel: AI Qualification Chat + Voice Callback"
+          desc: "Homeowner requests rooftop solar savings estimate through the custom solar calculator landing page."
         },
         {
           icon: "⚡",
           iconClass: "icon-purple",
-          title: "2. Roof & Bill Triage",
+          title: "2. Roof & Utility Assessment",
           pill: "100% Qualified",
           pillClass: "pill-purple",
-          desc: "AI collects monthly electricity bill, roof ownership status, and pin code/zip.",
-          meta: "Matched: Commercial-Ready Residential Install"
+          desc: "System validates monthly electricity bill, roof ownership status, and shading viability for installation eligibility."
         },
         {
           icon: "📅",
           iconClass: "icon-indigo",
-          title: "3. Engineer Survey Scheduled",
+          title: "3. Technical Survey Booked",
           pill: "Calendar Synced",
           pillClass: "pill-indigo",
-          desc: "Homeowner selects Thursday at 2:00 PM for an on-site solar assessment.",
-          meta: "Integrated: Field Team Calendar & Dispatch Sync"
+          desc: "Qualified homeowner selects a convenient on-site survey window synced directly with engineering dispatch."
         },
         {
           icon: "📲",
           iconClass: "icon-green",
-          title: "4. Multi-Touch Confirmation",
-          pill: "Automated",
+          title: "4. Automated Confirmation",
+          pill: "Instant Dispatch",
           pillClass: "pill-green",
-          desc: "Automated WhatsApp & email confirmation sent with pre-survey checklist.",
-          meta: "Dispatched: Sales Engineer Notified"
+          desc: "Automated WhatsApp and email confirmation sent with pre-survey checklist while alerting the engineering team."
         }
       ]
     },
     hospitality: {
       id: "hospitality",
       tabLabel: "Hospitality",
-      title: "Guest Inquiry to Direct Room Booking",
-      cycleTime: "⚡ 30s Full Cycle",
+      title: "Guest Inquiry to Direct Booking",
+      cycleTime: "⚡ 30s Cycle",
       steps: [
         {
           icon: "🛎️",
@@ -150,17 +138,15 @@
           title: "1. Guest Enquiry Captured",
           pill: "0s Delay • 11:50 PM",
           pillClass: "pill-cyan",
-          desc: "Traveler calls and messages after-hours asking about suite availability and airport transfer.",
-          meta: "Channel: 24/7 AI Voice Concierge + Web Chat"
+          desc: "Traveler connects after-hours via voice concierge or website chat inquiring about suite availability and amenities."
         },
         {
           icon: "✨",
           iconClass: "icon-purple",
-          title: "2. Instant Concierge Resolution",
+          title: "2. Real-Time Concierge Triage",
           pill: "100% Qualified",
           pillClass: "pill-purple",
-          desc: "AI checks live dates, answers amenity FAQs, and offers a direct-booking package.",
-          meta: "Matched: 4-Night Direct Suite Reservation"
+          desc: "AI checks live room inventory, answers hotel policy questions, and offers an exclusive direct-booking package."
         },
         {
           icon: "📅",
@@ -168,34 +154,31 @@
           title: "3. Direct Reservation Confirmed",
           pill: "Calendar Synced",
           pillClass: "pill-indigo",
-          desc: "Guest completes booking deposit and locks in check-in dates without OTA fees.",
-          meta: "Integrated: Booking Engine & Calendar Sync"
+          desc: "Guest locks in check-in dates with secure deposit payment, avoiding high third-party OTA commissions."
         },
         {
           icon: "📲",
           iconClass: "icon-green",
-          title: "4. Multi-Touch Confirmation",
-          pill: "Automated",
+          title: "4. Automated Confirmation",
+          pill: "Instant Dispatch",
           pillClass: "pill-green",
-          desc: "Instant WhatsApp itinerary, check-in guide, and concierge contact dispatched.",
-          meta: "Dispatched: Front Desk & Housekeeping Synced"
+          desc: "Instant WhatsApp welcome itinerary, check-in guide, and direct concierge contact dispatched to the guest."
         }
       ]
     },
     homeservices: {
       id: "homeservices",
       tabLabel: "Home Services",
-      title: "Emergency Call to Dispatched Technician",
-      cycleTime: "⚡ 38s Full Cycle",
+      title: "Service Call to Dispatched Tech",
+      cycleTime: "⚡ 38s Cycle",
       steps: [
         {
           icon: "🛠️",
           iconClass: "icon-cyan",
-          title: "1. Service Call Answered",
+          title: "1. Emergency Call Answered",
           pill: "0s Delay • 7:45 AM",
           pillClass: "pill-cyan",
-          desc: "Homeowner calls regarding urgent AC/HVAC repair while technicians are on-site.",
-          meta: "Channel: 24/7 AI Voice Receptionist"
+          desc: "Homeowner calls with an urgent HVAC or plumbing breakdown during morning rush with zero hold time."
         },
         {
           icon: "⚡",
@@ -203,26 +186,23 @@
           title: "2. Issue & Location Triage",
           pill: "100% Qualified",
           pillClass: "pill-purple",
-          desc: "AI captures system issue, service address, and urgency level with zero hold time.",
-          meta: "Matched: Priority Residential Service Call"
+          desc: "AI receptionist captures exact equipment failure, service address, and emergency priority in natural dialogue."
         },
         {
           icon: "📅",
           iconClass: "icon-indigo",
-          title: "3. Dispatch Slot Booked",
+          title: "3. Dispatch Window Booked",
           pill: "Calendar Synced",
           pillClass: "pill-indigo",
-          desc: "Customer books the 1:00 PM–3:00 PM arrival window from live technician availability.",
-          meta: "Integrated: Dispatch Calendar & Job Board Sync"
+          desc: "Customer chooses an available arrival window matched with on-duty technician territory and truck stock."
         },
         {
           icon: "📲",
           iconClass: "icon-green",
-          title: "4. Multi-Touch Confirmation",
-          pill: "Automated",
+          title: "4. Automated Confirmation",
+          pill: "Instant Dispatch",
           pillClass: "pill-green",
-          desc: "Instant SMS & WhatsApp booking confirmation sent with technician arrival alerts.",
-          meta: "Dispatched: Field Tech Assigned"
+          desc: "Immediate SMS confirmation sent with assigned technician details and GPS tracking link, updating dispatch board."
         }
       ]
     }
@@ -245,6 +225,7 @@
     let currentIndex = 0;
     let autoTimer = null;
     let isPaused = false;
+    let userInteracted = false;
 
     function renderPipelineHTML(steps) {
       return steps
@@ -258,7 +239,6 @@
               <span class="hw-node-pill ${step.pillClass}">${step.pill}</span>
             </div>
             <div class="hw-node-desc">${step.desc}</div>
-            <div class="hw-node-meta">${step.meta}</div>
           </div>
         </div>
       `
@@ -273,7 +253,7 @@
       const newIndex = INDUSTRY_KEYS.indexOf(industryKey);
       if (newIndex !== -1) currentIndex = newIndex;
 
-      // Update Tab Buttons
+      // Update Tab Buttons (both class and accessibility state)
       tabs.forEach((tab) => {
         const isMatch = tab.getAttribute("data-industry") === industryKey;
         tab.classList.toggle("active", isMatch);
@@ -289,10 +269,10 @@
 
       // Smooth Fade Out -> Update -> Fade In
       titleEl.style.opacity = "0";
-      titleEl.style.transform = "translateY(3px)";
+      titleEl.style.transform = "translateY(2px)";
       latencyEl.style.opacity = "0";
       pipelineEl.style.opacity = "0";
-      pipelineEl.style.transform = "translateY(4px)";
+      pipelineEl.style.transform = "translateY(3px)";
 
       setTimeout(() => {
         titleEl.innerHTML = `<span>${data.title}</span>`;
@@ -304,13 +284,13 @@
         latencyEl.style.opacity = "1";
         pipelineEl.style.opacity = "1";
         pipelineEl.style.transform = "translateY(0)";
-      }, 160);
+      }, 140);
     }
 
     function startAutoCycle() {
       stopAutoCycle();
       autoTimer = setInterval(() => {
-        if (!isPaused) {
+        if (!isPaused && !userInteracted) {
           currentIndex = (currentIndex + 1) % INDUSTRY_KEYS.length;
           switchIndustry(INDUSTRY_KEYS[currentIndex], true);
         }
@@ -324,20 +304,36 @@
       }
     }
 
-    // Attach click events to tabs
+    // Direct and robust click handling with event delegation
+    tabsContainer.addEventListener("click", function (e) {
+      const targetTab = e.target.closest(".hw-tab");
+      if (!targetTab) return;
+      e.preventDefault();
+      e.stopPropagation();
+
+      const industryKey = targetTab.getAttribute("data-industry");
+      if (industryKey) {
+        userInteracted = true;
+        stopAutoCycle(); // Keep user on their selected tab without jumping away
+        switchIndustry(industryKey, true);
+      }
+    });
+
+    // Also attach directly to tabs for maximum cross-browser compatibility
     tabs.forEach((tab) => {
       tab.addEventListener("click", (e) => {
         e.preventDefault();
+        e.stopPropagation();
         const industryKey = tab.getAttribute("data-industry");
         if (industryKey) {
+          userInteracted = true;
+          stopAutoCycle();
           switchIndustry(industryKey, true);
-          // Restart cycle from newly selected tab
-          startAutoCycle();
         }
       });
     });
 
-    // Pause on hover over stage or card
+    // Pause on hover over card
     const hoverTarget = stage || card;
     if (hoverTarget) {
       hoverTarget.addEventListener("mouseenter", () => {
@@ -348,7 +344,7 @@
       });
     }
 
-    // Initialize auto-cycling
+    // Begin ambient auto-cycle until user clicks a tab
     startAutoCycle();
   }
 
