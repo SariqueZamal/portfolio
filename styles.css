@@ -279,7 +279,9 @@ p.lead {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  font-family: var(--font-mono);
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
   border-radius: var(--radius-full);
   padding: 10px 22px;
   text-decoration: none;
@@ -295,7 +297,7 @@ p.lead {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  font-family: var(--font-mono);
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
   background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
   color: #ffffff;
   box-shadow: 0 0 28px rgba(99, 102, 241, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
@@ -304,6 +306,7 @@ p.lead {
   padding: 12px 24px;
   font-size: 0.9rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
   text-decoration: none;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -2719,11 +2722,10 @@ nav#main-nav {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-mono);
-  font-size: 0.92rem;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 0.95rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.01em;
   color: #ffffff;
   background: #6366f1;
   border: 1px solid #6366f1;
@@ -2746,14 +2748,13 @@ nav#main-nav {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 0.92rem;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 0.95rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #e2e8f0;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  letter-spacing: -0.01em;
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   padding: 14px 28px;
   border-radius: var(--radius-full);
   text-decoration: none;
@@ -2860,8 +2861,8 @@ nav#main-nav {
   background: linear-gradient(145deg, rgba(15, 23, 42, 0.94) 0%, rgba(10, 15, 26, 0.97) 60%, rgba(6, 9, 18, 0.99) 100%);
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-top: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 26px;
-  padding: 22px 22px 18px 22px;
+  border-radius: 24px;
+  padding: 18px 20px 16px 20px;
   box-shadow: 
     0 28px 70px -12px rgba(0, 0, 0, 0.85),
     0 0 45px -8px rgba(99, 102, 241, 0.2),
@@ -2883,14 +2884,20 @@ nav#main-nav {
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* Card Header */
+/* Card Header & Tabs */
 .hw-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 12px;
+}
+
+.hw-header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 15px;
 }
 
 .hw-window-controls {
@@ -2924,15 +2931,44 @@ nav#main-nav {
   text-transform: uppercase;
 }
 
-.hw-scenario-tag {
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  font-weight: 600;
-  color: #94a3b8;
-  background: rgba(255, 255, 255, 0.05);
+/* 5-Industry Interactive Tab Switcher */
+.hw-industry-tabs {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(10, 15, 26, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  padding: 3px 9px;
   border-radius: var(--radius-full);
+  padding: 3px;
+  width: 100%;
+}
+
+.hw-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 5px 6px;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #94a3b8;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hw-tab:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hw-tab.active {
+  color: #ffffff;
+  background: #6366f1;
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.45);
 }
 
 /* Scenario Sub-Header */
@@ -2940,17 +2976,19 @@ nav#main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 11px;
 }
 
 .hw-scenario-title {
-  font-family: var(--font-display);
-  font-size: 0.92rem;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 0.94rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
   color: #ffffff;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
 .hw-latency-chip {
@@ -2961,6 +2999,7 @@ nav#main-nav {
   border: 1px solid rgba(6, 182, 212, 0.25);
   padding: 2px 8px;
   border-radius: var(--radius-full);
+  transition: opacity 0.18s ease;
 }
 
 /* Steps Pipeline */
@@ -2968,16 +3007,17 @@ nav#main-nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
 /* Vertical Flow Connection Line */
 .hw-pipeline::before {
   content: '';
   position: absolute;
-  left: 20px;
-  top: 20px;
-  bottom: 20px;
+  left: 21px;
+  top: 18px;
+  bottom: 18px;
   width: 2px;
   background: linear-gradient(180deg, #06b6d4 0%, #6366f1 35%, #8b5cf6 70%, #10b981 100%);
   opacity: 0.55;
@@ -2991,11 +3031,11 @@ nav#main-nav {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 10px 12px;
+  padding: 10px 14px;
   background: rgba(18, 25, 43, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 14px;
-  transition: all 0.25s ease;
+  transition: all 0.22s ease;
   transform: translateZ(12px);
 }
 
@@ -3054,9 +3094,10 @@ nav#main-nav {
 }
 
 .hw-node-title {
-  font-family: var(--font-display);
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -3078,15 +3119,15 @@ nav#main-nav {
 .pill-green { background: rgba(16, 185, 129, 0.14); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.28); }
 
 .hw-node-desc {
-  font-size: 0.74rem;
+  font-size: 0.73rem;
   color: #cbd5e1;
-  line-height: 1.45;
+  line-height: 1.4;
   margin-bottom: 2px;
 }
 
 .hw-node-meta {
   font-family: var(--font-mono);
-  font-size: 0.64rem;
+  font-size: 0.63rem;
   color: #64748b;
 }
 
@@ -3095,8 +3136,8 @@ nav#main-nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  margin-top: 14px;
-  padding-top: 12px;
+  margin-top: 12px;
+  padding-top: 11px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -3104,14 +3145,15 @@ nav#main-nav {
   background: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 11px;
-  padding: 7px 8px;
+  padding: 7px 6px;
   text-align: center;
 }
 
 .hw-stat-val {
-  font-family: var(--font-display);
-  font-size: 0.92rem;
-  font-weight: 800;
+  font-family: 'Plus Jakarta Sans', var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: #ffffff;
   line-height: 1.2;
   white-space: nowrap;
@@ -3122,10 +3164,13 @@ nav#main-nav {
 
 .hw-stat-lbl {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   color: #94a3b8;
   margin-top: 2px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 3D Floating Space Badges */
@@ -5432,6 +5477,37 @@ section[id],
   .hero-3d-nexora-stage {
     max-width: 340px;
     border-radius: 24px;
+  }
+
+  .hero-workflow-3d-card {
+    padding: 14px 14px 12px 14px;
+    border-radius: 20px;
+    transform: none !important;
+  }
+
+  .hw-industry-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 2px;
+  }
+
+  .hw-industry-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hw-tab {
+    flex: 0 0 auto;
+    padding: 4px 8px;
+    font-size: 0.65rem;
+  }
+
+  .hw-stat-val {
+    font-size: 0.8rem;
+  }
+
+  .hw-stat-lbl {
+    font-size: 0.52rem;
   }
 
   .hero-floating-badge {
