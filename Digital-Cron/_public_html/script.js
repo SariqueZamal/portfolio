@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Messages will appear here -->
       </div>
       <form class="dc-chatbot-footer" id="dc-chatbot-form">
-        <input type="text" class="dc-chatbot-input" id="dc-chatbot-input" placeholder="Type how can I help you..." autocomplete="off" />
+        <input type="text" class="dc-chatbot-input" id="dc-chatbot-input" placeholder="Ask a question or select an option..." autocomplete="off" />
         <button type="submit" class="dc-chatbot-send-btn" aria-label="Send Message">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         </button>
@@ -285,6 +285,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     closeBtn.addEventListener("click", closeChat);
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && win.classList.contains("is-open")) {
+        closeChat();
+      }
+    });
+
+    // Close on click outside
+    document.addEventListener("click", (e) => {
+      if (win.classList.contains("is-open") && !win.contains(e.target) && !trigger.contains(e.target)) {
+        closeChat();
+      }
+    });
 
     const waSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.472 1.332 4.982l-1.356 4.954 5.074-1.33c1.464.798 3.102 1.218 4.773 1.218.066 0 .132 0 .198-.002 5.505-.062 9.923-4.594 9.923-10.099-.001-5.399-4.386-9.789-9.956-9.711zm5.176 13.914c-.218.618-1.282 1.206-1.766 1.26-.444.048-.992.052-1.611-.144-.383-.12-.871-.274-1.493-.541-2.646-1.139-4.348-3.832-4.48-4.009-.131-.177-1.077-1.433-1.077-2.733 0-1.3.682-1.939.925-2.203.243-.264.53-.33.707-.33.177 0 .354.002.508.01.163.008.383-.062.597.45.218.528.751 1.83.817 1.962.066.132.11.286.022.463-.088.176-.132.286-.264.441-.132.155-.278.347-.397.466-.132.132-.27.276-.115.541.155.265.688 1.132 1.474 1.831.992.883 1.83 1.158 2.095 1.291.265.132.42.11.575-.066.155-.177.663-.772.84-1.037.177-.265.354-.221.597-.132.243.088 1.547.728 1.812.861.265.132.442.198.508.309.067.11.067.638-.151 1.256z"/></svg>`;
 
@@ -359,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showGreeting() {
-      appendBotMessage("Hey 👋 How can I help you today?", true);
+      appendBotMessage("Hey 👋 Ask Question or select an option above", true, null, true);
     }
 
     function appendUserMessage(text) {
@@ -370,10 +384,9 @@ document.addEventListener("DOMContentLoaded", () => {
       msgsContainer.scrollTop = msgsContainer.scrollHeight;
     }
 
-    function appendBotMessage(html, showChips = false, customChips = null) {
+    function appendBotMessage(html, showChips = false, customChips = null, chipsAbove = false) {
       const msg = document.createElement("div");
       msg.className = "dc-chat-msg bot";
-      let content = `<div class="dc-chat-bubble">${html}</div>`;
       
       const chipsData = customChips || [
         { query: "services", label: "🚀 Explore AI Services" },
@@ -382,15 +395,18 @@ document.addEventListener("DOMContentLoaded", () => {
         { query: "whatsapp", label: "💬 Chat on WhatsApp" }
       ];
 
+      let chipsHtml = "";
       if (showChips) {
-        content += `<div class="dc-chat-chips">`;
+        chipsHtml += `<div class="dc-chat-chips" style="${chipsAbove ? 'margin-bottom: 10px; margin-top: 0;' : 'margin-top: 6px;'}">`;
         chipsData.forEach(c => {
-          content += `<button type="button" class="dc-chat-chip" data-query="${c.query}">${c.label}</button>`;
+          chipsHtml += `<button type="button" class="dc-chat-chip" data-query="${c.query}">${c.label}</button>`;
         });
-        content += `</div>`;
+        chipsHtml += `</div>`;
       }
-      
-      msg.innerHTML = content;
+
+      let bubbleHtml = `<div class="dc-chat-bubble">${html}</div>`;
+
+      msg.innerHTML = chipsAbove ? (chipsHtml + bubbleHtml) : (bubbleHtml + chipsHtml);
       msgsContainer.appendChild(msg);
       msgsContainer.scrollTop = msgsContainer.scrollHeight;
 
@@ -470,7 +486,7 @@ document.addEventListener("DOMContentLoaded", () => {
           { query: "whatsapp", label: "💬 Chat on WhatsApp" }
         ]);
       } else if (q.includes("hi") || q.includes("hey") || q.includes("hello")) {
-        appendBotMessage("Hello! 👋 How can I assist you with your website or AI automation today?", true);
+        appendBotMessage("Hey 👋 Ask Question or select an option above", true, null, true);
       } else {
         // Fallback for any unspecified question: give them WhatsApp, Email, and Book Appointment to discuss
         appendBotMessage(getThreeWaysCard("To discuss your specific question or project requirements, choose from any of our <strong>3 direct ways to connect</strong>:"), true, [
