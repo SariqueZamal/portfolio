@@ -246,45 +246,42 @@
         .join("");
     }
 
+    function stopAutoCycle() {
+      if (autoTimer) {
+        clearInterval(autoTimer);
+        autoTimer = null;
+      }
+    }
+
     function switchIndustry(industryKey, animate = true) {
       const data = INDUSTRY_SCENARIOS[industryKey];
       if (!data) return;
 
+      if (pipelineEl.dataset.currentIndustry === industryKey) {
+        return; // Already showing this industry
+      }
+      pipelineEl.dataset.currentIndustry = industryKey;
+
       const newIndex = INDUSTRY_KEYS.indexOf(industryKey);
       if (newIndex !== -1) currentIndex = newIndex;
 
-      // Update Tab Buttons (both class and accessibility state)
+      // Update Tab Buttons (both class and accessibility state immediately)
       tabs.forEach((tab) => {
         const isMatch = tab.getAttribute("data-industry") === industryKey;
         tab.classList.toggle("active", isMatch);
         tab.setAttribute("aria-selected", isMatch ? "true" : "false");
       });
 
-      if (!animate) {
-        titleEl.innerHTML = `<span>${data.title}</span>`;
-        latencyEl.textContent = data.cycleTime;
-        pipelineEl.innerHTML = renderPipelineHTML(data.steps);
-        return;
+      // Synchronous DOM update ensures instant zero-lag response on click
+      titleEl.innerHTML = `<span>${data.title}</span>`;
+      latencyEl.textContent = data.cycleTime;
+      pipelineEl.innerHTML = renderPipelineHTML(data.steps);
+
+      if (animate) {
+        pipelineEl.classList.remove("hw-fade");
+        void pipelineEl.offsetWidth; // Force reflow to replay micro-animation
+        pipelineEl.classList.add("hw-fade");
       }
-
-      // Smooth Fade Out -> Update -> Fade In
-      titleEl.style.opacity = "0";
-      titleEl.style.transform = "translateY(2px)";
-      latencyEl.style.opacity = "0";
-      pipelineEl.style.opacity = "0";
-      pipelineEl.style.transform = "translateY(3px)";
-
-      setTimeout(() => {
-        titleEl.innerHTML = `<span>${data.title}</span>`;
-        latencyEl.textContent = data.cycleTime;
-        pipelineEl.innerHTML = renderPipelineHTML(data.steps);
-
-        titleEl.style.opacity = "1";
-        titleEl.style.transform = "translateY(0)";
-        latencyEl.style.opacity = "1";
-        pipelineEl.style.opacity = "1";
-        pipelineEl.style.transform = "translateY(0)";
-      }, 140);
     }
 
     function startAutoCycle() {
@@ -297,41 +294,43 @@
       }, 6000);
     }
 
-    function stopAutoCycle() {
-      if (autoTimer) {
-        clearInterval(autoTimer);
-        autoTimer = null;
+    // Global function for instant onclick access from HTML buttons
+    window.dcSwitchIndustry = function (industryKey) {
+      userInteracted = true;
+      stopAutoCycle();
+      switchIndustry(industryKey, true);
+    };
+
+    function triggerTabSelection(target) {
+      if (!target) return;
+      const tabEl = target.closest(".hw-tab");
+      if (!tabEl) return;
+      const key = tabEl.getAttribute("data-industry");
+      if (key && INDUSTRY_SCENARIOS[key]) {
+        userInteracted = true;
+        stopAutoCycle();
+        switchIndustry(key, true);
       }
     }
 
-    // Direct and robust click handling with event delegation
-    tabsContainer.addEventListener("click", function (e) {
-      const targetTab = e.target.closest(".hw-tab");
-      if (!targetTab) return;
-      e.preventDefault();
-      e.stopPropagation();
+    // Direct click listeners on individual tabs
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", function (e) {
+        e.preventDefault();
+        triggerTabSelection(tab);
+      });
+    });
 
-      const industryKey = targetTab.getAttribute("data-industry");
-      if (industryKey) {
-        userInteracted = true;
-        stopAutoCycle(); // Keep user on their selected tab without jumping away
-        switchIndustry(industryKey, true);
+    // Also support pointerdown for instant responsiveness
+    tabsContainer.addEventListener("pointerdown", function (e) {
+      const tab = e.target.closest(".hw-tab");
+      if (tab) {
+        triggerTabSelection(tab);
       }
     });
 
-    // Also attach directly to tabs for maximum cross-browser compatibility
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const industryKey = tab.getAttribute("data-industry");
-        if (industryKey) {
-          userInteracted = true;
-          stopAutoCycle();
-          switchIndustry(industryKey, true);
-        }
-      });
-    });
+    // Set initial data attribute
+    pipelineEl.dataset.currentIndustry = "clinics";
 
     // Pause on hover over card
     const hoverTarget = stage || card;
@@ -352,6 +351,7 @@
   function initHeroWorkflow3D() {
     const stage = document.getElementById("heroWorkflowStage");
     const card = document.getElementById("heroWorkflowCard");
+    const tabsContainer = document.getElementById("hwIndustryTabs");
     if (!stage || !card) return;
 
     // Check for touch / mobile or reduced motion preference
@@ -361,6 +361,12 @@
       return;
     }
 
+    let isOverTabs = false;
+    if (tabsContainer) {
+      tabsContainer.addEventListener("mouseenter", () => { isOverTabs = true; });
+      tabsContainer.addEventListener("mouseleave", () => { isOverTabs = false; });
+    }
+
     let rafId = null;
     let targetX = 4;
     let targetY = -7;
@@ -368,6 +374,9 @@
     let currentY = -7;
 
     function onMouseMove(e) {
+      // If user cursor is over the interactive tabs, freeze tilt for rock-solid clickability
+      if (isOverTabs) return;
+
       const rect = stage.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
