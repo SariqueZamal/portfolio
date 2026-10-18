@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 5. Scroll Reveal Intersection Observer
-  const revealElements = document.querySelectorAll("section, .service-card, .work-card, .solution-block, .insight-card");
+  const revealElements = document.querySelectorAll("section:not(.page-hero), .service-card, .work-card, .solution-block, .insight-card");
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -78,14 +78,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0, rootMargin: "0px 0px -30px 0px" }
   );
 
   revealElements.forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(16px)";
-    el.style.transition = "opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)";
-    revealObserver.observe(el);
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    } else {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(16px)";
+      el.style.transition = "opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)";
+      revealObserver.observe(el);
+    }
   });
 
   // 6. Interactive FAQ Accordion
