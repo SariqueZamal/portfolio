@@ -150,27 +150,97 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 8. Contact & Free Audit Form Handling
+  // 8. Contact & Free Audit Google Sheets Form Handling
+  // Paste your deployed Google Apps Script Web App URL below:
+  const GOOGLE_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycby-YOUR-DEPLOYED-SCRIPT-ID/exec";
+
   const forms = document.querySelectorAll(".interactive-form");
   forms.forEach((form) => {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const submitBtn = form.querySelector('button[type="submit"]');
       const banner = form.parentElement.querySelector(".form-success-banner");
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : "Submit";
 
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerText = "Submitting Request...";
+        submitBtn.innerText = "Submitting to Google Sheets...";
       }
 
-      setTimeout(() => {
+      // Determine target tab and extract data
+      const isContactForm = form.id === "contact-form";
+      const sheetName = isContactForm ? "Book Consultation" : "Free Audit";
+
+      let payload = {
+        sheetName: sheetName,
+        timestamp: new Date().toLocaleString()
+      };
+
+      if (isContactForm) {
+        const indSelect = form.querySelector('[name="industry"]');
+        const needSelect = form.querySelector('[name="need"]');
+        const prefSelect = form.querySelector('[name="preferred_method"]');
+
+        payload = {
+          ...payload,
+          name: form.querySelector('[name="name"]')?.value.trim() || "",
+          business: form.querySelector('[name="business"]')?.value.trim() || "",
+          email: form.querySelector('[name="email"]')?.value.trim() || "",
+          phone: form.querySelector('[name="phone"]')?.value.trim() || "",
+          website: form.querySelector('[name="website"]')?.value.trim() || "",
+          industry: indSelect && indSelect.selectedIndex > 0 ? indSelect.options[indSelect.selectedIndex].text : "",
+          need: needSelect && needSelect.selectedIndex > 0 ? needSelect.options[needSelect.selectedIndex].text : "",
+          current_process: form.querySelector('[name="current_process"]')?.value.trim() || "",
+          preferred_method: prefSelect && prefSelect.selectedIndex >= 0 ? prefSelect.options[prefSelect.selectedIndex].text : "Email"
+        };
+      } else {
+        const indSelect = form.querySelector('[name="industry"]');
+        const helpSelect = form.querySelector('[name="primary_help"]');
+        const prefContact = form.querySelector('input[name="preferred_contact"]:checked')?.value || "email";
+
+        payload = {
+          ...payload,
+          name: form.querySelector('[name="name"]')?.value.trim() || "",
+          business: form.querySelector('[name="business"]')?.value.trim() || "",
+          email: form.querySelector('[name="email"]')?.value.trim() || "",
+          phone: form.querySelector('[name="phone"]')?.value.trim() || "",
+          website: form.querySelector('[name="website"]')?.value.trim() || "",
+          industry: indSelect && indSelect.selectedIndex > 0 ? indSelect.options[indSelect.selectedIndex].text : "",
+          need: helpSelect && helpSelect.selectedIndex > 0 ? helpSelect.options[helpSelect.selectedIndex].text : "",
+          current_process: form.querySelector('[name="challenge"]')?.value.trim() || "",
+          preferred_method: prefContact.charAt(0).toUpperCase() + prefContact.slice(1)
+        };
+      }
+
+      try {
+        if (GOOGLE_SCRIPT_WEBAPP_URL && !GOOGLE_SCRIPT_WEBAPP_URL.includes("YOUR-DEPLOYED-SCRIPT-ID")) {
+          await fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(payload)
+          });
+        } else {
+          console.warn("Google Apps Script Web App URL needs to be set. Prepared payload:", payload);
+        }
+
+        form.reset();
         form.style.display = "none";
         if (banner) {
           banner.style.display = "block";
           banner.scrollIntoView({ behavior: "smooth", block: "center" });
         }
-      }, 800);
+      } catch (err) {
+        console.error("Submission error:", err);
+        alert("There was an issue submitting your form. Please try again or reach out directly on WhatsApp.");
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
+      }
     });
   });
 
