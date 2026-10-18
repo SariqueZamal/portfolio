@@ -54,42 +54,152 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 4. Header Shrink on Scroll
+  // 4. Kinetic Scroll Manager: Header, Progress Bar, Back-To-Top & Parallax
   const header = document.getElementById("site-header");
-  if (header) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 40) {
+
+  // Create Top Scroll Progress Indicator
+  let scrollProgressBar = document.getElementById("dc-scroll-progress-bar");
+  if (!scrollProgressBar) {
+    const progressWrap = document.createElement("div");
+    progressWrap.className = "dc-scroll-progress";
+    progressWrap.setAttribute("aria-hidden", "true");
+    scrollProgressBar = document.createElement("div");
+    scrollProgressBar.id = "dc-scroll-progress-bar";
+    scrollProgressBar.className = "dc-scroll-progress-bar";
+    progressWrap.appendChild(scrollProgressBar);
+    document.body.prepend(progressWrap);
+  }
+
+  // Create Floating Glassmorphic Back to Top Button
+  let backToTopBtn = document.getElementById("dc-back-to-top");
+  if (!backToTopBtn) {
+    backToTopBtn = document.createElement("button");
+    backToTopBtn.id = "dc-back-to-top";
+    backToTopBtn.className = "dc-back-to-top";
+    backToTopBtn.setAttribute("aria-label", "Scroll back to top");
+    backToTopBtn.innerHTML = `
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+      <span>TOP</span>
+    `;
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.body.appendChild(backToTopBtn);
+  }
+
+  // Optimized Scroll Loop via requestAnimationFrame
+  let isScrolling = false;
+  function onScroll() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // A. Header Compact on Scroll
+    if (header) {
+      if (scrollY > 30) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
       }
-    });
+    }
+
+    // B. Progress Bar Scaling
+    if (scrollProgressBar && scrollHeight > 0) {
+      const progress = Math.min(1, Math.max(0, scrollY / scrollHeight));
+      scrollProgressBar.style.transform = `scaleX(${progress})`;
+    }
+
+    // C. Back To Top Visibility
+    if (backToTopBtn) {
+      if (scrollY > 380) {
+        backToTopBtn.classList.add("is-visible");
+      } else {
+        backToTopBtn.classList.remove("is-visible");
+      }
+    }
+
+    // D. Subtle Spotlight Parallax
+    if (spotlight && window.innerWidth > 992) {
+      const offset = Math.min(100, scrollY * 0.04);
+      spotlight.style.transform = `translateY(${offset}px)`;
+    }
+
+    isScrolling = false;
   }
 
-  // 5. Scroll Reveal Intersection Observer
-  const revealElements = document.querySelectorAll("section:not(.page-hero), .service-card, .work-card, .solution-block, .insight-card");
+  window.addEventListener("scroll", () => {
+    if (!isScrolling) {
+      requestAnimationFrame(onScroll);
+      isScrolling = true;
+    }
+  }, { passive: true });
+
+  // Initial trigger
+  onScroll();
+
+  // 5. High-End Optical Scroll Reveal Engine
+  const revealSelectors = [
+    "section:not(.page-hero) .container > .section-header",
+    "section:not(.page-hero) .container > h2",
+    ".service-card",
+    ".work-card",
+    ".solution-card-nexora",
+    ".pricing-card",
+    ".bento-card",
+    ".feature-box",
+    ".feature-card",
+    ".timeline-item",
+    ".faq-item",
+    ".tech-category-group",
+    ".article-hero-image-wrap",
+    ".article-callout-box",
+    ".upgrade-cta-card",
+    ".table-responsive",
+    ".contact-grid > div",
+    ".audit-card"
+  ];
+
+  const revealCandidates = document.querySelectorAll(revealSelectors.join(", "));
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = "1";
-          entry.target.style.transform = "translateY(0)";
-          observer.unobserve(entry.target);
+          const el = entry.target;
+          el.classList.add("dc-revealed");
+          observer.unobserve(el);
+
+          // Clean up will-change after transition
+          setTimeout(() => {
+            el.classList.add("dc-reveal-done");
+          }, 850);
         }
       });
     },
-    { threshold: 0, rootMargin: "0px 0px -30px 0px" }
+    { threshold: 0.05, rootMargin: "0px 0px -40px 0px" }
   );
 
-  revealElements.forEach((el) => {
+  // Group siblings in grids for graceful wave stagger
+  const gridContainers = document.querySelectorAll(".service-grid, .service-grid-2, .service-grid-3, .service-grid-4, .blueprint-grid, .timeline-list, .faq-list, .features-grid");
+  gridContainers.forEach((grid) => {
+    const items = grid.querySelectorAll(".service-card, .work-card, .timeline-item, .faq-item, .feature-box, .bento-card");
+    items.forEach((item, idx) => {
+      item.style.setProperty("--dc-delay", `${Math.min(idx * 75, 400)}ms`);
+    });
+  });
+
+  revealCandidates.forEach((el) => {
     const rect = el.getBoundingClientRect();
+    // Elements already visible above the fold get revealed immediately
     if (rect.top < window.innerHeight && rect.bottom > 0) {
-      el.style.opacity = "1";
-      el.style.transform = "translateY(0)";
+      el.classList.add("dc-revealed", "dc-reveal-done");
     } else {
-      el.style.opacity = "0";
-      el.style.transform = "translateY(16px)";
-      el.style.transition = "opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)";
+      if (el.classList.contains("article-hero-image-wrap")) {
+        el.classList.add("dc-reveal-scale");
+      } else {
+        el.classList.add("dc-reveal");
+      }
       revealObserver.observe(el);
     }
   });
