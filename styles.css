@@ -1589,6 +1589,14 @@ nav#main-nav {
   color: var(--accent-primary);
   margin-top: auto;
   white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .service-link-text,
+.service-link-text:hover {
+  color: var(--accent-cyan);
+  gap: 10px;
 }
 
 /* Feature & Split Layouts */
@@ -8474,63 +8482,4 @@ section[id],
     border-radius: var(--radius-sm);
     margin: 16px 0 28px 0;
   }
-}
-
-/* Blog Post Card Read Guide Button */
-.insight-card-action {
-  margin-top: auto;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
-  width: 100%;
-}
-
-.insight-read-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 11px 20px;
-  border-radius: var(--radius-full);
-  font-family: var(--font-sans);
-  font-size: 0.86rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
-
-.insight-read-btn svg {
-  transition: transform 0.25s ease;
-  color: var(--accent-primary);
-  flex-shrink: 0;
-}
-
-.service-card:hover .insight-read-btn {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.22) 0%, rgba(0, 229, 255, 0.16) 100%);
-  border-color: rgba(0, 229, 255, 0.4);
-  color: #00e5ff;
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.18);
-}
-
-.service-card:hover .insight-read-btn svg {
-  transform: translateX(4px);
-  color: #00e5ff;
-}
-
-.insight-read-btn:hover {
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
-  border-color: rgba(255, 255, 255, 0.35) !important;
-  color: #ffffff !important;
-  box-shadow: 0 0 28px rgba(99, 102, 241, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
-  transform: translateY(-2px) !important;
-}
-
-.insight-read-btn:hover svg {
-  color: #ffffff !important;
-  transform: translateX(4px) !important;
 }
