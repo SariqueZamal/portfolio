@@ -151,8 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 8. Contact & Free Audit Google Sheets Form Handling
-  // Paste your deployed Google Apps Script Web App URL below:
-  const GOOGLE_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycby-YOUR-DEPLOYED-SCRIPT-ID/exec";
+  const GOOGLE_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbxZ2kvd-Z6gw-ua5eHkDG-WST6zL6OetihQ_hdTNyhE8Fl0kxXxkDLhvoVenpQC2DS1Hg/exec";
 
   const forms = document.querySelectorAll(".interactive-form");
   forms.forEach((form) => {
@@ -181,13 +180,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const indSelect = form.querySelector('[name="industry"]');
         const needSelect = form.querySelector('[name="need"]');
         const prefSelect = form.querySelector('[name="preferred_method"]');
+        const rawPhone = form.querySelector('[name="phone"]')?.value.trim() || "";
+        const phone = rawPhone.startsWith("+") ? "'" + rawPhone : rawPhone;
 
         payload = {
           ...payload,
           name: form.querySelector('[name="name"]')?.value.trim() || "",
           business: form.querySelector('[name="business"]')?.value.trim() || "",
           email: form.querySelector('[name="email"]')?.value.trim() || "",
-          phone: form.querySelector('[name="phone"]')?.value.trim() || "",
+          phone: phone,
           website: form.querySelector('[name="website"]')?.value.trim() || "",
           industry: indSelect && indSelect.selectedIndex > 0 ? indSelect.options[indSelect.selectedIndex].text : "",
           need: needSelect && needSelect.selectedIndex > 0 ? needSelect.options[needSelect.selectedIndex].text : "",
@@ -198,13 +199,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const indSelect = form.querySelector('[name="industry"]');
         const helpSelect = form.querySelector('[name="primary_help"]');
         const prefContact = form.querySelector('input[name="preferred_contact"]:checked')?.value || "email";
+        const rawPhone = form.querySelector('[name="phone"]')?.value.trim() || "";
+        const phone = rawPhone.startsWith("+") ? "'" + rawPhone : rawPhone;
 
         payload = {
           ...payload,
           name: form.querySelector('[name="name"]')?.value.trim() || "",
           business: form.querySelector('[name="business"]')?.value.trim() || "",
           email: form.querySelector('[name="email"]')?.value.trim() || "",
-          phone: form.querySelector('[name="phone"]')?.value.trim() || "",
+          phone: phone,
           website: form.querySelector('[name="website"]')?.value.trim() || "",
           industry: indSelect && indSelect.selectedIndex > 0 ? indSelect.options[indSelect.selectedIndex].text : "",
           need: helpSelect && helpSelect.selectedIndex > 0 ? helpSelect.options[helpSelect.selectedIndex].text : "",
@@ -214,18 +217,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       try {
-        if (GOOGLE_SCRIPT_WEBAPP_URL && !GOOGLE_SCRIPT_WEBAPP_URL.includes("YOUR-DEPLOYED-SCRIPT-ID")) {
-          await fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-              "Content-Type": "text/plain;charset=utf-8"
-            },
-            body: JSON.stringify(payload)
-          });
-        } else {
-          console.warn("Google Apps Script Web App URL needs to be set. Prepared payload:", payload);
-        }
+        await fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(payload)
+        });
 
         form.reset();
         form.style.display = "none";
