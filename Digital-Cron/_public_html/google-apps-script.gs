@@ -59,21 +59,22 @@ function doPost(e) {
     var row = headers.map(function(header) {
       var h = header.toString().trim().toLowerCase();
 
+      // Email (check before business so "Business Email Address" matches email)
+      if (h.indexOf("email") !== -1) {
+        return data.email || "";
+      }
+      // Business Name (exclude business email)
+      if (h.indexOf("business") !== -1 && h.indexOf("email") === -1) {
+        return data.business || "";
+      }
       // Name (exclude Business Name)
       if (h.indexOf("name") !== -1 && h.indexOf("business") === -1) {
         return data.name || "";
       }
-      // Business Name
-      if (h.indexOf("business") !== -1) {
-        return data.business || "";
-      }
-      // Email
-      if (h.indexOf("email") !== -1) {
-        return data.email || "";
-      }
       // Phone / Mobile
       if (h.indexOf("phone") !== -1 || h.indexOf("mobile") !== -1) {
-        return data.phone || "";
+        var p = (data.phone || "").toString().trim();
+        return (p.indexOf("+") === 0) ? "'" + p : p;
       }
       // Website
       if (h.indexOf("website") !== -1) {
