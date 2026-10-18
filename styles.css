@@ -206,14 +206,17 @@ p.lead {
   font-size: 0.76rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: #a5b4fc;
   background: rgba(99, 102, 241, 0.09);
   border: 1px solid rgba(99, 102, 241, 0.28);
   padding: 6px 14px;
   border-radius: var(--radius-full);
   margin-bottom: 16px;
-  white-space: nowrap;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
   backdrop-filter: blur(8px);
 }
 
@@ -503,23 +506,32 @@ nav#main-nav {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 300px;
-  max-width: 85%;
+  right: 0;
+  width: min(300px, 85vw);
   height: 100vh;
+  height: 100dvh;
   background: var(--bg-surface);
   border-left: 1px solid var(--border-card);
   z-index: 1000;
   padding: 24px 20px;
-  display: flex;
+  display: none;
   flex-direction: column;
-  transition: right 0.32s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: -8px 0 30px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
 }
 
 .mobile-menu.is-open {
-  right: 0;
+  display: flex;
+  animation: slideMenuIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideMenuIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .mobile-menu-header {
@@ -612,12 +624,13 @@ nav#main-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px 8px;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--text-muted);
   margin-bottom: 16px;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .breadcrumb a {
@@ -810,7 +823,9 @@ nav#main-nav {
 /* Continuous Marquee Ticker Ribbon (Matching Reference Design) */
 .marquee-ribbon-wrapper {
   width: 100%;
+  max-width: 100%;
   overflow: hidden;
+  contain: paint;
   padding: 22px 0;
   position: relative;
   background: rgba(8, 10, 16, 0.95);
@@ -2534,7 +2549,8 @@ nav#main-nav {
   gap: 24px;
 }
 
-.promo-badge-tag {
+.promo-badge-tag,
+.sidebar-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -2549,6 +2565,9 @@ nav#main-nav {
   padding: 4px 12px;
   border-radius: var(--radius-full);
   width: fit-content;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .promo-title-main {
@@ -5424,6 +5443,11 @@ section[id],
 
   .footer-grid-nexora {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand-col {
+    grid-column: span 1 !important;
   }
 }
 
@@ -5474,7 +5498,7 @@ section[id],
   }
 
   .hero-3d-stage {
-    max-width: 320px;
+    max-width: 100%;
     border-radius: 22px;
   }
 
@@ -5482,6 +5506,14 @@ section[id],
   .container,
   .container-narrow {
     padding: 0 16px;
+  }
+
+  .btn-pill,
+  .btn {
+    white-space: normal;
+    word-break: normal;
+    text-align: center;
+    max-width: 100%;
   }
 
   .hero-nexora-title {
@@ -5511,14 +5543,36 @@ section[id],
   }
 
   .hero-3d-nexora-stage {
-    max-width: 340px;
+    max-width: 100%;
     border-radius: 24px;
+  }
+
+  .hero-workflow-3d-stage {
+    max-width: 100%;
+    width: 100%;
   }
 
   .hero-workflow-3d-card {
     padding: 14px 14px 12px 14px;
     border-radius: 20px;
     transform: none !important;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .solution-card-nexora {
+    padding: 22px 16px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .service-blueprint-trigger-btn {
+    font-size: 0.84rem;
+    padding: 8px 12px;
+    white-space: normal;
+    text-align: center;
+    width: 100%;
   }
 
   .hw-industry-tabs {
@@ -5582,8 +5636,18 @@ section[id],
 
 @media (max-width: 360px) {
   .container,
-  .container-narrow {
+  .container-narrow,
+  .container-medium {
     padding: 0 12px;
+  }
+
+  .btn-pill,
+  .btn {
+    white-space: normal;
+    padding: 10px 14px;
+    font-size: 0.86rem;
+    word-break: normal;
+    text-align: center;
   }
 
   .brand {
@@ -5880,7 +5944,7 @@ section[id],
 /* Key Capabilities Grid */
 .bp-capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 20px;
   margin: 28px 0 48px 0;
 }
@@ -6715,7 +6779,7 @@ section[id],
 /* Standards 4-Grid */
 .about-standards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -6724,6 +6788,8 @@ section[id],
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   padding: 28px 26px;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .about-std-num {
@@ -6752,7 +6818,13 @@ section[id],
 
 @media (max-width: 768px) {
   .about-standards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-standard-card {
+    padding: 20px 16px;
   }
 }
 
@@ -6928,7 +7000,11 @@ section[id],
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 6px 14px;
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
+  max-width: 100%;
+  white-space: normal;
+  word-break: normal;
+  line-height: 1.4;
 }
 
 .chip-dot {
@@ -7058,6 +7134,19 @@ section[id],
   }
 }
 
+@media (max-width: 480px) {
+  .founder-content-card {
+    padding: 24px 16px;
+  }
+  .founder-chip {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+    border-radius: 12px;
+  }
+  .founder-headline {
+    font-size: 1.55rem;
+  }
+}
 
 /* ==========================================================================
    EQUAL-HEIGHT FORM & SIDEBAR LAYOUT (CONTACT & FREE AUDIT PAGES)
@@ -7073,6 +7162,8 @@ section[id],
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-width: 0;
+  width: 100%;
 }
 
 .equal-split-left .promo-sidebar {
@@ -7089,6 +7180,7 @@ section[id],
   flex-direction: column;
   height: 100%;
   width: 100%;
+  min-width: 0;
 }
 
 .equal-split-right .form-container {
@@ -7114,7 +7206,7 @@ section[id],
 
 @media (max-width: 992px) {
   .equal-split-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 36px;
     align-items: flex-start;
   }
@@ -7128,6 +7220,15 @@ section[id],
   .equal-split-right .form-textarea {
     flex: none;
     min-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-sidebar {
+    padding: 24px 16px;
+  }
+  .equal-split-right .form-container {
+    padding: 22px 14px;
   }
 }
 
@@ -7242,7 +7343,7 @@ section[id],
 /* Journey Comparison (Before vs After) */
 .journey-comparison-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 28px;
   margin-top: 36px;
 }
@@ -7458,7 +7559,7 @@ section[id],
 /* Starting From Where You Are (3 Pathways) */
 .pathways-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 24px;
   margin-top: 36px;
 }
@@ -7503,7 +7604,7 @@ section[id],
 /* Qualification Fit Section (Good Fit vs Not Right Fit) */
 .fit-comparison-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 28px;
   margin-top: 36px;
 }
@@ -7592,6 +7693,21 @@ section[id],
   }
   .package-card {
     padding: 28px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-card {
+    padding: 20px 14px;
+  }
+  .fit-card {
+    padding: 20px 14px;
+  }
+  .pathway-card {
+    padding: 20px 14px;
+  }
+  .package-card {
+    padding: 22px 14px;
   }
 }
 
