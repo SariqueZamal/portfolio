@@ -4513,6 +4513,7 @@ nav#main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding-top: 28px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   font-family: var(--font-mono);
@@ -4520,6 +4521,12 @@ nav#main-nav {
   color: var(--text-muted);
   flex-wrap: wrap;
   gap: 16px;
+  box-sizing: border-box;
+}
+
+.footer-bottom-nexora p {
+  margin: 0;
+  white-space: nowrap;
 }
 
 .legal-links-nexora {
@@ -4528,6 +4535,8 @@ nav#main-nav {
   gap: 16px;
   flex-wrap: wrap;
   margin-right: 36px; /* Shifted to right with balanced margin from chatbot */
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .legal-links-nexora a {
