@@ -54,6 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Scroll Restoration Management
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "auto";
+  }
+
   // 4. Kinetic Scroll Manager: Header, Progress Bar, Back-To-Top & Parallax
   const header = document.getElementById("site-header");
 
@@ -85,7 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <span>TOP</span>
     `;
     backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
     });
     document.body.appendChild(backToTopBtn);
   }
@@ -105,10 +111,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // B. Progress Bar Scaling
-    if (scrollProgressBar && scrollHeight > 0) {
-      const progress = Math.min(1, Math.max(0, scrollY / scrollHeight));
-      scrollProgressBar.style.transform = `scaleX(${progress})`;
+    // B. Progress Bar Scaling with fade-in when scrolling away from top
+    if (scrollProgressBar) {
+      if (scrollHeight > 0) {
+        const progress = Math.min(1, Math.max(0, scrollY / scrollHeight));
+        scrollProgressBar.style.transform = `scaleX(${progress})`;
+        scrollProgressBar.style.opacity = scrollY > 8 ? "1" : "0";
+      } else {
+        scrollProgressBar.style.opacity = "0";
+      }
     }
 
     // C. Back To Top Visibility
@@ -120,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // D. Subtle Spotlight Parallax
+    // D. Subtle Spotlight Parallax (Desktop Only)
     if (spotlight && window.innerWidth > 992) {
       const offset = Math.min(100, scrollY * 0.04);
       spotlight.style.transform = `translateY(${offset}px)`;
@@ -140,6 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
   onScroll();
 
   // 5. High-End Optical Scroll Reveal Engine
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   const revealSelectors = [
     "section:not(.page-hero) .container > .section-header",
     "section:not(.page-hero) .container > h2",
@@ -147,6 +160,21 @@ document.addEventListener("DOMContentLoaded", () => {
     ".work-card",
     ".solution-card-nexora",
     ".pricing-card",
+    ".package-card",
+    ".pathway-card",
+    ".blueprint-card-luxury",
+    ".bp-capability-card",
+    ".bp-process-card",
+    ".about-industry-card",
+    ".about-standard-card",
+    ".contact-channel-card",
+    ".deliverable-item",
+    ".founder-content-card",
+    ".industry-card-ref",
+    ".journey-card",
+    ".testimonial-card-ref",
+    ".workflow-stage-card",
+    ".metric-card-nexora",
     ".bento-card",
     ".feature-box",
     ".feature-card",
@@ -158,7 +186,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ".upgrade-cta-card",
     ".table-responsive",
     ".contact-grid > div",
-    ".audit-card"
+    ".audit-card",
+    ".legal-content > h2"
   ];
 
   const revealCandidates = document.querySelectorAll(revealSelectors.join(", "));
@@ -170,10 +199,15 @@ document.addEventListener("DOMContentLoaded", () => {
           el.classList.add("dc-revealed");
           observer.unobserve(el);
 
-          // Clean up will-change after transition
+          // After entrance transition completes, cleanly unbind entrance classes
+          // so native hover transforms, 3D tilts, and interactions work 100% unimpeded.
+          const delayStr = el.style.getPropertyValue("--dc-delay") || "0ms";
+          const delayMs = parseFloat(delayStr) || 0;
           setTimeout(() => {
-            el.classList.add("dc-reveal-done");
-          }, 850);
+            el.classList.remove("dc-reveal", "dc-reveal-scale", "dc-revealed");
+            el.style.removeProperty("--dc-delay");
+            el.classList.add("dc-reveal-complete");
+          }, 850 + delayMs);
         }
       });
     },
@@ -181,19 +215,77 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // Group siblings in grids for graceful wave stagger
-  const gridContainers = document.querySelectorAll(".service-grid, .service-grid-2, .service-grid-3, .service-grid-4, .blueprint-grid, .timeline-list, .faq-list, .features-grid");
+  const gridSelectors = [
+    ".service-grid",
+    ".service-grid-2",
+    ".service-grid-3",
+    ".service-grid-4",
+    ".blueprint-grid",
+    ".blueprint-luxury-grid",
+    ".bp-capabilities-grid",
+    ".bp-process-grid",
+    ".about-industry-grid",
+    ".about-standards-grid",
+    ".contact-channels-grid",
+    ".deliverables-grid",
+    ".founder-equal-grid",
+    ".industries-grid-ref",
+    ".journey-comparison-grid",
+    ".packages-grid",
+    ".pathways-grid",
+    ".solutions-grid-nexora",
+    ".testimonials-grid-3",
+    ".workflow-stages-grid",
+    ".metrics-grid-nexora",
+    ".timeline-list",
+    ".faq-list",
+    ".features-grid"
+  ];
+
+  const gridContainers = document.querySelectorAll(gridSelectors.join(", "));
   gridContainers.forEach((grid) => {
-    const items = grid.querySelectorAll(".service-card, .work-card, .timeline-item, .faq-item, .feature-box, .bento-card");
+    const items = grid.querySelectorAll([
+      ".service-card",
+      ".work-card",
+      ".solution-card-nexora",
+      ".package-card",
+      ".pathway-card",
+      ".blueprint-card-luxury",
+      ".bp-capability-card",
+      ".bp-process-card",
+      ".about-industry-card",
+      ".about-standard-card",
+      ".contact-channel-card",
+      ".deliverable-item",
+      ".founder-content-card",
+      ".industry-card-ref",
+      ".journey-card",
+      ".testimonial-card-ref",
+      ".workflow-stage-card",
+      ".metric-card-nexora",
+      ".timeline-item",
+      ".faq-item",
+      ".feature-box",
+      ".feature-card",
+      ".bento-card"
+    ].join(", "));
+
     items.forEach((item, idx) => {
-      item.style.setProperty("--dc-delay", `${Math.min(idx * 75, 400)}ms`);
+      item.style.setProperty("--dc-delay", `${Math.min(idx * 70, 420)}ms`);
     });
   });
 
   revealCandidates.forEach((el) => {
+    // If reduced motion is requested, keep elements naturally displayed
+    if (prefersReducedMotion) {
+      el.classList.add("dc-reveal-complete");
+      return;
+    }
+
     const rect = el.getBoundingClientRect();
-    // Elements already visible above the fold get revealed immediately
+    // Elements already visible above the fold render immediately without entrance delay
     if (rect.top < window.innerHeight && rect.bottom > 0) {
-      el.classList.add("dc-revealed", "dc-reveal-done");
+      el.classList.add("dc-reveal-complete");
     } else {
       if (el.classList.contains("article-hero-image-wrap")) {
         el.classList.add("dc-reveal-scale");
