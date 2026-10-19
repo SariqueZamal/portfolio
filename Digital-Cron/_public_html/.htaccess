@@ -1,0 +1,94 @@
+# ==============================================================================
+# DIGITAL CRON — PRODUCTION APACHE / LITESPEED CONFIGURATION (.htaccess)
+# Domain: https://digitalcron.com/
+# ==============================================================================
+
+# 1. Enforce UTF-8 Encoding
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .xml .json .svg
+
+# 2. Modern MIME Types
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType application/json .json
+  AddType image/svg+xml .svg .svgz
+</IfModule>
+
+# 3. Canonical Domain & HTTPS Redirection
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect HTTP to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://digitalcron.com/$1 [R=301,L]
+
+  # Redirect WWW to Non-WWW (canonical https://digitalcron.com/)
+  RewriteCond %{HTTP_HOST} ^www\.digitalcron\.com$ [NC]
+  RewriteRule ^(.*)$ https://digitalcron.com/$1 [R=301,L]
+
+  # Clean Redirect for legacy /blog to /insights.html
+  RewriteRule ^blog/?$ insights.html [R=301,L]
+</IfModule>
+
+# 4. Gzip & Deflate Compression (High Performance)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# 5. Browser Caching (High Google PageSpeed Score)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML: Cache for 1 hour to allow rapid updates
+  ExpiresByType text/html "access plus 1 hour"
+
+  # CSS and JavaScript: Cache for 1 month
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+
+  # Images and Icons: Cache for 1 year
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Web Fonts: Cache for 1 year
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+
+  # Data & Manifests: Cache for 1 day
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+</IfModule>
+
+# 6. HTTP Security Headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# 7. Prevent Directory Browsing
+Options -Indexes

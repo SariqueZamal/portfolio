@@ -217,6 +217,7 @@ p.lead {
   white-space: normal;
   text-align: center;
   line-height: 1.4;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -331,6 +332,7 @@ p.lead {
   background-color: rgba(255, 255, 255, 0.03);
   color: var(--text-primary);
   border: 1px solid rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-radius: var(--radius-full);
   padding: 12px 24px;
@@ -354,6 +356,7 @@ p.lead {
   background-color: rgba(255, 255, 255, 0.03);
   color: var(--text-primary);
   border-color: rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -387,8 +390,9 @@ p.lead {
   height: var(--header-height);
   z-index: 100;
   background-color: rgba(6, 7, 10, 0.8);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
   border-bottom: 1px solid var(--border-subtle);
   transition: var(--transition-smooth);
 }
@@ -584,6 +588,7 @@ nav#main-nav {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   z-index: 999;
   opacity: 0;
@@ -703,8 +708,9 @@ nav#main-nav {
 
 .floating-stat-card {
   background: rgba(13, 17, 26, 0.72);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 22px 24px;
@@ -1249,6 +1255,7 @@ nav#main-nav {
   padding: 6px 14px;
   border-radius: var(--radius-full);
   margin-bottom: 20px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -1430,6 +1437,7 @@ nav#main-nav {
   border: 1px solid rgba(99, 102, 241, 0.32);
   padding: 4px 10px;
   border-radius: 20px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -1456,6 +1464,7 @@ nav#main-nav {
   border: 1px solid var(--border-subtle);
   padding: 4px 10px;
   border-radius: 20px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -1482,6 +1491,7 @@ nav#main-nav {
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 4px 10px;
   border-radius: 20px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -2280,6 +2290,7 @@ nav#main-nav {
   color: #c7d2fe;
   padding: 4px 10px;
   border-radius: var(--radius-full);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -2707,6 +2718,7 @@ nav#main-nav {
   padding: 6px 14px;
   border-radius: var(--radius-full);
   margin-bottom: 22px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -2895,8 +2907,9 @@ nav#main-nav {
     0 0 45px -8px rgba(99, 102, 241, 0.2),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.35),
     inset 0 -1px 1px 0 rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+
   transform-style: preserve-3d;
   transform: rotateY(-7deg) rotateX(4deg);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
@@ -3248,8 +3261,9 @@ nav#main-nav {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--radius-full);
   box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.8), 0 0 24px rgba(99, 102, 241, 0.2);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
@@ -3304,8 +3318,9 @@ nav#main-nav {
   right: -12px;
   bottom: 24px;
   background: rgba(15, 20, 32, 0.88);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 18px;
   padding: 16px 20px;
@@ -3891,6 +3906,7 @@ nav#main-nav {
 /* Horizontal Flow Sequence Tracker */
 .workflow-stepper-tracker {
   background: rgba(15, 23, 42, 0.6);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(99, 102, 241, 0.22);
   border-radius: var(--radius-lg);
@@ -4621,8 +4637,9 @@ html {
   height: 490px;
   max-height: calc(100vh - 120px);
   background: rgba(11, 13, 20, 0.96);
-  backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
@@ -6242,6 +6259,7 @@ html {
 
 .blueprint-card-luxury {
   background: rgba(13, 18, 28, 0.85);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 20px;
@@ -7860,8 +7878,9 @@ html {
   justify-content: center;
   padding: 20px;
   background: rgba(5, 7, 13, 0.82);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -7900,6 +7919,7 @@ html {
   padding: 24px 32px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(15, 21, 35, 0.92);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
@@ -8534,8 +8554,9 @@ html {
   padding: 8px 14px;
   border-radius: var(--radius-full);
   background: rgba(10, 13, 20, 0.82);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #cbd5e1;
   font-family: var(--font-mono);
@@ -8672,4 +8693,132 @@ html {
   .bento-card.dc-revealed {
     animation: none !important;
   }
+}
+
+
+/* ==========================================================================
+   CROSS-BROWSER COMPATIBILITY & WCAG 2.2 AA ACCESSIBILITY SAFEGUARDS
+   ========================================================================== */
+
+/* 1. Visible Keyboard Focus Indicator (WCAG 2.2 AA) */
+:focus-visible {
+  outline: 2px solid #00e5ff !important;
+  outline-offset: 3px !important;
+  border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #00e5ff !important;
+  outline-offset: 2px !important;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 2. WebKit / Safari Flexbox & Grid min-width: 0 protection & Word Wrapping */
+.service-card,
+.work-card,
+.solution-card-nexora,
+.package-card,
+.pathway-card,
+.blueprint-card-luxury,
+.bp-capability-card,
+.bp-process-card,
+.about-industry-card,
+.about-standard-card,
+.contact-channel-card,
+.deliverable-item,
+.founder-content-card,
+.industry-card-ref,
+.journey-card,
+.testimonial-card-ref,
+.workflow-stage-card,
+.metric-card-nexora,
+.feature-box,
+.feature-card,
+.bento-card,
+.timeline-item,
+.faq-item {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* 3. iOS Safari Auto-Zoom Prevention on Touch Form Controls */
+@media (max-width: 768px) {
+  input,
+  select,
+  textarea,
+  .form-input,
+  .form-select,
+  .form-textarea,
+  .dc-chatbot-input,
+  .prefooter-input,
+  .footer-subscribe-input {
+    font-size: 16px !important;
+  }
+}
+
+/* 4. Touch Target Sizes on Mobile (44px Minimum) */
+@media (max-width: 768px) {
+  .social-btn-round {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .dc-back-to-top {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .dc-chatbot-trigger {
+    min-width: 45px;
+    min-height: 45px;
+  }
+  .footer-links-list a,
+  .legal-links-nexora a {
+    padding: 6px 0;
+  }
+}
+
+/* 5. Mobile Dynamic Viewport Height for Chatbot Window */
+@media (max-width: 768px) {
+  .dc-chatbot-window {
+    right: 16px;
+    bottom: 76px;
+    width: calc(100vw - 32px);
+    max-height: calc(100dvh - 96px);
+  }
+}
+
+
+/* ==========================================================================
+   CAL.COM BOOKING MODAL & CONSULTATION ENHANCEMENTS
+   ========================================================================== */
+cal-modal-box {
+  position: fixed !important;
+  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  height: 100dvh !important;
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+}
+
+cal-modal-box iframe.cal-embed {
+  border-radius: 16px !important;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.85) !important;
+  max-height: calc(100dvh - 32px) !important;
+}
+
+[data-cal-link],
+.dc-way-cal {
+  cursor: pointer !important;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
