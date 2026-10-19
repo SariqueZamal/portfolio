@@ -71,6 +71,7 @@ h1, h2, h3, h4, p, span, a, li {
 html {
   scroll-behavior: smooth;
   background-color: var(--bg-base);
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -5097,7 +5098,7 @@ html {
 
 @media (max-width: 1180px) and (min-width: 769px) {
   .legal-links-nexora {
-    margin-right: 58px;
+    margin-right: 36px;
   }
 }
 
