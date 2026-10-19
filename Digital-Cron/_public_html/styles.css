@@ -8612,45 +8612,45 @@ html {
   }
 }
 
-/* 3. Optical Blur & Spring Scroll Reveal */
-.dc-reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  filter: blur(3px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform, filter;
+/* 3. Optical Blur & Spring Scroll Reveal (Safe Progressive Enhancement) */
+.dc-reveal,
+.dc-reveal-scale {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: auto;
   transition-delay: var(--dc-delay, 0ms);
+}
+
+/* Staged entrance ONLY on desktop viewports when JavaScript explicitly stages below-the-fold elements */
+@media (min-width: 769px) {
+  .dc-reveal.dc-reveal-staged {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(2px);
+  }
+  .dc-reveal-scale.dc-reveal-staged {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    filter: blur(2px);
+  }
 }
 
 .dc-revealed {
   opacity: 1 !important;
-  transform: translateY(0) !important;
-  filter: blur(0) !important;
-}
-
-.dc-revealed.dc-reveal-done {
-  will-change: auto;
-  filter: none;
-}
-
-/* Hero & Featured Media Scale-In */
-.dc-reveal-scale {
-  opacity: 0;
-  transform: translateY(24px) scale(0.97);
-  filter: blur(4px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform, filter;
-  transition-delay: var(--dc-delay, 0ms);
-}
-
-.dc-reveal-scale.dc-revealed {
-  opacity: 1 !important;
   transform: translateY(0) scale(1) !important;
   filter: blur(0) !important;
+}
+
+.dc-revealed.dc-reveal-done,
+.dc-reveal-complete {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  will-change: auto;
 }
 
 /* Ambient Sheen Pulse on Card Entrance */
@@ -8677,6 +8677,20 @@ html {
   }
 }
 
+/* On mobile screens, disable hiding completely for instant, rock-solid visibility */
+@media (max-width: 768px) {
+  .dc-reveal,
+  .dc-reveal-scale,
+  .dc-reveal.dc-reveal-staged,
+  .dc-reveal-scale.dc-reveal-staged {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+
 /* Accessibility: instant display when motion is reduced */
 @media (prefers-reduced-motion: reduce) {
   .dc-reveal,
@@ -8694,7 +8708,6 @@ html {
     animation: none !important;
   }
 }
-
 
 /* ==========================================================================
    CROSS-BROWSER COMPATIBILITY & WCAG 2.2 AA ACCESSIBILITY SAFEGUARDS
@@ -8821,4 +8834,43 @@ cal-modal-box iframe.cal-embed {
   cursor: pointer !important;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Chatbot Guaranteed Visibility & Top Layer Z-Index */
+.dc-chatbot-trigger,
+#dc-chatbot-trigger {
+  position: fixed !important;
+  bottom: 22px !important;
+  right: 22px !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #00e5ff 0%, #6366f1 50%, #a855f7 100%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 2147483640 !important;
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.4), 0 0 16px rgba(99, 102, 241, 0.4) !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.dc-chatbot-window,
+#dc-chatbot-window {
+  z-index: 2147483645 !important;
+}
+
+@media (max-width: 480px) {
+  .dc-chatbot-trigger,
+  #dc-chatbot-trigger {
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
 }

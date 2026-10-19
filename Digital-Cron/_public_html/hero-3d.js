@@ -4,6 +4,7 @@
  * along with the interactive 5-Industry scenario tab switcher and auto-cycle engine.
  */
 (function () {
+  window.dcSwitchIndustry = window.dcSwitchIndustry || function () {};
   // 1. Precise Multi-Billion Dollar Enterprise Industry Scenarios
   const INDUSTRY_SCENARIOS = {
     clinics: {
@@ -315,8 +316,7 @@
 
     // Direct click listeners on individual tabs
     tabs.forEach((tab) => {
-      tab.addEventListener("click", function (e) {
-        e.preventDefault();
+      tab.addEventListener("click", function () {
         triggerTabSelection(tab);
       });
     });

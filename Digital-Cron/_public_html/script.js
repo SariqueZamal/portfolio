@@ -1,3 +1,7 @@
+// Brave Shields & Privacy Blocker Safe Polyfill
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function () { (window.dataLayer = window.dataLayer || []).push(arguments); };
+
 // Production Domain Guard & One-to-One Redirect from Legacy GitHub Pages URL
 if (typeof window !== "undefined" && window.location && window.location.hostname === "sariquezamal.github.io") {
   const cleanPath = window.location.pathname.replace(/^\/portfolio/, "");
@@ -5,6 +9,13 @@ if (typeof window !== "undefined" && window.location && window.location.hostname
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Guaranteed Chatbot Boot First
+  try {
+    initFloatingChatbot();
+  } catch (err) {
+    console.warn("Chatbot boot warning:", err);
+  }
+
   // 1. Mobile Hamburger Menu & Accessible Drawer
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -314,8 +325,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   revealCandidates.forEach((el) => {
-    // If reduced motion is requested, keep elements naturally displayed
-    if (prefersReducedMotion) {
+    // If reduced motion is requested or mobile screen, keep elements naturally displayed
+    if (prefersReducedMotion || window.innerWidth <= 768) {
       el.classList.add("dc-reveal-complete");
       return;
     }
@@ -326,13 +337,21 @@ document.addEventListener("DOMContentLoaded", () => {
       el.classList.add("dc-reveal-complete");
     } else {
       if (el.classList.contains("article-hero-image-wrap")) {
-        el.classList.add("dc-reveal-scale");
+        el.classList.add("dc-reveal-scale", "dc-reveal-staged");
       } else {
-        el.classList.add("dc-reveal");
+        el.classList.add("dc-reveal", "dc-reveal-staged");
       }
       revealObserver.observe(el);
     }
   });
+
+  // Failsafe: After 1500ms, ensure all staged elements become fully visible even if observer is throttled
+  setTimeout(() => {
+    document.querySelectorAll(".dc-reveal-staged").forEach((el) => {
+      el.classList.remove("dc-reveal-staged");
+      el.classList.add("dc-reveal-complete");
+    });
+  }, 1500);
 
   // 6. Interactive FAQ Accordion
   const faqItems = document.querySelectorAll(".faq-item");
@@ -839,7 +858,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 10. Lightweight GA4 Conversion & Engagement Event Listeners
   document.addEventListener("click", (e) => {
-    if (typeof gtag !== "function") return;
 
     const target = e.target.closest("a, button");
     if (!target) return;

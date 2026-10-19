@@ -15,7 +15,7 @@ AddCharset UTF-8 .html .css .js .xml .json .svg
   AddType image/svg+xml .svg .svgz
 </IfModule>
 
-# 3. Canonical Domain & HTTPS Redirection
+# 3. Canonical Domain, HTTPS Redirection & Clean URLs
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -28,8 +28,13 @@ AddCharset UTF-8 .html .css .js .xml .json .svg
   RewriteCond %{HTTP_HOST} ^www\.digitalcron\.com$ [NC]
   RewriteRule ^(.*)$ https://digitalcron.com/$1 [R=301,L]
 
-  # Clean Redirect for legacy /blog to /insights.html
-  RewriteRule ^blog/?$ insights.html [R=301,L]
+  # Clean Redirect for legacy /blog or /blog.html to /insights.html
+  RewriteRule ^blog(\.html)?/?$ insights.html [R=301,L]
+
+  # Clean URLs: Serve .html automatically if requested without extension
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^([^/]+)/?$ $1.html [L]
 </IfModule>
 
 # 4. Gzip & Deflate Compression (High Performance)
@@ -49,15 +54,15 @@ AddCharset UTF-8 .html .css .js .xml .json .svg
   AddOutputFilterByType DEFLATE font/woff2
 </IfModule>
 
-# 5. Browser Caching (High Google PageSpeed Score)
+# 5. Browser Caching & Instant HTML Updates
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
 
-  # HTML: Cache for 1 hour to allow rapid updates
-  ExpiresByType text/html "access plus 1 hour"
+  # HTML: 0 seconds so live changes and updates reflect immediately without stale cache
+  ExpiresByType text/html "access plus 0 seconds"
 
-  # CSS and JavaScript: Cache for 1 month
+  # CSS and JavaScript: Cache for 1 month (cache-busting query strings used for updates)
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType text/javascript "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
@@ -82,13 +87,18 @@ AddCharset UTF-8 .html .css .js .xml .json .svg
   ExpiresByType text/xml "access plus 1 day"
 </IfModule>
 
+# Force fresh HTML on every request
+<FilesMatch "\.(html|htm)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </IfModule>
+</FilesMatch>
+
 # 6. HTTP Security Headers
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
-
-# 7. Prevent Directory Browsing
-Options -Indexes
