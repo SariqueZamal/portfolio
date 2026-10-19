@@ -5,7 +5,7 @@ if (typeof window !== "undefined" && window.location && window.location.hostname
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Mobile Hamburger Menu
+  // 1. Mobile Hamburger Menu & Accessible Drawer
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileMenuClose = document.getElementById("mobile-menu-close");
@@ -18,17 +18,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function openMenu() {
-    if (mobileMenu) mobileMenu.classList.add("is-open");
+    if (mobileMenu) {
+      mobileMenu.classList.add("is-open");
+      mobileMenu.setAttribute("aria-hidden", "false");
+    }
     if (overlay) overlay.classList.add("is-open");
     if (hamburgerBtn) {
       hamburgerBtn.classList.add("is-active");
       hamburgerBtn.setAttribute("aria-expanded", "true");
     }
     document.body.style.overflow = "hidden";
+
+    // Focus first link in mobile menu for keyboard accessibility
+    if (mobileMenu) {
+      const firstLink = mobileMenu.querySelector("a, button");
+      if (firstLink) firstLink.focus();
+    }
   }
 
   function closeMenu() {
-    if (mobileMenu) mobileMenu.classList.remove("is-open");
+    if (mobileMenu) {
+      mobileMenu.classList.remove("is-open");
+      mobileMenu.setAttribute("aria-hidden", "true");
+    }
     if (overlay) overlay.classList.remove("is-open");
     if (hamburgerBtn) {
       hamburgerBtn.classList.remove("is-active");
@@ -37,12 +49,32 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   }
 
-  if (hamburgerBtn) hamburgerBtn.addEventListener("click", openMenu);
+  function toggleMenu() {
+    if (mobileMenu && mobileMenu.classList.contains("is-open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  if (hamburgerBtn) hamburgerBtn.addEventListener("click", toggleMenu);
   if (mobileMenuClose) mobileMenuClose.addEventListener("click", closeMenu);
   if (overlay) overlay.addEventListener("click", closeMenu);
 
+  // Close mobile menu when clicking any link inside it
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll("a, button:not(#mobile-menu-close)").forEach((item) => {
+      item.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+  }
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMenu();
+    if (e.key === "Escape" && mobileMenu && mobileMenu.classList.contains("is-open")) {
+      closeMenu();
+      if (hamburgerBtn) hamburgerBtn.focus();
+    }
   });
 
   // Clean any legacy theme state
@@ -649,7 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
 
             <!-- 3. Book Appointment -->
-            <a href="contact.html" class="dc-way-item dc-way-cal" data-cal-link="sariquezamal/30min" data-cal-namespace="30min">
+            <a href="https://cal.com/sariquezamal/30min" target="_blank" rel="noopener noreferrer" class="dc-way-item dc-way-cal" data-cal-link="sariquezamal/30min" data-cal-namespace="30min">
               <div class="dc-way-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
               </div>
@@ -722,7 +754,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { query: "audit", label: "🔍 Free Website Audit" }
           ]);
         } else if (query === "consultation") {
-          appendBotMessage(`Schedule a direct 30-minute discovery session with our founder Sarique Zamal to map your digital systems:<br><br>👉 <a href="contact.html">Book Free 30-Min Strategy Call &rarr;</a>`, true, [
+          appendBotMessage(`Schedule a direct 30-minute discovery session with our founder Sarique Zamal to map your digital systems:<br><br>👉 <a href="https://cal.com/sariquezamal/30min" target="_blank" rel="noopener noreferrer" data-cal-link="sariquezamal/30min">Book Free 30-Min Strategy Call &rarr;</a>`, true, [
             { query: "whatsapp", label: "💬 WhatsApp Direct" },
             { query: "email", label: "✉️ Send Email" },
             { query: "services", label: "🚀 View Services" }
@@ -768,7 +800,7 @@ document.addEventListener("DOMContentLoaded", () => {
           { query: "whatsapp", label: "💬 Chat on WhatsApp" }
         ]);
       } else if (q.includes("book") || q.includes("meeting") || q.includes("consult") || q.includes("appointment") || q.includes("schedule")) {
-        appendBotMessage(`You can book an architecture strategy call with our founder directly:<br><br>👉 <a href="contact.html">Schedule Free 30-Min Call &rarr;</a>`, true, [
+        appendBotMessage(`You can book an architecture strategy call with our founder directly:<br><br>👉 <a href="https://cal.com/sariquezamal/30min" target="_blank" rel="noopener noreferrer" data-cal-link="sariquezamal/30min">Schedule Free 30-Min Call &rarr;</a>`, true, [
           { query: "whatsapp", label: "💬 WhatsApp Direct" },
           { query: "email", label: "✉️ Send Email" }
         ]);
@@ -822,12 +854,38 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // B. Cal.com Booking Consultation Trigger Clicks
-    if (target.hasAttribute("data-cal-link") || (target.innerText && /book\s+a?\s*consultation|schedule\s+call/i.test(target.innerText))) {
+    // B. Cal.com Booking Consultation Trigger Clicks & Cross-Screen Resilience
+    const calTarget = target.closest("[data-cal-link], .dc-way-cal, #header-cta-btn, #hero-primary-btn");
+    const isCalIntent = !!calTarget || target.hasAttribute("data-cal-link") || (target.innerText && /book\s+a?\s*(?:free\s+)?(?:automation\s+)?consultation|schedule\s+(?:a\s+)?call/i.test(target.innerText));
+    
+    if (isCalIntent) {
+      const btnLabel = (target.innerText || "Book Consultation").trim().slice(0, 50);
       gtag("event", "booking_cta_click", {
         event_category: "Engagement",
-        event_label: (target.innerText || "Book Consultation").trim().slice(0, 50)
+        event_label: btnLabel
       });
+
+      const CAL_DIRECT_URL = "https://cal.com/sariquezamal/30min";
+      const isMobileScreen = window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+      if (isMobileScreen) {
+        // Mobile viewports: open direct full-screen booking to eliminate shadow-DOM height clamping, scroll freeze, and iframe cutoff
+        e.preventDefault();
+        e.stopPropagation();
+        window.open(CAL_DIRECT_URL, "_blank", "noopener,noreferrer");
+        return;
+      }
+
+      // Desktop viewports: if Cal modal fails to render within 700ms (e.g. adblocker, tracking protection), gracefully open direct link
+      setTimeout(function() {
+        const modal = document.querySelector("cal-modal-box");
+        const iframe = document.querySelector("iframe.cal-embed");
+        const isVisible = (modal && window.getComputedStyle(modal).display !== "none" && window.getComputedStyle(modal).visibility !== "hidden") ||
+                          (iframe && window.getComputedStyle(iframe).display !== "none");
+        if (!isVisible) {
+          window.open(CAL_DIRECT_URL, "_blank", "noopener,noreferrer");
+        }
+      }, 700);
       return;
     }
 
@@ -855,5 +913,5 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       return;
     }
-  }, { passive: true });
+  });
 });
