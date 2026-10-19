@@ -1,3 +1,9 @@
+// Production Domain Guard & One-to-One Redirect from Legacy GitHub Pages URL
+if (typeof window !== "undefined" && window.location && window.location.hostname === "sariquezamal.github.io") {
+  const cleanPath = window.location.pathname.replace(/^\/portfolio/, "");
+  window.location.replace("https://digitalcron.com" + cleanPath + window.location.search + window.location.hash);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Mobile Hamburger Menu
   const hamburgerBtn = document.getElementById("hamburger-btn");
@@ -440,6 +446,15 @@ document.addEventListener("DOMContentLoaded", () => {
           banner.style.display = "block";
           banner.scrollIntoView({ behavior: "smooth", block: "center" });
         }
+
+        // GA4 Lead Conversion Event (Zero PII sent to analytics)
+        if (typeof gtag === "function") {
+          gtag("event", isContactForm ? "generate_lead" : "request_audit", {
+            event_category: "Conversion",
+            event_label: isContactForm ? "Contact & Consultation Form" : "Free Audit Form",
+            value: 1
+          });
+        }
       } catch (err) {
         console.error("Submission error:", err);
         alert("There was an issue submitting your form. Please try again or reach out directly on WhatsApp.");
@@ -789,4 +804,56 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   initFloatingChatbot();
+
+  // 10. Lightweight GA4 Conversion & Engagement Event Listeners
+  document.addEventListener("click", (e) => {
+    if (typeof gtag !== "function") return;
+
+    const target = e.target.closest("a, button");
+    if (!target) return;
+
+    // A. WhatsApp Direct Click
+    const href = target.getAttribute("href") || "";
+    if (href.includes("wa.me") || href.includes("whatsapp.com")) {
+      gtag("event", "whatsapp_click", {
+        event_category: "Contact",
+        event_label: "WhatsApp Direct Chat"
+      });
+      return;
+    }
+
+    // B. Cal.com Booking Consultation Trigger Clicks
+    if (target.hasAttribute("data-cal-link") || (target.innerText && /book\s+a?\s*consultation|schedule\s+call/i.test(target.innerText))) {
+      gtag("event", "booking_cta_click", {
+        event_category: "Engagement",
+        event_label: (target.innerText || "Book Consultation").trim().slice(0, 50)
+      });
+      return;
+    }
+
+    // C. Free Audit CTA Clicks
+    if (href.includes("free-audit.html") || (target.innerText && /free\s+audit|request\s+audit/i.test(target.innerText))) {
+      gtag("event", "audit_cta_click", {
+        event_category: "Engagement",
+        event_label: (target.innerText || "Free Audit").trim().slice(0, 50)
+      });
+      return;
+    }
+
+    // D. Direct Email & Phone Clicks
+    if (href.startsWith("mailto:")) {
+      gtag("event", "contact_click", {
+        event_category: "Contact",
+        event_label: "Email Link"
+      });
+      return;
+    }
+    if (href.startsWith("tel:")) {
+      gtag("event", "contact_click", {
+        event_category: "Contact",
+        event_label: "Phone Link"
+      });
+      return;
+    }
+  }, { passive: true });
 });
