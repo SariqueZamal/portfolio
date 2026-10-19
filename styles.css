@@ -4531,10 +4531,14 @@ html {
   scroll-behavior: smooth;
 }
 
-section[id],
-.solution-card-nexora[id],
-.package-card[id] {
-  scroll-margin-top: 100px;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+[id] {
+  scroll-margin-top: calc(var(--header-height, 76px) + 24px);
 }
 
 /* ==========================================================================
@@ -8512,7 +8516,9 @@ section[id],
   background: linear-gradient(90deg, #6366f1 0%, #00e5ff 50%, #a855f7 100%);
   transform-origin: 0 50%;
   transform: scaleX(0);
-  will-change: transform;
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.25s ease;
   box-shadow: 0 0 12px rgba(0, 229, 255, 0.75), 0 0 4px rgba(99, 102, 241, 0.9);
 }
 
@@ -8605,8 +8611,7 @@ section[id],
 
 .dc-revealed.dc-reveal-done {
   will-change: auto;
-  filter: none !important;
-  transition: none;
+  filter: none;
 }
 
 /* Hero & Featured Media Scale-In */
@@ -8631,7 +8636,12 @@ section[id],
 .service-card.dc-revealed,
 .solution-card-nexora.dc-revealed,
 .work-card.dc-revealed,
-.bento-card.dc-revealed {
+.bento-card.dc-revealed,
+.blueprint-card-luxury.dc-revealed,
+.package-card.dc-revealed,
+.industry-card-ref.dc-revealed,
+.about-industry-card.dc-revealed,
+.workflow-stage-card.dc-revealed {
   animation: dcCardSheen 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
