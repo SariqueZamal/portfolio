@@ -8,7 +8,7 @@ if (typeof window !== "undefined" && window.location && window.location.hostname
   window.location.replace("https://digitalcron.com" + cleanPath + window.location.search + window.location.hash);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function initDigitalCronApp() {
   // Guaranteed Chatbot Boot First
   try {
     initFloatingChatbot();
@@ -545,6 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 10. Floating AI Chatbot Widget
   function initFloatingChatbot() {
+    if (!document.body) return;
     if (document.getElementById("dc-chatbot-trigger")) return;
 
     // Create trigger button
@@ -890,7 +891,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Mobile viewports: open direct full-screen booking to eliminate shadow-DOM height clamping, scroll freeze, and iframe cutoff
         e.preventDefault();
         e.stopPropagation();
-        window.open(CAL_DIRECT_URL, "_blank", "noopener,noreferrer");
+        window.location.href = CAL_DIRECT_URL;
         return;
       }
 
@@ -901,7 +902,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const isVisible = (modal && window.getComputedStyle(modal).display !== "none" && window.getComputedStyle(modal).visibility !== "hidden") ||
                           (iframe && window.getComputedStyle(iframe).display !== "none");
         if (!isVisible) {
-          window.open(CAL_DIRECT_URL, "_blank", "noopener,noreferrer");
+          window.location.href = CAL_DIRECT_URL;
         }
       }, 700);
       return;
@@ -932,4 +933,21 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
   });
-});
+}
+
+// Resilient Bootstrap Sequence: Run immediately if DOM ready, or on DOMContentLoaded
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initDigitalCronApp);
+} else {
+  initDigitalCronApp();
+}
+
+// Window load and bfcache safeguards: Guarantee chatbot presence
+if (typeof window !== "undefined") {
+  window.addEventListener("pageshow", () => {
+    try { initFloatingChatbot(); } catch (e) {}
+  });
+  window.addEventListener("load", () => {
+    try { initFloatingChatbot(); } catch (e) {}
+  });
+}
