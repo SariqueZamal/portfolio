@@ -3,6 +3,9 @@
 # Domain: https://digitalcron.com/
 # ==============================================================================
 
+# Directory Index: Prevent 403 Forbidden on Hostinger LiteSpeed/Apache root
+DirectoryIndex index.html index.htm
+
 # 1. Enforce UTF-8 Encoding
 AddDefaultCharset UTF-8
 AddCharset UTF-8 .html .css .js .xml .json .svg
